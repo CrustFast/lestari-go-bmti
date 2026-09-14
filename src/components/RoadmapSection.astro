@@ -1,0 +1,272 @@
+---
+const timelineSteps = [
+	{
+		date: 'MEI – JUNI 2026',
+		title: 'Tahap I: Stabilisasi',
+		description: 'Fokus pada pencapaian Quick Wins untuk menekan biaya operasional secara langsung. Langkah utama meliputi sinkronisasi data beban konsumsi listrik dan air, serta aktivasi fasilitas Green Point untuk pengelolaan sampah terpilah.',
+		icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>`
+	},
+	{
+		date: 'JULI – DESEMBER 2026',
+		title: 'Tahap II: Institusionalisasi',
+		description: 'Pelembagaan sistem agar program terus berjalan pasca-2026. Tahap ini mengintegrasikan seluruh Standar Operasional Prosedur (SOP) Green Office ke dalam Sistem Penjaminan Mutu Internal (SPMI) dan menyelaraskannya dengan siklus perencanaan DIPA.',
+		icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`
+	},
+	{
+		date: '2027 – 2030',
+		title: 'Tahap III: Ekspansi & Mandiri',
+		description: 'Visi jangka panjang untuk mewujudkan kampus mandiri energi dan netralitas emisi. Ditandai dengan integrasi teknologi Waste-to-Energy dalam skala penuh dan pencapaian kemandirian energi hingga ≥20% melalui optimalisasi PLTS, PLTB, serta operasional unit pirolisis.',
+		icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>`
+	}
+];
+---
+
+<section id="peta-jalan" class="roadmap-section">
+	<div class="roadmap-container">
+		<!-- Left Column (Sticky) -->
+		<div class="roadmap-left" data-animate="fade-right">
+			<div class="sticky-wrapper">
+				<div class="section-label">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+						<path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+					</svg>
+					PETA JALAN PROGRAM
+				</div>
+				<h2 class="section-heading">Transformasi Menuju Keunggulan Berkelanjutan</h2>
+				<p class="section-description">
+					Dari upaya menekan beban operasional hingga mencapai kemandirian energi. Eksplorasi tahapan strategis BBPPMPV BMTI dalam mewujudkan tata kelola ekosistem kampus yang berwawasan lingkungan.
+				</p>
+				
+				<div class="highlight-box">
+					<h3 class="highlight-number">2026 &ndash; 2030</h3>
+					<h4 class="highlight-title">Periode Transformasi Strategis</h4>
+					<p class="highlight-desc">
+						Peta jalan ini disusun untuk mengoptimalkan siklus anggaran 2026 dengan visi jangka panjang mewujudkan tata kelola kampus rendah karbon.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Right Column (Timeline) -->
+		<div class="roadmap-right">
+			<div class="timeline" data-animate="fade-in">
+				{timelineSteps.map((step, index) => (
+					<div class="timeline-item" data-animate="fade-up" data-delay={index * 150}>
+						<div class="timeline-icon" set:html={step.icon}></div>
+						<div class="timeline-content">
+							<span class="timeline-date">{step.date}</span>
+							<h3 class="timeline-title">{step.title}</h3>
+							<p class="timeline-desc">{step.description}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.roadmap-section {
+		padding: 6rem 0;
+		background-color: var(--white);
+		position: relative;
+	}
+
+	.roadmap-container {
+		max-width: var(--container-max);
+		margin: 0 auto;
+		padding: 0 var(--container-padding);
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 4rem;
+	}
+
+	/* --- Left Column --- */
+	.roadmap-left {
+		position: relative;
+	}
+
+	.sticky-wrapper {
+		position: relative;
+	}
+
+	.section-label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--green-600);
+		font-weight: 700;
+		font-size: 0.8rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		margin-bottom: 1.5rem;
+	}
+
+	.section-heading {
+		font-family: var(--font-heading);
+		font-size: clamp(2rem, 3.5vw, 2.75rem);
+		font-weight: 800;
+		color: var(--green-900);
+		line-height: 1.2;
+		margin-bottom: 1.25rem;
+		letter-spacing: -0.02em;
+	}
+
+	.section-description {
+		font-size: 1.05rem;
+		line-height: 1.7;
+		color: var(--gray-600);
+		margin-bottom: 2.5rem;
+		max-width: 90%;
+	}
+
+	/* Highlight Box */
+	.highlight-box {
+		background-color: #f6fbf7; /* Very subtle light green */
+		border: 1px solid rgba(30, 160, 47, 0.1);
+		border-radius: 16px;
+		padding: 2rem;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+	}
+
+	.highlight-number {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: var(--green-600);
+		font-family: var(--font-heading);
+		line-height: 1.1;
+		margin-bottom: 0.25rem;
+	}
+
+	.highlight-title {
+		font-size: 1.05rem;
+		font-weight: 700;
+		color: var(--gray-800);
+		margin-bottom: 0.75rem;
+	}
+
+	.highlight-desc {
+		font-size: 0.9rem;
+		line-height: 1.6;
+		color: var(--gray-600);
+		margin: 0;
+	}
+
+	/* --- Right Column (Timeline) --- */
+	.timeline {
+		position: relative;
+		padding-left: 2rem;
+	}
+
+	/* Vertical Line Segments */
+	.timeline-item::before {
+		content: '';
+		position: absolute;
+		top: 40px; /* Starts exactly at the bottom of the current icon */
+		bottom: -4rem; /* Reaches exactly to the top of the next icon */
+		left: -13px; /* Center of the icon: -32px (padding) + 20px (half icon width) - 1px (half line width) */
+		width: 2px;
+		background-color: var(--green-300);
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: transform 1s ease-out 0.4s;
+		z-index: 1;
+	}
+
+	.timeline-item.animate-in::before {
+		transform: scaleY(1);
+	}
+
+	/* Stop the line at the last node */
+	.timeline-item:last-child::before {
+		display: none;
+	}
+
+	.timeline-item {
+		position: relative;
+		margin-bottom: 4rem;
+	}
+
+	.timeline-item:last-child {
+		margin-bottom: 0;
+	}
+
+	.timeline-icon {
+		position: absolute;
+		left: -2rem; /* Moves icon over the line */
+		top: 0;
+		width: 40px;
+		height: 40px;
+		background-color: var(--white);
+		border: 2px solid var(--green-500);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--green-600);
+		z-index: 2;
+		transition: background-color 0.5s ease 0.4s;
+	}
+
+	.timeline-item.animate-in .timeline-icon {
+		background-color: var(--green-50);
+	}
+
+	.timeline-content {
+		padding-left: 2rem;
+		padding-top: 0.2rem;
+	}
+
+	.timeline-date {
+		display: inline-block;
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: var(--green-600);
+		letter-spacing: 0.05em;
+		margin-bottom: 0.5rem;
+	}
+
+	.timeline-title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--gray-900);
+		margin-bottom: 0.75rem;
+	}
+
+	.timeline-desc {
+		font-size: 0.95rem;
+		line-height: 1.6;
+		color: var(--gray-600);
+		margin: 0;
+	}
+
+	/* Responsive Layout */
+	@media (min-width: 1024px) {
+		.roadmap-container {
+			grid-template-columns: 5fr 7fr;
+			gap: 6rem;
+		}
+
+		.sticky-wrapper {
+			position: sticky;
+			top: 120px; /* Offset for navbar */
+		}
+
+		.timeline {
+			padding-left: 3rem;
+		}
+
+		.timeline-icon {
+			left: -3rem;
+		}
+
+		.timeline-item::before {
+			left: -29px; /* Center of the icon: -48px + 20px - 1px */
+		}
+
+		.timeline-content {
+			padding-left: 1rem;
+		}
+	}
+</style>

@@ -1,0 +1,107 @@
+<script is:inline>
+    // Inline blocking script to prevent the preloader glitch/flash
+    // This runs instantly before the HTML below is rendered
+    if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('lestari_preloader')) {
+        document.documentElement.classList.add('skip-preloader');
+    }
+</script>
+
+<div id="app-preloader" class="preloader">
+    <div class="preloader-content">
+        <div class="preloader-brand">
+            <img src="/favicon-square.png" alt="Lestari Logo" class="preloader-logo" />
+            <span class="preloader-text">LESTARI</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background-color: var(--btn-primary-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+        transform: translateY(0);
+    }
+    
+    .preloader.slide-down {
+        transform: translateY(100%);
+    }
+
+    .preloader-brand {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .preloader-logo {
+        width: 100px;
+        height: 100px;
+        animation: preloader-pulse 2s infinite ease-in-out;
+    }
+
+    .preloader-text {
+        font-family: var(--font-serif);
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: var(--white);
+        letter-spacing: 0.02em;
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: text-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation-delay: 0.3s;
+    }
+    
+    @keyframes text-fade-in {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes preloader-pulse {
+        0% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); border-radius: 50%; }
+        50% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); border-radius: 50%; }
+        100% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); border-radius: 50%; }
+    }
+</style>
+
+<style is:global>
+    html.skip-preloader #app-preloader {
+        display: none !important;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const preloader = document.getElementById('app-preloader');
+        if (!preloader) return;
+
+        // Check if preloader has been shown in the current session
+        const hasSeenPreloader = sessionStorage.getItem('lestari_preloader');
+        
+        if (hasSeenPreloader) {
+            // If already seen, hide immediately without animation
+            preloader.style.display = 'none';
+        } else {
+            // Block scrolling while preloading
+            document.documentElement.style.overflow = 'hidden';
+            
+            // Wait 3 seconds, then trigger the slide-down animation
+            setTimeout(() => {
+                preloader.classList.add('slide-down');
+                sessionStorage.setItem('lestari_preloader', 'true');
+                document.documentElement.style.overflow = '';
+                
+                // Wait for the CSS transition (0.8s) to finish before removing from DOM
+                setTimeout(() => {
+                    preloader.remove();
+                }, 800);
+            }, 3000);
+        }
+    });
+</script>

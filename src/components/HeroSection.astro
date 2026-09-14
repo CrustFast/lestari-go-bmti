@@ -1,0 +1,297 @@
+---
+---
+
+<section id="hero" class="hero">
+	<!-- Background Image Carousel -->
+	<div class="hero-bg" id="hero-bg-carousel">
+		<img src="/img/bg-1.jpeg" class="carousel-bg active" alt="Lanskap 1" loading="eager" fetchpriority="high" />
+		<img src="/img/bg-2.jpg" class="carousel-bg" alt="Lanskap 2" loading="lazy" />
+		<img src="/img/bg-3.jpg" class="carousel-bg" alt="Lanskap 3" loading="lazy" />
+		<div class="hero-overlay"></div>
+	</div>
+
+	<div class="hero-container">
+		<!-- Left Content -->
+		<div class="hero-content">
+			<!-- Rating Badge -->
+			<div class="hero-rating" data-animate="fade-up">
+				<span class="rating-count">Layanan Ekosistem Terpadu Asri</span>
+			</div>
+
+			<!-- Heading -->
+			<h1 class="hero-heading" data-animate="fade-up" data-delay="100">
+				Pionir Pendidikan Vokasi
+				<span class="heading-accent">Rendah Karbon & Berkelanjutan</span>
+			</h1>
+
+			<!-- Description -->
+			<p class="hero-description" data-animate="fade-up" data-delay="200">
+				BBPPMPV BMTI bertransformasi mewujudkan ekosistem kampus yang selaras dengan alam. Melalui inisiatif Green Office, kami mengintegrasikan efisiensi energi, pengelolaan limbah cerdas, dan ruang pembelajaran inovatif untuk masa depan vokasi yang lebih hijau.
+			</p>
+
+			<!-- Actions: CTA & Carousel Indicators -->
+			<div class="hero-actions" data-animate="fade-up" data-delay="300">
+				<div class="hero-cta">
+					<a href="#tentang" class="btn btn-primary btn-animated" id="hero-cta-services">
+						<svg class="btn-icon-custom" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle class="icon-bg" cx="12" cy="12" r="12" fill="white"/>
+							<path class="icon-arrow" d="M9.5 14.5L14.5 9.5M14.5 9.5H10.5M14.5 9.5V13.5" stroke="var(--btn-primary-bg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<span class="btn-text">Mulai Jelajahi</span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Carousel Indicators -->
+		<div class="hero-gallery" id="carousel-indicators" data-animate="fade-left" data-delay="400">
+			<div class="gallery-card active" data-index="0">
+				<img src="/img/bg-1.jpeg" alt="Lanskap 1" width="120" height="90" loading="eager" />
+			</div>
+			<div class="gallery-card" data-index="1">
+				<img src="/img/bg-2.jpg" alt="Lanskap 2" width="120" height="90" loading="lazy" />
+			</div>
+			<div class="gallery-card" data-index="2">
+				<img src="/img/bg-3.jpg" alt="Lanskap 3" width="120" height="90" loading="lazy" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		position: relative;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	/* Background */
+	.hero-bg {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+	}
+
+	.hero-bg img.carousel-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+	}
+
+	.hero-bg img.carousel-bg.active {
+		opacity: 1;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			105deg,
+			rgba(10, 46, 20, 0.92) 0%,
+			rgba(10, 46, 20, 0.85) 35%,
+			rgba(10, 46, 20, 0.6) 55%,
+			rgba(10, 46, 20, 0.2) 75%,
+			rgba(10, 46, 20, 0.15) 100%
+		);
+	}
+
+	/* Container */
+	.hero-container {
+		position: relative;
+		z-index: 1;
+		max-width: var(--container-max);
+		margin: 0 auto;
+		padding: 8.5rem var(--container-padding) 3rem;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 3rem;
+		align-items: center;
+		width: 100%;
+	}
+
+	/* Content */
+	.hero-content {
+		max-width: 800px;
+	}
+
+	/* Tagline Badge */
+	.hero-rating {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.5rem 1rem;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 50px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		margin-bottom: 1.5rem;
+	}
+
+	.rating-count {
+		font-size: 0.75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--white);
+	}
+
+	/* Heading */
+	.hero-heading {
+		font-family: var(--font-heading);
+		font-size: clamp(1.75rem, 4vw, 2.5rem);
+		font-weight: 600;
+		color: var(--white);
+		line-height: 1.2;
+		margin-bottom: 1.25rem;
+		letter-spacing: -0.02em;
+	}
+
+	.heading-accent {
+		display: block;
+		color: var(--gray-300);
+		font-style: italic;
+	}
+
+	/* Description */
+	.hero-description {
+		font-size: 1rem;
+		line-height: 1.7;
+		color: rgba(255, 255, 255, 0.75);
+		margin-bottom: 2rem;
+		max-width: 520px;
+	}
+
+	/* Actions */
+	.hero-actions {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2.5rem;
+		margin-top: 1rem;
+	}
+
+	/* CTA */
+	.hero-cta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+
+	/* Gallery Cards / Carousel Indicators */
+	.hero-gallery {
+		position: absolute;
+		bottom: 3rem;
+		right: var(--container-padding);
+		display: flex;
+		gap: 0.75rem;
+		z-index: 2;
+	}
+
+	.gallery-card {
+		width: 120px;
+		height: 90px;
+		border-radius: 10px;
+		overflow: hidden;
+		border: 2px solid transparent;
+		cursor: pointer;
+		transition: all var(--transition-base);
+		opacity: 0.6;
+	}
+
+	.gallery-card:hover, .gallery-card.active {
+		opacity: 1;
+		border-color: var(--white);
+		transform: translateY(-2px);
+	}
+
+	.gallery-card img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+
+
+	/* Responsive */
+	@media (min-width: 768px) {
+		.hero-heading {
+			font-size: clamp(2rem, 4vw, 3rem);
+		}
+
+		.hero-description {
+			font-size: 1.05rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.hero-container {
+			grid-template-columns: 1fr;
+			gap: 4rem;
+			padding-top: 11rem;
+			padding-bottom: 4rem;
+		}
+
+		.hero-overlay {
+			background: linear-gradient(
+				105deg,
+				rgba(10, 46, 20, 0.92) 0%,
+				rgba(10, 46, 20, 0.82) 40%,
+				rgba(10, 46, 20, 0.5) 60%,
+				rgba(10, 46, 20, 0.15) 80%,
+				rgba(10, 46, 20, 0.15) 100%
+			);
+		}
+	}
+</style>
+
+<script>
+	// Carousel Logic
+	const cards = document.querySelectorAll('.gallery-card');
+	const bgs = document.querySelectorAll('.carousel-bg');
+	
+	if (cards.length > 0 && bgs.length > 0) {
+		let currentIndex = 0;
+		let carouselInterval: ReturnType<typeof setInterval>;
+
+		function goToSlide(index: number) {
+			cards.forEach(c => c.classList.remove('active'));
+			bgs.forEach(b => b.classList.remove('active'));
+			
+			if (cards[index]) cards[index].classList.add('active');
+			if (bgs[index]) bgs[index].classList.add('active');
+			currentIndex = index;
+		}
+
+		function nextSlide() {
+			let next = currentIndex + 1;
+			if (next >= cards.length) next = 0;
+			goToSlide(next);
+		}
+
+		function startAutoplay() {
+			carouselInterval = setInterval(nextSlide, 5000);
+		}
+
+		function resetAutoplay() {
+			clearInterval(carouselInterval);
+			startAutoplay();
+		}
+
+		cards.forEach((card, index) => {
+			card.addEventListener('click', () => {
+				goToSlide(index);
+				resetAutoplay();
+			});
+		});
+
+		startAutoplay();
+	}
+</script>

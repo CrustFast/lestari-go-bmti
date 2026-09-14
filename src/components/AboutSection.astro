@@ -1,0 +1,548 @@
+---
+import LogoSection from './LogoSection.astro';
+---
+
+<section id="tentang" class="about-wrapper">
+	<!-- Logo Section at the top -->
+	<LogoSection />
+
+	<!-- Main About Section -->
+	<div class="about-container">
+		<!-- Left Image with Floating Card -->
+		<div class="about-visual" data-animate="fade-right">
+			<div class="image-wrapper">
+				<img src="img/abt-2.jpeg" alt="Petani di area green office" class="main-image" loading="lazy" />
+				
+				<!-- Floating Card -->
+				<div class="floating-card">
+					<div class="card-icon">
+						<svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+							<path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+						</svg>
+					</div>
+					<div class="card-text">
+						<span class="card-title">Transformasi</span>
+						<span class="card-subtitle">Hijau BMTI</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Right Content -->
+		<div class="about-content" data-animate="fade-left" data-delay="200">
+			<!-- Top Label -->
+			<div class="section-label">
+				<svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+					<path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+				</svg>
+				Tentang Kami & Perjalanan Transformasi
+			</div>
+
+			<!-- Heading -->
+			<h2 class="section-heading">
+				Pusat Keunggulan Vokasi yang <span class="text-accent">Bersinergi</span> dengan Alam
+			</h2>
+
+			<!-- Description -->
+			<p class="section-description">
+				Sebagai episentrum pendidikan vokasi yang mengelola kawasan kampus seluas 130.976 m², BBPPMPV BMTI memiliki tanggung jawab besar dalam menerapkan tata kelola kelembagaan yang berkelanjutan. Menghadapi tingginya beban operasional dan kebijakan rasionalisasi anggaran pada tahun 2026, kami merevolusi program peduli lingkungan menjadi instrumen efisiensi yang terukur. Kini, kami bertransformasi menjadi pelopor kampus vokasi yang rendah karbon dengan mengintegrasikan empat pilar aksi nyata:
+			</p>
+
+			<!-- Features 2x2 Grid -->
+			<div class="features-grid">
+				<div class="feature-item">
+					<span class="check-icon">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+					</span>
+					<span class="feature-text">Kemandirian Energi Terbarukan</span>
+				</div>
+				<div class="feature-item">
+					<span class="check-icon">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+					</span>
+					<span class="feature-text">Sirkularitas & Manajemen Limbah</span>
+				</div>
+				<div class="feature-item">
+					<span class="check-icon">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+					</span>
+					<span class="feature-text">Konservasi Hidrologi & Lahan</span>
+				</div>
+				<div class="feature-item">
+					<span class="check-icon">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+					</span>
+					<span class="feature-text">Ekosistem Laboratorium Hidup (Living Lab)</span>
+				</div>
+			</div>
+
+			<!-- CTA Button -->
+			<div class="about-cta">
+				<a href="#" id="btn-read-more-about" class="btn btn-primary btn-animated">
+					<svg class="btn-icon-custom" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle class="icon-bg" cx="12" cy="12" r="12" fill="white"/>
+						<path class="icon-arrow" d="M9.5 14.5L14.5 9.5M14.5 9.5H10.5M14.5 9.5V13.5" stroke="var(--btn-primary-bg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					<span class="btn-text">Baca selengkapnya</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<dialog id="about-modal" class="custom-modal" data-lenis-prevent>
+		<div class="modal-content">
+			<button class="modal-close" aria-label="Tutup Modal" id="close-about-modal">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="18" y1="6" x2="6" y2="18"></line>
+					<line x1="6" y1="6" x2="18" y2="18"></line>
+				</svg>
+			</button>
+			<div class="modal-header-img">
+				<img src="/img/bg-1.jpeg" alt="Banner Transformasi Hijau" loading="lazy" />
+			</div>
+			<div class="modal-body" data-lenis-prevent>
+				<h2>Profil & Visi Transformasi Hijau BBPPMPV BMTI</h2>
+				
+				<h3 class="modal-section-label">
+					<svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+						<path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+					</svg>
+					Kita Itu Siapa?
+				</h3>
+				<h4>Episentrum Pendidikan Vokasi Nasional</h4>
+				<p>Sebagai Unit Pelaksana Teknis di bawah Direktorat Jenderal Pendidikan Menengah, Pendidikan Khusus, dan Pendidikan Layanan Khusus, Kemdikdasmen, Balai Besar Pengembangan Penjaminan Mutu Pendidikan Vokasi Bidang Mesin dan Teknik Industri (BBPPMPV BMTI) mengemban mandat strategis untuk menjamin dan meningkatkan mutu pendidikan vokasi di Indonesia. Kami adalah kawah candradimuka bagi masa depan pendidikan vokasi dan menjadi episentrum pengembangan kompetensi di bidang mesin dan teknik industri yang menuntut standar operasional tinggi.</p>
+				<p>Dalam menjalankan mandat tersebut, BBPPMPV BMTI mengelola kawasan seluas <strong>130.976 m²</strong>. Besarnya skala operasional ini membawa tantangan tersendiri, terutama terkait tingginya beban biaya utilitas dan volume limbah teknis maupun organik yang dihasilkan setiap harinya.</p>
+				
+				<h3 class="modal-section-label">
+					<svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+						<path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+					</svg>
+					Mengapa Kami Bertransformasi?
+				</h3>
+				<h4>Keterbatasan Sebagai Katalis Inovasi</h4>
+				<p>Lahirnya komitmen transformasi Green Office ini dipercepat oleh terbitnya kebijakan efisiensi anggaran tahun 2026 yang menyebabkan penurunan pagu anggaran BBPPMPV BMTI sebesar <strong>42,7%</strong>. Namun, keterbatasan anggaran ini justru menjadi momentum strategis untuk mentransformasi Green Office dari sekadar program lingkungan menjadi alat efisiensi operasional yang terukur.</p>
+
+				<h3 class="modal-section-label">
+					<svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+						<path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+					</svg>
+					Tujuan Kita Apa?
+				</h3>
+				<h4>Menuju Keunggulan Berkelanjutan (From Efficiency to Excellence)</h4>
+				<p>Tujuan utama kami bukan sekadar mempercantik lingkungan kantor, melainkan membangun ekosistem institusi yang selaras dengan alam dan menjadikan keberlanjutan sebagai napas operasional. Kami membagi tujuan ini ke dalam beberapa fase strategis:</p>
+				<ul class="modal-list">
+					<li><strong>Jangka Pendek:</strong> Mewujudkan fondasi tata kelola dan efisiensi operasional yang cepat (Quick Wins) melalui sinkronisasi data konsumsi listrik dan air, serta optimalisasi sistem pengelolaan sampah terpilah.</li>
+					<li><strong>Jangka Menengah:</strong> Mengintegrasikan kebijakan Green Office ke dalam Sistem Penjaminan Mutu Internal (SPMI) dan operasionalisasi teknologi pengolahan limbah (seperti pirolisis).</li>
+					<li><strong>Jangka Panjang:</strong> Menjadikan BBPPMPV BMTI sebagai pusat keunggulan (center of excellence) ekosistem vokasi berbasis ekonomi sirkular dan mewujudkan kemandirian energi sebesar <strong>≥20%</strong> melalui perluasan infrastruktur energi terbarukan.</li>
+				</ul>
+				<p>Lebih dari itu, tujuan akhir kami adalah menjadikan kampus ini sebagai Laboratorium Hidup (Living Laboratory) yang inspiratif, di mana setiap praktik bengkel diintegrasikan dengan standar tata kelola rendah karbon.</p>
+			</div>
+		</div>
+	</dialog>
+</section>
+
+<style>
+	.about-wrapper {
+		background: var(--white);
+		position: relative;
+	}
+
+	.about-container {
+		max-width: var(--container-max);
+		margin: 0 auto;
+		padding: 6rem var(--container-padding);
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	/* Left Visual */
+	.about-visual {
+		position: relative;
+	}
+
+	.image-wrapper {
+		position: relative;
+		border-radius: 24px;
+		overflow: hidden;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+	}
+
+	.main-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		aspect-ratio: 4/3;
+	}
+
+	/* Floating Card */
+	.floating-card {
+		position: absolute;
+		bottom: 1.5rem;
+		left: 1.5rem;
+		background: var(--green-900);
+		color: var(--white);
+		padding: 1.25rem 1.5rem;
+		border-radius: 16px;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		box-shadow: 0 10px 25px rgba(10, 46, 20, 0.4);
+		max-width: 280px;
+	}
+
+	.card-icon {
+		color: var(--white);
+		flex-shrink: 0;
+	}
+
+	.card-title {
+		display: block;
+		font-size: 0.85rem;
+		opacity: 0.8;
+	}
+
+	.card-subtitle {
+		display: block;
+		font-weight: 600;
+		font-size: 1.05rem;
+	}
+
+	/* Right Content */
+	.section-label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--btn-primary-bg);
+		font-weight: 600;
+		font-size: 0.95rem;
+		margin-bottom: 1rem;
+	}
+
+	.section-heading {
+		font-family: var(--font-heading);
+		font-size: clamp(2rem, 3.5vw, 2.75rem);
+		font-weight: 700;
+		color: var(--green-900);
+		line-height: 1.2;
+		margin-bottom: 1.5rem;
+		letter-spacing: -0.02em;
+	}
+
+	.text-accent {
+		color: var(--green-600);
+	}
+
+	.section-description {
+		font-size: 1.05rem;
+		line-height: 1.7;
+		color: var(--gray-600);
+		margin-bottom: 2.5rem;
+	}
+
+	/* Features Grid */
+	.features-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+		margin-bottom: 3rem;
+	}
+
+	.feature-item {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.check-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background-color: var(--green-900);
+		color: var(--white);
+		flex-shrink: 0;
+	}
+
+	.feature-text {
+		font-weight: 600;
+		color: var(--gray-800);
+		font-size: 1rem;
+	}
+
+	/* CTA overrides */
+	.about-cta .btn-animated {
+		width: 220px; /* Wider because text is "Baca selengkapnya" */
+	}
+
+	/* Responsive */
+	@media (min-width: 768px) {
+		.features-grid {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.floating-card {
+			bottom: 2rem;
+			left: 2rem;
+			padding: 1.5rem 2rem;
+		}
+	}
+
+	/* Modal Styles */
+	.custom-modal {
+		border: none;
+		border-radius: 16px;
+		background: var(--white);
+		padding: 0;
+		max-width: 1000px; /* Made wider for split layout */
+		width: 90%;
+		max-height: 90vh;
+		margin: auto;
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+		overflow: hidden;
+		opacity: 0;
+		transform: translateY(20px) scale(0.95);
+		transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.custom-modal[open] {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+
+	.custom-modal.is-closing {
+		opacity: 0;
+		transform: translateY(20px) scale(0.95);
+	}
+
+	@starting-style {
+		.custom-modal[open] {
+			opacity: 0;
+			transform: translateY(20px) scale(0.95);
+		}
+	}
+
+	.custom-modal::backdrop {
+		background: rgba(10, 46, 20, 0.6); /* dark green overlay */
+		backdrop-filter: blur(4px);
+		opacity: 0;
+		transition: opacity 0.4s ease-out;
+	}
+
+	.custom-modal[open]::backdrop {
+		opacity: 1;
+	}
+
+	.custom-modal.is-closing::backdrop {
+		opacity: 0;
+	}
+
+	@starting-style {
+		.custom-modal[open]::backdrop {
+			opacity: 0;
+		}
+	}
+
+	.modal-content {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		max-height: 90vh;
+	}
+
+	.modal-close {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 10;
+		background: rgba(255, 255, 255, 0.9);
+		border: none;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		color: var(--gray-800);
+		transition: all 0.2s ease;
+	}
+
+	.modal-close:hover {
+		background: var(--green-600);
+		color: var(--white);
+		transform: scale(1.1);
+	}
+
+	.modal-header-img {
+		width: 100%;
+		height: 250px;
+		flex-shrink: 0;
+	}
+
+	.modal-header-img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.modal-body {
+		padding: 2.5rem;
+		overflow-y: auto;
+		color: var(--gray-700);
+		line-height: 1.8;
+	}
+
+	.modal-body h2 {
+		color: var(--green-900);
+		font-size: 2rem;
+		margin-bottom: 1.5rem; /* Reduced from 2rem */
+		font-family: var(--font-heading);
+		letter-spacing: -0.02em;
+		line-height: 1.3;
+	}
+
+	.modal-section-label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--btn-primary-bg);
+		font-weight: 600;
+		font-size: 0.95rem;
+		margin-top: 1.75rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.modal-body h4 {
+		color: var(--gray-900);
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem; /* Reduced from 1rem */
+		font-weight: 600;
+	}
+
+	.modal-body p {
+		margin-bottom: 1rem; /* Reduced from 1.25rem */
+	}
+
+	.modal-list {
+		padding-left: 0;
+		margin-bottom: 1.5rem;
+		list-style: none;
+	}
+
+	.modal-list li {
+		margin-bottom: 0.75rem;
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.modal-list li::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 10px; /* Vertically centered with the first line of text */
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: var(--green-600);
+	}
+
+	.modal-list li strong {
+		color: var(--green-800);
+	}
+
+	@media (max-width: 768px) {
+		.modal-header-img {
+			height: 200px;
+		}
+		.modal-body {
+			padding: 1.5rem;
+		}
+		.modal-body h2 {
+			font-size: 1.5rem;
+		}
+	}
+
+	/* Desktop Split Modal (40:60) */
+	@media (min-width: 992px) {
+		.modal-content {
+			flex-direction: row;
+			height: 80vh; /* Fixed height for inner scroll */
+			max-height: 700px;
+		}
+
+		.modal-header-img {
+			width: 40%;
+			height: 100%;
+			padding: 1.5rem 0 1.5rem 1.5rem; /* Gap around image */
+		}
+		
+		.modal-header-img img {
+			border-radius: 12px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+		}
+
+		.modal-body {
+			width: 60%;
+			height: 100%; /* Force height to enable scrollbar inside body */
+			padding: 3rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.about-container {
+			grid-template-columns: 1fr 1fr;
+			gap: 5rem;
+		}
+
+		.main-image {
+			aspect-ratio: 1/1; /* Squarish */
+		}
+	}
+</style>
+
+<script>
+	const readMoreBtn = document.getElementById('btn-read-more-about');
+	const aboutModal = document.getElementById('about-modal') as HTMLDialogElement;
+	const closeModalBtn = document.getElementById('close-about-modal');
+
+	if (readMoreBtn && aboutModal && closeModalBtn) {
+		const closeModal = () => {
+			aboutModal.classList.add('is-closing');
+			
+			// Use setTimeout to ensure transition finishes before HTMLDialogElement.close()
+			setTimeout(() => {
+				aboutModal.classList.remove('is-closing');
+				aboutModal.close();
+				document.body.style.overflow = '';
+			}, 400); // match the 0.4s CSS transition
+		};
+
+		// Open modal
+		readMoreBtn.addEventListener('click', (e) => {
+			e.preventDefault();
+			aboutModal.showModal();
+			document.body.style.overflow = 'hidden'; // Prevent background scrolling
+		});
+
+		// Close modal with button
+		closeModalBtn.addEventListener('click', closeModal);
+
+		// Close when clicking outside the modal content (on the backdrop)
+		aboutModal.addEventListener('click', (e) => {
+			if (e.target === aboutModal) {
+				closeModal();
+			}
+		});
+	}
+</script>

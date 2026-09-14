@@ -1,0 +1,611 @@
+---
+const benefits = [
+	{
+		icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>`, // Wallet
+		title: 'Efisiensi Anggaran Berkinerja',
+		description: 'Tercapainya efisiensi anggaran operasional yang diukur melalui optimasi penggunaan energi dan pengelolaan limbah.',
+		linkText: 'Baca Selengkapnya',
+		modalImg: '/img/abt-2.jpeg',
+		modalPoints: [
+			{ title: 'Optimalisasi Belanja Negara', text: 'Program ini memastikan tercapainya efisiensi anggaran operasional yang diukur melalui optimasi penggunaan energi, pengelolaan limbah, dan pemeliharaan sarana prasarana sebagai langkah strategis dalam menanggapi kebijakan penajaman belanja negara.' },
+			{ title: 'Penguatan Tata Kelola Berstandar Mutu', text: 'Efisiensi ini bukan sekadar pemotongan biaya, melainkan wujud tata kelola lingkungan kerja yang terstandarisasi, transparan, dan berkelanjutan. Sistem ini terintegrasi secara holistik ke dalam sistem penjaminan mutu serta evaluasi kinerja instansi.' }
+		]
+	},
+	{
+		icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`, // Energy/Solar
+		title: 'Optimalisasi Aset Berkelanjutan',
+		description: 'Meningkatkan nilai guna investasi melalui pemanfaatan infrastruktur ramah lingkungan seperti PLTS, PLTB, dan biogas guna menekan jejak karbon institusi.',
+		linkText: 'Baca Selengkapnya',
+		modalImg: '/img/bg-1.jpeg',
+		modalPoints: [
+			{ title: 'Pemanfaatan Infrastruktur Hijau', text: 'BBPPMPV BMTI meningkatkan nilai guna investasi melalui pemanfaatan maksimal infrastruktur ramah lingkungan. Ini mencakup optimalisasi PLTS, PLTB, PLTMH, instalasi biogas, dan stasiun pengisian kendaraan listrik.' },
+			{ title: 'Penurunan Jejak Karbon', text: 'Langkah optimalisasi aset ini secara langsung menekan ketergantungan operasional kampus pada sumber energi konvensional, yang pada akhirnya menurunkan jejak karbon institusi secara signifikan.' }
+		]
+	},
+	{
+		icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>`, // Shield/Health
+		title: 'Kualitas Lingkungan (Well-being)',
+		description: 'Terciptanya atmosfer kerja yang lebih sehat, nyaman, dan aman melalui manajemen limbah yang sistematis serta mitigasi risiko proaktif.',
+		linkText: 'Baca Selengkapnya',
+		modalImg: '/img/abt-2.jpeg',
+		modalPoints: [
+			{ title: 'Kesehatan dan Keselamatan Kerja', text: 'Terciptanya atmosfer kerja yang lebih sehat, nyaman, dan aman. Hal ini dicapai melalui manajemen limbah yang sistematis, pengendalian polusi, serta mitigasi risiko lingkungan (seperti pengelolaan vegetasi) yang proaktif.' },
+			{ title: 'Peningkatan Produktivitas', text: 'Ekosistem kerja yang kondusif, segar, dan estetik secara langsung berkontribusi pada peningkatan kesehatan fisik, kesejahteraan mental, dan motivasi kerja pegawai dalam memberikan layanan pendidikan yang prima.' },
+			{ title: 'Internalisasi Budaya Hijau', text: 'Terbentuknya kebiasaan hemat energi dan ramah lingkungan yang mengakar kuat dalam setiap prosedur standar operasional (SOP) serta rutinitas harian seluruh warga kampus.' }
+		]
+	},
+	{
+		icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>`, // Microscope
+		title: 'Fasilitas Living Laboratory',
+		description: 'Menjadikan ekosistem di lingkungan BBPPMPV BMTI sebagai media pembelajaran nyata yang komprehensif bagi para peserta diklat.',
+		linkText: 'Baca Selengkapnya',
+		modalImg: '/img/bg-1.jpeg',
+		modalPoints: [
+			{ title: 'Media Pembelajaran Komprehensif', text: 'Menjadikan ekosistem di lingkungan BBPPMPV BMTI sebagai media pembelajaran nyata (Living Laboratory) yang komprehensif bagi peserta diklat.' },
+			{ title: 'Praktik Langsung 3R & Adaptasi Iklim', text: 'Peserta dapat mengimplementasikan langsung prinsip 3R (Reduce, Reuse, Recycle), efisiensi energi, dan strategi adaptasi perubahan iklim. Praktik baik ini dapat direplikasi langsung pada satuan pendidikan maupun dunia industri asal mereka.' },
+			{ title: 'Literasi Ekologis', text: 'Meningkatkan kompetensi serta kesadaran ekologis pegawai dan peserta melalui partisipasi aktif dalam program pemantauan energi dan aksi pelestarian lingkungan.' }
+		]
+	},
+	{
+		icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>`,
+		title: 'Rujukan Vokasi Nasional',
+		description: 'Memposisikan lembaga sebagai pionir pendidikan vokasi yang adaptif, sehingga menjadi benchmark (rujukan) nasional dalam praktik tata kelola ramah lingkungan.',
+		linkText: 'Baca Selengkapnya',
+		modalImg: '/img/abt-2.jpeg',
+		modalPoints: [
+			{ title: 'Pionir Pendidikan Adaptif', text: 'Memposisikan BBPPMPV BMTI sebagai UPT pendidikan vokasi pelopor yang inovatif dan adaptif, sehingga menjadi benchmark (rujukan) nasional dalam implementasi praktik Green Office.' },
+			{ title: 'Penyediaan Model Replikasi', text: 'Menghadirkan prototipe efisiensi operasional dan program lingkungan yang dapat direplikasi oleh satuan kerja lain dalam optimalisasi sumber daya. Model ini membuktikan bahwa efisiensi bisa dilakukan tanpa mengabaikan kualitas layanan publik.' },
+			{ title: 'Akselerasi Kemitraan', text: 'Membuka peluang sinergi kemitraan dengan berbagai pihak, termasuk Pemerintah Daerah, komunitas lingkungan, dan sektor swasta, guna membangun ekosistem pendidikan vokasi yang tangguh.' }
+		]
+	},
+	{
+		icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`, // Globe
+		title: 'Kontribusi SDGs & Asta Cita',
+		description: 'Memberikan kontribusi nyata dalam pencapaian target SDGs global serta mendukung prioritas nasional terkait kemandirian energi dan air.',
+		linkText: 'Baca Selengkapnya',
+		modalImg: '/img/bg-1.jpeg',
+		modalPoints: [
+			{ title: 'Dukungan Tujuan Pembangunan Berkelanjutan (SDGs)', text: 'Memberikan kontribusi nyata pada pencapaian SDGs global, khususnya Tujuan 7 (Energi Bersih), Tujuan 9 (Inovasi & Infrastruktur), Tujuan 11 (Permukiman Berkelanjutan), Tujuan 12 (Konsumsi Bertanggung Jawab), serta Tujuan 13 (Penanganan Perubahan Iklim).' },
+			{ title: 'Keselarasan Prioritas Nasional', text: 'Mendukung implementasi Asta Cita ke-2 (Kemandirian Energi dan Air) dan Asta Cita ke-4 (Penguatan SDM dan Pendidikan). Program ini juga mengintegrasikan nilai-nilai Gerakan Indonesia ASRI dalam operasional pendidikan vokasi.' },
+			{ title: 'Transisi Pemerintahan Rendah Karbon', text: 'Memperkuat komitmen nasional dalam mewujudkan tata kelola pemerintahan rendah karbon (low-carbon governance) serta mengarusutamakan praktik sirkular ekonomi.' }
+		]
+	}
+];
+---
+
+<section id="manfaat" class="benefits-section">
+	<div class="bg-overlay"></div>
+	
+	<div class="benefits-container">
+		<!-- Header Section -->
+		<div class="benefits-header" data-animate="fade-up">
+			<div class="header-left">
+				<div class="section-label">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+						<path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+					</svg>
+					Manfaat Program
+				</div>
+				<h2 class="section-heading">Nilai Tambah & Dampak Strategis Green Office</h2>
+			</div>
+			<div class="header-right">
+				<p class="section-description">
+					Implementasi peta jalan ini dirancang untuk memberikan dampak operasional yang berkelanjutan, menciptakan ekosistem kampus yang tangguh bagi seluruh pemangku kepentingan.
+				</p>
+			</div>
+		</div>
+
+		<!-- Cards Grid -->
+		<div class="benefits-grid">
+			{benefits.map((item, index) => (
+				<div class="benefit-card" data-animate="fade-up" data-delay={index * 100}>
+					<div class="card-icon-box" set:html={item.icon}></div>
+					<h3 class="card-title">{item.title}</h3>
+					<p class="card-desc">{item.description}</p>
+					<button class="card-link benefit-read-more" data-modal={`benefit-modal-${index}`}>
+						<span class="link-text">{item.linkText}</span>
+						<span class="arrow-icon">➔</span>
+					</button>
+				</div>
+			))}
+		</div>
+	</div>
+
+	<!-- Modals for Benefits -->
+	{benefits.map((item, index) => (
+		<dialog id={`benefit-modal-${index}`} class="custom-modal benefit-modal" data-lenis-prevent>
+			<div class="modal-content">
+				<button class="modal-close close-benefit-modal" aria-label="Tutup Modal" data-target={`benefit-modal-${index}`}>
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<line x1="18" y1="6" x2="6" y2="18"></line>
+						<line x1="6" y1="6" x2="18" y2="18"></line>
+					</svg>
+				</button>
+				<div class="modal-header-img">
+					<img src={item.modalImg} alt={item.title} loading="lazy" />
+				</div>
+				<div class="modal-body" data-lenis-prevent>
+					<h2>{item.title}</h2>
+					
+					{item.modalPoints.map((point) => (
+						<>
+							<div class="modal-section-label">
+								<svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+									<path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+								</svg>
+								{point.title}
+							</div>
+							<p>{point.text}</p>
+						</>
+					))}
+				</div>
+			</div>
+		</dialog>
+	))}
+</section>
+
+<style>
+	.benefits-section {
+		position: relative;
+		padding: 4.5rem 0;
+		/* Parallax Background */
+		background-image: url('/img/manfaat-1.jpeg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed; /* This creates the parallax effect */
+		background-repeat: no-repeat;
+	}
+
+	/* Light overlay to ensure text is readable since the bg is bright */
+	.bg-overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(245, 248, 245, 0.92); /* Very light, slightly green-tinted white overlay */
+		z-index: 1;
+	}
+
+	.benefits-container {
+		max-width: var(--container-max);
+		margin: 0 auto;
+		padding: 0 var(--container-padding);
+		position: relative;
+		z-index: 2;
+	}
+
+	/* Header */
+	.benefits-header {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.header-left {
+		flex: 1;
+		max-width: 600px;
+	}
+
+	.section-label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--green-600);
+		font-weight: 700;
+		font-size: 0.8rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
+	}
+
+	.section-heading {
+		font-family: var(--font-heading);
+		font-size: clamp(1.75rem, 3vw, 2.25rem);
+		font-weight: 700;
+		color: var(--gray-900);
+		line-height: 1.2;
+		margin: 0;
+	}
+
+	.header-right {
+		flex: 1;
+		display: flex;
+		align-items: center;
+	}
+
+	.section-description {
+		font-size: 1.05rem;
+		line-height: 1.7;
+		color: var(--gray-600);
+		margin: 0;
+		max-width: 500px;
+	}
+
+	/* Grid */
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	/* Card */
+	.benefit-card {
+		background: var(--white);
+		padding: 1.5rem;
+		border-radius: 16px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+	}
+
+	/* Card Hover State */
+	.benefit-card:hover {
+		background: var(--green-900);
+		transform: translateY(-5px);
+		box-shadow: 0 20px 40px rgba(10, 46, 20, 0.15);
+	}
+
+	/* Icon Box */
+	.card-icon-box {
+		width: 44px;
+		height: 44px;
+		background: var(--green-900);
+		color: var(--white);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1.25rem;
+		transition: all 0.4s ease;
+	}
+
+	.card-icon-box :global(svg) {
+		width: 22px;
+		height: 22px;
+	}
+
+	.benefit-card:hover .card-icon-box {
+		background: var(--white);
+		color: var(--green-600);
+	}
+
+	/* Typography */
+	.card-title {
+		font-size: 1.05rem;
+		font-weight: 700;
+		color: var(--gray-900);
+		margin-bottom: 0.75rem;
+		transition: color 0.4s ease;
+	}
+
+	.benefit-card:hover .card-title {
+		color: var(--white);
+	}
+
+	.card-desc {
+		font-size: 0.85rem;
+		line-height: 1.6;
+		color: var(--gray-600);
+		margin-bottom: 1.5rem;
+		flex-grow: 1;
+		transition: color 0.4s ease;
+	}
+
+	.benefit-card:hover .card-desc {
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	/* Link */
+	.card-link {
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: var(--green-600);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		transition: color 0.4s ease;
+		cursor: pointer;
+		background: none;
+		border: none;
+		padding: 0;
+		font-family: inherit;
+		margin-top: auto;
+		z-index: 2;
+	}
+
+	.link-text {
+		position: relative;
+	}
+
+	.link-text::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: var(--white);
+		transition: width 0.3s ease;
+		border-radius: 2px;
+	}
+
+	.arrow-icon {
+		display: inline-block;
+		transition: transform 0.3s ease;
+	}
+
+	.benefit-card:hover .card-link {
+		color: var(--white);
+	}
+
+	.benefit-card:hover .link-text::after {
+		width: 100%;
+	}
+
+	.benefit-card:hover .arrow-icon {
+		transform: translateX(4px);
+	}
+
+	/* Shared Modal Styles */
+	.custom-modal {
+		border: none;
+		border-radius: 16px;
+		background: var(--white);
+		padding: 0;
+		max-width: 1000px; /* Split layout width */
+		width: 90%;
+		max-height: 90vh;
+		margin: auto;
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+		overflow: hidden;
+		opacity: 0;
+		transform: translateY(20px) scale(0.95);
+		transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.custom-modal[open] {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+
+	.custom-modal.is-closing {
+		opacity: 0;
+		transform: translateY(20px) scale(0.95);
+	}
+
+	@starting-style {
+		.custom-modal[open] {
+			opacity: 0;
+			transform: translateY(20px) scale(0.95);
+		}
+	}
+
+	.custom-modal::backdrop {
+		background: rgba(10, 46, 20, 0.6);
+		backdrop-filter: blur(4px);
+		opacity: 0;
+		transition: opacity 0.4s ease-out;
+	}
+
+	.custom-modal[open]::backdrop {
+		opacity: 1;
+	}
+
+	.custom-modal.is-closing::backdrop {
+		opacity: 0;
+	}
+
+	@starting-style {
+		.custom-modal[open]::backdrop {
+			opacity: 0;
+		}
+	}
+
+	.modal-content {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		max-height: 90vh;
+	}
+
+	.modal-close {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 10;
+		background: rgba(255, 255, 255, 0.9);
+		border: none;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		color: var(--gray-800);
+		transition: all 0.2s ease;
+	}
+
+	.modal-close:hover {
+		background: var(--green-600);
+		color: var(--white);
+		transform: scale(1.1);
+	}
+
+	.modal-header-img {
+		width: 100%;
+		height: 250px;
+		flex-shrink: 0;
+	}
+
+	.modal-header-img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.modal-body {
+		padding: 2.5rem;
+		overflow-y: auto;
+		color: var(--gray-700);
+		line-height: 1.8;
+	}
+
+	.modal-body h2 {
+		color: var(--green-900);
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+		font-family: var(--font-heading);
+		letter-spacing: -0.02em;
+		line-height: 1.3;
+	}
+
+	.modal-section-label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--btn-primary-bg);
+		font-weight: 600;
+		font-size: 0.95rem;
+		margin-top: 1.75rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.modal-body p {
+		margin-bottom: 1rem;
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.benefits-header {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.benefits-header .header-left,
+		.benefits-header .header-right {
+			max-width: 100%;
+		}
+
+		.section-label {
+			justify-content: center;
+		}
+
+		.modal-header-img {
+			height: 200px;
+		}
+		
+		.modal-body {
+			padding: 1.5rem;
+		}
+		
+		.modal-body h2 {
+			font-size: 1.5rem;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.benefits-header {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+
+		.header-right {
+			justify-content: flex-end;
+			padding-bottom: 0.5rem;
+		}
+
+		.benefits-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 992px) {
+		.modal-content {
+			flex-direction: row;
+			height: 80vh;
+			max-height: 700px;
+		}
+
+		.modal-header-img {
+			width: 40%;
+			height: 100%;
+			padding: 1.5rem 0 1.5rem 1.5rem;
+		}
+		
+		.modal-header-img img {
+			border-radius: 12px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+		}
+
+		.modal-body {
+			width: 60%;
+			height: 100%;
+			padding: 3rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.benefits-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+</style>
+
+<script>
+	const benefitBtns = document.querySelectorAll('.benefit-read-more');
+	const closeBtns = document.querySelectorAll('.close-benefit-modal');
+
+	benefitBtns.forEach(btn => {
+		btn.addEventListener('click', (e) => {
+			e.preventDefault();
+			const targetId = btn.getAttribute('data-modal');
+			if (targetId) {
+				const modal = document.getElementById(targetId) as HTMLDialogElement;
+				if (modal) {
+					modal.showModal();
+					document.body.style.overflow = 'hidden';
+				}
+			}
+		});
+	});
+
+	closeBtns.forEach(btn => {
+		btn.addEventListener('click', () => {
+			const targetId = btn.getAttribute('data-target');
+			if (targetId) {
+				const modal = document.getElementById(targetId) as HTMLDialogElement;
+				if (modal) {
+					modal.classList.add('is-closing');
+					setTimeout(() => {
+						modal.classList.remove('is-closing');
+						modal.close();
+						document.body.style.overflow = '';
+					}, 400);
+				}
+			}
+		});
+	});
+
+	// Close on backdrop click for all benefit modals
+	const modals = document.querySelectorAll('.benefit-modal');
+	modals.forEach(modal => {
+		modal.addEventListener('click', (e) => {
+			if (e.target === modal) {
+				modal.classList.add('is-closing');
+				setTimeout(() => {
+					modal.classList.remove('is-closing');
+					(modal as HTMLDialogElement).close();
+					document.body.style.overflow = '';
+				}, 400);
+			}
+		});
+	});
+</script>

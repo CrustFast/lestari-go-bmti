@@ -1,0 +1,60 @@
+---
+---
+
+<section class="logo-section" data-animate="fade-up">
+	<div class="logo-container">
+		<img src="/img/logo/tut-wuri-handayani.png" alt="Tut Wuri Handayani" class="partner-logo logo-kemdikbud" loading="lazy" />
+		<img src="/img/logo/Logo-Cimahi.png" alt="Dinas Lingkungan Hidup Cimahi" class="partner-logo logo-cimahi" loading="lazy" />
+		<img src="/img/logo/logo-indonesia_asri.png" alt="Indonesia Asri" class="partner-logo logo-asri" loading="lazy" />
+		<img src="/img/logo/dudi-logo.png" alt="Dunia Usaha Dunia Industri" class="partner-logo logo-dudi" loading="lazy" />
+	</div>
+</section>
+
+<style>
+	.logo-section {
+		padding: 4rem var(--container-padding);
+		background: var(--white);
+	}
+
+	.logo-container {
+		max-width: var(--container-max);
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.partner-logo {
+		opacity: 0.6;
+		transition: opacity var(--transition-base), transform var(--transition-base), filter var(--transition-base);
+		filter: grayscale(100%);
+		object-fit: contain;
+	}
+
+	/* Individual sizing for visual balance (mobile base) */
+	.logo-kemdikbud { height: 55px; }
+	.logo-cimahi { height: 55px; } 
+	.logo-asri { height: 55px; }
+	.logo-dudi { height: 48px; }
+
+	.partner-logo:hover {
+		opacity: 1;
+		filter: grayscale(0%);
+		transform: translateY(-2px);
+	}
+
+	@media (min-width: 768px) {
+		.logo-container {
+			justify-content: center;
+			gap: 10rem;
+		}
+		
+		/* Visual balance for desktop */
+		.logo-kemdikbud { height: 80px; }
+		.logo-cimahi { height: 80px; }
+		.logo-asri { height: 80px; }
+		.logo-dudi { height: 70px; }
+	}
+</style>

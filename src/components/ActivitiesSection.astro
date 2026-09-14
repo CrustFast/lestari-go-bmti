@@ -1,0 +1,477 @@
+---
+const activities = [
+	{
+		title: 'Optimalisasi Energi Terbarukan',
+		date: '10-09-2026',
+		description: 'Mengoperasikan fasilitas PLTS dan PLTB sebagai sumber energi penerangan kawasan yang terintegrasi dengan modul praktikum Project-Based Learning (PjBL) bagi peserta diklat.',
+		image: '/img/bg-2.jpg',
+		icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`
+	},
+	{
+		title: 'Pengelolaan Sampah Terpilah',
+		date: '12-09-2026',
+		description: 'Mengaktifkan titik pengumpulan sampah terpilah (Green Point) di zona asrama, perkantoran, dan bengkel dengan alur angkut yang terjadwal menuju TPSS.',
+		image: '/img/abt-1.jpeg',
+		icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>`
+	},
+	{
+		title: 'Pembangunan Fasilitas Resapan',
+		date: '15-09-2026',
+		description: 'Mengonstruksi 20 lubang biopori dan sumur resapan pada titik-titik rawan genangan untuk mendukung konservasi air tanah di kawasan institusi.',
+		image: '/img/bg-3.jpg',
+		icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>`
+	},
+	{
+		title: 'Inovasi Teknologi Pirolisis',
+		date: '18-09-2026',
+		description: 'Merancang unit percontohan teknologi pirolisis guna mengonversi limbah plastik menjadi bahan bakar sebagai media inovasi pembelajaran di lingkungan Balai.',
+		image: '/img/abt-2.jpeg',
+		icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2-9 5 18 2-9h5"/></svg>`
+	}
+];
+---
+
+<section id="aktivitas" class="activities-section">
+	<div class="activities-container">
+		<!-- Header -->
+		<div class="activities-header" data-animate="fade-up">
+			<div class="header-left">
+				<div class="section-label">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<circle cx="12" cy="12" r="3"></circle>
+						<path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+					</svg>
+					Aksi & Implementasi
+				</div>
+				<h2 class="section-heading">
+					Inisiatif Nyata untuk<br>
+					<span class="heading-light">Mewujudkan Kampus Hijau</span>
+				</h2>
+			</div>
+			<div class="header-right">
+				<button class="nav-btn prev-btn" aria-label="Previous">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+				</button>
+				<button class="nav-btn next-btn" aria-label="Next">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+				</button>
+			</div>
+		</div>
+
+		<!-- Carousel Track -->
+		<div class="carousel-wrapper" data-animate="fade-up" data-delay="200">
+			<div class="carousel-track" id="activities-track">
+				{activities.map((item, index) => (
+					<div class="activity-card">
+						<div class="card-image-wrapper">
+							<img src={item.image} alt={item.title} class="card-image" loading="lazy" />
+							<div class="card-date">{item.date}</div>
+						</div>
+						<div class="card-content">
+							<h3 class="card-title">{item.title}</h3>
+							<p class="card-desc">{item.description}</p>
+							<a href="#" class="card-link">
+								<span class="link-text">Baca Selengkapnya</span>
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+							</a>
+						</div>
+						<!-- Floating bottom right icon -->
+						<div class={`card-floating-icon ${index % 2 === 0 ? 'bg-green' : 'bg-white'}`} set:html={item.icon}></div>
+					</div>
+				))}
+				
+				<!-- View All Card -->
+				<a href="/aktivitas" class="activity-card view-all-card">
+					<div class="view-all-content">
+						<div class="view-all-icon">
+							<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M5 12h14M12 5l7 7-7 7"/>
+							</svg>
+						</div>
+						<span class="view-all-text">Lihat semua aktivitas</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.activities-section {
+		padding: 5rem 0;
+		background-color: #f8faf9; /* Light gray-green background to contrast white cards */
+		overflow: hidden;
+	}
+
+	.activities-container {
+		max-width: var(--container-max);
+		margin: 0 auto;
+		padding: 0 var(--container-padding);
+	}
+
+	/* Header */
+	.activities-header {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	@media (min-width: 768px) {
+		.activities-header {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+	}
+
+	.section-label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--green-600);
+		font-weight: 700;
+		font-size: 0.8rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
+	}
+
+	.section-heading {
+		font-family: var(--font-heading);
+		font-size: clamp(2rem, 3.5vw, 2.75rem);
+		font-weight: 800;
+		color: var(--green-900);
+		line-height: 1.1;
+		margin: 0;
+		letter-spacing: -0.02em;
+	}
+
+	.heading-light {
+		color: var(--gray-400);
+	}
+
+	/* Navigation */
+	.header-right {
+		display: flex;
+		gap: 1rem;
+	}
+
+	/* View All Card */
+	.view-all-card {
+		background: var(--green-50, #f0fdf4);
+		color: var(--green-600);
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		border: 1px dashed var(--green-200, #bbf7d0);
+	}
+
+	.view-all-card:hover {
+		background: var(--green-600);
+		color: var(--white);
+	}
+
+	.view-all-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.view-all-icon {
+		width: 72px;
+		height: 72px;
+		background: var(--green-600);
+		color: var(--white);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, color 0.4s ease;
+		box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4);
+		animation: pulse-green 2s infinite;
+	}
+
+	@keyframes pulse-green {
+		0% {
+			transform: scale(0.95);
+			box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4);
+		}
+		70% {
+			transform: scale(1);
+			box-shadow: 0 0 0 15px rgba(22, 163, 74, 0);
+		}
+		100% {
+			transform: scale(0.95);
+			box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+		}
+	}
+
+	.view-all-card:hover .view-all-icon {
+		background: var(--white);
+		color: var(--green-600);
+		transform: translateX(10px) scale(1);
+		box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+		animation: none;
+	}
+
+	.view-all-text {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: inherit;
+		text-align: center;
+		line-height: 1.4;
+	}
+
+	.nav-btn {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease;
+		background: var(--white);
+		color: var(--green-600);
+		border: 1px solid var(--gray-200);
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+	}
+
+	.nav-btn:hover {
+		background: var(--green-600);
+		color: var(--white);
+		border-color: var(--green-600);
+		transform: translateY(-2px);
+	}
+
+	.next-btn {
+		background: var(--green-600);
+		color: var(--white);
+		border: none;
+		box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4);
+		animation: pulse-green 2s infinite;
+	}
+	
+	.next-btn:hover {
+		background: var(--green-700);
+		animation: none;
+	}
+
+	/* Carousel */
+	.carousel-wrapper {
+		position: relative;
+		margin-right: calc(var(--container-padding) * -1); /* Let it bleed to the right edge */
+		padding-right: var(--container-padding);
+	}
+
+	.carousel-track {
+		display: flex;
+		gap: 1.5rem;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none;  /* IE and Edge */
+		padding-bottom: 2rem; /* space for box shadows */
+		scroll-behavior: smooth;
+	}
+
+	.carousel-track::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Card */
+	.activity-card {
+		flex: 0 0 85%;
+		max-width: 380px;
+		background: var(--white);
+		border-radius: 20px;
+		padding: 1.25rem;
+		scroll-snap-align: start;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	@media (min-width: 768px) {
+		.activity-card {
+			flex: 0 0 calc(33.333% - 1rem);
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.activity-card {
+			flex: 0 0 calc(25% - 1.125rem); /* roughly 4 cards visible */
+		}
+	}
+
+	.activity-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+	}
+
+	.card-image-wrapper {
+		position: relative;
+		width: 100%;
+		height: 200px;
+		border-radius: 14px;
+		overflow: hidden;
+		margin-bottom: 1.5rem;
+	}
+
+	.card-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.5s ease;
+	}
+
+	.activity-card:hover .card-image {
+		transform: scale(1.05);
+	}
+
+	.card-date {
+		position: absolute;
+		bottom: 12px;
+		left: 12px;
+		background: rgba(255, 255, 255, 0.9);
+		backdrop-filter: blur(4px);
+		padding: 0.35rem 0.75rem;
+		border-radius: 50px;
+		font-size: 0.75rem;
+		font-weight: 700;
+		color: var(--green-700);
+		letter-spacing: 0.02em;
+	}
+
+	.card-content {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding-bottom: 1.5rem; /* Space for the floating icon */
+	}
+
+	.card-title {
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: var(--gray-900);
+		margin-bottom: 0.75rem;
+		line-height: 1.4;
+	}
+
+	.card-desc {
+		font-size: 0.85rem;
+		line-height: 1.6;
+		color: var(--gray-600);
+		margin-bottom: 1.5rem;
+		flex-grow: 1;
+	}
+
+	.card-link {
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: var(--gray-900);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		transition: color 0.3s ease;
+		margin-top: auto;
+		text-decoration: none;
+	}
+	
+	.link-text {
+		position: relative;
+	}
+
+	.link-text::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: var(--green-600);
+		transition: width 0.3s ease;
+		border-radius: 2px;
+	}
+
+	.card-link svg {
+		color: var(--green-600);
+		transition: transform 0.3s ease;
+	}
+
+	.activity-card:hover .card-link {
+		color: var(--green-600);
+	}
+
+	.activity-card:hover .link-text::after {
+		width: 100%;
+	}
+
+	.activity-card:hover .card-link svg {
+		transform: translate(2px, -2px);
+	}
+
+	/* Floating Bottom Right Icon */
+	.card-floating-icon {
+		position: absolute;
+		bottom: -15px;
+		right: -15px;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+		transition: transform 0.3s ease;
+	}
+
+	.activity-card:hover .card-floating-icon {
+		transform: scale(1.1);
+	}
+
+	.bg-green {
+		background: var(--green-600);
+		color: var(--white);
+	}
+
+	.bg-white {
+		background: var(--white);
+		color: var(--green-600);
+		border: 1px solid var(--gray-100);
+	}
+
+</style>
+
+<script>
+	// Setup carousel navigation
+	document.addEventListener('DOMContentLoaded', () => {
+		const track = document.getElementById('activities-track');
+		const prevBtn = document.querySelector('.prev-btn');
+		const nextBtn = document.querySelector('.next-btn');
+
+		if (track && prevBtn && nextBtn) {
+			const getScrollAmount = () => {
+				const card = track.querySelector('.activity-card');
+				if (card) {
+					// card width + gap
+					return card.getBoundingClientRect().width + 24; 
+				}
+				return 300;
+			};
+
+			nextBtn.addEventListener('click', () => {
+				track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+			});
+
+			prevBtn.addEventListener('click', () => {
+				track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+			});
+		}
+	});
+</script>

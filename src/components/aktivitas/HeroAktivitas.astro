@@ -1,0 +1,410 @@
+---
+const carouselItems = [
+	{
+		image: '/img/bg-1.jpeg',
+		label: 'INFRASTRUKTUR HIJAU',
+		title: 'Optimalisasi Energi Terbarukan: BMTI Integrasikan PLTS 20,8 kW dan PLTB untuk Kemandirian Energi',
+		excerpt: 'Langkah nyata BBPPMPV BMTI mengoperasikan infrastruktur energi terbarukan melalui Smart Energy Management System (SEMS) guna mengurangi ketergantungan pada listrik konvensional secara terukur.',
+		date: 'Rabu, 9 September 2026',
+		author: 'Tim Lestari'
+	},
+	{
+		image: '/img/bg-2.jpg',
+		label: 'INFRASTRUKTUR HIJAU',
+		title: 'Ubah Tantangan Menjadi Peluang: BMTI Rancang Prototipe Teknologi Pirolisis',
+		excerpt: 'Mengubah sampah plastik menjadi bahan bakar cair alternatif sebagai fasilitas percontohan dan media inovasi pembelajaran praktik bengkel.',
+		date: 'Selasa, 8 September 2026',
+		author: 'Tim Lestari'
+	},
+	{
+		image: '/img/bg-3.jpg',
+		label: 'PENGUATAN SDM',
+		title: 'Integrasi Kurikulum Hijau, BMTI Jadikan Praktik Bengkel sebagai Living Laboratory',
+		excerpt: 'Melibatkan peserta diklat langsung ke dalam pemeliharaan sistem energi dan inovasi pengelolaan limbah melalui pendekatan Project-Based Learning (PjBL).',
+		date: 'Senin, 7 September 2026',
+		author: 'Tim Lestari'
+	}
+];
+---
+
+<section id="hero" class="hero">
+    <!-- Background Image Carousel -->
+    <div class="hero-bg" id="hero-bg-carousel">
+        {carouselItems.map((item, index) => (
+            <img 
+                src={item.image} 
+                class={`carousel-bg ${index === 0 ? 'active' : ''}`} 
+                alt={item.title} 
+                loading={index === 0 ? "eager" : "lazy"} 
+                data-index={index}
+            />
+        ))}
+        <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-container">
+        <!-- Content -->
+        <div class="hero-content">
+            {carouselItems.map((item, index) => (
+                <div class={`slide-content ${index === 0 ? 'active' : ''}`} data-index={index}>
+                    <!-- Label -->
+                    <div class="hero-rating slide-element">
+                        <span class="rating-count">{item.label}</span>
+                    </div>
+
+                    <!-- Heading -->
+                    <h1 class="hero-heading slide-element">
+                        {item.title}
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="hero-description slide-element">
+                        {item.excerpt}
+                    </p>
+
+                    <!-- Meta & CTA -->
+                    <div class="hero-actions slide-element">
+                        <div class="slide-meta">
+                            <span class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                {item.date}
+                            </span>
+                            <span class="meta-separator">|</span>
+                            <span class="meta-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Penulis: {item.author}
+                            </span>
+                        </div>
+                        
+                        <div class="hero-cta">
+                            <a href="#" class="btn-read-more">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+
+    <!-- Carousel Controls (Bottom Center) -->
+    <div class="hero-controls-wrapper">
+        <div class="hero-controls-pill">
+            <button class="control-btn prev-btn" aria-label="Previous Slide">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="indicator-text">
+                <span class="current" id="currentSlideNum">1</span> <span class="total">dari {carouselItems.length}</span>
+            </div>
+            <button class="control-btn next-btn" aria-label="Next Slide">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    /* Background */
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    .hero-bg img.carousel-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .hero-bg img.carousel-bg.active {
+        opacity: 1;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            105deg,
+            rgba(10, 46, 20, 0.92) 0%,
+            rgba(10, 46, 20, 0.85) 35%,
+            rgba(10, 46, 20, 0.6) 55%,
+            rgba(10, 46, 20, 0.2) 75%,
+            rgba(10, 46, 20, 0.15) 100%
+        );
+    }
+
+    /* Container */
+    .hero-container {
+        position: relative;
+        z-index: 1;
+        max-width: var(--container-max);
+        margin: 0 auto;
+        padding: 8.5rem var(--container-padding) 3rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Content */
+    .hero-content {
+        max-width: 800px;
+        position: relative;
+    }
+
+    .slide-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease;
+    }
+
+    .slide-content.active {
+        position: relative;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Initial hidden state for elements inside slide */
+    .slide-content .slide-element {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* When active, animate them in with stagger */
+    .slide-content.active .slide-element {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .slide-content.active .hero-rating { transition-delay: 0.1s; }
+    .slide-content.active .hero-heading { transition-delay: 0.2s; }
+    .slide-content.active .hero-description { transition-delay: 0.3s; }
+    .slide-content.active .hero-actions { transition-delay: 0.4s; }
+
+    /* Tagline Badge */
+    .hero-rating {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 1.5rem;
+    }
+
+    .rating-count {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--white);
+    }
+
+    /* Heading */
+    .hero-heading {
+        font-family: var(--font-heading);
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 600;
+        color: var(--white);
+        line-height: 1.2;
+        margin: 0 0 1.5rem 0;
+        letter-spacing: -0.01em;
+    }
+
+    /* Description */
+    .hero-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 2rem;
+        max-width: 90%;
+    }
+
+    /* Meta & Actions */
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .slide-meta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .meta-separator {
+        opacity: 0.5;
+    }
+
+    .btn-read-more {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6rem 1.2rem;
+        background: transparent;
+        color: var(--white);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 5px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        width: fit-content;
+    }
+
+    .btn-read-more:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: var(--white);
+    }
+
+    /* Bottom Controls */
+    .hero-controls-wrapper {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    .hero-controls-pill {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        background: rgba(30, 35, 40, 0.85); /* Darker pill */
+        padding: 0.6rem 1.5rem;
+        border-radius: 50px; /* Pill shape */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .indicator-text {
+        display: flex;
+        align-items: baseline;
+        gap: 0.4rem;
+    }
+
+    .indicator-text .current {
+        color: var(--white);
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .indicator-text .total {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1.05rem;
+        font-weight: 400;
+    }
+
+    .control-btn {
+        background: transparent;
+        border: none;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .control-btn:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+</style>
+
+<script>
+    const bgs = document.querySelectorAll('.carousel-bg');
+    const contents = document.querySelectorAll('.slide-content');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const currentSlideNum = document.getElementById('currentSlideNum');
+    
+    let currentIndex = 0;
+    const totalSlides = bgs.length;
+    let autoPlayInterval;
+
+    function goToSlide(index) {
+        bgs[currentIndex].classList.remove('active');
+        contents[currentIndex].classList.remove('active');
+        
+        currentIndex = index;
+        if (currentIndex >= totalSlides) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = totalSlides - 1;
+        
+        bgs[currentIndex].classList.add('active');
+        contents[currentIndex].classList.add('active');
+        if (currentSlideNum) {
+            currentSlideNum.textContent = (currentIndex + 1).toString();
+        }
+    }
+
+    function nextSlide() {
+        goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentIndex - 1);
+    }
+
+    nextBtn?.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+    });
+
+    prevBtn?.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+    });
+
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 7000);
+    }
+
+    function resetAutoPlay() {
+        clearInterval(autoPlayInterval);
+        startAutoPlay();
+    }
+
+    if (bgs.length > 1) {
+        startAutoPlay();
+    }
+</script>

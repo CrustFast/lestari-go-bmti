@@ -1,0 +1,355 @@
+---
+export interface Props {
+	activeLabel?: string;
+}
+
+const { activeLabel = 'Aktivitas' } = Astro.props;
+
+const navLinks = [
+	{ label: activeLabel, href: '#', active: true },
+];
+---
+
+<header id="navbar" class="navbar">
+	<div class="navbar-container">
+		<!-- Logo -->
+		<a href="/" class="navbar-logo" aria-label="Lestari Home">
+			<div class="logo-icon-wrapper">
+				<img src="/img/logo 1.png" alt="Logo Lestari" class="logo-icon-img" />
+			</div>
+			<span class="logo-text">Lestari</span>
+		</a>
+
+		<!-- Navigation Links (Desktop) -->
+		<nav class="navbar-nav" aria-label="Navigasi Utama">
+			<ul class="nav-links">
+				{navLinks.map((link) => (
+					<li>
+						<a
+							href={link.href}
+							class:list={['nav-link', { active: link.active }]}
+						>
+							{link.label}
+						</a>
+					</li>
+				))}
+			</ul>
+		</nav>
+
+		<!-- Call Button -->
+		<div class="navbar-cta">
+			<a href="/" class="btn btn-primary btn-animated back-btn">
+                <svg class="btn-icon-custom" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="icon-bg" cx="12" cy="12" r="12" fill="white"/>
+                    <path class="icon-arrow" d="M9.5 14.5L14.5 9.5M14.5 9.5H10.5M14.5 9.5V13.5" stroke="var(--btn-primary-bg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="btn-text">Kembali</span>
+            </a>
+		</div>
+
+		<!-- Mobile Menu Button -->
+		<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Buka menu navigasi" aria-expanded="false">
+			<span class="hamburger-line"></span>
+			<span class="hamburger-line"></span>
+			<span class="hamburger-line"></span>
+		</button>
+	</div>
+
+	<!-- Mobile Menu -->
+	<div class="mobile-menu" id="mobileMenu">
+		<nav aria-label="Navigasi Mobile">
+			<ul class="mobile-nav-links">
+				{navLinks.map((link) => (
+					<li>
+						<a href={link.href} class:list={['mobile-nav-link', { active: link.active }]}>
+							{link.label}
+						</a>
+					</li>
+				))}
+			</ul>
+			<a href="/" class="mobile-cta-btn">
+				Kembali
+			</a>
+		</nav>
+	</div>
+</header>
+
+<style>
+	.navbar {
+		position: fixed;
+		top: 1.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 85%;
+		max-width: 800px;
+		z-index: 1000;
+		background: rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(3px);
+		-webkit-backdrop-filter: blur(8px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		border-radius: 50px;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.navbar.scrolled {
+		top: 0;
+		width: 100%;
+		max-width: 100%;
+		border-radius: 0;
+		background: rgba(10, 46, 20, 0.95);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+		border-color: transparent;
+	}
+
+	.navbar-container {
+		width: 100%;
+		max-width: var(--container-max);
+		margin: 0 auto;
+		padding: 0.75rem 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	/* Logo */
+	.navbar-logo {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		z-index: 10;
+		text-decoration: none;
+	}
+
+	.logo-icon-wrapper {
+		width: 36px;
+		height: 36px;
+		background-color: var(--btn-primary-bg);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		flex-shrink: 0;
+	}
+
+	.logo-icon-img {
+		width: 75%;
+		height: 75%;
+		object-fit: contain;
+	}
+
+	.logo-text {
+		font-family: var(--font-serif);
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: var(--white);
+		letter-spacing: -0.01em;
+	}
+
+	/* Nav Links */
+	.navbar-nav {
+		display: none;
+	}
+
+	.nav-links {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.nav-link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 0.3rem;
+		padding: 0.5rem 0.25rem;
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 0.9rem;
+		font-weight: 500;
+		transition: color var(--transition-fast);
+		text-decoration: none;
+	}
+
+	.nav-link::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 2.5px;
+		background-color: var(--white);
+		transition: width 0.3s ease, transform 0.3s ease;
+		transform: translateX(-50%);
+		border-radius: 4px;
+	}
+
+	.nav-link:hover::after,
+	.nav-link.active::after {
+		width: 60%;
+	}
+
+	.nav-link:hover,
+	.nav-link.active {
+		color: var(--white);
+	}
+
+	/* CTA Button */
+	.navbar-cta {
+		display: none;
+	}
+
+    .back-btn {
+        width: 140px;
+    }
+	.back-btn.btn-animated:hover .btn-text {
+		transform: translateX(-10px);
+	}
+
+	/* Mobile Menu Button */
+	.mobile-menu-btn {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 32px;
+		height: 32px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		z-index: 10;
+	}
+
+	.hamburger-line {
+		width: 32px;
+		height: 3px;
+		background: var(--white);
+		border-radius: 10px;
+		transition: all 0.3s linear;
+		transform-origin: 1px;
+	}
+
+	/* Mobile Menu */
+	.mobile-menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: var(--green-900);
+		z-index: 5;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transform: translateY(-100%);
+		opacity: 0;
+		visibility: hidden;
+		transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, visibility 0.4s ease;
+	}
+
+	.mobile-menu.active {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.mobile-nav-links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		margin-bottom: 3rem;
+		padding: 0;
+		list-style: none;
+	}
+
+	.mobile-nav-link {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: rgba(255, 255, 255, 0.7);
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.mobile-nav-link:hover,
+	.mobile-nav-link.active {
+		color: var(--white);
+	}
+
+	.mobile-cta-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		background: var(--btn-primary-bg);
+		color: var(--white);
+		padding: 1rem 2rem;
+		border-radius: 50px;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	/* Responsive */
+	@media (min-width: 768px) {
+		.navbar-nav {
+			display: block;
+		}
+
+		.navbar-cta {
+			display: block;
+		}
+
+		.mobile-menu-btn {
+			display: none;
+		}
+	}
+</style>
+
+<script>
+	const navbar = document.getElementById('navbar');
+	const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+	const mobileMenu = document.getElementById('mobileMenu');
+	const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+	// Handle scroll
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 50) {
+			navbar?.classList.add('scrolled');
+		} else {
+			navbar?.classList.remove('scrolled');
+		}
+	});
+
+	// Handle mobile menu
+	mobileMenuBtn?.addEventListener('click', () => {
+		const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+		
+		mobileMenuBtn.setAttribute('aria-expanded', (!isExpanded).toString());
+		mobileMenu?.classList.toggle('active');
+		
+		// Animate hamburger
+		const lines = mobileMenuBtn.querySelectorAll('.hamburger-line');
+		if (!isExpanded) {
+			(lines[0] as HTMLElement).style.transform = 'rotate(45deg)';
+			(lines[1] as HTMLElement).style.opacity = '0';
+			(lines[2] as HTMLElement).style.transform = 'rotate(-45deg)';
+		} else {
+			(lines[0] as HTMLElement).style.transform = 'rotate(0)';
+			(lines[1] as HTMLElement).style.opacity = '1';
+			(lines[2] as HTMLElement).style.transform = 'rotate(0)';
+		}
+
+		// Prevent body scroll when menu is open
+		document.body.style.overflow = !isExpanded ? 'hidden' : '';
+	});
+
+	// Close mobile menu when clicking a link
+	mobileNavLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			mobileMenuBtn?.click();
+		});
+	});
+</script>
