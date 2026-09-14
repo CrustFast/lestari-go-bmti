@@ -1,0 +1,298 @@
+---
+const sdgsData = [
+    { 
+        bg: '/img/bg-1.jpeg', icon: '/img/sdgs/04.jpg', alt: 'SDG 4', color: '#C5192D', goal: '4',
+        desc: 'Memastikan pendidikan vokasi yang inklusif, merata, dan berkualitas serta mempromosikan kesempatan belajar sepanjang hayat bagi semua.',
+        metrics: [ {v: '1', l: 'Living Laboratory'}, {v: '5+', l: 'Modul Hijau'}, {v: '100%', l: 'Keterlibatan PjBL'}, {v: '12', l: 'Kegiatan Literasi'} ]
+    },
+    { 
+        bg: '/img/bg-2.jpg', icon: '/img/sdgs/06.jpg', alt: 'SDG 6', color: '#26BDE2', goal: '6',
+        desc: 'Memastikan ketersediaan dan manajemen air bersih yang berkelanjutan serta sanitasi yang memadai di seluruh lingkungan institusi.',
+        metrics: [ {v: '20', l: 'Titik Biopori'}, {v: '5', l: 'Sumur Resapan'}, {v: '1', l: 'Rain Harvesting'}, {v: '100%', l: 'Sanitasi Layak'} ]
+    },
+    { 
+        bg: '/img/bg-3.jpg', icon: '/img/sdgs/07.jpg', alt: 'SDG 7', color: '#FCC30B', goal: '7',
+        desc: 'Memastikan akses terhadap energi yang terjangkau, dapat diandalkan, berkelanjutan, dan modern bagi operasional kampus.',
+        metrics: [ {v: '20.8 kW', l: 'Kapasitas PLTS'}, {v: '3 kW', l: 'Kapasitas PLTB'}, {v: '≥20%', l: 'Kemandirian Energi'}, {v: '4', l: 'Fasilitas EBT'} ]
+    },
+    { 
+        bg: '/img/abt-1.jpeg', icon: '/img/sdgs/09.jpg', alt: 'SDG 9', color: '#FD6925', goal: '9',
+        desc: 'Membangun infrastruktur yang tangguh, mendukung industrialisasi berkelanjutan, serta mendorong inovasi teknologi vokasi.',
+        metrics: [ {v: '1', l: 'Unit Pirolisis'}, {v: '1', l: 'Gedung Green Bldg'}, {v: '100%', l: 'Integrasi SPMI'}, {v: '1', l: 'Smart Energy Sys'} ]
+    },
+    { 
+        bg: '/img/abt-2.jpeg', icon: '/img/sdgs/12.jpg', alt: 'SDG 12', color: '#BF8B2E', goal: '12',
+        desc: 'Memastikan pola konsumsi sumber daya dan tata kelola operasional yang berkelanjutan serta bertanggung jawab.',
+        metrics: [ {v: '100%', l: 'Kelola Sampah Org'}, {v: '3', l: 'Titik Green Point'}, {v: '42.7%', l: 'Efisiensi Anggaran'}, {v: '4', l: 'Audit Tahunan'} ]
+    },
+    { 
+        bg: '/img/kandep4.jpg', icon: '/img/sdgs/15.jpg', alt: 'SDG 15', color: '#56C02B', goal: '15',
+        desc: 'Melindungi, merestorasi, dan meningkatkan pemanfaatan berkelanjutan ekosistem daratan serta keanekaragaman hayati kampus.',
+        metrics: [ {v: '130k m²', l: 'Area Konservasi'}, {v: '1.250', l: 'Pohon Terdata'}, {v: '100%', l: 'Penataan RTH'}, {v: '25', l: 'Spesies Vegetasi'} ]
+    },
+    { 
+        bg: '/img/hero-1.jpeg', icon: '/img/sdgs/17.jpg', alt: 'SDG 17', color: '#19486A', goal: '17',
+        desc: 'Menguatkan sarana pelaksanaan dan merevitalisasi kemitraan lintas sektor untuk pembangunan vokasi berkelanjutan.',
+        metrics: [ {v: '1', l: 'Kolaborasi DLH'}, {v: '3', l: 'SMK Mitra Replikasi'}, {v: '5+', l: 'Mitra DUDI'}, {v: '2', l: 'Komunitas Mentor'} ]
+    },
+];
+---
+<section class="sdgs-content-section">
+    <div class="container">
+        <h2 class="section-title" data-animate="fade-up">
+            7 Sustainable Development Goals (SDGs)
+        </h2>
+        <p class="header-microcopy">
+                *Klik pada setiap ikon SDG di bawah ini untuk melihat rincian aksi nyata dan implementasi program kami di lapangan.
+            </p>
+        
+        <div class="sdgs-grid" data-animate="fade-up">
+            {sdgsData.map((item) => (
+                <div class="sdg-card" style={`--hover-color: ${item.color};`}>
+                    <img src={item.bg} alt="Background" class="sdg-img" loading="lazy" />
+                    <div class="sdg-overlay-tint"></div>
+                    <div class="sdg-hover-fill"></div>
+                    
+                    <div class="sdg-hover-content">
+                        <div class="hover-bg-number">{item.goal}</div>
+                        <h3 class="hover-title">Goal {item.goal}</h3>
+                        <p class="hover-desc">{item.desc}</p>
+                        <hr class="hover-divider" />
+                        <div class="hover-metrics">
+                            {item.metrics.map(m => (
+                                <div class="metric">
+                                    <div class="metric-value">{m.v}</div>
+                                    <div class="metric-label">{m.l}</div>
+                                </div>
+                            ))}
+                        </div>
+                        <a href="#" class="hover-btn">Detail &rarr;</a>
+                    </div>
+
+                    <div class="sdg-icon-wrapper">
+                        <img src={item.icon} alt={item.alt} class="sdg-icon" loading="lazy" />
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .sdgs-content-section {
+        padding: 5rem 0;
+        background-color: var(--white);
+    }
+
+    .container {
+        max-width: var(--container-max);
+        margin: 0 auto;
+        padding: 0 var(--container-padding);
+    }
+
+    .section-title {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 3vw, 2.5rem);
+        font-weight: 800;
+        color: var(--green-900);
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+
+    .header-microcopy {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.6);
+        margin: 0;
+        font-style: italic;
+    }
+
+    .sdgs-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+        .sdgs-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .sdgs-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .sdg-card {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        aspect-ratio: 3 / 4;
+        background-color: var(--gray-100);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .sdg-overlay-tint {
+        position: absolute;
+        inset: 0;
+        background: rgba(10, 46, 20, 0.5); /* Lighter green overlay */
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .sdg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        z-index: 0;
+        position: relative;
+    }
+
+    .sdg-hover-fill {
+        position: absolute;
+        bottom: -50px;
+        left: -50px;
+        width: 100px;
+        height: 100px;
+        background-color: var(--hover-color);
+        z-index: 20; /* Above the icon */
+        border-radius: 50%;
+        transform: scale(0);
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+    }
+
+    .sdg-card:hover .sdg-hover-fill {
+        transform: scale(12); /* 1200px diameter circle, covers the card */
+    }
+
+    .sdg-hover-content {
+        position: absolute;
+        inset: 0;
+        z-index: 30; /* Above the hover fill */
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        transition-delay: 0s;
+        pointer-events: none;
+    }
+
+    .sdg-card:hover .sdg-hover-content {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.2s; /* Waits slightly for the fill animation */
+    }
+
+    .hover-bg-number {
+        position: absolute;
+        top: -1rem;
+        left: 1rem;
+        font-family: Arial, sans-serif;
+        font-size: 8rem;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.15);
+        line-height: 1;
+        z-index: 1;
+    }
+
+    .hover-title {
+        font-family: Arial, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        letter-spacing: -0.02em;
+        z-index: 2;
+        position: relative;
+    }
+
+    .hover-desc {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+        opacity: 0.95;
+        z-index: 2;
+        position: relative;
+    }
+
+    .hover-divider {
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 1rem;
+        z-index: 2;
+        position: relative;
+    }
+
+    .hover-metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        margin-bottom: auto;
+        z-index: 2;
+        position: relative;
+    }
+
+    .metric-value {
+        font-family: Arial, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 0.15rem;
+    }
+
+    .metric-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        opacity: 0.9;
+        text-transform: capitalize;
+    }
+
+    .hover-btn {
+        display: inline-block;
+        border: 1px solid #ffffff;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        color: #ffffff;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        margin-top: 1rem;
+        z-index: 2;
+        position: relative;
+        pointer-events: auto;
+    }
+
+    .hover-btn:hover {
+        background-color: #ffffff;
+        color: var(--hover-color);
+    }
+
+    .sdg-icon-wrapper {
+        position: absolute;
+        bottom: 1.25rem;
+        left: 1.25rem;
+        width: 150px;
+        height: 150px;
+        z-index: 10;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        background-color: #ffffff;
+    }
+
+    .sdg-icon {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+</style>
