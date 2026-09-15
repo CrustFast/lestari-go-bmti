@@ -518,7 +518,7 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 		width: 100%;
 		max-width: 400px;
 		box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-		transition: transform 0.4s ease, opacity 0.4s ease;
+		transition: all 0.4s ease;
 	}
 
 	.lightbox-card.hidden {
@@ -752,14 +752,27 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 			
 			if (icon) {
 				e.preventDefault();
-				if (lightboxImg) lightboxImg.setAttribute('src', icon.getAttribute('data-img') || '');
+				const newSrc = icon.getAttribute('data-img') || '';
+				
 				if (lightboxCategory) lightboxCategory.textContent = icon.getAttribute('data-category');
 				if (lightboxTitle) lightboxTitle.textContent = icon.getAttribute('data-title');
 				if (lightboxDesc) lightboxDesc.textContent = icon.getAttribute('data-desc');
 				if (lightboxDate) lightboxDate.textContent = icon.getAttribute('data-date');
 				if (lightboxLocation) lightboxLocation.textContent = icon.getAttribute('data-location');
 				if (lightboxParties) lightboxParties.textContent = icon.getAttribute('data-parties');
+				
 				if (lightbox) lightbox.classList.add('active');
+
+				if (lightboxImg && newSrc) {
+					// Use decode() to prevent main-thread jank during animation
+					const temp = new Image();
+					temp.src = newSrc;
+					temp.decode().then(() => {
+						lightboxImg.setAttribute('src', newSrc);
+					}).catch(() => {
+						lightboxImg.setAttribute('src', newSrc);
+					});
+				}
 			}
 		});
 

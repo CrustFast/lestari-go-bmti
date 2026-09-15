@@ -529,7 +529,7 @@ const sdgsData = [
         width: 100%;
         max-width: 400px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-        transition: transform 0.4s ease, opacity 0.4s ease;
+        transition: all 0.4s ease;
         color: #111;
     }
 
@@ -913,14 +913,25 @@ const sdgsData = [
         const triggers = [img1, img2];
         triggers.forEach(img => {
             img.addEventListener('click', () => {
-                if(lbImg) lbImg.setAttribute('src', img.getAttribute('data-img') || '');
+                const newSrc = img.getAttribute('data-img') || '';
                 if(lbCat) lbCat.textContent = img.getAttribute('data-category');
                 if(lbTitle) lbTitle.textContent = img.getAttribute('data-title');
                 if(lbDesc) lbDesc.textContent = img.getAttribute('data-desc');
                 if(lbDate) lbDate.textContent = img.getAttribute('data-date');
                 if(lbLoc) lbLoc.textContent = img.getAttribute('data-location');
                 if(lbParties) lbParties.textContent = img.getAttribute('data-parties');
+                
                 if(lightbox) lightbox.classList.add('active');
+
+                if (lbImg && newSrc) {
+                    const temp = new Image();
+                    temp.src = newSrc;
+                    temp.decode().then(() => {
+                        lbImg.setAttribute('src', newSrc);
+                    }).catch(() => {
+                        lbImg.setAttribute('src', newSrc);
+                    });
+                }
             });
         });
 
