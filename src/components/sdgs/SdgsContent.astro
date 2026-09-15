@@ -3,38 +3,100 @@ const sdgsData = [
     { 
         bg: '/img/bg-1.jpeg', icon: '/img/sdgs/04.jpg', alt: 'SDG 4', color: '#C5192D', goal: '4',
         desc: 'Memastikan pendidikan vokasi yang inklusif, merata, dan berkualitas serta mempromosikan kesempatan belajar sepanjang hayat bagi semua.',
-        metrics: [ {v: '1', l: 'Living Laboratory'}, {v: '5+', l: 'Modul Hijau'}, {v: '100%', l: 'Keterlibatan PjBL'}, {v: '12', l: 'Kegiatan Literasi'} ]
+        metrics: [ {v: '1', l: 'Living Laboratory'}, {v: '5+', l: 'Modul Hijau'}, {v: '100%', l: 'Keterlibatan PjBL'}, {v: '12', l: 'Kegiatan Literasi'} ],
+        panelHeader: 'SDG 4 - Pendidikan Bermutu',
+        panelTitle: 'Mengintegrasikan Keberlanjutan dalam Pendidikan Vokasi',
+        activities: [
+            'Menjadikan seluruh kawasan BMTI seluas 130.976 m² sebagai Living Laboratory (Laboratorium Hidup) bagi pendidik dan tenaga kependidikan.',
+            'Melibatkan peserta diklat secara langsung dalam merawat infrastruktur energi terbarukan melalui pendekatan Project-Based Learning (PjBL).',
+            'Mewajibkan integrasi nilai-nilai pelestarian lingkungan dan efisiensi sumber daya ke dalam kurikulum dan modul praktikum.'
+        ],
+        panelImages: ['/img/bg-1.jpeg', '/img/abt-1.jpeg']
     },
     { 
         bg: '/img/bg-2.jpg', icon: '/img/sdgs/06.jpg', alt: 'SDG 6', color: '#26BDE2', goal: '6',
         desc: 'Memastikan ketersediaan dan manajemen air bersih yang berkelanjutan serta sanitasi yang memadai di seluruh lingkungan institusi.',
-        metrics: [ {v: '20', l: 'Titik Biopori'}, {v: '5', l: 'Sumur Resapan'}, {v: '1', l: 'Rain Harvesting'}, {v: '100%', l: 'Sanitasi Layak'} ]
+        metrics: [ {v: '20', l: 'Titik Biopori'}, {v: '5', l: 'Sumur Resapan'}, {v: '1', l: 'Rain Harvesting'}, {v: '100%', l: 'Sanitasi Layak'} ],
+        panelHeader: 'SDG 6 - Air Bersih dan Sanitasi Layak',
+        panelTitle: 'Konservasi Hidrologi dan Manajemen Air BMTI',
+        activities: [
+            'Mengonstruksi 20 lubang biopori dan sumur resapan pada titik-titik rawan genangan untuk memaksimalkan konservasi air tanah.',
+            'Menerapkan sistem pemanenan air hujan (rain harvesting) guna menjaga ketersediaan cadangan air bersih secara mandiri.',
+            'Merawat dan memastikan seluruh fasilitas sanitasi di zona perkantoran, asrama, dan bengkel beroperasi dengan standar kebersihan tinggi.'
+        ],
+        panelImages: ['/img/bg-2.jpg', '/img/kandep4.jpg']
     },
     { 
         bg: '/img/bg-3.jpg', icon: '/img/sdgs/07.jpg', alt: 'SDG 7', color: '#FCC30B', goal: '7',
         desc: 'Memastikan akses terhadap energi yang terjangkau, dapat diandalkan, berkelanjutan, dan modern bagi operasional kampus.',
-        metrics: [ {v: '20.8 kW', l: 'Kapasitas PLTS'}, {v: '3 kW', l: 'Kapasitas PLTB'}, {v: '≥20%', l: 'Kemandirian Energi'}, {v: '4', l: 'Fasilitas EBT'} ]
+        metrics: [ {v: '20.8 kW', l: 'Kapasitas PLTS'}, {v: '3 kW', l: 'Kapasitas PLTB'}, {v: '≥20%', l: 'Kemandirian Energi'}, {v: '4', l: 'Fasilitas EBT'} ],
+        panelHeader: 'SDG 7 - Energi Bersih dan Terjangkau',
+        panelTitle: 'Inisiatif Kemandirian Energi BMTI',
+        activities: [
+            'Mengoperasikan fasilitas PLTS berkapasitas 20,8 kW dan PLTB 3 kW sebagai tulang punggung pasokan energi penerangan kawasan.',
+            'Mengelola dan memanfaatkan instalasi biogas dari limbah organik kampus.',
+            'Menggunakan Smart Energy Management System secara real-time dan melakukan kewajiban audit konsumsi energi setiap triwulan.'
+        ],
+        panelImages: ['/img/bg-3.jpg', '/img/hero-1.jpeg']
     },
     { 
         bg: '/img/abt-1.jpeg', icon: '/img/sdgs/09.jpg', alt: 'SDG 9', color: '#FD6925', goal: '9',
         desc: 'Membangun infrastruktur yang tangguh, mendukung industrialisasi berkelanjutan, serta mendorong inovasi teknologi vokasi.',
-        metrics: [ {v: '1', l: 'Unit Pirolisis'}, {v: '1', l: 'Gedung Green Bldg'}, {v: '100%', l: 'Integrasi SPMI'}, {v: '1', l: 'Smart Energy Sys'} ]
+        metrics: [ {v: '1', l: 'Unit Pirolisis'}, {v: '1', l: 'Gedung Green Bldg'}, {v: '100%', l: 'Integrasi SPMI'}, {v: '1', l: 'Smart Energy Sys'} ],
+        panelHeader: 'SDG 9 - Industri, Inovasi, dan Infrastruktur',
+        panelTitle: 'Inovasi Infrastruktur Vokasi Hijau',
+        activities: [
+            'Merancang unit percontohan teknologi pirolisis yang mengonversi sampah plastik menjadi bahan bakar cair untuk mendukung alat praktik bengkel.',
+            'Mengoperasikan Gedung Galeri Kejuruan sebagai wahana demonstrasi yang dibangun dengan mengadopsi prinsip desain bangunan hijau (green building).',
+            'Mengintegrasikan tata kelola Green Office menjadi bagian baku dari Sistem Penjaminan Mutu Internal (SPMI) lembaga.'
+        ],
+        panelImages: ['/img/abt-1.jpeg', '/img/bg-2.jpg']
     },
     { 
         bg: '/img/abt-2.jpeg', icon: '/img/sdgs/12.jpg', alt: 'SDG 12', color: '#BF8B2E', goal: '12',
         desc: 'Memastikan pola konsumsi sumber daya dan tata kelola operasional yang berkelanjutan serta bertanggung jawab.',
-        metrics: [ {v: '100%', l: 'Kelola Sampah Org'}, {v: '3', l: 'Titik Green Point'}, {v: '42.7%', l: 'Efisiensi Anggaran'}, {v: '4', l: 'Audit Tahunan'} ]
+        metrics: [ {v: '100%', l: 'Kelola Sampah Org'}, {v: '3', l: 'Titik Green Point'}, {v: '42.7%', l: 'Efisiensi Anggaran'}, {v: '4', l: 'Audit Tahunan'} ],
+        panelHeader: 'SDG 12 - Konsumsi dan Produksi yang Bertanggung Jawab',
+        panelTitle: 'Sirkularitas Ekonomi dan Efisiensi Operasional',
+        activities: [
+            'Mengaktifkan Green Point untuk sistem pemilahan sampah di asrama, bengkel, dan kantor dengan jalur angkut terjadwal menuju TPSS.',
+            'Memberikan pelatihan teknis manajemen limbah (Waste Management) khusus bagi staf asrama, dapur, dan unit kebersihan.',
+            'Melakukan digitalisasi administrasi birokrasi berbasis cloud untuk menghapus penggunaan kertas (paperless) secara bertahap.'
+        ],
+        panelImages: ['/img/abt-2.jpeg', '/img/kandep4.jpg']
     },
     { 
         bg: '/img/kandep4.jpg', icon: '/img/sdgs/15.jpg', alt: 'SDG 15', color: '#56C02B', goal: '15',
         desc: 'Melindungi, merestorasi, dan meningkatkan pemanfaatan berkelanjutan ekosistem daratan serta keanekaragaman hayati kampus.',
-        metrics: [ {v: '130k m²', l: 'Area Konservasi'}, {v: '1.250', l: 'Pohon Terdata'}, {v: '100%', l: 'Penataan RTH'}, {v: '25', l: 'Spesies Vegetasi'} ]
+        metrics: [ {v: '130k m²', l: 'Area Konservasi'}, {v: '1.250', l: 'Pohon Terdata'}, {v: '100%', l: 'Penataan RTH'}, {v: '25', l: 'Spesies Vegetasi'} ],
+        panelHeader: 'SDG 15 - Ekosistem Daratan',
+        panelTitle: 'Perawatan Ekosistem dan Ruang Terbuka Hijau',
+        activities: [
+            'Melakukan peremajaan dan penataan ulang seluruh vegetasi di Ruang Terbuka Hijau (RTH) untuk menjaga pasokan oksigen mikro.',
+            'Melaksanakan pemangkasan pohon berisiko dan mengelola 2 hingga 4 mobil pick up limbah organik (daun/ranting) per harinya.',
+            'Menjadikan kawasan asri BMTI sebagai habitat buatan yang menjaga fungsi ekologis bagi lingkungan sekitarnya.'
+        ],
+        panelImages: ['/img/kandep4.jpg', '/img/bg-3.jpg']
     },
     { 
         bg: '/img/hero-1.jpeg', icon: '/img/sdgs/17.jpg', alt: 'SDG 17', color: '#19486A', goal: '17',
         desc: 'Menguatkan sarana pelaksanaan dan merevitalisasi kemitraan lintas sektor untuk pembangunan vokasi berkelanjutan.',
-        metrics: [ {v: '1', l: 'Kolaborasi DLH'}, {v: '3', l: 'SMK Mitra Replikasi'}, {v: '5+', l: 'Mitra DUDI'}, {v: '2', l: 'Komunitas Mentor'} ]
+        metrics: [ {v: '1', l: 'Kolaborasi DLH'}, {v: '3', l: 'SMK Mitra Replikasi'}, {v: '5+', l: 'Mitra DUDI'}, {v: '2', l: 'Komunitas Mentor'} ],
+        panelHeader: 'SDG 17 - Kemitraan untuk Mencapai Tujuan',
+        panelTitle: 'Sinergi Lintas Sektor untuk Keberlanjutan',
+        activities: [
+            'Penandatanganan komitmen dan sinergi teknis dengan Dinas Lingkungan Hidup (DLH) Kota Cimahi untuk perawatan lingkungan yang partisipatif.',
+            'Membuka pintu kemitraan erat dengan Dunia Usaha dan Dunia Industri (DUDI) untuk dukungan infrastruktur hijau (skema CSR/riset bersama).',
+            'Menjadi pusat rujukan (center of excellence) dan melaksanakan pendampingan replikasi Green Office bagi minimal tiga satuan pendidikan vokasi lainnya.'
+        ],
+        panelImages: ['/img/hero-1.jpeg', '/img/bg-1.jpeg']
     },
+    {
+        isGlobalGoals: true,
+        bg: '#F5F5F5',
+        icon: '/img/sdgs/global-goals.png',
+        alt: 'Global Goals'
+    }
 ];
 ---
 <section class="sdgs-content-section">
@@ -42,38 +104,102 @@ const sdgsData = [
         <h2 class="section-title" data-animate="fade-up">
             7 Sustainable Development Goals (SDGs)
         </h2>
-        <p class="header-microcopy">
-                *Klik pada setiap ikon SDG di bawah ini untuk melihat rincian aksi nyata dan implementasi program kami di lapangan.
-            </p>
+        <p class="header-microcopy" data-animate="fade-up" data-delay="100">
+            *Klik pada setiap gambar di bawah ini untuk melihat rincian aksi nyata dan implementasi program kami di lapangan.
+        </p>
         
         <div class="sdgs-grid" data-animate="fade-up">
             {sdgsData.map((item) => (
-                <div class="sdg-card" style={`--hover-color: ${item.color};`}>
-                    <img src={item.bg} alt="Background" class="sdg-img" loading="lazy" />
-                    <div class="sdg-overlay-tint"></div>
-                    <div class="sdg-hover-fill"></div>
-                    
-                    <div class="sdg-hover-content">
-                        <div class="hover-bg-number">{item.goal}</div>
-                        <h3 class="hover-title">Goal {item.goal}</h3>
-                        <p class="hover-desc">{item.desc}</p>
-                        <hr class="hover-divider" />
-                        <div class="hover-metrics">
-                            {item.metrics.map(m => (
-                                <div class="metric">
-                                    <div class="metric-value">{m.v}</div>
-                                    <div class="metric-label">{m.l}</div>
-                                </div>
-                            ))}
-                        </div>
-                        <a href="#" class="hover-btn">Detail &rarr;</a>
+                item.isGlobalGoals ? (
+                    <div class="sdg-card global-goals-card">
+                        <img src={item.icon} alt={item.alt} class="global-goals-img" loading="lazy" />
                     </div>
+                ) : (
+                    <div class="sdg-card" style={`--hover-color: ${item.color};`}>
+                        <img src={item.bg} alt="Background" class="sdg-img" loading="lazy" />
+                        <div class="sdg-overlay-tint"></div>
+                        <div class="sdg-hover-fill"></div>
+                        
+                        <div class="sdg-hover-content">
+                            <div class="hover-bg-number">{item.goal}</div>
+                            <h3 class="hover-title">Goal {item.goal}</h3>
+                            <p class="hover-desc">{item.desc}</p>
+                            <hr class="hover-divider" />
+                            <div class="hover-metrics">
+                                {item.metrics && item.metrics.map(m => (
+                                    <div class="metric">
+                                        <div class="metric-value">{m.v}</div>
+                                        <div class="metric-label">{m.l}</div>
+                                    </div>
+                                ))}
+                            </div>
+                            <button class="hover-btn detail-btn" data-goal={item.goal}>Detail &rarr;</button>
+                        </div>
 
-                    <div class="sdg-icon-wrapper">
-                        <img src={item.icon} alt={item.alt} class="sdg-icon" loading="lazy" />
+                        <div class="sdg-icon-wrapper">
+                            <img src={item.icon} alt={item.alt} class="sdg-icon" loading="lazy" />
+                        </div>
+                    </div>
+                )
+            ))}
+        </div>
+
+        <!-- SDG Side Drawer -->
+        <div id="sdg-drawer-overlay" class="drawer-overlay"></div>
+        <div id="sdg-drawer" class="drawer-panel" data-lenis-prevent>
+            <div class="drawer-bg-number" id="drawer-bg-number"></div>
+            <button class="drawer-close" aria-label="Tutup panel">&times;</button>
+            <div class="drawer-header">
+                <span class="drawer-badge" id="drawer-badge">SDG</span>
+                <h3 class="drawer-title" id="drawer-title">Judul Panel</h3>
+            </div>
+            <div class="drawer-body">
+                <div class="drawer-narrative">
+                    <p><strong>Aksi Nyata:</strong></p>
+                    <ul id="drawer-activities"></ul>
+                </div>
+                <div class="drawer-gallery">
+                    <img id="drawer-img-1" src="" alt="Dokumentasi 1" loading="lazy" />
+                    <img id="drawer-img-2" src="" alt="Dokumentasi 2" loading="lazy" />
+                </div>
+            </div>
+            <div class="drawer-footer">
+                <a href="#" class="drawer-action-btn">Lihat Galeri &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Gallery Lightbox -->
+        <div id="gallery-lightbox" class="lightbox" data-lenis-prevent>
+            <div class="lightbox-overlay" id="lightbox-close"></div>
+            <div class="lightbox-content">
+                <button class="lightbox-close-btn" id="lightbox-close-btn">&times;</button>
+                <div class="lightbox-img-wrapper">
+                    <img src="" alt="Gallery Image" class="lightbox-img" id="lightbox-img" />
+                </div>
+                <div class="lightbox-card" id="lightbox-card" data-lenis-prevent>
+                    <span class="overlay-category" id="lightbox-category"></span>
+                    <h3 class="overlay-title" id="lightbox-title"></h3>
+                    <p class="overlay-desc" id="lightbox-desc"></p>
+                    <div class="lightbox-metadata">
+                        <div class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            <span id="lightbox-date"></span>
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span id="lightbox-location"></span>
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <span id="lightbox-parties"></span>
+                        </div>
                     </div>
                 </div>
-            ))}
+                <button class="lightbox-toggle-card" id="lightbox-toggle-card" aria-label="Toggle Informasi">
+                    <svg id="icon-hide" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                    <svg id="icon-show" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button>
+            </div>
         </div>
     </div>
 </section>
@@ -96,14 +222,16 @@ const sdgsData = [
         font-weight: 800;
         color: var(--green-900);
         text-align: center;
-        margin-bottom: 3.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .header-microcopy {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         line-height: 1.5;
-        color: rgba(255, 255, 255, 0.6);
-        margin: 0;
+        color: var(--btn-primary-bg);
+        text-align: center;
+        margin: 0 auto 3rem;
+        max-width: 600px;
         font-style: italic;
     }
 
@@ -269,6 +397,8 @@ const sdgsData = [
         z-index: 2;
         position: relative;
         pointer-events: auto;
+        background: transparent;
+        cursor: pointer;
     }
 
     .hover-btn:hover {
@@ -295,4 +425,530 @@ const sdgsData = [
         object-fit: cover;
         display: block;
     }
+
+    /* Global Goals Card Styling */
+    .global-goals-card {
+        background-color: #F5F5F5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        cursor: default; /* No pointer cursor since it doesn't do anything on hover */
+    }
+
+    .global-goals-img {
+        max-width: 85%;
+        max-height: 85%;
+        object-fit: contain;
+        display: block;
+    }
 </style>
+
+<style is:global>
+    /* Side Drawer */
+    .drawer-bg-number {
+        position: absolute !important;
+        top: 0rem !important;
+        left: 1.5rem !important;
+        font-family: Arial, sans-serif !important;
+        font-size: 10rem !important;
+        font-weight: 900 !important;
+        color: rgba(255, 255, 255, 0.08) !important;
+        line-height: 1 !important;
+        z-index: 0 !important;
+        pointer-events: none !important;
+        user-select: none !important;
+    }
+
+    /* Lightbox Global Styles */
+    .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    .lightbox.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .lightbox-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(4px);
+    }
+
+    .lightbox-content {
+        position: relative;
+        z-index: 1;
+        width: 90vw;
+        max-width: 1000px;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0.9);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .lightbox.active .lightbox-content {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .lightbox-img-wrapper {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .lightbox-card {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        color: #111;
+    }
+
+    .lightbox-card.hidden {
+        opacity: 0;
+        transform: translateY(20px);
+        pointer-events: none;
+    }
+
+    .overlay-category {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: var(--green-50, #f0fdf4);
+        color: var(--green-700, #15803d);
+        font-size: 0.75rem;
+        font-weight: 700;
+        border-radius: 50px;
+        margin-bottom: 0.75rem;
+    }
+
+    .overlay-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--gray-900, #111827);
+        margin-bottom: 0.5rem;
+    }
+
+    .overlay-desc {
+        font-size: 0.85rem;
+        color: var(--gray-600, #4b5563);
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .lightbox-metadata {
+        margin-top: 1.25rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--gray-200, #e5e7eb);
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        font-size: 0.85rem;
+        color: var(--gray-700, #374151);
+        line-height: 1.4;
+    }
+
+    .meta-item svg {
+        color: var(--green-600, #16a34a);
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .lightbox-toggle-card {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        background: rgba(0,0,0,0.6);
+        color: white;
+        border: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        backdrop-filter: blur(4px);
+        transition: background 0.3s;
+        z-index: 2;
+    }
+
+    .lightbox-toggle-card:hover {
+        background: rgba(0,0,0,0.8);
+    }
+
+    .lightbox-close-btn {
+        position: absolute;
+        top: -2.5rem;
+        right: -2rem;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 2.5rem;
+        cursor: pointer;
+        line-height: 1;
+        transition: transform 0.3s;
+    }
+
+    .lightbox-close-btn:hover {
+        transform: scale(1.15) rotate(90deg);
+    }
+
+    @media (max-width: 768px) {
+        .lightbox-close-btn {
+            top: -2.5rem;
+            right: 0;
+        }
+        .lightbox-card {
+            top: auto;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 3rem);
+        }
+        .lightbox-card.hidden {
+            transform: translate(-50%, 20px);
+        }
+        .lightbox-toggle-card {
+            bottom: auto;
+            top: -4rem;
+            right: 0;
+        }
+    }
+
+    .drawer-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .drawer-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .drawer-panel {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        max-width: 480px;
+        background-color: var(--drawer-bg, #111);
+        z-index: 1001;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        overflow-y: auto;
+        box-shadow: -5px 0 25px rgba(0,0,0,0.2);
+    }
+
+    .drawer-panel.active {
+        transform: translateX(0);
+    }
+
+    .drawer-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        color: white;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        line-height: 1;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+        z-index: 10;
+    }
+
+    .drawer-close:hover {
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+    .drawer-header {
+        position: relative;
+        z-index: 1;
+        padding: 3rem 2.5rem 2rem;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .drawer-badge {
+        display: inline-block;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        opacity: 0.9;
+        border: 1px solid rgba(255,255,255,0.5);
+        padding: 0.25rem 0.75rem;
+        border-radius: 50px;
+    }
+
+    .drawer-title {
+        font-family: var(--font-heading, Arial, sans-serif);
+        font-size: 1.75rem;
+        font-weight: 800;
+        line-height: 1.3;
+        margin: 0;
+    }
+
+    .drawer-body {
+        position: relative;
+        z-index: 1;
+        padding: 2rem 2.5rem;
+        flex: 1;
+    }
+
+    .drawer-narrative p {
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .drawer-narrative ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2.5rem 0;
+    }
+
+    .drawer-narrative li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        opacity: 0.95;
+    }
+
+    .drawer-narrative li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: rgba(255,255,255,0.6);
+        font-size: 1.25rem;
+        top: -2px;
+    }
+
+    .drawer-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .drawer-gallery img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        background: rgba(0,0,0,0.2);
+    }
+
+    .drawer-footer {
+        padding: 2rem 2.5rem;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        text-align: center;
+    }
+
+    .drawer-action-btn {
+        display: inline-block;
+        border: 1px solid #ffffff;
+        padding: 0.5rem 1.5rem;
+        border-radius: 4px;
+        color: #ffffff;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        background: transparent;
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+
+    .drawer-action-btn:hover {
+        background-color: #ffffff;
+        color: var(--drawer-bg, #111);
+    }
+</style>
+
+<script define:vars={{ sdgsData }}>
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.detail-btn');
+        const overlay = document.getElementById('sdg-drawer-overlay');
+        const drawer = document.getElementById('sdg-drawer');
+        const closeBtn = document.querySelector('.drawer-close');
+
+        const drawerBgNumber = document.getElementById('drawer-bg-number');
+        const drawerBadge = document.getElementById('drawer-badge');
+        const drawerTitle = document.getElementById('drawer-title');
+        const drawerActivities = document.getElementById('drawer-activities');
+        const img1 = document.getElementById('drawer-img-1');
+        const img2 = document.getElementById('drawer-img-2');
+
+        const openDrawer = (goalId) => {
+            const data = sdgsData.find(s => s.goal === goalId);
+            if (!data) return;
+
+            // Set content
+            drawerBgNumber.textContent = data.goal;
+            drawerBadge.textContent = data.panelHeader;
+            drawerTitle.textContent = data.panelTitle;
+            
+            // Clear and populate activities
+            drawerActivities.innerHTML = '';
+            data.activities.forEach(act => {
+                const li = document.createElement('li');
+                li.textContent = act;
+                drawerActivities.appendChild(li);
+            });
+
+            // Set images and lightbox triggers
+            if (data.panelImages && data.panelImages.length >= 2) {
+                const setupImg = (imgEl, src) => {
+                    imgEl.src = src;
+                    imgEl.classList.add('lightbox-trigger');
+                    imgEl.style.cursor = 'pointer';
+                    imgEl.setAttribute('data-img', src);
+                    imgEl.setAttribute('data-category', data.panelHeader);
+                    imgEl.setAttribute('data-title', data.panelTitle);
+                    imgEl.setAttribute('data-desc', 'Aksi nyata berkelanjutan di BBPPMPV BMTI.');
+                    imgEl.setAttribute('data-date', 'September 2026');
+                    imgEl.setAttribute('data-location', 'Kampus BMTI');
+                    imgEl.setAttribute('data-parties', 'Tim Lestari BMTI');
+                };
+                setupImg(img1, data.panelImages[0]);
+                setupImg(img2, data.panelImages[1]);
+            }
+
+            // Set dynamic background color
+            drawer.style.setProperty('--drawer-bg', data.color);
+
+            // Open
+            overlay.classList.add('active');
+            drawer.classList.add('active');
+            document.body.style.overflow = 'hidden'; // prevent background scrolling
+        };
+
+        const closeDrawer = () => {
+            overlay.classList.remove('active');
+            drawer.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const goalId = btn.getAttribute('data-goal');
+                openDrawer(goalId);
+            });
+        });
+
+        closeBtn.addEventListener('click', closeDrawer);
+        overlay.addEventListener('click', closeDrawer);
+
+        // Lightbox Logic
+        const lightbox = document.getElementById('gallery-lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        const lbCat = document.getElementById('lightbox-category');
+        const lbTitle = document.getElementById('lightbox-title');
+        const lbDesc = document.getElementById('lightbox-desc');
+        const lbDate = document.getElementById('lightbox-date');
+        const lbLoc = document.getElementById('lightbox-location');
+        const lbParties = document.getElementById('lightbox-parties');
+        const lbCloseBtn = document.getElementById('lightbox-close-btn');
+        const lbOverlay = document.getElementById('lightbox-close');
+        const lbCard = document.getElementById('lightbox-card');
+        const lbToggle = document.getElementById('lightbox-toggle-card');
+        const iconHide = document.getElementById('icon-hide');
+        const iconShow = document.getElementById('icon-show');
+
+        // Drawer images act as triggers
+        const triggers = [img1, img2];
+        triggers.forEach(img => {
+            img.addEventListener('click', () => {
+                if(lbImg) lbImg.setAttribute('src', img.getAttribute('data-img') || '');
+                if(lbCat) lbCat.textContent = img.getAttribute('data-category');
+                if(lbTitle) lbTitle.textContent = img.getAttribute('data-title');
+                if(lbDesc) lbDesc.textContent = img.getAttribute('data-desc');
+                if(lbDate) lbDate.textContent = img.getAttribute('data-date');
+                if(lbLoc) lbLoc.textContent = img.getAttribute('data-location');
+                if(lbParties) lbParties.textContent = img.getAttribute('data-parties');
+                if(lightbox) lightbox.classList.add('active');
+            });
+        });
+
+        if (lbToggle && lbCard && iconHide && iconShow) {
+            lbToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                lbCard.classList.toggle('hidden');
+                if (lbCard.classList.contains('hidden')) {
+                    iconHide.style.display = 'none';
+                    iconShow.style.display = 'block';
+                } else {
+                    iconHide.style.display = 'block';
+                    iconShow.style.display = 'none';
+                }
+            });
+        }
+
+        const closeLightbox = () => {
+            if (lightbox) lightbox.classList.remove('active');
+            setTimeout(() => {
+                if (lbImg) lbImg.setAttribute('src', '');
+                if (lbCard) lbCard.classList.remove('hidden');
+                if (iconHide) iconHide.style.display = 'block';
+                if (iconShow) iconShow.style.display = 'none';
+            }, 400);
+        };
+
+        if (lbCloseBtn) lbCloseBtn.addEventListener('click', closeLightbox);
+        if (lbOverlay) lbOverlay.addEventListener('click', closeLightbox);
+    });
+</script>
