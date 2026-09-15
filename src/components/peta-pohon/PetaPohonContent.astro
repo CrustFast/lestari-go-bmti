@@ -1,0 +1,228 @@
+---
+---
+<section class="peta-content-section">
+    <div class="container">
+        <!-- Left Side: Text and Metrics -->
+        <div class="content-left" data-animate="fade-up">
+            <!-- Title -->
+            <h2 class="main-title">
+                Persebaran Ekosistem &<br />
+                Ruang Terbuka Hijau (RTH)
+            </h2>
+
+            <!-- Description -->
+            <p class="description">
+                Pilih zona atau klik ikon pohon pada peta untuk melihat detail spesies, tahun tanam, dan status perawatan.
+            </p>
+
+            <!-- Metrics / Progress Bars -->
+            <div class="metrics-container">
+                <!-- Bar 1 -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span class="metric-label">Pohon Peneduh & Kanopi Utama</span>
+                        <span class="metric-value">1.250 Pohon</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 85%;"></div>
+                    </div>
+                    <div class="metric-footer">
+                        <span>Predikat Perawatan: 92% Sehat</span>
+                        <span>+15% Daya Serap Karbon</span>
+                    </div>
+                </div>
+
+                <!-- Bar 2 -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span class="metric-label">Tanaman Buah & Produktif</span>
+                        <span class="metric-value">420 Pohon</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 45%;"></div>
+                    </div>
+                    <div class="metric-footer">
+                        <span>Status: Tersebar di area Asrama & Kantin</span>
+                    </div>
+                </div>
+
+                <!-- Bar 3 -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span class="metric-label">Konservasi Hidrologi Lahan</span>
+                        <span class="metric-value">20 Titik</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 20%;"></div>
+                    </div>
+                    <div class="metric-footer">
+                        <span>Rincian: Sumur Resapan & Biopori</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Map -->
+        <div class="content-right" data-animate="fade-up" style="animation-delay: 0.2s;">
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-placeholder-content">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="map-icon">
+                            <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <p>Peta Interaktif akan ditampilkan di sini</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .peta-content-section {
+        min-height: 100vh;
+        background-color: #051A0F; /* Deep dark green */
+        display: flex;
+        align-items: center;
+        padding: 6rem 0;
+        color: var(--white, #ffffff);
+    }
+    
+    .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin: 0 auto;
+        padding: 0 var(--container-padding);
+        display: grid;
+        grid-template-columns: 3.5fr 6.5fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    /* --- Left Side --- */
+    .content-left {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .main-title {
+        font-size: clamp(1.5rem, 2.5vw, 1.75rem);
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 0.5rem;
+    }
+
+    /* Metrics */
+    .metrics-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-top: 0.5rem;
+    }
+
+    .metric-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .metric-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 0.85rem;
+        font-weight: 600;
+        gap: 0.5rem;
+    }
+
+    .metric-value {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .progress-bar-bg {
+        width: 100%;
+        height: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .progress-bar-fill {
+        height: 100%;
+        background: #22c55e; /* Bright green */
+        border-radius: 4px;
+        transition: width 1s ease-out;
+    }
+
+    .metric-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* --- Right Side (Map) --- */
+    .content-right {
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .map-placeholder {
+        width: 100%;
+        height: 100%;
+        background-color: #f8fafc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+    }
+
+    .map-placeholder-content {
+        text-align: center;
+        color: var(--gray-400, #9ca3af);
+    }
+
+    .map-icon {
+        margin-bottom: 1rem;
+        color: var(--gray-300, #d1d5db);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .container {
+            grid-template-columns: 1fr;
+            padding-top: 4rem;
+        }
+        
+        .content-right {
+            min-height: 400px;
+        }
+        
+        .map-placeholder {
+            min-height: 400px;
+        }
+    }
+</style>

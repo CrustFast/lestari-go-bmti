@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarAktivitas from '../components/aktivitas/NavbarAktivitas.astro';
+import Footer from '../components/Footer.astro';
+import PetaPohonHeader from '../components/peta-pohon/PetaPohonHeader.astro';
+import PetaPohonContent from '../components/peta-pohon/PetaPohonContent.astro';
+---
+
+<Layout title="Peta Pohon & Inventarisasi RTH - Lestari BMTI">
+	<NavbarAktivitas activeLabel="Peta Pohon" />
+	
+	<PetaPohonHeader />
+	<PetaPohonContent />
+
+	<div class="peta-footer-wrapper">
+		<Footer />
+	</div>
+</Layout>
+
+<style>
+	.peta-footer-wrapper :global(.site-footer) {
+		background-color: #051A0F;
+		border-top-color: rgba(255, 255, 255, 0.1);
+	}
+	.peta-footer-wrapper :global(.footer-heading),
+	.peta-footer-wrapper :global(.logo-title) {
+		color: #ffffff;
+	}
+	.peta-footer-wrapper :global(.footer-desc),
+	.peta-footer-wrapper :global(.list-text),
+	.peta-footer-wrapper :global(.footer-bottom),
+	.peta-footer-wrapper :global(.footer-legal a) {
+		color: rgba(255, 255, 255, 0.7);
+	}
+	.peta-footer-wrapper :global(.footer-legal a:hover) {
+		color: #ffffff;
+	}
+	.peta-footer-wrapper :global(.footer-badge) {
+		background-color: rgba(255, 255, 255, 0.1);
+		color: #ffffff;
+	}
+	.peta-footer-wrapper :global(.text-green) {
+		color: #86efac;
+	}
+	.peta-footer-wrapper :global(.list-icon),
+	.peta-footer-wrapper :global(.footer-social a) {
+		color: #86efac !important;
+	}
+	.peta-footer-wrapper :global(.logo-subtitle) {
+		color: rgba(255, 255, 255, 0.5);
+	}
+</style>

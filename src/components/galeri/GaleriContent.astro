@@ -691,7 +691,7 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 		if (customSortTrigger) {
 			customSortTrigger.addEventListener('click', (e) => {
 				e.stopPropagation();
-				customSortWrapper.classList.toggle('open');
+				if (customSortWrapper) customSortWrapper.classList.toggle('open');
 			});
 		}
 
@@ -701,7 +701,7 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 				customSortOptions.forEach(opt => opt.classList.remove('selected'));
 				option.classList.add('selected');
 				
-				const value = option.getAttribute('data-value');
+				const value = option.getAttribute('data-value') || 'terbaru';
 				const text = option.textContent;
 				
 				if (customSortLabel) customSortLabel.textContent = text;

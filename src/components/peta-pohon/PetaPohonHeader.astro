@@ -1,0 +1,101 @@
+---
+---
+<section class="peta-header">
+	<div class="header-container">
+		<div class="header-content" data-animate="fade-up">
+			<div class="section-label">
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+					<path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+				</svg>
+				Peta Pohon / Inventarisasi RTH
+			</div>
+			
+			<h1 class="main-title">
+				Sistem Informasi Geografis<br>
+				<span class="text-light">Ruang Terbuka Hijau (RTH)</span>
+			</h1>
+			
+			<p class="description">
+				Sebagai bagian dari perwujudan Living Laboratory, BBPPMPV BMTI menginventarisasi seluruh kekayaan hayati di atas lahan seluas 130.976 m². Peta interaktif ini memetakan persebaran vegetasi untuk mendukung perawatan partisipatif dan pemantauan jejak serapan karbon kampus.
+			</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.peta-header {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		padding: 6rem 0;
+		background-image: url('/img/kandep4.jpg');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		position: relative;
+		overflow: hidden;
+	}
+	.peta-header::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: rgba(10, 46, 20, 0.851); /* var(--green-900) at 85% opacity */
+		z-index: 1;
+	}
+
+	.header-container {
+		width: 100%;
+		max-width: var(--container-max);
+		margin: 0 auto;
+		padding: 0 var(--container-padding);
+		position: relative;
+		z-index: 2;
+	}
+
+	/* Header Content */
+	.header-content {
+		max-width: 800px;
+		margin: 4rem auto 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.section-label {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: var(--white);
+		padding: 0.5rem 1rem;
+		border-radius: 50px;
+		color: var(--green-700);
+		font-size: 0.85rem;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		box-shadow: 0 4px 15px rgba(22, 163, 74, 0.1);
+		margin-bottom: 1.5rem;
+	}
+
+	.main-title {
+		font-family: var(--font-heading);
+		font-size: clamp(2.5rem, 5vw, 3.5rem);
+		font-weight: 800;
+		color: var(--white);
+		line-height: 1.1;
+		margin-bottom: 1.5rem;
+		letter-spacing: -0.02em;
+	}
+
+	.text-light {
+		color: var(--green-400);
+	}
+
+	.description {
+		font-size: 1.15rem;
+		line-height: 1.7;
+		color: rgba(255, 255, 255, 0.9);
+		max-width: 700px;
+	}
+</style>
