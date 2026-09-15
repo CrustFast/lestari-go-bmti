@@ -12,68 +12,76 @@
 
             <!-- Description -->
             <p class="description">
-                Pilih zona atau klik ikon pohon pada peta untuk melihat detail spesies, tahun tanam, dan status perawatan.
+                Jelajahi peta atau klik ikon titik pohon untuk melihat foto lapangan, nama spesies (lokal & latin), dimensi pohon, serta kelengkapan data inventarisasi.
             </p>
 
             <!-- Metrics / Progress Bars -->
             <div class="metrics-container">
-                <!-- Bar 1 -->
-                <div class="metric-item">
-                    <div class="metric-header">
-                        <span class="metric-label">Pohon Peneduh & Kanopi Utama</span>
-                        <span class="metric-value">1.250 Pohon</span>
+                    <!-- Bar 1 -->
+                    <div class="metric-item">
+                        <div class="metric-header">
+                            <span class="metric-label">Tajuk Pohon Terpetakan</span>
+                            <span class="metric-value">481 Tajuk</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 100%;"></div>
+                        </div>
+                        <div class="metric-footer">
+                            <span>Berdasarkan hasil pemetaan kawasan kampus</span>
+                        </div>
                     </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 85%;"></div>
-                    </div>
-                    <div class="metric-footer">
-                        <span>Predikat Perawatan: 92% Sehat</span>
-                        <span>+15% Daya Serap Karbon</span>
-                    </div>
-                </div>
 
-                <!-- Bar 2 -->
-                <div class="metric-item">
-                    <div class="metric-header">
-                        <span class="metric-label">Tanaman Buah & Produktif</span>
-                        <span class="metric-value">420 Pohon</span>
+                    <!-- Bar 2 -->
+                    <div class="metric-item">
+                        <div class="metric-header">
+                            <span class="metric-label">Pohon Tersurvei Lapangan</span>
+                            <span class="metric-value">262 Pohon</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 54%;"></div>
+                        </div>
+                        <div class="metric-footer">
+                            <span>Terdiri dari 87 jenis (spesies) berbeda</span>
+                        </div>
                     </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 45%;"></div>
-                    </div>
-                    <div class="metric-footer">
-                        <span>Status: Tersebar di area Asrama & Kantin</span>
-                    </div>
-                </div>
 
-                <!-- Bar 3 -->
-                <div class="metric-item">
-                    <div class="metric-header">
-                        <span class="metric-label">Konservasi Hidrologi Lahan</span>
-                        <span class="metric-value">20 Titik</span>
+                    <!-- Bar 3 -->
+                    <div class="metric-item">
+                        <div class="metric-header">
+                            <span class="metric-label">Luas Area Pemetaan</span>
+                            <span class="metric-value">13.0 Hektar</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill fill-blue" style="width: 100%;"></div>
+                        </div>
+                        <div class="metric-footer">
+                            <span>Terbagi ke dalam 8 blok kawasan kampus</span>
+                        </div>
                     </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 20%;"></div>
-                    </div>
-                    <div class="metric-footer">
-                        <span>Rincian: Sumur Resapan & Biopori</span>
-                    </div>
-                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="cta-container">
+                <a href="/peta-gis.html" target="_blank" class="btn btn-primary btn-animated">
+                    <svg class="btn-icon-custom" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="icon-bg" cx="12" cy="12" r="12" fill="white"/>
+                        <path class="icon-arrow" d="M9.5 14.5L14.5 9.5M14.5 9.5H10.5M14.5 9.5V13.5" stroke="var(--btn-primary-bg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="btn-text">Buka Peta GIS Inventarisasi Lengkap</span>
+                </a>
             </div>
         </div>
 
         <!-- Right Side: Map -->
         <div class="content-right" data-animate="fade-up" style="animation-delay: 0.2s;">
             <div class="map-container">
-                <div class="map-placeholder">
-                    <div class="map-placeholder-content">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="map-icon">
-                            <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        <p>Peta Interaktif akan ditampilkan di sini</p>
-                    </div>
-                </div>
+                <iframe 
+                    id="gis-iframe"
+                    src="/peta-gis.html" 
+                    title="Peta Pohon GIS Interaktif" 
+                    class="gis-iframe"
+                    loading="lazy">
+                </iframe>
             </div>
         </div>
     </div>
@@ -174,40 +182,78 @@
         color: rgba(255, 255, 255, 0.5);
     }
 
+    /* CTA Button */
+    .cta-container {
+        margin-top: 1rem;
+    }
+    
+    .cta-container .btn {
+        width: 100%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        position: relative;
+    }
+
+    .cta-container .btn-text {
+        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(-12px); /* Shift text slightly to the left initially */
+    }
+
+    .cta-container .btn:hover .btn-text {
+        opacity: 0;
+        transform: translateX(15px); /* Slide text out to the right (or opposite of left) */
+    }
+
+    .cta-container .btn svg {
+        position: absolute;
+        left: 1.5rem;
+        transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .cta-container .btn:hover svg {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cta-container .btn .icon-arrow {
+        transition: transform 0.3s ease;
+        transform-origin: center;
+    }
+
+    .cta-container .btn:hover .icon-arrow {
+        transform: translate(2px, -2px);
+    }
+
+    .fill-blue {
+        background: #38bdf8 !important;
+    }
+
     /* --- Right Side (Map) --- */
     .content-right {
         width: 100%;
         height: 100%;
-        min-height: 500px;
+        min-height: 550px;
     }
 
     .map-container {
         width: 100%;
         height: 100%;
+        min-height: 550px;
         background: #ffffff;
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        display: flex;
     }
 
-    .map-placeholder {
+    .gis-iframe {
         width: 100%;
         height: 100%;
-        background-color: #f8fafc;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 500px;
-    }
-
-    .map-placeholder-content {
-        text-align: center;
-        color: var(--gray-400, #9ca3af);
-    }
-
-    .map-icon {
-        margin-bottom: 1rem;
-        color: var(--gray-300, #d1d5db);
+        min-height: 550px;
+        border: none;
     }
 
     /* Responsive */
@@ -217,12 +263,37 @@
             padding-top: 4rem;
         }
         
-        .content-right {
-            min-height: 400px;
-        }
-        
-        .map-placeholder {
-            min-height: 400px;
+        .content-right, .map-container, .gis-iframe {
+            min-height: 450px;
         }
     }
 </style>
+
+<script>
+    // Inject CSS to hide the sidebar when the map is embedded in the iframe
+    document.addEventListener("DOMContentLoaded", () => {
+        const iframe = document.getElementById('gis-iframe') as HTMLIFrameElement;
+        if (iframe) {
+            iframe.addEventListener('load', () => {
+                try {
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        #side { display: none !important; } 
+                        #drawer-btn { display: none !important; }
+                        #mapwrap { flex: 1 !important; width: 100% !important; }
+                    `;
+                    iframe.contentWindow?.document.head.appendChild(style);
+                    
+                    // Trigger map resize if Leaflet is accessible
+                    setTimeout(() => {
+                        if (iframe.contentWindow && (iframe.contentWindow as any).map) {
+                            (iframe.contentWindow as any).map.invalidateSize();
+                        }
+                    }, 300);
+                } catch (e) {
+                    console.error('Failed to inject iframe styles:', e);
+                }
+            });
+        }
+    });
+</script>
