@@ -109,6 +109,18 @@ import Preloader from '../components/Preloader.astro';
 		-moz-osx-font-smoothing: grayscale;
 	}
 
+	/* Skeleton Loading */
+	.skeleton {
+		background: linear-gradient(90deg, rgba(160, 160, 160, 0.15) 25%, rgba(160, 160, 160, 0.3) 50%, rgba(160, 160, 160, 0.15) 75%);
+		background-size: 200% 100%;
+		animation: skeleton-loading 1.5s infinite linear;
+	}
+
+	@keyframes skeleton-loading {
+		0% { background-position: 200% 0; }
+		100% { background-position: -200% 0; }
+	}
+
 	/* Lenis Global Styles */
 	html.lenis, html.lenis body {
 		height: auto;

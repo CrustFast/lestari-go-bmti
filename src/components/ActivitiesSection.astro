@@ -64,7 +64,7 @@ const activities = [
 				{activities.map((item, index) => (
 					<div class="activity-card">
 						<div class="card-image-wrapper">
-							<img src={item.image} alt={item.title} class="card-image" loading="lazy" />
+							<img src={item.image} alt={item.title} class="card-image skeleton" loading="lazy" onload="this.classList.remove('skeleton')" />
 							<div class="card-date">{item.date}</div>
 						</div>
 						<div class="card-content">
