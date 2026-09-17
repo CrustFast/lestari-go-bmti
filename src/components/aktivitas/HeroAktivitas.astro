@@ -1,30 +1,9 @@
 ---
-const carouselItems = [
-	{
-		image: '/img/bg-1.jpeg',
-		label: 'INFRASTRUKTUR HIJAU',
-		title: 'Optimalisasi Energi Terbarukan: BMTI Integrasikan PLTS 20,8 kW dan PLTB untuk Kemandirian Energi',
-		excerpt: 'Langkah nyata BBPPMPV BMTI mengoperasikan infrastruktur energi terbarukan melalui Smart Energy Management System (SEMS) guna mengurangi ketergantungan pada listrik konvensional secara terukur.',
-		date: 'Rabu, 9 September 2026',
-		author: 'Tim Lestari'
-	},
-	{
-		image: '/img/bg-2.jpg',
-		label: 'INFRASTRUKTUR HIJAU',
-		title: 'Ubah Tantangan Menjadi Peluang: BMTI Rancang Prototipe Teknologi Pirolisis',
-		excerpt: 'Mengubah sampah plastik menjadi bahan bakar cair alternatif sebagai fasilitas percontohan dan media inovasi pembelajaran praktik bengkel.',
-		date: 'Selasa, 8 September 2026',
-		author: 'Tim Lestari'
-	},
-	{
-		image: '/img/bg-3.jpg',
-		label: 'PENGUATAN SDM',
-		title: 'Integrasi Kurikulum Hijau, BMTI Jadikan Praktik Bengkel sebagai Living Laboratory',
-		excerpt: 'Melibatkan peserta diklat langsung ke dalam pemeliharaan sistem energi dan inovasi pengelolaan limbah melalui pendekatan Project-Based Learning (PjBL).',
-		date: 'Senin, 7 September 2026',
-		author: 'Tim Lestari'
-	}
-];
+import { articles } from '../../data/berita';
+const carouselItems = articles.map(article => ({
+    ...article,
+    label: article.category.toUpperCase()
+}));
 ---
 
 <section id="hero" class="hero">
@@ -84,7 +63,7 @@ const carouselItems = [
                         </div>
                         
                         <div class="hero-cta">
-                            <a href="#" class="btn-read-more">Baca Selengkapnya</a>
+                            <a href={`/aktivitas/${item.slug}`} class="btn-read-more">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -230,7 +209,7 @@ const carouselItems = [
     .hero-heading {
         font-family: var(--font-heading);
         font-size: clamp(1.75rem, 4vw, 2.5rem);
-        font-weight: 600;
+        font-weight: 800;
         color: var(--white);
         line-height: 1.2;
         margin: 0 0 1.5rem 0;
@@ -360,9 +339,9 @@ const carouselItems = [
     
     let currentIndex = 0;
     const totalSlides = bgs.length;
-    let autoPlayInterval;
+    let autoPlayInterval: ReturnType<typeof setInterval>;
 
-    function goToSlide(index) {
+    function goToSlide(index: number) {
         bgs[currentIndex].classList.remove('active');
         contents[currentIndex].classList.remove('active');
         

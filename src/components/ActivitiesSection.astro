@@ -1,34 +1,22 @@
 ---
-const activities = [
-	{
-		title: 'Optimalisasi Energi Terbarukan',
-		date: '10-09-2026',
-		description: 'Mengoperasikan fasilitas PLTS dan PLTB sebagai sumber energi penerangan kawasan yang terintegrasi dengan modul praktikum Project-Based Learning (PjBL) bagi peserta diklat.',
-		image: '/img/bg-2.jpg',
-		icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`
-	},
-	{
-		title: 'Pengelolaan Sampah Terpilah',
-		date: '12-09-2026',
-		description: 'Mengaktifkan titik pengumpulan sampah terpilah (Green Point) di zona asrama, perkantoran, dan bengkel dengan alur angkut yang terjadwal menuju TPSS.',
-		image: '/img/abt-1.jpeg',
-		icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>`
-	},
-	{
-		title: 'Pembangunan Fasilitas Resapan',
-		date: '15-09-2026',
-		description: 'Mengonstruksi 20 lubang biopori dan sumur resapan pada titik-titik rawan genangan untuk mendukung konservasi air tanah di kawasan institusi.',
-		image: '/img/bg-3.jpg',
-		icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>`
-	},
-	{
-		title: 'Inovasi Teknologi Pirolisis',
-		date: '18-09-2026',
-		description: 'Merancang unit percontohan teknologi pirolisis guna mengonversi limbah plastik menjadi bahan bakar sebagai media inovasi pembelajaran di lingkungan Balai.',
-		image: '/img/abt-2.jpeg',
-		icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2-9 5 18 2-9h5"/></svg>`
-	}
+import { articles } from '../data/berita';
+
+const icons = [
+	`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`,
+	`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>`,
+	`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>`,
+	`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2-9 5 18 2-9h5"/></svg>`
 ];
+
+// Display maximum of 4 activities
+const activities = articles.slice(0, 4).map((article, index) => ({
+	title: article.title,
+	date: article.date,
+	description: article.excerpt,
+	image: article.image,
+    slug: article.slug,
+	icon: icons[index % icons.length]
+}));
 ---
 
 <section id="aktivitas" class="activities-section">
@@ -70,7 +58,7 @@ const activities = [
 						<div class="card-content">
 							<h3 class="card-title">{item.title}</h3>
 							<p class="card-desc">{item.description}</p>
-							<a href="#" class="card-link">
+							<a href={`/aktivitas/${item.slug}`} class="card-link">
 								<span class="link-text">Baca Selengkapnya</span>
 								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
 							</a>

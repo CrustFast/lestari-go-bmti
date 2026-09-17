@@ -1,0 +1,295 @@
+---
+import { articles } from '../../data/berita';
+const { article } = Astro.props;
+
+// Use other articles as related news
+const relatedNews = articles.filter(a => a.slug !== article.slug);
+---
+
+<section class="detail-content">
+    <div class="content-container main-grid-wrapper">
+        <div class="main-layout">
+            
+            <!-- Left Column: Article Body -->
+            <article class="article-body">
+                <!-- Featured Image in Content -->
+                <figure class="featured-image-wrapper">
+                    <img src={article.image} alt={article.title} class="featured-img" />
+                </figure>
+
+                <!-- Content Text -->
+                <div class="prose" set:html={article.content}></div>
+            </article>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar-column">
+                
+                <!-- Related News Widget -->
+                <div class="widget popular-widget">
+                    <h4 class="widget-title">BERITA TERKAIT</h4>
+                    <div class="popular-list">
+                        {relatedNews.map((news) => (
+                            <div class="popular-item">
+                                <a href={`/aktivitas/${news.slug}`} class="popular-img-link">
+                                    <img src={news.image} alt={news.title} class="popular-img" loading="lazy" />
+                                </a>
+                                <div class="popular-info">
+                                    <h5 class="popular-title">
+                                        <a href={`/aktivitas/${news.slug}`}>{news.title}</a>
+                                    </h5>
+                                    <div class="popular-meta">
+                                        {news.category} | {news.date}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <!-- Share Widget -->
+                <div class="widget share-widget">
+                    <h4 class="widget-title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="share-icon"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+                        Bagikan Berita Ini
+                    </h4>
+                    <div class="social-share">
+                        <a href="#" class="share-btn facebook" aria-label="Share to Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="share-btn twitter" aria-label="Share to Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="share-btn whatsapp" aria-label="Share to WhatsApp">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                            <span>Whatsapp</span>
+                        </a>
+                        <a href="#" class="share-btn email" aria-label="Share via Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+
+            </aside>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Layout */
+    .detail-content {
+        padding-top: 0;
+        padding-bottom: 5rem;
+        background: #ffffff;
+    }
+
+    .content-container {
+        max-width: var(--container-max, 1280px);
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .main-grid-wrapper {
+        padding-top: 3rem;
+    }
+
+    .main-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    @media (min-width: 992px) {
+        .main-layout {
+            grid-template-columns: 2fr 1fr; /* Approximately 66% and 33% */
+        }
+    }
+
+    /* Article Body */
+    .article-body {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .featured-image-wrapper {
+        margin: 0 0 2.5rem 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .featured-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    /* Prose / Typography */
+    .prose {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--gray-700, #374151);
+    }
+
+    .prose p {
+        margin-bottom: 1.5rem;
+    }
+
+    .prose strong {
+        color: var(--gray-900, #111827);
+        font-weight: 600;
+    }
+
+    .author-credits {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--gray-200, #e5e7eb);
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .editor-note {
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: var(--gray-500, #6b7280);
+        padding: 0.75rem 1rem;
+        background: var(--gray-50, #f9fafb);
+        border-radius: 8px;
+        display: inline-block;
+    }
+
+    /* Sidebar Widgets */
+    .sidebar-column {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .widget {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+
+    .widget-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--green-700, #166534); /* Modified to green to match image styling */
+        margin: 0 0 1.5rem 0;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid var(--green-100, #dcfce7);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .share-icon {
+        color: var(--green-500, #22c55e);
+    }
+
+    /* Popular/Related News */
+    .popular-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .popular-item {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .popular-img-link {
+        flex-shrink: 0;
+        width: 90px;
+        height: 70px;
+        border-radius: 8px;
+        overflow: hidden;
+        display: block;
+    }
+
+    .popular-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .popular-img-link:hover .popular-img {
+        transform: scale(1.05);
+    }
+
+    .popular-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        flex: 1;
+    }
+
+    .popular-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .popular-title a {
+        color: var(--gray-800, #1f2937);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .popular-title a:hover {
+        color: var(--green-600, #16a34a);
+    }
+
+    .popular-meta {
+        font-size: 0.8rem;
+        color: var(--gray-500, #6b7280);
+    }
+
+    /* Social Share */
+    .social-share {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .share-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: var(--gray-500, #6b7280);
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+    .share-btn svg {
+        color: var(--green-500, #22c55e);
+        transition: transform 0.2s ease;
+    }
+
+    .share-btn:hover {
+        color: var(--green-600, #16a34a);
+    }
+
+    .share-btn:hover svg {
+        transform: translateY(-2px);
+    }
+
+    /* Specific brand colors on hover could be added, but keeping it green matches the image design style more closely */
+    .share-btn.facebook:hover svg { color: #1877F2; }
+    .share-btn.twitter:hover svg { color: #1DA1F2; }
+    .share-btn.whatsapp:hover svg { color: #25D366; }
+    .share-btn.email:hover svg { color: #D44638; }
+
+</style>

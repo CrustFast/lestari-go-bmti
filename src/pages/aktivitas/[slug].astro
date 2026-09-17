@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NavbarAktivitas from '../../components/aktivitas/NavbarAktivitas.astro';
+import Footer from '../../components/Footer.astro';
+import DetailHero from '../../components/aktivitas/DetailHero.astro';
+import DetailContent from '../../components/aktivitas/DetailContent.astro';
+import { articles } from '../../data/berita';
+
+export function getStaticPaths() {
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+---
+
+<Layout title={`${article.title} - Lestari BMTI`}>
+	<NavbarAktivitas />
+	<DetailHero article={article} />
+	<DetailContent article={article} />
+	<Footer />
+</Layout>
