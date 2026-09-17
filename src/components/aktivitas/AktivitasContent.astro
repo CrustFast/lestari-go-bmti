@@ -8,11 +8,6 @@ const tabs = [
 
 import { articles } from '../../data/berita';
 const popularNews = articles.slice(0, 5);
-
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
-
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{jpeg,jpg,png,gif,webp,JPG,JPEG,PNG}');
 ---
 
 <section class="aktivitas-content">
@@ -42,7 +37,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{
                     {articles.map((article) => (
                         <article class="article-card" data-category={article.categoryId}>
                             <a href={`/aktivitas/${article.slug}`} class="article-img-link">
-                                <Image src={images[article.image]()} alt={article.title} class="article-img" loading="lazy" />
+                                <img src={article.image} alt={article.title} class="article-img" loading="lazy" />
                             </a>
                             <div class="article-info">
                                 <h3 class="article-title">
@@ -117,7 +112,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{
                         {popularNews.map((news) => (
                             <div class="popular-item">
                                 <a href="#" class="popular-img-link">
-                                    <Image src={images[news.image]()} alt={news.title} class="popular-img" loading="lazy" />
+                                    <img src={news.image} alt={news.title} class="popular-img" loading="lazy" />
                                 </a>
                                 <div class="popular-info">
                                     <h5 class="popular-title">

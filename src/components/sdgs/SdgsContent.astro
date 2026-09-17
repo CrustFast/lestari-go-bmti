@@ -37,7 +37,7 @@ const sdgsData = [
             'Mengelola dan memanfaatkan instalasi biogas dari limbah organik kampus.',
             'Menggunakan Smart Energy Management System secara real-time dan melakukan kewajiban audit konsumsi energi setiap triwulan.'
         ],
-        panelImages: ['/src/assets/img/bg-3.jpg', '/src/assets/img/bg-1.jpeg']
+        panelImages: ['/src/assets/img/bg-3.jpg', '/src/assets/img/hero-1.jpeg']
     },
     { 
         bg: '/src/assets/img/abt-1.jpeg', icon: '/src/assets/img/sdgs/09.jpg', alt: 'SDG 9', color: '#FD6925', goal: '9',
@@ -79,7 +79,7 @@ const sdgsData = [
         panelImages: ['/src/assets/img/kandep4.jpg', '/src/assets/img/bg-3.jpg']
     },
     { 
-        bg: '/src/assets/img/bg-1.jpeg', icon: '/src/assets/img/sdgs/17.jpg', alt: 'SDG 17', color: '#19486A', goal: '17',
+        bg: '/src/assets/img/hero-1.jpeg', icon: '/src/assets/img/sdgs/17.jpg', alt: 'SDG 17', color: '#19486A', goal: '17',
         desc: 'Menguatkan sarana pelaksanaan dan merevitalisasi kemitraan lintas sektor untuk pembangunan vokasi berkelanjutan.',
         metrics: [ {v: '1', l: 'Kolaborasi DLH'}, {v: '3', l: 'SMK Mitra Replikasi'}, {v: '5+', l: 'Mitra DUDI'}, {v: '2', l: 'Komunitas Mentor'} ],
         panelHeader: 'SDG 17 - Kemitraan untuk Mencapai Tujuan',
@@ -89,7 +89,7 @@ const sdgsData = [
             'Membuka pintu kemitraan erat dengan Dunia Usaha dan Dunia Industri (DUDI) untuk dukungan infrastruktur hijau (skema CSR/riset bersama).',
             'Menjadi pusat rujukan (center of excellence) dan melaksanakan pendampingan replikasi Green Office bagi minimal tiga satuan pendidikan vokasi lainnya.'
         ],
-        panelImages: ['/src/assets/img/bg-1.jpeg', '/src/assets/img/bg-1.jpeg']
+        panelImages: ['/src/assets/img/hero-1.jpeg', '/src/assets/img/bg-1.jpeg']
     },
     {
         isGlobalGoals: true,
@@ -98,11 +98,6 @@ const sdgsData = [
         alt: 'Global Goals'
     }
 ];
-
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
-
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/**/*.{jpeg,jpg,png,gif,webp,JPG,JPEG,PNG}');
 ---
 <section class="sdgs-content-section">
     <div class="container">
@@ -117,11 +112,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/**/
             {sdgsData.map((item) => (
                 item.isGlobalGoals ? (
                     <div class="sdg-card global-goals-card">
-                        <Image src={images[item.icon]()} alt={item.alt} class="global-goals-img" loading="lazy" />
+                        <img src={item.icon} alt={item.alt} class="global-goals-img" loading="lazy" />
                     </div>
                 ) : (
                     <div class="sdg-card" style={`--hover-color: ${item.color};`}>
-                        <Image src={images[item.bg]()} alt="Background" class="sdg-img" loading="lazy" />
+                        <img src={item.bg} alt="Background" class="sdg-img" loading="lazy" />
                         <div class="sdg-overlay-tint"></div>
                         <div class="sdg-hover-fill"></div>
                         
@@ -142,7 +137,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/**/
                         </div>
 
                         <div class="sdg-icon-wrapper">
-                            <Image src={images[item.icon]()} alt={item.alt} class="sdg-icon" loading="lazy" />
+                            <img src={item.icon} alt={item.alt} class="sdg-icon" loading="lazy" />
                         </div>
                     </div>
                 )

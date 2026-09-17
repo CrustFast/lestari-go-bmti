@@ -5,9 +5,6 @@ const navLinks = [
 	{ label: 'SDGs', href: '/sdgs' },
 	{ label: 'Profil', href: '#', hasDropdown: true },
 ];
-
-import { Image } from 'astro:assets';
-import logoImg from '../assets/img/logo/logo 1.png';
 ---
 
 <header id="navbar" class="navbar">
@@ -15,7 +12,7 @@ import logoImg from '../assets/img/logo/logo 1.png';
 		<!-- Logo -->
 		<a href="/" class="navbar-logo" aria-label="Lestari Home">
 			<div class="logo-icon-wrapper">
-				<Image src={logoImg} alt="Logo Lestari" class="logo-icon-img" />
+				<img src="/img/logo 1.png" alt="Logo Lestari" class="logo-icon-img" />
 			</div>
 			<span class="logo-text">Lestari</span>
 		</a>

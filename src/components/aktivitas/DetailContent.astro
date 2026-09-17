@@ -4,11 +4,6 @@ const { article } = Astro.props;
 
 // Use other articles as related news
 const relatedNews = articles.filter(a => a.slug !== article.slug);
-
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
-
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{jpeg,jpg,png,gif,webp,JPG,JPEG,PNG}');
 ---
 
 <section class="detail-content">
@@ -19,7 +14,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{
             <article class="article-body">
                 <!-- Featured Image in Content -->
                 <figure class="featured-image-wrapper">
-                    <Image src={images[article.image]()} alt={article.title} class="featured-img" />
+                    <img src={article.image} alt={article.title} class="featured-img" />
                 </figure>
 
                 <!-- Content Text -->
@@ -36,7 +31,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{
                         {relatedNews.map((news) => (
                             <div class="popular-item">
                                 <a href={`/aktivitas/${news.slug}`} class="popular-img-link">
-                                    <Image src={images[news.image]()} alt={news.title} class="popular-img" loading="lazy" />
+                                    <img src={news.image} alt={news.title} class="popular-img" loading="lazy" />
                                 </a>
                                 <div class="popular-info">
                                     <h5 class="popular-title">

@@ -72,11 +72,6 @@ const galleryItems = [
 		parties: 'Unit Keamanan & Staf BMTI'
 	}
 ];
-
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
-
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{jpeg,jpg,png,gif,webp,JPG,JPEG,PNG}');
 ---
 
 <section id="konservasi" class="gallery-section">
@@ -112,7 +107,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{
 		<div class="gallery-grid" data-animate="fade-up" data-delay="200">
 			{galleryItems.map(item => (
 				<div class="gallery-item" data-category={item.category}>
-					<Image src={images[item.image]()} alt={item.title} class="gallery-img" loading="lazy" />
+					<img src={item.image} alt={item.title} class="gallery-img" loading="lazy" />
 					<div class="gallery-overlay">
 						<div class="overlay-top-space">
 							<div class="overlay-center-icon" 
