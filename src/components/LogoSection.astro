@@ -1,11 +1,15 @@
 ---
+import { Image } from 'astro:assets';
+import kemdikbud from '../assets/img/logo/tut-wuri-handayani.png';
+import cimahi from '../assets/img/logo/Logo-Cimahi.png';
+import asri from '../assets/img/logo/logo 1.png';
 ---
 
 <section class="logo-section" data-animate="fade-up">
 	<div class="logo-container">
-		<img src="/img/logo/tut-wuri-handayani.png" alt="Tut Wuri Handayani" class="partner-logo logo-kemdikbud" loading="lazy" />
-		<img src="/img/logo/Logo-Cimahi.png" alt="Dinas Lingkungan Hidup Cimahi" class="partner-logo logo-cimahi" loading="lazy" />
-		<img src="/img/logo/logo 1.png" alt="Indonesia Asri" class="partner-logo logo-asri" loading="lazy" />
+		<Image src={kemdikbud} alt="Tut Wuri Handayani" class="partner-logo logo-kemdikbud" loading="lazy" />
+		<Image src={cimahi} alt="Dinas Lingkungan Hidup Cimahi" class="partner-logo logo-cimahi" loading="lazy" />
+		<Image src={asri} alt="Indonesia Asri" class="partner-logo logo-asri" loading="lazy" />
 	</div>
 </section>
 

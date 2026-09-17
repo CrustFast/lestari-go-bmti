@@ -22,7 +22,7 @@ export const articles: Article[] = [
         author: 'Doni TP',
         editor: 'Tim Lestari',
         views: '125 Kali',
-        image: '/img/IMG_0139.JPG',
+        image: '/src/assets/img/IMG_0139.JPG',
         excerpt: 'SD Cikal Serpong mengambil langkah inspiratif dalam memperkenalkan isu energi terbarukan kepada para siswa sejak dini melalui kegiatan Overnight Field Trip Year 4 di BBPPMPV BMTI.',
         content: `
 <p><strong>Cimahi, BBPPMPV BMTI</strong> – SD Cikal Serpong mengambil langkah inspiratif dalam memperkenalkan isu energi terbarukan kepada para siswa sejak dini. Melalui kegiatan <em>Overnight Field Trip Year 4</em>, sebanyak 100 siswa kelas 4 berkesempatan mengunjungi Balai Besar Pengembangan Penjaminan Mutu Pendidikan Vokasi (BBPPMPV) BMTI di Cimahi. Kunjungan ini menjadi bagian dari pembelajaran tematik bertajuk <em>Transformation of Energy and Alternative Energy Solutions</em>.</p>
@@ -33,7 +33,7 @@ export const articles: Article[] = [
 
 <h4>1. Energi Air (Hidro)</h4>
 <figure>
-    <img src="/img/IMG_0139.JPG" alt="Materi Hidro">
+    <img src="/img/IMG_0139.webp" alt="Materi Hidro">
     <figcaption>Widyaiswara Niamul Niam sedang menyampaikan materi hidro</figcaption>
 </figure>
 <p>Dalam sesi ini, siswa mempelajari bagaimana aliran air dimanfaatkan untuk menghasilkan listrik melalui teknologi turbin. Mereka melihat langsung prototipe pembangkit listrik tenaga mikrohidro dan belajar mengenai peran gravitasi dan debit air dalam menggerakkan turbin. Antusiasme siswa terlihat saat menyaksikan simulasi air yang mengaktifkan generator mini.</p>
@@ -46,7 +46,7 @@ export const articles: Article[] = [
 
 <h4>4. Energi Surya</h4>
 <figure>
-    <img src="/img/IMG_0293.JPG" alt="Materi Surya">
+    <img src="/img/IMG_0293.webp" alt="Materi Surya">
     <figcaption>Peserta sedang merakit minatur Hybrid PLTS</figcaption>
 </figure>
 <p>Sesi terakhir tak kalah seru, di mana siswa diajak merakit miniatur panel surya dan menangkap sinar matahari untuk menyalakan kipas kecil. Mereka juga mencoba merakit versi mini dari <em>Hybrid PLTS</em> (Pembangkit Listrik Tenaga Surya), lengkap dengan bimbingan dari instruktur ahli. Salah satu siswa, Artha, mengungkapkan rasa senangnya, “Rasanya seperti bermain, tapi kita bisa belajar banyak. Seru banget waktu merakit solar panel sendiri dan bisa nyalain kipas!”</p>
@@ -58,7 +58,7 @@ export const articles: Article[] = [
 
 <h3>Menumbuhkan Kepedulian dan Aksi Nyata</h3>
 <figure>
-    <img src="/img/IMG_0435.JPG" alt="Foto Bersama">
+    <img src="/img/IMG_0435.webp" alt="Foto Bersama">
     <figcaption>Foto bersama 100 peserta</figcaption>
 </figure>
 <p>Melalui kunjungan edukatif ini, diharapkan para siswa tidak hanya memahami konsep energi secara teoritis, tetapi juga tumbuh sebagai individu yang sadar akan pentingnya keberlanjutan lingkungan dan energi masa depan.</p>
@@ -74,7 +74,7 @@ export const articles: Article[] = [
         author: 'Doni TP',
         editor: 'Tim Lestari',
         views: '342 Kali',
-        image: '/img/IMG_0289.JPG',
+        image: '/src/assets/img/IMG_0289.JPG',
         excerpt: 'BBPPMPV BMTI terus memperkuat peran strategisnya dalam mendukung kebijakan pemerintah menuju green economy melalui peresmian Sarana Praktik Pembangkit Listrik Tenaga Surya (PLTS) untuk Mobil Listrik.',
         content: `
 <p><strong>Cimahi, 06/11/2025</strong> — Balai Besar Pengembangan Penjaminan Mutu Pendidikan Vokasi Bidang Mesin dan Teknik Industri (BBPPMPV BMTI) terus memperkuat peran strategisnya dalam mendukung kebijakan pemerintah menuju green economy dan care economy melalui pengembangan pendidikan vokasi berbasis energi bersih dan berkelanjutan. Langkah nyata tersebut diwujudkan dengan peresmian Sarana Praktik Pembangkit Listrik Tenaga Surya (PLTS) untuk Mobil Listrik yang berlangsung di Kampus BBPPMPV BMTI, Cimahi.</p>
@@ -83,7 +83,7 @@ export const articles: Article[] = [
 <p>Sarana praktik PLTS tersebut dimanfaatkan untuk pembelajaran dan pelatihan bagi pegawai serta guru vokasi pada program Teknologi Energi Terbarukan (TET). Program ini berkolaborasi dengan bidang Teknik Otomotif, di mana pelatihan terkait teknologi mobil listrik disampaikan oleh widyaiswara berlatar belakang otomotif, sementara aspek pemanfaatan dan integrasi tenaga surya dikembangkan oleh tim TET.</p>
 
 <figure>
-    <img src="/img/IMG_0289.JPG" alt="Fungsionalisasi PLTS">
+    <img src="/img/IMG_0289.webp" alt="Fungsionalisasi PLTS">
     <figcaption>Fungsionalisasi Pembangkit Listrik Tenaga Surya (PLTS) pada Mobil Listrik</figcaption>
 </figure>
 
@@ -105,7 +105,7 @@ export const articles: Article[] = [
         author: 'Doni TP',
         editor: 'Tim Lestari',
         views: '512 Kali',
-        image: '/img/IMG_0341.JPG',
+        image: '/src/assets/img/IMG_0341.JPG',
         excerpt: 'Menyambut Hari Lingkungan Hidup, BBPPMPV BMTI resmi memulai era baru tata kelola rendah karbon melalui peluncuran program Green Office & Green Culture 2026.',
         content: `
 <p><strong>CIMAHI, BBPPMPV BMTI</strong> — Menyambut Hari Lingkungan Hidup, Balai Besar Pengembangan Penjaminan Mutu Pendidikan Vokasi Bidang Mesin dan Teknik Industri (BBPPMPV BMTI) resmi memulai era baru tata kelola rendah karbon. Melalui peluncuran program <em>Green Office & Green Culture 2026</em> di kawasan Kampus BMTI, Cimahi, Jawa Barat, Kamis (4/6), institusi ini menegaskan posisinya sebagai pionir <em>Green Campus</em> di Indonesia.</p>
@@ -113,7 +113,7 @@ export const articles: Article[] = [
 
 <h3>Transformasi Fundamental, Bukan Sekadar Kosmetik Visual</h3>
 <figure>
-    <img src="/img/IMG_0341.JPG" alt="Pelepasan Burung">
+    <img src="/img/IMG_0341.webp" alt="Pelepasan Burung">
     <figcaption>Pelepasan Burung Kutilang Oleh Dirjen PMPK dan Kepala BBPPMPV BMTI</figcaption>
 </figure>
 <p>Acara yang diawali dengan kesegaran senam pagi bersama ini dibuka oleh Kepala Bagian Tata Usaha BBPPMPV BMTI, Heri Susanto, S.Kom., M.Kes. Dalam laporannya, Heri menegaskan bahwa momentum ini adalah komitmen bersama untuk meninggalkan pola kerja administrasi yang masih konvensional.</p>
@@ -133,7 +133,7 @@ export const articles: Article[] = [
 
 <h3>Apresiasi Pusat: BBPPMPV BMTI sebagai Hub Vokasi Ramah Iklim</h3>
 <figure>
-    <img src="/img/IMG_0387.JPG" alt="Pemasangan Biopori">
+    <img src="/img/IMG_0387.webp" alt="Pemasangan Biopori">
     <figcaption>Pemasangan Biopori oleh Dirjen PMPK dan Kepala BBPPMPV BMTI</figcaption>
 </figure>
 <p>Aksi nyata ini mendapat apresiasi penuh dari Direktur Jenderal Pendidikan Menengah dan Pendidikan Khusus, Tatang Mutaqin, S.Sos., M.Ed., Ph.D., yang hadir langsung untuk meresmikan program.</p>
@@ -155,7 +155,7 @@ export const articles: Article[] = [
         author: 'Tim Lestari',
         editor: 'Tim Lestari',
         views: '215 Kali',
-        image: '/img/bg-2.jpg',
+        image: '/src/assets/img/bg-2.jpg',
         excerpt: 'Di antara rimbunnya lanskap hijau kampus BBPPMPV BMTI, berdiri sebuah pohon sarat makna yang menyimpan rekam jejak sejarah penting bagi pelestarian lingkungan di Indonesia.',
         content: `
 <p><strong>Cimahi, BBPPMPV BMTI</strong> — Di antara rimbunnya lanskap hijau kampus <strong>BBPPMPV BMTI</strong>, berdiri sebuah pohon sarat makna yang menyimpan rekam jejak sejarah penting bagi pelestarian lingkungan di Indonesia. Pohon tersebut adalah <strong>Keben</strong> (<em>Barringtonia asiatica</em>)—tanaman tangguh yang tidak hanya berfungsi secara ekologis, tetapi juga mengemban simbol perdamaian dunia.</p>
@@ -186,7 +186,7 @@ export const articles: Article[] = [
         author: 'Tim Lestari',
         editor: 'Tim Lestari',
         views: '180 Kali',
-        image: '/img/bg-3.jpg',
+        image: '/src/assets/img/bg-3.jpg',
         excerpt: 'Di antara ragam vegetasi yang memperkaya ruang hijau kita, terdapat satu spesies pohon rindang yang menyimpan potensi strategis luar biasa bagi ketahanan energi dan pemulihan lingkungan: Kemiri Sunan.',
         content: `
 <p><strong>Cimahi, BBPPMPV BMTI</strong> — Di antara ragam vegetasi yang memperkaya ruang hijau kita, terdapat satu spesies pohon rindang yang menyimpan potensi strategis luar biasa bagi ketahanan energi dan pemulihan lingkungan: Kemiri Sunan (<em>Reutealis trisperma</em> (Blanco) Airy Shaw).</p>
@@ -234,7 +234,7 @@ export const articles: Article[] = [
         author: 'Tim Lestari',
         editor: 'Tim Lestari',
         views: '290 Kali',
-        image: '/img/abt-1.jpeg',
+        image: '/src/assets/img/abt-1.jpeg',
         excerpt: 'Keberadaan pohon ini menjadi aset keanekaragaman hayati yang bernilai tinggi sekaligus menuntut perhatian khusus dalam tata kelola Green Management System (GMS).',
         content: `
 <p><strong>CIMAHI, BBPPMPV BMTI</strong> — Di tengah rimbunnya pepohonan peneduh kawasan, berdiri tegak sebuah pohon raksasa dengan postur kokoh bercabang tinggi. Namun, jika didekati, pohon ini berbeda dari pohon taman pada umumnya: sekujur batangnya dilapisi ribuan duri runcing seperti perisai baja. Tumbuhan unik nan eksotis ini adalah <em>Hura crepitans</em>, atau yang populer di dunia internasional dengan sebutan <em>Sandbox Tree</em> maupun Pohon Dinamit.</p>
@@ -272,7 +272,7 @@ export const articles: Article[] = [
         author: 'Tim Lestari',
         editor: 'Tim Lestari',
         views: '130 Kali',
-        image: '/img/abt-2.jpeg',
+        image: '/src/assets/img/abt-2.jpeg',
         excerpt: 'Pohon Kepel (atau kerap disebut juga burahol atau ki burahol) adalah pohon buah tropis legendaris yang kini berstatus sebagai tanaman langka di Indonesia.',
         content: `
 <h3>1. Pengenalan Umum & Status Kelangkaan</h3>

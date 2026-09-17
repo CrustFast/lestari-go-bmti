@@ -10,7 +10,7 @@ const categories = [
 const galleryItems = [
 	{
 		category: 'Penanaman Vegetasi',
-		image: '/img/bg-1.jpeg',
+		image: '/src/assets/img/bg-1.jpeg',
 		title: 'Peremajaan Vegetasi Kampus',
 		desc: 'Penataan ulang Ruang Terbuka Hijau (RTH) dan pemeliharaan pohon tua guna menjaga pasokan oksigen mikro.',
 		date: '12-08-2026',
@@ -19,7 +19,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Konservasi Hidrologi',
-		image: '/img/bg-2.jpg',
+		image: '/src/assets/img/bg-2.jpg',
 		title: 'Sumur Resapan & Biopori',
 		desc: 'Konstruksi 20 lubang biopori di titik rawan genangan untuk mengembalikan fungsi serapan air tanah.',
 		date: '25-08-2026',
@@ -28,7 +28,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Konservasi Hidrologi',
-		image: '/img/bg-3.jpg',
+		image: '/src/assets/img/bg-3.jpg',
 		title: 'Rain Harvesting System',
 		desc: 'Sistem pemanenan air hujan untuk menjaga siklus hidrologi dan ketersediaan air bersih di area kampus.',
 		date: '05-09-2026',
@@ -37,7 +37,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Perawatan RTH',
-		image: '/img/abt-1.jpeg',
+		image: '/src/assets/img/abt-1.jpeg',
 		title: 'Manajemen Sampah Organik',
 		desc: 'Pengelolaan harian limbah hayati dari ruang terbuka hijau untuk mewujudkan target Zero-Waste.',
 		date: 'Rutinitas Harian',
@@ -46,7 +46,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Kolaborasi Ekologis',
-		image: '/img/abt-2.jpeg',
+		image: '/src/assets/img/abt-2.jpeg',
 		title: 'Sinergi dengan DLH Kota Cimahi',
 		desc: 'Perawatan partisipatif kawasan hijau bersama instansi pemerintah daerah untuk pelestarian jangka panjang.',
 		date: '10-09-2026',
@@ -55,7 +55,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Penanaman Vegetasi',
-		image: '/img/bg-2.jpg',
+		image: '/src/assets/img/bg-2.jpg',
 		title: 'Edukasi Lingkungan Hijau',
 		desc: 'Melibatkan siswa dan masyarakat sekitar dalam praktik langsung perawatan tanaman dan pemahaman ekosistem.',
 		date: '12-09-2026',
@@ -64,7 +64,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Konservasi Hidrologi',
-		image: '/img/bg-3.jpg',
+		image: '/src/assets/img/bg-3.jpg',
 		title: 'Kawasan Bebas Emisi',
 		desc: 'Penetapan zona khusus bebas kendaraan bermotor di area pusat kampus untuk menjaga kualitas udara.',
 		date: 'Mulai Sep 2026',
@@ -72,6 +72,11 @@ const galleryItems = [
 		parties: 'Unit Keamanan & Staf BMTI'
 	}
 ];
+
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{jpeg,jpg,png,gif,webp,JPG,JPEG,PNG}');
 ---
 
 <section id="konservasi" class="gallery-section">
@@ -107,7 +112,7 @@ const galleryItems = [
 		<div class="gallery-grid" data-animate="fade-up" data-delay="200">
 			{galleryItems.map(item => (
 				<div class="gallery-item" data-category={item.category}>
-					<img src={item.image} alt={item.title} class="gallery-img" loading="lazy" />
+					<Image src={images[item.image]()} alt={item.title} class="gallery-img" loading="lazy" />
 					<div class="gallery-overlay">
 						<div class="overlay-top-space">
 							<div class="overlay-center-icon" 

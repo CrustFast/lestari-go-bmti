@@ -4,14 +4,19 @@ const carouselItems = articles.map(article => ({
     ...article,
     label: article.category.toUpperCase()
 }));
+
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{jpeg,jpg,png,gif,webp,JPG,JPEG,PNG}');
 ---
 
 <section id="hero" class="hero">
     <!-- Background Image Carousel -->
     <div class="hero-bg" id="hero-bg-carousel">
         {carouselItems.map((item, index) => (
-            <img 
-                src={item.image} 
+            <Image 
+                src={images[item.image]()} 
                 class={`carousel-bg ${index === 0 ? 'active' : ''}`} 
                 alt={item.title} 
                 loading={index === 0 ? "eager" : "lazy"} 

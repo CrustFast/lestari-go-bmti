@@ -8,6 +8,9 @@ const { activeLabel = 'Aktivitas' } = Astro.props;
 const navLinks = [
 	{ label: activeLabel, href: '#', active: true },
 ];
+
+import { Image } from 'astro:assets';
+import logoImg from '../../assets/img/logo/logo 1.png';
 ---
 
 <header id="navbar" class="navbar">
@@ -15,7 +18,7 @@ const navLinks = [
 		<!-- Logo -->
 		<a href="/" class="navbar-logo" aria-label="Lestari Home">
 			<div class="logo-icon-wrapper">
-				<img src="/img/logo 1.png" alt="Logo Lestari" class="logo-icon-img" />
+				<Image src={logoImg} alt="Logo Lestari" class="logo-icon-img" />
 			</div>
 			<span class="logo-text">Lestari</span>
 		</a>

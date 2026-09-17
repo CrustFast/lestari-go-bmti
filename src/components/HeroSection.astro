@@ -1,12 +1,16 @@
 ---
+import { Image } from 'astro:assets';
+import img0293 from '../assets/img/IMG_0293.webp';
+import img0341 from '../assets/img/IMG_0341.webp';
+import img0387 from '../assets/img/IMG_0387.webp';
 ---
 
 <section id="hero" class="hero">
 	<!-- Background Image Carousel -->
 	<div class="hero-bg" id="hero-bg-carousel">
-		<img src="/img/IMG_0293.webp" class="carousel-bg active skeleton" alt="Lanskap 1" loading="eager" fetchpriority="high" onload="this.classList.remove('skeleton')" />
-		<img src="/img/IMG_0341.webp" class="carousel-bg skeleton" alt="Lanskap 2" loading="lazy" onload="this.classList.remove('skeleton')" />
-		<img src="/img/IMG_0387.webp" class="carousel-bg skeleton" alt="Lanskap 3" loading="lazy" onload="this.classList.remove('skeleton')" />
+		<Image src={img0293} class="carousel-bg active skeleton" alt="Lanskap 1" loading="eager" fetchpriority="high" onload="this.classList.remove('skeleton')" />
+		<Image src={img0341} class="carousel-bg skeleton" alt="Lanskap 2" loading="lazy" onload="this.classList.remove('skeleton')" />
+		<Image src={img0387} class="carousel-bg skeleton" alt="Lanskap 3" loading="lazy" onload="this.classList.remove('skeleton')" />
 		<div class="hero-overlay"></div>
 	</div>
 
@@ -47,13 +51,13 @@
 		<!-- Carousel Indicators -->
 		<div class="hero-gallery" id="carousel-indicators" data-animate="fade-left" data-delay="400">
 			<div class="gallery-card active" data-index="0">
-				<img src="/img/IMG_0293.webp" alt="Lanskap 1" width="120" height="90" loading="eager" class="skeleton" onload="this.classList.remove('skeleton')" />
+				<Image src={img0293} alt="Lanskap 1" width="120" height="90" loading="eager" class="skeleton" onload="this.classList.remove('skeleton')" />
 			</div>
 			<div class="gallery-card" data-index="1">
-				<img src="/img/IMG_0341.webp" alt="Lanskap 2" width="120" height="90" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')" />
+				<Image src={img0341} alt="Lanskap 2" width="120" height="90" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')" />
 			</div>
 			<div class="gallery-card" data-index="2">
-				<img src="/img/IMG_0387.webp" alt="Lanskap 3" width="120" height="90" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')" />
+				<Image src={img0387} alt="Lanskap 3" width="120" height="90" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')" />
 			</div>
 		</div>
 	</div>
