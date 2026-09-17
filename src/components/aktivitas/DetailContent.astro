@@ -1,9 +1,40 @@
 ---
+import { Image, getImage } from 'astro:assets';
 import { articles } from '../../data/berita';
 const { article } = Astro.props;
 
 // Use other articles as related news
 const relatedNews = articles.filter(a => a.slug !== article.slug);
+
+let htmlContent = article.content;
+
+// Auto-optimize inline images in HTML content
+const imageMatches = htmlContent.match(/<img[^>]+src="([^">]+)"[^>]*>/g);
+if (imageMatches) {
+    const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/**/*.{jpeg,jpg,png,gif,webp}', { eager: true });
+    
+    for (const match of imageMatches) {
+        const srcMatch = match.match(/src="([^">]+)"/);
+        if (srcMatch) {
+            let rawSrc = srcMatch[1]; 
+            // Automatically map /img/... paths to /src/assets/img/...
+            if (rawSrc.startsWith('/img/')) {
+                rawSrc = '/src/assets/img/' + rawSrc.substring(5);
+            }
+
+            if (images[rawSrc]) {
+                const imgMeta = images[rawSrc].default;
+                const optimized = await getImage({ src: imgMeta, format: 'webp' });
+                
+                let newImgTag = match.replace(
+                    `src="${srcMatch[1]}"`, 
+                    `src="${optimized.src}" width="${optimized.attributes.width}" height="${optimized.attributes.height}" loading="lazy"`
+                );
+                htmlContent = htmlContent.replace(match, newImgTag);
+            }
+        }
+    }
+}
 ---
 
 <section class="detail-content">
@@ -14,11 +45,11 @@ const relatedNews = articles.filter(a => a.slug !== article.slug);
             <article class="article-body">
                 <!-- Featured Image in Content -->
                 <figure class="featured-image-wrapper">
-                    <img src={article.image} alt={article.title} class="featured-img" />
+                    <Image src={article.image} alt={article.title} class="featured-img" />
                 </figure>
 
                 <!-- Content Text -->
-                <div class="prose" set:html={article.content}></div>
+                <div class="prose" set:html={htmlContent}></div>
             </article>
 
             <!-- Right Column: Sidebar -->
@@ -31,7 +62,7 @@ const relatedNews = articles.filter(a => a.slug !== article.slug);
                         {relatedNews.map((news) => (
                             <div class="popular-item">
                                 <a href={`/aktivitas/${news.slug}`} class="popular-img-link">
-                                    <img src={news.image} alt={news.title} class="popular-img" loading="lazy" />
+                                    <Image src={news.image} alt={news.title} class="popular-img" loading="lazy" />
                                 </a>
                                 <div class="popular-info">
                                     <h5 class="popular-title">

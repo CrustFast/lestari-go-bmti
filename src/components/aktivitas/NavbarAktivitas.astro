@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import logoImg from '../../assets/img/logo 1.png';
+
 export interface Props {
 	activeLabel?: string;
 }
@@ -15,7 +18,7 @@ const navLinks = [
 		<!-- Logo -->
 		<a href="/" class="navbar-logo" aria-label="Lestari Home">
 			<div class="logo-icon-wrapper">
-				<img src="/img/logo 1.png" alt="Logo Lestari" class="logo-icon-img" />
+				<Image src={logoImg} alt="Logo Lestari" class="logo-icon-img" />
 			</div>
 			<span class="logo-text">Lestari</span>
 		</a>

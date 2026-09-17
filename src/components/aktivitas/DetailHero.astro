@@ -1,10 +1,11 @@
 ---
+import { Image } from 'astro:assets';
 const { article } = Astro.props;
 ---
 
 <section class="detail-hero">
     <div class="hero-bg">
-        <img src={article.image} alt="Background" class="bg-img" />
+        <Image src={article.image} alt="Background" class="bg-img" />
         <div class="overlay"></div>
     </div>
     

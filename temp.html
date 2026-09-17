@@ -1,0 +1,3154 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/png" href="/favicon-square.png"><meta name="generator" content="Astro v7.3.2"><meta name="description" content="Lestari menyediakan jasa pembuatan taman, perawatan lanskap, dan desain ruang hijau yang memadukan keindahan, fungsi, dan keberlanjutan."><title>Lestari | Layanan Ekosistem Terpadu Asri</title><!-- Google Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/Preloader.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.preloader[data-astro-cid-xtleqxzo] {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--btn-primary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .8s cubic-bezier(.77, 0, .175, 1);
+  transform: translateY(0);
+}
+
+.preloader[data-astro-cid-xtleqxzo].slide-down {
+  transform: translateY(100%);
+}
+
+.preloader-brand[data-astro-cid-xtleqxzo] {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.preloader-logo[data-astro-cid-xtleqxzo] {
+  width: 100px;
+  height: 100px;
+  animation: 2s ease-in-out infinite preloader-pulse;
+}
+
+.preloader-text[data-astro-cid-xtleqxzo] {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: .02em;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: .8s cubic-bezier(.16, 1, .3, 1) forwards text-fade-in;
+  animation-delay: .3s;
+}
+
+@keyframes text-fade-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes preloader-pulse {
+  0% {
+    transform: scale(.95);
+    opacity: .8;
+    box-shadow: 0 0 #fff6;
+    border-radius: 50%;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 0 0 20px #fff0;
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: scale(.95);
+    opacity: .8;
+    box-shadow: 0 0 #fff0;
+    border-radius: 50%;
+  }
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/Preloader.astro?astro&amp;type=style&amp;index=1&amp;lang.css">html.skip-preloader #app-preloader {
+        display: none !important;
+    }</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/layouts/Layout.astro?astro&amp;type=style&amp;index=0&amp;lang.css">*,
+	*::before,
+	*::after {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	:root {
+		/* Primary greens */
+		--green-900: #0a2e14;
+		--green-800: #14532d;
+		--green-700: #166534;
+		--green-600: #1EA02F;
+		--green-500: #24ba37;
+		--green-400: #4ade80;
+		--green-300: #86efac;
+		--green-100: #dcfce7;
+		--green-50: #f0fdf4;
+
+		/* Accent */
+		--yellow-500: #eab308;
+		--yellow-400: #facc15;
+
+		/* Neutrals */
+		--white: #ffffff;
+		--gray-50: #f9fafb;
+		--gray-100: #f3f4f6;
+		--gray-200: #e5e7eb;
+		--gray-300: #d1d5db;
+		--gray-500: #6b7280;
+		--gray-600: #4b5563;
+		--gray-700: #374151;
+		--gray-800: #1f2937;
+		--gray-900: #111827;
+
+		/* Typography */
+		--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		--font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+		--font-heading: 'Montserrat', sans-serif;
+
+		/* UI Components */
+		--btn-primary-bg: #1EA02F; /* --green-600 */
+		--btn-primary-hover: #24ba37; /* --green-500 */
+
+		/* Spacing */
+		--container-max: 1280px;
+		--container-padding: 1.5rem;
+
+		/* Transitions */
+		--transition-fast: 150ms ease;
+		--transition-base: 250ms ease;
+		--transition-slow: 400ms ease;
+	}
+
+	html {
+		/* Removed scroll-behavior: smooth as Lenis handles it better */
+	}
+
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		min-height: 100vh;
+		font-family: var(--font-sans);
+		color: var(--gray-900);
+		background-color: var(--white);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	/* Skeleton Loading */
+	.skeleton {
+		background: linear-gradient(90deg, rgba(160, 160, 160, 0.15) 25%, rgba(160, 160, 160, 0.3) 50%, rgba(160, 160, 160, 0.15) 75%);
+		background-size: 200% 100%;
+		animation: skeleton-loading 1.5s infinite linear;
+	}
+
+	@keyframes skeleton-loading {
+		0% { background-position: 200% 0; }
+		100% { background-position: -200% 0; }
+	}
+
+	/* Lenis Global Styles */
+	html.lenis, html.lenis body {
+		height: auto;
+	}
+
+	.lenis.lenis-smooth {
+		scroll-behavior: auto !important;
+	}
+
+	.lenis.lenis-smooth [data-lenis-prevent] {
+		overscroll-behavior: contain;
+	}
+
+	.lenis.lenis-stopped {
+		overflow: hidden;
+	}
+
+	.lenis.lenis-smooth iframe {
+		pointer-events: none;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	ul,
+	ol {
+		list-style: none;
+	}
+
+	button {
+		cursor: pointer;
+		border: none;
+		background: none;
+		font-family: inherit;
+	}
+
+	/* Buttons */
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 0.65rem 1.5rem;
+		font-size: 0.95rem;
+		font-weight: 600;
+		border-radius: 50px;
+		transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+		white-space: nowrap;
+	}
+
+	.btn-icon {
+		flex-shrink: 0;
+	}
+
+	.btn-primary {
+		background: var(--btn-primary-bg);
+		color: var(--white);
+	}
+
+	.btn-primary:not(.btn-animated):hover {
+		background: var(--btn-primary-hover);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(30, 160, 47, 0.4);
+	}
+
+	/* Animated Button Styling */
+	.btn-animated {
+		width: 195px;
+		padding: 0.65rem 1rem; 
+		gap: 0.75rem;
+		justify-content: center;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		overflow: hidden;
+	}
+
+	.btn-text {
+		transition: max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		max-width: 200px;
+		opacity: 1;
+		transform: translateX(0);
+		white-space: nowrap;
+	}
+
+	.icon-bg {
+		transition: fill 0.4s ease;
+	}
+
+	.icon-arrow {
+		transition: stroke 0.4s ease, transform 0.4s ease;
+		transform-origin: center;
+	}
+
+	.btn-primary.btn-animated:hover {
+		background: var(--white);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 15px rgba(30, 160, 47, 0.1), inset 0 0 0 1.5px var(--btn-primary-bg);
+	}
+
+	.btn-animated:hover .btn-text {
+		max-width: 0;
+		opacity: 0;
+		transform: translateX(-15px);
+		margin: 0;
+	}
+
+	.btn-animated:hover .icon-bg {
+		fill: var(--btn-primary-bg);
+	}
+
+	.btn-animated:hover .icon-arrow {
+		stroke: var(--white);
+		transform: rotate(45deg);
+	}
+
+	.btn-secondary {
+		background: rgba(255, 255, 255, 0.1);
+		color: var(--white);
+		border: 1px solid rgba(255, 255, 255, 0.25);
+		backdrop-filter: blur(4px);
+	}
+
+	.btn-secondary:hover {
+		background: rgba(255, 255, 255, 0.2);
+		border-color: rgba(255, 255, 255, 0.4);
+		transform: translateY(-2px);
+	}
+
+	/* Animations */
+	[data-animate] {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity 0.7s ease, transform 0.7s ease;
+	}
+
+	[data-animate="fade-left"] {
+		transform: translateX(40px);
+	}
+
+	[data-animate="fade-right"] {
+		transform: translateX(-40px);
+	}
+
+	[data-animate="fade-up"] {
+		transform: translateY(40px);
+	}
+
+	[data-animate].animate-in {
+		opacity: 1;
+		transform: translate(0, 0);
+	}</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/Navbar.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.navbar[data-astro-cid-l7arcky5] {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  max-width: 800px;
+  z-index: 1000;
+  background: #fff3;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #ffffff4d;
+  border-radius: 50px;
+  transition: all .4s cubic-bezier(.4, 0, .2, 1);
+}
+
+.navbar[data-astro-cid-l7arcky5].scrolled {
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  background: #0a2e14f2;
+  box-shadow: 0 4px 30px #00000026;
+  border-color: #0000;
+}
+
+.navbar-container[data-astro-cid-l7arcky5] {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: .75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo[data-astro-cid-l7arcky5] {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  z-index: 10;
+}
+
+.logo-icon-wrapper[data-astro-cid-l7arcky5] {
+  width: 36px;
+  height: 36px;
+  background-color: var(--btn-primary-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.logo-icon-img[data-astro-cid-l7arcky5] {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+}
+
+.logo-text[data-astro-cid-l7arcky5] {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -.01em;
+}
+
+.navbar-nav[data-astro-cid-l7arcky5] {
+  display: none;
+}
+
+.nav-links[data-astro-cid-l7arcky5] {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-link[data-astro-cid-l7arcky5] {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .5rem .25rem;
+  color: #ffffffe6;
+  font-size: .9rem;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.nav-link[data-astro-cid-l7arcky5]:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2.5px;
+  background-color: var(--white);
+  transition: width .3s, transform .3s;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+.nav-link[data-astro-cid-l7arcky5]:hover:after, .nav-link[data-astro-cid-l7arcky5].active:after {
+  width: 60%;
+}
+
+.nav-link[data-astro-cid-l7arcky5]:hover, .nav-link[data-astro-cid-l7arcky5].active {
+  color: var(--white);
+}
+
+.dropdown-chevron[data-astro-cid-l7arcky5] {
+  transition: transform var(--transition-fast);
+}
+
+.nav-link[data-astro-cid-l7arcky5]:hover .dropdown-chevron[data-astro-cid-l7arcky5] {
+  transform: rotate(180deg);
+}
+
+.navbar-cta[data-astro-cid-l7arcky5] {
+  display: none;
+}
+
+.btn-tentang[data-astro-cid-l7arcky5] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .65rem 1.5rem;
+  background: var(--btn-primary-bg);
+  color: var(--white);
+  font-weight: 600;
+  font-size: .95rem;
+  border-radius: 50px;
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-tentang[data-astro-cid-l7arcky5]:hover {
+  background: var(--btn-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px #16a34a66;
+}
+
+.mobile-menu-btn[data-astro-cid-l7arcky5] {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  z-index: 10;
+}
+
+.hamburger-line[data-astro-cid-l7arcky5] {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.mobile-menu-btn[data-astro-cid-l7arcky5].open .hamburger-line[data-astro-cid-l7arcky5]:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-btn[data-astro-cid-l7arcky5].open .hamburger-line[data-astro-cid-l7arcky5]:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn[data-astro-cid-l7arcky5].open .hamburger-line[data-astro-cid-l7arcky5]:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-menu[data-astro-cid-l7arcky5] {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #0a2e14f7;
+  backdrop-filter: blur(16px);
+  padding: 1rem var(--container-padding) 2rem;
+  border-top: 1px solid #ffffff1a;
+}
+
+.mobile-menu[data-astro-cid-l7arcky5].open {
+  display: block;
+  animation: .3s forwards slideDown;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-nav-links[data-astro-cid-l7arcky5] {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  margin-bottom: 1.5rem;
+}
+
+.mobile-nav-link[data-astro-cid-l7arcky5] {
+  display: block;
+  padding: .75rem 1rem;
+  color: #ffffffd9;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.mobile-nav-link[data-astro-cid-l7arcky5]:hover, .mobile-nav-link[data-astro-cid-l7arcky5].active {
+  color: var(--white);
+  background: #ffffff1a;
+}
+
+.mobile-cta-phone[data-astro-cid-l7arcky5] {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .875rem 1.25rem;
+  background: var(--green-600);
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 50px;
+  justify-content: center;
+  transition: background var(--transition-fast);
+}
+
+.mobile-cta-phone[data-astro-cid-l7arcky5]:hover {
+  background: var(--green-500);
+}
+
+@media (width >= 768px) {
+  .navbar-nav[data-astro-cid-l7arcky5] {
+    display: block;
+  }
+
+  .mobile-menu-btn[data-astro-cid-l7arcky5] {
+    display: none;
+  }
+}
+
+@media (width >= 1024px) {
+  .navbar-cta[data-astro-cid-l7arcky5] {
+    display: block;
+  }
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/HeroSection.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.hero[data-astro-cid-s4khibbi] {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg[data-astro-cid-s4khibbi] {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg[data-astro-cid-s4khibbi] img.carousel-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-bg[data-astro-cid-s4khibbi] img.carousel-bg.active {
+  opacity: 1;
+}
+
+.hero-overlay[data-astro-cid-s4khibbi] {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, #0a2e14eb 0%, #0a2e14d9 35%, #0a2e1499 55%, #0a2e1433 75%, #0a2e1426 100%);
+}
+
+.hero-container[data-astro-cid-s4khibbi] {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 8.5rem var(--container-padding) 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-content[data-astro-cid-s4khibbi] {
+  max-width: 800px;
+}
+
+.hero-rating[data-astro-cid-s4khibbi] {
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  background: #ffffff1a;
+  border-radius: 50px;
+  border: 1px solid #fff3;
+  margin-bottom: 1.5rem;
+}
+
+.rating-count[data-astro-cid-s4khibbi] {
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--white);
+}
+
+.hero-heading[data-astro-cid-s4khibbi] {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -.02em;
+}
+
+.heading-accent[data-astro-cid-s4khibbi] {
+  display: block;
+  color: var(--gray-300);
+  font-style: italic;
+}
+
+.hero-description[data-astro-cid-s4khibbi] {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #ffffffbf;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+.hero-actions[data-astro-cid-s4khibbi] {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+.hero-cta[data-astro-cid-s4khibbi] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-gallery[data-astro-cid-s4khibbi] {
+  position: absolute;
+  bottom: 3rem;
+  right: var(--container-padding);
+  display: flex;
+  gap: .75rem;
+  z-index: 2;
+}
+
+.gallery-card[data-astro-cid-s4khibbi] {
+  width: 120px;
+  height: 90px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #0000;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  opacity: .6;
+}
+
+.gallery-card[data-astro-cid-s4khibbi]:hover, .gallery-card[data-astro-cid-s4khibbi].active {
+  opacity: 1;
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.gallery-card[data-astro-cid-s4khibbi] img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (width >= 768px) {
+  .hero-heading[data-astro-cid-s4khibbi] {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .hero-description[data-astro-cid-s4khibbi] {
+    font-size: 1.05rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .hero-container[data-astro-cid-s4khibbi] {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding-top: 11rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-overlay[data-astro-cid-s4khibbi] {
+    background: linear-gradient(105deg, #0a2e14eb 0%, #0a2e14d1 40%, #0a2e1480 60%, #0a2e1426 80% 100%);
+  }
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/LogoSection.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.logo-section[data-astro-cid-dnmh47xm] {
+  padding: 4rem var(--container-padding);
+  background: var(--white);
+}
+
+.logo-container[data-astro-cid-dnmh47xm] {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.partner-logo[data-astro-cid-dnmh47xm] {
+  opacity: .6;
+  transition: opacity var(--transition-base), transform var(--transition-base), filter var(--transition-base);
+  filter: grayscale();
+  object-fit: contain;
+  width: auto;
+}
+
+.logo-kemdikbud[data-astro-cid-dnmh47xm] {
+  height: 55px;
+}
+
+.logo-cimahi[data-astro-cid-dnmh47xm] {
+  height: 55px;
+}
+
+.logo-asri[data-astro-cid-dnmh47xm] {
+  height: 55px;
+}
+
+.logo-dudi[data-astro-cid-dnmh47xm] {
+  height: 48px;
+}
+
+.partner-logo[data-astro-cid-dnmh47xm]:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: translateY(-2px);
+}
+
+@media (width >= 768px) {
+  .logo-container[data-astro-cid-dnmh47xm] {
+    justify-content: center;
+    gap: 10rem;
+  }
+
+  .logo-kemdikbud[data-astro-cid-dnmh47xm] {
+    height: 80px;
+  }
+
+  .logo-cimahi[data-astro-cid-dnmh47xm] {
+    height: 80px;
+  }
+
+  .logo-asri[data-astro-cid-dnmh47xm] {
+    height: 80px;
+  }
+
+  .logo-dudi[data-astro-cid-dnmh47xm] {
+    height: 70px;
+  }
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/AboutSection.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.about-wrapper[data-astro-cid-lx6rp2ia] {
+  background: var(--white);
+  position: relative;
+}
+
+.about-container[data-astro-cid-lx6rp2ia] {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 6rem var(--container-padding);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-visual[data-astro-cid-lx6rp2ia] {
+  position: relative;
+}
+
+.image-wrapper[data-astro-cid-lx6rp2ia] {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px #00000014;
+}
+
+.main-image[data-astro-cid-lx6rp2ia] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.floating-card[data-astro-cid-lx6rp2ia] {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: var(--green-900);
+  color: var(--white);
+  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 10px 25px #0a2e1466;
+  max-width: 280px;
+}
+
+.card-icon[data-astro-cid-lx6rp2ia] {
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.card-title[data-astro-cid-lx6rp2ia] {
+  display: block;
+  font-size: .85rem;
+  opacity: .8;
+}
+
+.card-subtitle[data-astro-cid-lx6rp2ia] {
+  display: block;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.section-label[data-astro-cid-lx6rp2ia] {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--btn-primary-bg);
+  font-weight: 600;
+  font-size: .95rem;
+  margin-bottom: 1rem;
+}
+
+.section-heading[data-astro-cid-lx6rp2ia] {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--green-900);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -.02em;
+}
+
+.text-accent[data-astro-cid-lx6rp2ia] {
+  color: var(--green-600);
+}
+
+.section-description[data-astro-cid-lx6rp2ia] {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--gray-600);
+  margin-bottom: 2.5rem;
+}
+
+.features-grid[data-astro-cid-lx6rp2ia] {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.feature-item[data-astro-cid-lx6rp2ia] {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.check-icon[data-astro-cid-lx6rp2ia] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--green-900);
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.feature-text[data-astro-cid-lx6rp2ia] {
+  font-weight: 600;
+  color: var(--gray-800);
+  font-size: 1rem;
+}
+
+.about-cta[data-astro-cid-lx6rp2ia] .btn-animated[data-astro-cid-lx6rp2ia] {
+  width: 220px;
+}
+
+@media (width >= 768px) {
+  .features-grid[data-astro-cid-lx6rp2ia] {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .floating-card[data-astro-cid-lx6rp2ia] {
+    bottom: 2rem;
+    left: 2rem;
+    padding: 1.5rem 2rem;
+  }
+}
+
+.custom-modal[data-astro-cid-lx6rp2ia] {
+  border: none;
+  border-radius: 16px;
+  background: var(--white);
+  padding: 0;
+  max-width: 1000px;
+  width: 90%;
+  max-height: 90vh;
+  margin: auto;
+  box-shadow: 0 25px 50px -12px #00000040;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px) scale(.95);
+  transition: opacity .4s cubic-bezier(.16, 1, .3, 1), transform .4s cubic-bezier(.16, 1, .3, 1);
+}
+
+.custom-modal[data-astro-cid-lx6rp2ia][open] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.custom-modal[data-astro-cid-lx6rp2ia].is-closing {
+  opacity: 0;
+  transform: translateY(20px) scale(.95);
+}
+
+@starting-style {
+  .custom-modal[data-astro-cid-lx6rp2ia][open] {
+    opacity: 0;
+    transform: translateY(20px) scale(.95);
+  }
+}
+
+.custom-modal[data-astro-cid-lx6rp2ia]::backdrop {
+  background: #0a2e1499;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity .4s ease-out;
+}
+
+.custom-modal[data-astro-cid-lx6rp2ia][open]::backdrop {
+  opacity: 1;
+}
+
+.custom-modal[data-astro-cid-lx6rp2ia].is-closing::backdrop {
+  opacity: 0;
+}
+
+@starting-style {
+  .custom-modal[data-astro-cid-lx6rp2ia][open]::backdrop {
+    opacity: 0;
+  }
+}
+
+.modal-content[data-astro-cid-lx6rp2ia] {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 90vh;
+}
+
+.modal-close[data-astro-cid-lx6rp2ia] {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: #ffffffe6;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #0000001a;
+  color: var(--gray-800);
+  transition: all .2s;
+}
+
+.modal-close[data-astro-cid-lx6rp2ia]:hover {
+  background: var(--green-600);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.modal-header-img[data-astro-cid-lx6rp2ia] {
+  width: 100%;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.modal-header-img[data-astro-cid-lx6rp2ia] img[data-astro-cid-lx6rp2ia] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-body[data-astro-cid-lx6rp2ia] {
+  padding: 2.5rem;
+  overflow-y: auto;
+  color: var(--gray-700);
+  line-height: 1.8;
+}
+
+.modal-body[data-astro-cid-lx6rp2ia] h2[data-astro-cid-lx6rp2ia] {
+  color: var(--green-900);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+  letter-spacing: -.02em;
+  line-height: 1.3;
+}
+
+.modal-section-label[data-astro-cid-lx6rp2ia] {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--btn-primary-bg);
+  font-weight: 600;
+  font-size: .95rem;
+  margin-top: 1.75rem;
+  margin-bottom: .5rem;
+}
+
+.modal-body[data-astro-cid-lx6rp2ia] h4[data-astro-cid-lx6rp2ia] {
+  color: var(--gray-900);
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+.modal-body[data-astro-cid-lx6rp2ia] p[data-astro-cid-lx6rp2ia] {
+  margin-bottom: 1rem;
+}
+
+.modal-list[data-astro-cid-lx6rp2ia] {
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  list-style: none;
+}
+
+.modal-list[data-astro-cid-lx6rp2ia] li[data-astro-cid-lx6rp2ia] {
+  margin-bottom: .75rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.modal-list[data-astro-cid-lx6rp2ia] li[data-astro-cid-lx6rp2ia]:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--green-600);
+}
+
+.modal-list[data-astro-cid-lx6rp2ia] li[data-astro-cid-lx6rp2ia] strong[data-astro-cid-lx6rp2ia] {
+  color: var(--green-800);
+}
+
+@media (width <= 768px) {
+  .modal-header-img[data-astro-cid-lx6rp2ia] {
+    height: 200px;
+  }
+
+  .modal-body[data-astro-cid-lx6rp2ia] {
+    padding: 1.5rem;
+  }
+
+  .modal-body[data-astro-cid-lx6rp2ia] h2[data-astro-cid-lx6rp2ia] {
+    font-size: 1.5rem;
+  }
+}
+
+@media (width >= 992px) {
+  .modal-content[data-astro-cid-lx6rp2ia] {
+    flex-direction: row;
+    height: 80vh;
+    max-height: 700px;
+  }
+
+  .modal-header-img[data-astro-cid-lx6rp2ia] {
+    width: 40%;
+    height: 100%;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+
+  .modal-header-img[data-astro-cid-lx6rp2ia] img[data-astro-cid-lx6rp2ia] {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px #0000001a;
+  }
+
+  .modal-body[data-astro-cid-lx6rp2ia] {
+    width: 60%;
+    height: 100%;
+    padding: 3rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .about-container[data-astro-cid-lx6rp2ia] {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+
+  .main-image[data-astro-cid-lx6rp2ia] {
+    aspect-ratio: 1;
+  }
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/MetricCard.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.metric-card[data-astro-cid-p5buzfly] {
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: transform var(--transition-base), background var(--transition-base), border-color var(--transition-base);
+  color: var(--white);
+}
+
+.metric-card[data-astro-cid-p5buzfly]:hover {
+  transform: translateY(-5px);
+  background: #ffffff14;
+  border-color: #fff3;
+}
+
+.card-large[data-astro-cid-p5buzfly] {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-header[data-astro-cid-p5buzfly] {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.card-icon-wrapper[data-astro-cid-p5buzfly] {
+  color: var(--green-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-large[data-astro-cid-p5buzfly] .card-icon-wrapper[data-astro-cid-p5buzfly] svg {
+  width: 28px;
+  height: 28px;
+}
+
+.card-badge[data-astro-cid-p5buzfly] {
+  background: #ffffff1a;
+  padding: .35rem .65rem;
+  border-radius: 50px;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  color: var(--green-100);
+}
+
+.card-value[data-astro-cid-p5buzfly] {
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  line-height: 1;
+  margin-bottom: .4rem;
+  color: var(--white);
+}
+
+.card-title[data-astro-cid-p5buzfly] {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green-100);
+  margin-bottom: .75rem;
+}
+
+.card-desc[data-astro-cid-p5buzfly] {
+  font-size: .85rem;
+  line-height: 1.6;
+  color: #ffffffb3;
+  margin: 0;
+}
+
+.card-small[data-astro-cid-p5buzfly] {
+  padding: 1.25rem;
+}
+
+.small-card-content[data-astro-cid-p5buzfly] {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.small-icon[data-astro-cid-p5buzfly] {
+  background: #ffffff1a;
+  padding: .65rem;
+  border-radius: 12px;
+  color: var(--green-400);
+}
+
+.small-icon[data-astro-cid-p5buzfly] svg {
+  width: 20px;
+  height: 20px;
+}
+
+.small-title[data-astro-cid-p5buzfly] {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 .25rem;
+}
+
+.small-desc[data-astro-cid-p5buzfly] {
+  font-size: .8rem;
+  line-height: 1.5;
+  color: #ffffffb3;
+  margin: 0;
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/MetricsSection.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.metrics-section[data-astro-cid-rvzyeh7d] {
+  background-color: var(--green-900);
+  padding: 4.5rem 0;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.metrics-section[data-astro-cid-rvzyeh7d]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 100% 0, #1ea02f26 0%, #0000 60%);
+  pointer-events: none;
+}
+
+.metrics-container[data-astro-cid-rvzyeh7d] {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  position: relative;
+  z-index: 1;
+}
+
+.metrics-header[data-astro-cid-rvzyeh7d] {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.header-left[data-astro-cid-rvzyeh7d] {
+  flex: 1;
+}
+
+.section-label[data-astro-cid-rvzyeh7d] {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--green-400);
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+
+.pulse-dot[data-astro-cid-rvzyeh7d] {
+  width: 10px;
+  height: 10px;
+  background-color: var(--green-400);
+  border-radius: 50%;
+  position: relative;
+}
+
+.pulse-dot[data-astro-cid-rvzyeh7d]:after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  background-color: var(--green-400);
+  opacity: .4;
+  animation: 2s infinite pulse;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: .4;
+  }
+
+  70% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.section-heading[data-astro-cid-rvzyeh7d] {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.header-right[data-astro-cid-rvzyeh7d] {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-badge[data-astro-cid-rvzyeh7d] {
+  background: #ffffff1a;
+  border: 1px solid #fff3;
+  padding: .6rem 1.25rem;
+  border-radius: 50px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--white);
+  backdrop-filter: blur(4px);
+}
+
+.main-grid[data-astro-cid-rvzyeh7d] {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.secondary-grid[data-astro-cid-rvzyeh7d] {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (width >= 768px) {
+  .metrics-header[data-astro-cid-rvzyeh7d] {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .header-right[data-astro-cid-rvzyeh7d] {
+    align-items: flex-end;
+    padding-bottom: .5rem;
+  }
+
+  .main-grid[data-astro-cid-rvzyeh7d] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .secondary-grid[data-astro-cid-rvzyeh7d] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 1024px) {
+  .main-grid[data-astro-cid-rvzyeh7d] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .secondary-grid[data-astro-cid-rvzyeh7d] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/BenefitsSection.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.benefits-section[data-astro-cid-5iyckawq] {
+  position: relative;
+  padding: 4.5rem 0;
+  background-image: url("/src/assets/img/manfaat-1.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.bg-overlay[data-astro-cid-5iyckawq] {
+  position: absolute;
+  inset: 0;
+  background: #f5f8f5eb;
+  z-index: 1;
+}
+
+.benefits-container[data-astro-cid-5iyckawq] {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  position: relative;
+  z-index: 2;
+}
+
+.benefits-header[data-astro-cid-5iyckawq] {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.header-left[data-astro-cid-5iyckawq] {
+  flex: 1;
+  max-width: 600px;
+}
+
+.section-label[data-astro-cid-5iyckawq] {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--green-600);
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+
+.section-heading[data-astro-cid-5iyckawq] {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--gray-900);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.header-right[data-astro-cid-5iyckawq] {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.section-description[data-astro-cid-5iyckawq] {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--gray-600);
+  margin: 0;
+  max-width: 500px;
+}
+
+.benefits-grid[data-astro-cid-5iyckawq] {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.benefit-card[data-astro-cid-5iyckawq] {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px #00000008;
+  transition: all .4s cubic-bezier(.4, 0, .2, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.benefit-card[data-astro-cid-5iyckawq]:hover {
+  background: var(--green-900);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px #0a2e1426;
+}
+
+.card-icon-box[data-astro-cid-5iyckawq] {
+  width: 44px;
+  height: 44px;
+  background: var(--green-900);
+  color: var(--white);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: all .4s;
+}
+
+.card-icon-box[data-astro-cid-5iyckawq] svg {
+  width: 22px;
+  height: 22px;
+}
+
+.benefit-card[data-astro-cid-5iyckawq]:hover .card-icon-box[data-astro-cid-5iyckawq] {
+  background: var(--white);
+  color: var(--green-600);
+}
+
+.card-title[data-astro-cid-5iyckawq] {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: .75rem;
+  transition: color .4s;
+}
+
+.benefit-card[data-astro-cid-5iyckawq]:hover .card-title[data-astro-cid-5iyckawq] {
+  color: var(--white);
+}
+
+.card-desc[data-astro-cid-5iyckawq] {
+  font-size: .85rem;
+  line-height: 1.6;
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  transition: color .4s;
+}
+
+.benefit-card[data-astro-cid-5iyckawq]:hover .card-desc[data-astro-cid-5iyckawq] {
+  color: #fffc;
+}
+
+.card-link[data-astro-cid-5iyckawq] {
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--green-600);
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  transition: color .4s;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  margin-top: auto;
+  z-index: 2;
+}
+
+.link-text[data-astro-cid-5iyckawq] {
+  position: relative;
+}
+
+.link-text[data-astro-cid-5iyckawq]:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--white);
+  transition: width .3s;
+  border-radius: 2px;
+}
+
+.arrow-icon[data-astro-cid-5iyckawq] {
+  display: inline-block;
+  transition: transform .3s;
+}
+
+.benefit-card[data-astro-cid-5iyckawq]:hover .card-link[data-astro-cid-5iyckawq] {
+  color: var(--white);
+}
+
+.benefit-card[data-astro-cid-5iyckawq]:hover .link-text[data-astro-cid-5iyckawq]:after {
+  width: 100%;
+}
+
+.benefit-card[data-astro-cid-5iyckawq]:hover .arrow-icon[data-astro-cid-5iyckawq] {
+  transform: translateX(4px);
+}
+
+.custom-modal[data-astro-cid-5iyckawq] {
+  border: none;
+  border-radius: 16px;
+  background: var(--white);
+  padding: 0;
+  max-width: 1000px;
+  width: 90%;
+  max-height: 90vh;
+  margin: auto;
+  box-shadow: 0 25px 50px -12px #00000040;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px) scale(.95);
+  transition: opacity .4s cubic-bezier(.16, 1, .3, 1), transform .4s cubic-bezier(.16, 1, .3, 1);
+}
+
+.custom-modal[data-astro-cid-5iyckawq][open] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.custom-modal[data-astro-cid-5iyckawq].is-closing {
+  opacity: 0;
+  transform: translateY(20px) scale(.95);
+}
+
+@starting-style {
+  .custom-modal[data-astro-cid-5iyckawq][open] {
+    opacity: 0;
+    transform: translateY(20px) scale(.95);
+  }
+}
+
+.custom-modal[data-astro-cid-5iyckawq]::backdrop {
+  background: #0a2e1499;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity .4s ease-out;
+}
+
+.custom-modal[data-astro-cid-5iyckawq][open]::backdrop {
+  opacity: 1;
+}
+
+.custom-modal[data-astro-cid-5iyckawq].is-closing::backdrop {
+  opacity: 0;
+}
+
+@starting-style {
+  .custom-modal[data-astro-cid-5iyckawq][open]::backdrop {
+    opacity: 0;
+  }
+}
+
+.modal-content[data-astro-cid-5iyckawq] {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 90vh;
+}
+
+.modal-close[data-astro-cid-5iyckawq] {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: #ffffffe6;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #0000001a;
+  color: var(--gray-800);
+  transition: all .2s;
+}
+
+.modal-close[data-astro-cid-5iyckawq]:hover {
+  background: var(--green-600);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.modal-header-img[data-astro-cid-5iyckawq] {
+  width: 100%;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.modal-header-img[data-astro-cid-5iyckawq] img[data-astro-cid-5iyckawq] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-body[data-astro-cid-5iyckawq] {
+  padding: 2.5rem;
+  overflow-y: auto;
+  color: var(--gray-700);
+  line-height: 1.8;
+}
+
+.modal-body[data-astro-cid-5iyckawq] h2[data-astro-cid-5iyckawq] {
+  color: var(--green-900);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+  letter-spacing: -.02em;
+  line-height: 1.3;
+}
+
+.modal-section-label[data-astro-cid-5iyckawq] {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--btn-primary-bg);
+  font-weight: 600;
+  font-size: .95rem;
+  margin-top: 1.75rem;
+  margin-bottom: .5rem;
+}
+
+.modal-body[data-astro-cid-5iyckawq] p[data-astro-cid-5iyckawq] {
+  margin-bottom: 1rem;
+}
+
+@media (width <= 768px) {
+  .benefits-header[data-astro-cid-5iyckawq] {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .benefits-header[data-astro-cid-5iyckawq] .header-left[data-astro-cid-5iyckawq], .benefits-header[data-astro-cid-5iyckawq] .header-right[data-astro-cid-5iyckawq] {
+    max-width: 100%;
+  }
+
+  .section-label[data-astro-cid-5iyckawq] {
+    justify-content: center;
+  }
+
+  .modal-header-img[data-astro-cid-5iyckawq] {
+    height: 200px;
+  }
+
+  .modal-body[data-astro-cid-5iyckawq] {
+    padding: 1.5rem;
+  }
+
+  .modal-body[data-astro-cid-5iyckawq] h2[data-astro-cid-5iyckawq] {
+    font-size: 1.5rem;
+  }
+}
+
+@media (width >= 768px) {
+  .benefits-header[data-astro-cid-5iyckawq] {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .header-right[data-astro-cid-5iyckawq] {
+    justify-content: flex-end;
+    padding-bottom: .5rem;
+  }
+
+  .benefits-grid[data-astro-cid-5iyckawq] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 992px) {
+  .modal-content[data-astro-cid-5iyckawq] {
+    flex-direction: row;
+    height: 80vh;
+    max-height: 700px;
+  }
+
+  .modal-header-img[data-astro-cid-5iyckawq] {
+    width: 40%;
+    height: 100%;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+
+  .modal-header-img[data-astro-cid-5iyckawq] img[data-astro-cid-5iyckawq] {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px #0000001a;
+  }
+
+  .modal-body[data-astro-cid-5iyckawq] {
+    width: 60%;
+    height: 100%;
+    padding: 3rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .benefits-grid[data-astro-cid-5iyckawq] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/RoadmapSection.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.roadmap-section[data-astro-cid-dtsbz5pk] {
+  padding: 6rem 0;
+  background-color: var(--white);
+  position: relative;
+}
+
+.roadmap-container[data-astro-cid-dtsbz5pk] {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.roadmap-left[data-astro-cid-dtsbz5pk] {
+  position: relative;
+}
+
+.sticky-wrapper[data-astro-cid-dtsbz5pk] {
+  position: relative;
+}
+
+.section-label[data-astro-cid-dtsbz5pk] {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--green-600);
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading[data-astro-cid-dtsbz5pk] {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--green-900);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -.02em;
+}
+
+.section-description[data-astro-cid-dtsbz5pk] {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--gray-600);
+  margin-bottom: 2.5rem;
+  max-width: 90%;
+}
+
+.highlight-box[data-astro-cid-dtsbz5pk] {
+  background-color: #f6fbf7;
+  border: 1px solid #1ea02f1a;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px #00000005;
+}
+
+.highlight-number[data-astro-cid-dtsbz5pk] {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--green-600);
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  margin-bottom: .25rem;
+}
+
+.highlight-title[data-astro-cid-dtsbz5pk] {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: .75rem;
+}
+
+.highlight-desc[data-astro-cid-dtsbz5pk] {
+  font-size: .9rem;
+  line-height: 1.6;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.timeline[data-astro-cid-dtsbz5pk] {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-item[data-astro-cid-dtsbz5pk]:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: -4rem;
+  left: -13px;
+  width: 2px;
+  background-color: var(--green-300);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 1s ease-out .4s;
+  z-index: 1;
+}
+
+.timeline-item[data-astro-cid-dtsbz5pk].animate-in:before {
+  transform: scaleY(1);
+}
+
+.timeline-item[data-astro-cid-dtsbz5pk]:last-child:before {
+  display: none;
+}
+
+.timeline-item[data-astro-cid-dtsbz5pk] {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.timeline-item[data-astro-cid-dtsbz5pk]:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon[data-astro-cid-dtsbz5pk] {
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  border: 2px solid var(--green-500);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-600);
+  z-index: 2;
+  transition: background-color .5s .4s;
+}
+
+.timeline-item[data-astro-cid-dtsbz5pk].animate-in .timeline-icon[data-astro-cid-dtsbz5pk] {
+  background-color: var(--green-50);
+}
+
+.timeline-content[data-astro-cid-dtsbz5pk] {
+  padding-left: 2rem;
+  padding-top: .2rem;
+}
+
+.timeline-date[data-astro-cid-dtsbz5pk] {
+  display: inline-block;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--green-600);
+  letter-spacing: .05em;
+  margin-bottom: .5rem;
+}
+
+.timeline-title[data-astro-cid-dtsbz5pk] {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: .75rem;
+}
+
+.timeline-desc[data-astro-cid-dtsbz5pk] {
+  font-size: .95rem;
+  line-height: 1.6;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+@media (width >= 1024px) {
+  .roadmap-container[data-astro-cid-dtsbz5pk] {
+    grid-template-columns: 5fr 7fr;
+    gap: 6rem;
+  }
+
+  .sticky-wrapper[data-astro-cid-dtsbz5pk] {
+    position: sticky;
+    top: 120px;
+  }
+
+  .timeline[data-astro-cid-dtsbz5pk] {
+    padding-left: 3rem;
+  }
+
+  .timeline-icon[data-astro-cid-dtsbz5pk] {
+    left: -3rem;
+  }
+
+  .timeline-item[data-astro-cid-dtsbz5pk]:before {
+    left: -29px;
+  }
+
+  .timeline-content[data-astro-cid-dtsbz5pk] {
+    padding-left: 1rem;
+  }
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/ActivitiesSection.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.activities-section[data-astro-cid-2amqlyem] {
+  padding: 5rem 0;
+  background-color: #f8faf9;
+  overflow: hidden;
+}
+
+.activities-container[data-astro-cid-2amqlyem] {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.activities-header[data-astro-cid-2amqlyem] {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (width >= 768px) {
+  .activities-header[data-astro-cid-2amqlyem] {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.section-label[data-astro-cid-2amqlyem] {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--green-600);
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+
+.section-heading[data-astro-cid-2amqlyem] {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--green-900);
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+
+.heading-light[data-astro-cid-2amqlyem] {
+  color: var(--gray-400);
+}
+
+.header-right[data-astro-cid-2amqlyem] {
+  display: flex;
+  gap: 1rem;
+}
+
+.view-all-card[data-astro-cid-2amqlyem] {
+  background: var(--green-50, #f0fdf4);
+  color: var(--green-600);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .4s cubic-bezier(.4, 0, .2, 1);
+  border: 1px dashed var(--green-200, #bbf7d0);
+}
+
+.view-all-card[data-astro-cid-2amqlyem]:hover {
+  background: var(--green-600);
+  color: var(--white);
+}
+
+.view-all-content[data-astro-cid-2amqlyem] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.view-all-icon[data-astro-cid-2amqlyem] {
+  width: 72px;
+  height: 72px;
+  background: var(--green-600);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .4s, box-shadow .4s, background .4s, color .4s;
+  box-shadow: 0 0 #16a34a66;
+  animation: 2s infinite pulse-green;
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(.95);
+    box-shadow: 0 0 #16a34a66;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px #16a34a00;
+  }
+
+  100% {
+    transform: scale(.95);
+    box-shadow: 0 0 #16a34a00;
+  }
+}
+
+.view-all-card[data-astro-cid-2amqlyem]:hover .view-all-icon[data-astro-cid-2amqlyem] {
+  background: var(--white);
+  color: var(--green-600);
+  transform: translateX(10px) scale(1);
+  box-shadow: 0 15px 25px #00000026;
+  animation: none;
+}
+
+.view-all-text[data-astro-cid-2amqlyem] {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: inherit;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.nav-btn[data-astro-cid-2amqlyem] {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
+  background: var(--white);
+  color: var(--green-600);
+  border: 1px solid var(--gray-200);
+  box-shadow: 0 4px 10px #00000005;
+}
+
+.nav-btn[data-astro-cid-2amqlyem]:hover {
+  background: var(--green-600);
+  color: var(--white);
+  border-color: var(--green-600);
+  transform: translateY(-2px);
+}
+
+.next-btn[data-astro-cid-2amqlyem] {
+  background: var(--green-600);
+  color: var(--white);
+  border: none;
+  box-shadow: 0 0 #16a34a66;
+  animation: 2s infinite pulse-green;
+}
+
+.next-btn[data-astro-cid-2amqlyem]:hover {
+  background: var(--green-700);
+  animation: none;
+}
+
+.carousel-wrapper[data-astro-cid-2amqlyem] {
+  position: relative;
+  margin-right: calc(var(--container-padding) * -1);
+  padding-right: var(--container-padding);
+}
+
+.carousel-track[data-astro-cid-2amqlyem] {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 2rem;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track[data-astro-cid-2amqlyem]::-webkit-scrollbar {
+  display: none;
+}
+
+.activity-card[data-astro-cid-2amqlyem] {
+  flex: 0 0 85%;
+  max-width: 380px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 1.25rem;
+  scroll-snap-align: start;
+  box-shadow: 0 10px 30px #00000008;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s, box-shadow .3s;
+}
+
+@media (width >= 768px) {
+  .activity-card[data-astro-cid-2amqlyem] {
+    flex: 0 0 calc(33.333% - 1rem);
+  }
+}
+
+@media (width >= 1024px) {
+  .activity-card[data-astro-cid-2amqlyem] {
+    flex: 0 0 calc(25% - 1.125rem);
+  }
+}
+
+.activity-card[data-astro-cid-2amqlyem]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px #0000000f;
+}
+
+.card-image-wrapper[data-astro-cid-2amqlyem] {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.card-image[data-astro-cid-2amqlyem] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.activity-card[data-astro-cid-2amqlyem]:hover .card-image[data-astro-cid-2amqlyem] {
+  transform: scale(1.05);
+}
+
+.card-date[data-astro-cid-2amqlyem] {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: #ffffffe6;
+  backdrop-filter: blur(4px);
+  padding: .35rem .75rem;
+  border-radius: 50px;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--green-700);
+  letter-spacing: .02em;
+}
+
+.card-content[data-astro-cid-2amqlyem] {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-bottom: 1.5rem;
+}
+
+.card-title[data-astro-cid-2amqlyem] {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: .75rem;
+  line-height: 1.4;
+}
+
+.card-desc[data-astro-cid-2amqlyem] {
+  font-size: .85rem;
+  line-height: 1.6;
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-link[data-astro-cid-2amqlyem] {
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  transition: color .3s;
+  margin-top: auto;
+  text-decoration: none;
+}
+
+.link-text[data-astro-cid-2amqlyem] {
+  position: relative;
+}
+
+.link-text[data-astro-cid-2amqlyem]:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--green-600);
+  transition: width .3s;
+  border-radius: 2px;
+}
+
+.card-link[data-astro-cid-2amqlyem] svg[data-astro-cid-2amqlyem] {
+  color: var(--green-600);
+  transition: transform .3s;
+}
+
+.activity-card[data-astro-cid-2amqlyem]:hover .card-link[data-astro-cid-2amqlyem] {
+  color: var(--green-600);
+}
+
+.activity-card[data-astro-cid-2amqlyem]:hover .link-text[data-astro-cid-2amqlyem]:after {
+  width: 100%;
+}
+
+.activity-card[data-astro-cid-2amqlyem]:hover .card-link[data-astro-cid-2amqlyem] svg[data-astro-cid-2amqlyem] {
+  transform: translate(2px, -2px);
+}
+
+.card-floating-icon[data-astro-cid-2amqlyem] {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px #0000000d;
+  transition: transform .3s;
+}
+
+.activity-card[data-astro-cid-2amqlyem]:hover .card-floating-icon[data-astro-cid-2amqlyem] {
+  transform: scale(1.1);
+}
+
+.bg-green[data-astro-cid-2amqlyem] {
+  background: var(--green-600);
+  color: var(--white);
+}
+
+.bg-white[data-astro-cid-2amqlyem] {
+  background: var(--white);
+  color: var(--green-600);
+  border: 1px solid var(--gray-100);
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/GallerySection.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.gallery-section[data-astro-cid-yfwvpblw] {
+  padding: 5rem 0 6rem;
+  background-color: var(--white);
+}
+
+.gallery-container[data-astro-cid-yfwvpblw] {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.gallery-header[data-astro-cid-yfwvpblw] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-label[data-astro-cid-yfwvpblw] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  color: var(--green-600);
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-heading[data-astro-cid-yfwvpblw] {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--green-900);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -.02em;
+}
+
+.heading-light[data-astro-cid-yfwvpblw] {
+  color: var(--gray-400);
+}
+
+.section-description[data-astro-cid-yfwvpblw] {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--gray-600);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gallery-filters[data-astro-cid-yfwvpblw] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem;
+  margin-bottom: 3rem;
+}
+
+.filter-btn[data-astro-cid-yfwvpblw] {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  color: var(--gray-700);
+  padding: .6rem 1.25rem;
+  border-radius: 50px;
+  font-size: .9rem;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.filter-btn[data-astro-cid-yfwvpblw]:hover {
+  border-color: var(--green-400);
+  color: var(--green-700);
+}
+
+.filter-btn[data-astro-cid-yfwvpblw].active {
+  background: var(--green-600);
+  border-color: var(--green-600);
+  color: var(--white);
+  box-shadow: 0 4px 12px #1ea02f33;
+}
+
+.gallery-grid[data-astro-cid-yfwvpblw] {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item[data-astro-cid-yfwvpblw] {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  cursor: pointer;
+  transform: scale(1);
+  opacity: 1;
+  transition: transform .4s, opacity .4s;
+}
+
+.gallery-item[data-astro-cid-yfwvpblw].hidden {
+  display: none;
+}
+
+.gallery-img[data-astro-cid-yfwvpblw] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+}
+
+.view-all-card[data-astro-cid-yfwvpblw] {
+  background: var(--green-50, #f0fdf4);
+  color: var(--green-600);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 1px dashed var(--green-200, #bbf7d0);
+}
+
+.view-all-card[data-astro-cid-yfwvpblw]:hover {
+  background: var(--green-600);
+  color: var(--white);
+  border-color: var(--green-600);
+  transform: translateY(-5px);
+}
+
+.view-all-content[data-astro-cid-yfwvpblw] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.view-all-icon[data-astro-cid-yfwvpblw] {
+  width: 72px;
+  height: 72px;
+  background: var(--green-600);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .4s, box-shadow .4s, background .4s, color .4s;
+  box-shadow: 0 0 #16a34a66;
+  animation: 2s infinite pulse-green;
+}
+
+.view-all-card[data-astro-cid-yfwvpblw]:hover .view-all-icon[data-astro-cid-yfwvpblw] {
+  background: var(--white);
+  color: var(--green-600);
+  transform: translateX(10px) scale(1);
+  box-shadow: 0 15px 25px #00000026;
+  animation: none;
+}
+
+.view-all-text[data-astro-cid-yfwvpblw] {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: inherit;
+  text-align: center;
+  line-height: 1.4;
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(.95);
+    box-shadow: 0 0 #16a34a66;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px #16a34a00;
+  }
+
+  100% {
+    transform: scale(.95);
+    box-shadow: 0 0 #16a34a00;
+  }
+}
+
+.gallery-item[data-astro-cid-yfwvpblw]:hover .gallery-img[data-astro-cid-yfwvpblw] {
+  transform: scale(1.1);
+}
+
+.gallery-overlay[data-astro-cid-yfwvpblw] {
+  position: absolute;
+  inset: 0;
+  background: #0a2e1480;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transition: opacity .4s;
+}
+
+.gallery-item[data-astro-cid-yfwvpblw]:hover .gallery-overlay[data-astro-cid-yfwvpblw] {
+  opacity: 1;
+}
+
+.overlay-top-space[data-astro-cid-yfwvpblw] {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-center-icon[data-astro-cid-yfwvpblw] {
+  width: 56px;
+  height: 56px;
+  background: var(--green-500);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(20px) scale(.8);
+  opacity: 0;
+  cursor: pointer;
+  transition: all .4s cubic-bezier(.4, 0, .2, 1);
+}
+
+.gallery-item[data-astro-cid-yfwvpblw]:hover .overlay-center-icon[data-astro-cid-yfwvpblw] {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.overlay-center-icon[data-astro-cid-yfwvpblw]:hover {
+  background: var(--green-600);
+  box-shadow: 0 4px 15px #22c55e66;
+  transform: translateY(0) scale(1.15) !important;
+}
+
+.overlay-bottom-card[data-astro-cid-yfwvpblw] {
+  background: var(--white);
+  padding: 1.25rem;
+  border-radius: 12px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all .4s cubic-bezier(.4, 0, .2, 1) .1s;
+}
+
+.gallery-item[data-astro-cid-yfwvpblw]:hover .overlay-bottom-card[data-astro-cid-yfwvpblw] {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.overlay-category[data-astro-cid-yfwvpblw] {
+  display: block;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--green-600);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: .25rem;
+}
+
+.overlay-title[data-astro-cid-yfwvpblw] {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: .5rem;
+}
+
+.overlay-desc[data-astro-cid-yfwvpblw] {
+  font-size: .85rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.lightbox[data-astro-cid-yfwvpblw] {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s, visibility .4s;
+}
+
+.lightbox[data-astro-cid-yfwvpblw].active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-overlay[data-astro-cid-yfwvpblw] {
+  position: absolute;
+  inset: 0;
+  background: #000000d9;
+  backdrop-filter: blur(4px);
+}
+
+.lightbox-content[data-astro-cid-yfwvpblw] {
+  position: relative;
+  z-index: 1;
+  width: 90vw;
+  max-width: 1000px;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(.9);
+  opacity: 0;
+  transition: all .4s cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.lightbox[data-astro-cid-yfwvpblw].active .lightbox-content[data-astro-cid-yfwvpblw] {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.lightbox-img-wrapper[data-astro-cid-yfwvpblw] {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px #00000080;
+}
+
+.lightbox-img[data-astro-cid-yfwvpblw] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lightbox-card[data-astro-cid-yfwvpblw] {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px #00000040;
+  transition: transform .4s, opacity .4s;
+}
+
+.lightbox-card[data-astro-cid-yfwvpblw].hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.lightbox-toggle-card[data-astro-cid-yfwvpblw] {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #0009;
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background .3s;
+  z-index: 2;
+}
+
+.lightbox-toggle-card[data-astro-cid-yfwvpblw]:hover {
+  background: #000c;
+}
+
+.lightbox-close-btn[data-astro-cid-yfwvpblw] {
+  position: absolute;
+  top: -2.5rem;
+  right: -2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform .3s;
+}
+
+.lightbox-close-btn[data-astro-cid-yfwvpblw]:hover {
+  transform: scale(1.15) rotate(90deg);
+}
+
+.lightbox-metadata[data-astro-cid-yfwvpblw] {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.meta-item[data-astro-cid-yfwvpblw] {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  font-size: .85rem;
+  color: var(--gray-700);
+  line-height: 1.4;
+}
+
+.meta-item[data-astro-cid-yfwvpblw] svg[data-astro-cid-yfwvpblw] {
+  color: var(--green-600);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (width <= 768px) {
+  .lightbox-close-btn[data-astro-cid-yfwvpblw] {
+    top: -2.5rem;
+    right: 0;
+  }
+
+  .lightbox-card[data-astro-cid-yfwvpblw] {
+    top: auto;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    max-width: none;
+  }
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/CtaSection.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.cta-section[data-astro-cid-xphih35w] {
+  padding: 4rem 0 6rem;
+  background-color: var(--white);
+}
+
+.cta-container[data-astro-cid-xphih35w] {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.cta-box[data-astro-cid-xphih35w] {
+  background-color: var(--green-900);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 20px 40px #0a2e1426;
+}
+
+@media (width >= 1024px) {
+  .cta-box[data-astro-cid-xphih35w] {
+    padding: 3rem 3.5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+}
+
+.bg-graphic[data-astro-cid-xphih35w] {
+  position: absolute;
+  right: -10%;
+  bottom: -25%;
+  width: 450px;
+  height: 450px;
+  color: #ffffff0f;
+  z-index: 1;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+.bg-graphic[data-astro-cid-xphih35w] svg[data-astro-cid-xphih35w] {
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 1024px) {
+  .bg-graphic[data-astro-cid-xphih35w] {
+    right: 0%;
+    bottom: -30%;
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.cta-content[data-astro-cid-xphih35w] {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  max-width: 650px;
+}
+
+.section-label[data-astro-cid-xphih35w] {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--green-400);
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.cta-heading[data-astro-cid-xphih35w] {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  letter-spacing: -.01em;
+}
+
+.cta-desc[data-astro-cid-xphih35w] {
+  font-size: .9rem;
+  line-height: 1.6;
+  color: #ffffffd9;
+  margin: 0;
+}
+
+.cta-actions[data-astro-cid-xphih35w] {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: fit-content;
+}
+
+@media (width >= 640px) {
+  .cta-actions[data-astro-cid-xphih35w] {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (width >= 1024px) {
+  .cta-actions[data-astro-cid-xphih35w] {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.btn[data-astro-cid-xphih35w] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  padding: .75rem 1.25rem;
+  font-size: .85rem;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: all .3s;
+  white-space: nowrap;
+}
+
+.btn-primary-light[data-astro-cid-xphih35w] {
+  background-color: var(--green-300);
+  color: var(--green-900);
+}
+
+.btn-primary-light[data-astro-cid-xphih35w]:hover {
+  background-color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px #0003;
+}
+
+.btn-outline-light[data-astro-cid-xphih35w] {
+  background-color: #ffffff1a;
+  color: var(--white);
+  border: 1px solid #fff3;
+  backdrop-filter: blur(4px);
+}
+
+.btn-outline-light[data-astro-cid-xphih35w]:hover {
+  background-color: #fff3;
+  border-color: #fff6;
+  transform: translateY(-2px);
+}
+</style><style data-vite-dev-id="D:/Magang (BMTI)/lestari/lestari/src/components/Footer.astro?astro&amp;type=style&amp;index=0&amp;lang.css">.site-footer[data-astro-cid-jo6i4kqk] {
+  background-color: var(--white);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--gray-100);
+}
+
+.footer-container[data-astro-cid-jo6i4kqk] {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.footer-top[data-astro-cid-jo6i4kqk] {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (width >= 768px) {
+  .footer-top[data-astro-cid-jo6i4kqk] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 1024px) {
+  .footer-top[data-astro-cid-jo6i4kqk] {
+    grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr;
+    gap: 4rem;
+  }
+}
+
+.footer-logo[data-astro-cid-jo6i4kqk] {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 1.25rem;
+}
+
+.logo-text[data-astro-cid-jo6i4kqk] {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title[data-astro-cid-jo6i4kqk] {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--green-700);
+  line-height: 1.1;
+}
+
+.logo-subtitle[data-astro-cid-jo6i4kqk] {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--gray-500);
+}
+
+.footer-desc[data-astro-cid-jo6i4kqk] {
+  font-size: .85rem;
+  line-height: 1.6;
+  color: var(--gray-500);
+  margin-bottom: 1.5rem;
+}
+
+.footer-badge[data-astro-cid-jo6i4kqk] {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background-color: #f0f4f8;
+  color: #334155;
+  padding: .5rem .85rem;
+  border-radius: 50px;
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+.footer-heading[data-astro-cid-jo6i4kqk] {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 1.5rem;
+}
+
+.mb-4[data-astro-cid-jo6i4kqk] {
+  margin-bottom: 1.25rem;
+}
+
+.footer-list[data-astro-cid-jo6i4kqk] {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer-list[data-astro-cid-jo6i4kqk] li[data-astro-cid-jo6i4kqk] {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+}
+
+.list-icon[data-astro-cid-jo6i4kqk] {
+  color: var(--green-600);
+  margin-top: .15rem;
+  flex-shrink: 0;
+}
+
+.list-text[data-astro-cid-jo6i4kqk] {
+  font-size: .85rem;
+  line-height: 1.6;
+  color: var(--gray-600);
+}
+
+.text-green[data-astro-cid-jo6i4kqk] {
+  color: var(--green-600);
+  font-weight: 600;
+  display: block;
+  margin-top: .25rem;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all .3s;
+  color: var(--green-600) !important;
+}
+
+.footer-social a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px #1ea02f33;
+  background-color: var(--green-600) !important;
+  color: var(--white) !important;
+}
+
+.footer-social a svg {
+  stroke: currentColor;
+  transition: color .3s;
+}
+
+.footer-bottom[data-astro-cid-jo6i4kqk] {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--gray-200);
+  font-size: .8rem;
+  color: var(--gray-500);
+}
+
+@media (width >= 768px) {
+  .footer-bottom[data-astro-cid-jo6i4kqk] {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-legal[data-astro-cid-jo6i4kqk] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-legal[data-astro-cid-jo6i4kqk] a[data-astro-cid-jo6i4kqk] {
+  color: var(--gray-500);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s;
+}
+
+.footer-legal[data-astro-cid-jo6i4kqk] a[data-astro-cid-jo6i4kqk]:hover {
+  color: var(--green-600);
+}
+</style><script type="module" src="/@vite/client"></script><script type="module" src="/@id/astro/runtime/client/dev-toolbar/entrypoint.js"></script><script>window.__astro_dev_toolbar__ = {"root":"D:\\Magang (BMTI)\\lestari\\lestari\\","version":"7.3.2","debugInfo":"Astro                    v7.3.2\nNode                     v22.17.0\nSystem                   Windows (x64)\nPackage Manager          npm\nOutput                   static\nAdapter                  none\nIntegrations             none"}</script><script type="module" src="/src/components/Preloader.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/Preloader.astro?astro&type=style&index=1&lang.css"></script><script type="module" src="/src/layouts/Layout.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/Navbar.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/HeroSection.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/LogoSection.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/AboutSection.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/MetricCard.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/MetricsSection.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/BenefitsSection.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/RoadmapSection.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/ActivitiesSection.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/GallerySection.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/CtaSection.astro?astro&type=style&index=0&lang.css"></script><script type="module" src="/src/components/Footer.astro?astro&type=style&index=0&lang.css"></script></head><body><script>
+    // Inline blocking script to prevent the preloader glitch/flash
+    // This runs instantly before the HTML below is rendered
+    if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('lestari_preloader')) {
+        document.documentElement.classList.add('skip-preloader');
+    }
+</script><div id="app-preloader" class="preloader" data-astro-cid-xtleqxzo><div class="preloader-content" data-astro-cid-xtleqxzo><div class="preloader-brand" data-astro-cid-xtleqxzo><img src="/favicon-square.png" alt="Lestari Logo" class="preloader-logo" data-astro-cid-xtleqxzo><span class="preloader-text" data-astro-cid-xtleqxzo>LESTARI</span></div></div></div><script type="module" src="/src/components/Preloader.astro?astro&type=script&index=0&lang.ts"></script><header id="navbar" class="navbar" data-astro-cid-l7arcky5><div class="navbar-container" data-astro-cid-l7arcky5><!-- Logo --><a href="/" class="navbar-logo" aria-label="Lestari Home" data-astro-cid-l7arcky5><div class="logo-icon-wrapper" data-astro-cid-l7arcky5><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Flogo+1.png%3ForigWidth%3D945%26origHeight%3D756%26origFormat%3Dpng&amp;w=945&amp;h=756&amp;f=webp" data-image-component="true" alt="Logo Lestari" data-astro-cid-l7arcky5="true" loading="lazy" decoding="async" width="945" height="756" class="logo-icon-img"></div><span class="logo-text" data-astro-cid-l7arcky5>Lestari</span></a><!-- Navigation Links (Desktop) --><nav class="navbar-nav" aria-label="Navigasi Utama" data-astro-cid-l7arcky5><ul class="nav-links" data-astro-cid-l7arcky5><li data-astro-cid-l7arcky5><a href="#" class="nav-link active" data-astro-cid-l7arcky5>Beranda</a></li><li data-astro-cid-l7arcky5><a href="/peta-pohon" class="nav-link" data-astro-cid-l7arcky5>Peta pohon</a></li><li data-astro-cid-l7arcky5><a href="/sdgs" class="nav-link" data-astro-cid-l7arcky5>SDGs</a></li><li data-astro-cid-l7arcky5><a href="#" class="nav-link" data-astro-cid-l7arcky5>Profil<svg class="dropdown-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" data-astro-cid-l7arcky5><path d="M2.5 4L5 6.5L7.5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-l7arcky5></path></svg></a></li></ul></nav><!-- Call Button --><div class="navbar-cta" data-astro-cid-l7arcky5><a href="https://bbppmpvbmti.kemendikdasmen.go.id/" target="_blank" rel="noopener noreferrer" class="btn-tentang" data-astro-cid-l7arcky5>Tentang Kami</a></div><!-- Mobile Menu Button --><button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Buka menu navigasi" aria-expanded="false" data-astro-cid-l7arcky5><span class="hamburger-line" data-astro-cid-l7arcky5></span><span class="hamburger-line" data-astro-cid-l7arcky5></span><span class="hamburger-line" data-astro-cid-l7arcky5></span></button></div><!-- Mobile Menu --><div class="mobile-menu" id="mobileMenu" data-astro-cid-l7arcky5><nav aria-label="Navigasi Mobile" data-astro-cid-l7arcky5><ul class="mobile-nav-links" data-astro-cid-l7arcky5><li data-astro-cid-l7arcky5><a href="#" class="mobile-nav-link active" data-astro-cid-l7arcky5>Beranda</a></li><li data-astro-cid-l7arcky5><a href="/peta-pohon" class="mobile-nav-link" data-astro-cid-l7arcky5>Peta pohon</a></li><li data-astro-cid-l7arcky5><a href="/sdgs" class="mobile-nav-link" data-astro-cid-l7arcky5>SDGs</a></li><li data-astro-cid-l7arcky5><a href="#" class="mobile-nav-link" data-astro-cid-l7arcky5>Profil</a></li></ul><a href="tel:+6281234567890" class="mobile-cta-phone" data-astro-cid-l7arcky5><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-l7arcky5><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" data-astro-cid-l7arcky5></path></svg>Hubungi (021) 555-0123</a></nav></div></header><script type="module" src="/src/components/Navbar.astro?astro&type=script&index=0&lang.ts"></script><section id="hero" class="hero" data-astro-cid-s4khibbi><!-- Background Image Carousel --><div class="hero-bg" id="hero-bg-carousel" data-astro-cid-s4khibbi><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2FIMG_0293.webp%3ForigWidth%3D1920%26origHeight%3D1280%26origFormat%3Dwebp&amp;w=1920&amp;h=1280&amp;f=webp" data-image-component="true" alt="Lanskap 1" loading="eager" fetchpriority="high" data-astro-cid-s4khibbi="true" decoding="async" width="1920" height="1280" class="carousel-bg active"><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2FIMG_0341.webp%3ForigWidth%3D1920%26origHeight%3D1280%26origFormat%3Dwebp&amp;w=1920&amp;h=1280&amp;f=webp" data-image-component="true" alt="Lanskap 2" loading="lazy" data-astro-cid-s4khibbi="true" decoding="async" width="1920" height="1280" class="carousel-bg"><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2FIMG_0387.webp%3ForigWidth%3D1920%26origHeight%3D1280%26origFormat%3Dwebp&amp;w=1920&amp;h=1280&amp;f=webp" data-image-component="true" alt="Lanskap 3" loading="lazy" data-astro-cid-s4khibbi="true" decoding="async" width="1920" height="1280" class="carousel-bg"><div class="hero-overlay" data-astro-cid-s4khibbi></div></div><div class="hero-container" data-astro-cid-s4khibbi><!-- Left Content --><div class="hero-content" data-astro-cid-s4khibbi><!-- Rating Badge --><div class="hero-rating" data-animate="fade-up" data-astro-cid-s4khibbi><span class="rating-count" data-astro-cid-s4khibbi>Layanan Ekosistem Terpadu Asri</span></div><!-- Heading --><h1 class="hero-heading" data-animate="fade-up" data-delay="100" data-astro-cid-s4khibbi>Pionir Pendidikan Vokasi<span class="heading-accent" data-astro-cid-s4khibbi>Rendah Karbon & Berkelanjutan</span></h1><!-- Description --><p class="hero-description" data-animate="fade-up" data-delay="200" data-astro-cid-s4khibbi>BBPPMPV BMTI bertransformasi mewujudkan ekosistem kampus yang selaras dengan alam. Melalui inisiatif Green Office, kami mengintegrasikan efisiensi energi, pengelolaan limbah cerdas, dan ruang pembelajaran inovatif untuk masa depan vokasi yang lebih hijau.</p><!-- Actions: CTA & Carousel Indicators --><div class="hero-actions" data-animate="fade-up" data-delay="300" data-astro-cid-s4khibbi><div class="hero-cta" data-astro-cid-s4khibbi><a href="#tentang" class="btn btn-primary btn-animated" id="hero-cta-services" data-astro-cid-s4khibbi><svg class="btn-icon-custom" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-astro-cid-s4khibbi><circle class="icon-bg" cx="12" cy="12" r="12" fill="white" data-astro-cid-s4khibbi></circle><path class="icon-arrow" d="M9.5 14.5L14.5 9.5M14.5 9.5H10.5M14.5 9.5V13.5" stroke="var(--btn-primary-bg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-s4khibbi></path></svg><span class="btn-text" data-astro-cid-s4khibbi>Mulai Jelajahi</span></a></div></div></div><!-- Carousel Indicators --><div class="hero-gallery" id="carousel-indicators" data-animate="fade-left" data-delay="400" data-astro-cid-s4khibbi><div class="gallery-card active" data-index="0" data-astro-cid-s4khibbi><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2FIMG_0293.webp%3ForigWidth%3D1920%26origHeight%3D1280%26origFormat%3Dwebp&amp;w=120&amp;h=90&amp;f=webp" data-image-component="true" alt="Lanskap 1" loading="eager" data-astro-cid-s4khibbi="true" decoding="async" width="120" height="90"></div><div class="gallery-card" data-index="1" data-astro-cid-s4khibbi><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2FIMG_0341.webp%3ForigWidth%3D1920%26origHeight%3D1280%26origFormat%3Dwebp&amp;w=120&amp;h=90&amp;f=webp" data-image-component="true" alt="Lanskap 2" loading="lazy" data-astro-cid-s4khibbi="true" decoding="async" width="120" height="90"></div><div class="gallery-card" data-index="2" data-astro-cid-s4khibbi><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2FIMG_0387.webp%3ForigWidth%3D1920%26origHeight%3D1280%26origFormat%3Dwebp&amp;w=120&amp;h=90&amp;f=webp" data-image-component="true" alt="Lanskap 3" loading="lazy" data-astro-cid-s4khibbi="true" decoding="async" width="120" height="90"></div></div></div></section><script type="module" src="/src/components/HeroSection.astro?astro&type=script&index=0&lang.ts"></script><section id="tentang" class="about-wrapper" data-astro-cid-lx6rp2ia><!-- Logo Section at the top --><section class="logo-section" data-animate="fade-up" data-astro-cid-dnmh47xm><div class="logo-container" data-astro-cid-dnmh47xm><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Flogo%2Ftut-wuri-handayani.png%3ForigWidth%3D1772%26origHeight%3D1772%26origFormat%3Dpng&amp;w=1772&amp;h=1772&amp;f=webp" data-image-component="true" alt="Tut Wuri Handayani" loading="lazy" data-astro-cid-dnmh47xm="true" decoding="async" width="1772" height="1772" class="partner-logo logo-kemdikbud"><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Flogo%2FLogo-Cimahi.png%3ForigWidth%3D521%26origHeight%3D599%26origFormat%3Dpng&amp;w=521&amp;h=599&amp;f=webp" data-image-component="true" alt="Dinas Lingkungan Hidup Cimahi" loading="lazy" data-astro-cid-dnmh47xm="true" decoding="async" width="521" height="599" class="partner-logo logo-cimahi"><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Flogo%2Flogo+1.png%3ForigWidth%3D1161%26origHeight%3D624%26origFormat%3Dpng&amp;w=1161&amp;h=624&amp;f=webp" data-image-component="true" alt="Indonesia Asri" loading="lazy" data-astro-cid-dnmh47xm="true" decoding="async" width="1161" height="624" class="partner-logo logo-asri"></div></section><!-- Main About Section --><div class="about-container" data-astro-cid-lx6rp2ia><!-- Left Image with Floating Card --><div class="about-visual" data-animate="fade-right" data-astro-cid-lx6rp2ia><div class="image-wrapper" data-astro-cid-lx6rp2ia><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fimage2.jpg%3ForigWidth%3D1600%26origHeight%3D900%26origFormat%3Djpg&amp;w=1600&amp;h=900&amp;f=webp" data-image-component="true" alt="Petani di area green office" loading="lazy" data-astro-cid-lx6rp2ia="true" decoding="async" width="1600" height="900" class="main-image"><!-- Floating Card --><div class="floating-card" data-astro-cid-lx6rp2ia><div class="card-icon" data-astro-cid-lx6rp2ia><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-lx6rp2ia><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-lx6rp2ia></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-lx6rp2ia></path></svg></div><div class="card-text" data-astro-cid-lx6rp2ia><span class="card-title" data-astro-cid-lx6rp2ia>Transformasi</span><span class="card-subtitle" data-astro-cid-lx6rp2ia>Hijau BMTI</span></div></div></div></div><!-- Right Content --><div class="about-content" data-animate="fade-left" data-delay="200" data-astro-cid-lx6rp2ia><!-- Top Label --><div class="section-label" data-astro-cid-lx6rp2ia><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-lx6rp2ia><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-lx6rp2ia></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-lx6rp2ia></path></svg>Tentang Kami & Perjalanan Transformasi</div><!-- Heading --><h2 class="section-heading" data-astro-cid-lx6rp2ia>Pusat Keunggulan Vokasi yang <span class="text-accent" data-astro-cid-lx6rp2ia>Bersinergi</span> dengan Alam</h2><!-- Description --><p class="section-description" data-astro-cid-lx6rp2ia>Sebagai episentrum pendidikan vokasi yang mengelola kawasan kampus seluas 130.976 m², BBPPMPV BMTI memiliki tanggung jawab besar dalam menerapkan tata kelola kelembagaan yang berkelanjutan. Menghadapi tingginya beban operasional dan kebijakan rasionalisasi anggaran pada tahun 2026, kami merevolusi program peduli lingkungan menjadi instrumen efisiensi yang terukur. Kini, kami bertransformasi menjadi pelopor kampus vokasi yang rendah karbon dengan mengintegrasikan empat pilar aksi nyata:</p><!-- Features 2x2 Grid --><div class="features-grid" data-astro-cid-lx6rp2ia><div class="feature-item" data-astro-cid-lx6rp2ia><span class="check-icon" data-astro-cid-lx6rp2ia><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-lx6rp2ia><polyline points="20 6 9 17 4 12" data-astro-cid-lx6rp2ia></polyline></svg></span><span class="feature-text" data-astro-cid-lx6rp2ia>Kemandirian Energi Terbarukan</span></div><div class="feature-item" data-astro-cid-lx6rp2ia><span class="check-icon" data-astro-cid-lx6rp2ia><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-lx6rp2ia><polyline points="20 6 9 17 4 12" data-astro-cid-lx6rp2ia></polyline></svg></span><span class="feature-text" data-astro-cid-lx6rp2ia>Sirkularitas & Manajemen Limbah</span></div><div class="feature-item" data-astro-cid-lx6rp2ia><span class="check-icon" data-astro-cid-lx6rp2ia><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-lx6rp2ia><polyline points="20 6 9 17 4 12" data-astro-cid-lx6rp2ia></polyline></svg></span><span class="feature-text" data-astro-cid-lx6rp2ia>Konservasi Hidrologi & Lahan</span></div><div class="feature-item" data-astro-cid-lx6rp2ia><span class="check-icon" data-astro-cid-lx6rp2ia><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-lx6rp2ia><polyline points="20 6 9 17 4 12" data-astro-cid-lx6rp2ia></polyline></svg></span><span class="feature-text" data-astro-cid-lx6rp2ia>Ekosistem Laboratorium Hidup (Living Lab)</span></div></div><!-- CTA Button --><div class="about-cta" data-astro-cid-lx6rp2ia><a href="#" id="btn-read-more-about" class="btn btn-primary btn-animated" data-astro-cid-lx6rp2ia><svg class="btn-icon-custom" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-astro-cid-lx6rp2ia><circle class="icon-bg" cx="12" cy="12" r="12" fill="white" data-astro-cid-lx6rp2ia></circle><path class="icon-arrow" d="M9.5 14.5L14.5 9.5M14.5 9.5H10.5M14.5 9.5V13.5" stroke="var(--btn-primary-bg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-lx6rp2ia></path></svg><span class="btn-text" data-astro-cid-lx6rp2ia>Baca selengkapnya</span></a></div></div></div><!-- Modal --><dialog id="about-modal" class="custom-modal" data-lenis-prevent data-astro-cid-lx6rp2ia><div class="modal-content" data-astro-cid-lx6rp2ia><button class="modal-close" aria-label="Tutup Modal" id="close-about-modal" data-astro-cid-lx6rp2ia><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-lx6rp2ia><line x1="18" y1="6" x2="6" y2="18" data-astro-cid-lx6rp2ia></line><line x1="6" y1="6" x2="18" y2="18" data-astro-cid-lx6rp2ia></line></svg></button><div class="modal-header-img" data-astro-cid-lx6rp2ia><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2FIMG_0289.webp%3ForigWidth%3D1920%26origHeight%3D1280%26origFormat%3Dwebp&amp;w=1920&amp;h=1280&amp;f=webp" data-image-component="true" alt="Banner Transformasi Hijau" loading="lazy" data-astro-cid-lx6rp2ia="true" decoding="async" width="1920" height="1280"></div><div class="modal-body" data-lenis-prevent data-astro-cid-lx6rp2ia><h2 data-astro-cid-lx6rp2ia>Profil & Visi Transformasi Hijau BBPPMPV BMTI</h2><h3 class="modal-section-label" data-astro-cid-lx6rp2ia><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-lx6rp2ia><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-lx6rp2ia></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-lx6rp2ia></path></svg>Kita Itu Siapa?</h3><h4 data-astro-cid-lx6rp2ia>Episentrum Pendidikan Vokasi Nasional</h4><p data-astro-cid-lx6rp2ia>Sebagai Unit Pelaksana Teknis di bawah Direktorat Jenderal Pendidikan Menengah, Pendidikan Khusus, dan Pendidikan Layanan Khusus, Kemdikdasmen, Balai Besar Pengembangan Penjaminan Mutu Pendidikan Vokasi Bidang Mesin dan Teknik Industri (BBPPMPV BMTI) mengemban mandat strategis untuk menjamin dan meningkatkan mutu pendidikan vokasi di Indonesia. Kami adalah kawah candradimuka bagi masa depan pendidikan vokasi dan menjadi episentrum pengembangan kompetensi di bidang mesin dan teknik industri yang menuntut standar operasional tinggi.</p><p data-astro-cid-lx6rp2ia>Dalam menjalankan mandat tersebut, BBPPMPV BMTI mengelola kawasan seluas <strong data-astro-cid-lx6rp2ia>130.976 m²</strong>. Besarnya skala operasional ini membawa tantangan tersendiri, terutama terkait tingginya beban biaya utilitas dan volume limbah teknis maupun organik yang dihasilkan setiap harinya.</p><h3 class="modal-section-label" data-astro-cid-lx6rp2ia><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-lx6rp2ia><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-lx6rp2ia></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-lx6rp2ia></path></svg>Mengapa Kami Bertransformasi?</h3><h4 data-astro-cid-lx6rp2ia>Keterbatasan Sebagai Katalis Inovasi</h4><p data-astro-cid-lx6rp2ia>Lahirnya komitmen transformasi Green Office ini dipercepat oleh terbitnya kebijakan efisiensi anggaran tahun 2026 yang menyebabkan penurunan pagu anggaran BBPPMPV BMTI sebesar <strong data-astro-cid-lx6rp2ia>42,7%</strong>. Namun, keterbatasan anggaran ini justru menjadi momentum strategis untuk mentransformasi Green Office dari sekadar program lingkungan menjadi alat efisiensi operasional yang terukur.</p><h3 class="modal-section-label" data-astro-cid-lx6rp2ia><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-lx6rp2ia><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-lx6rp2ia></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-lx6rp2ia></path></svg>Tujuan Kita Apa?</h3><h4 data-astro-cid-lx6rp2ia>Menuju Keunggulan Berkelanjutan (From Efficiency to Excellence)</h4><p data-astro-cid-lx6rp2ia>Tujuan utama kami bukan sekadar mempercantik lingkungan kantor, melainkan membangun ekosistem institusi yang selaras dengan alam dan menjadikan keberlanjutan sebagai napas operasional. Kami membagi tujuan ini ke dalam beberapa fase strategis:</p><ul class="modal-list" data-astro-cid-lx6rp2ia><li data-astro-cid-lx6rp2ia><strong data-astro-cid-lx6rp2ia>Jangka Pendek:</strong> Mewujudkan fondasi tata kelola dan efisiensi operasional yang cepat (Quick Wins) melalui sinkronisasi data konsumsi listrik dan air, serta optimalisasi sistem pengelolaan sampah terpilah.</li><li data-astro-cid-lx6rp2ia><strong data-astro-cid-lx6rp2ia>Jangka Menengah:</strong> Mengintegrasikan kebijakan Green Office ke dalam Sistem Penjaminan Mutu Internal (SPMI) dan operasionalisasi teknologi pengolahan limbah (seperti pirolisis).</li><li data-astro-cid-lx6rp2ia><strong data-astro-cid-lx6rp2ia>Jangka Panjang:</strong> Menjadikan BBPPMPV BMTI sebagai pusat keunggulan (center of excellence) ekosistem vokasi berbasis ekonomi sirkular dan mewujudkan kemandirian energi sebesar <strong data-astro-cid-lx6rp2ia>≥20%</strong> melalui perluasan infrastruktur energi terbarukan.</li></ul><p data-astro-cid-lx6rp2ia>Lebih dari itu, tujuan akhir kami adalah menjadikan kampus ini sebagai Laboratorium Hidup (Living Laboratory) yang inspiratif, di mana setiap praktik bengkel diintegrasikan dengan standar tata kelola rendah karbon.</p></div></div></dialog></section><script type="module" src="/src/components/AboutSection.astro?astro&type=script&index=0&lang.ts"></script><section id="metrik" class="metrics-section" data-astro-cid-rvzyeh7d><div class="metrics-container" data-astro-cid-rvzyeh7d><!-- Section Header --><div class="metrics-header" data-animate="fade-up" data-astro-cid-rvzyeh7d><div class="header-left" data-astro-cid-rvzyeh7d><div class="section-label" data-astro-cid-rvzyeh7d><span class="pulse-dot" data-astro-cid-rvzyeh7d></span>TARGET & PENCAPAIAN PROGRAM</div><h2 class="section-heading" data-astro-cid-rvzyeh7d>Dampak Nyata Keberlanjutan</h2></div><div class="header-right" data-astro-cid-rvzyeh7d><div class="header-badge" data-astro-cid-rvzyeh7d>Target Peta Jalan 2026–2030</div></div></div><!-- Main Metrics Grid --><div class="main-grid" data-astro-cid-rvzyeh7d><div data-animate="fade-up" data-delay="0" data-astro-cid-rvzyeh7d><div class="metric-card card-large" data-animate="fade-up" data-astro-cid-p5buzfly><div class="card-header" data-astro-cid-p5buzfly><div class="card-icon-wrapper" data-astro-cid-p5buzfly><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div><span class="card-badge" data-astro-cid-p5buzfly>Energi Terbarukan</span></div><div class="card-body" data-astro-cid-p5buzfly><div class="card-value" data-astro-cid-p5buzfly>≥20%</div><h3 class="card-title" data-astro-cid-p5buzfly>Kemandirian Energi</h3><p class="card-desc" data-astro-cid-p5buzfly>Pemenuhan kebutuhan energi operasional kampus yang bersumber dari infrastruktur PLTS, PLTB, dan teknologi pirolisis.</p></div></div></div><div data-animate="fade-up" data-delay="100" data-astro-cid-rvzyeh7d><div class="metric-card card-large" data-animate="fade-up" data-astro-cid-p5buzfly><div class="card-header" data-astro-cid-p5buzfly><div class="card-icon-wrapper" data-astro-cid-p5buzfly><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M12 8v8"/><path d="M9 13l3 3 3-3"/></svg></div><span class="card-badge" data-astro-cid-p5buzfly>Quick Wins 2026</span></div><div class="card-body" data-astro-cid-p5buzfly><div class="card-value" data-astro-cid-p5buzfly>≥5%</div><h3 class="card-title" data-astro-cid-p5buzfly>Efisiensi Biaya Utilitas</h3><p class="card-desc" data-astro-cid-p5buzfly>Penurunan tajam pada tagihan konsumsi listrik (sebelumnya Rp71,1 Juta/bulan) dan air melalui Smart Energy Management System.</p></div></div></div><div data-animate="fade-up" data-delay="200" data-astro-cid-rvzyeh7d><div class="metric-card card-large" data-animate="fade-up" data-astro-cid-p5buzfly><div class="card-header" data-astro-cid-p5buzfly><div class="card-icon-wrapper" data-astro-cid-p5buzfly><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></div><span class="card-badge" data-astro-cid-p5buzfly>Ekonomi Sirkular</span></div><div class="card-body" data-astro-cid-p5buzfly><div class="card-value" data-astro-cid-p5buzfly>≥10%</div><h3 class="card-title" data-astro-cid-p5buzfly>Reduksi Sampah ke TPA</h3><p class="card-desc" data-astro-cid-p5buzfly>Penurunan volume limbah operasional serta pengelolaan 100% sampah organik kampus secara mandiri melalui Green Point.</p></div></div></div></div><!-- Secondary Metrics Grid --><div class="secondary-grid" data-astro-cid-rvzyeh7d><div data-animate="fade-up" data-delay="300" data-astro-cid-rvzyeh7d><div class="metric-card card-small" data-animate="fade-up" data-astro-cid-p5buzfly><div class="small-card-content" data-astro-cid-p5buzfly><div class="card-icon-wrapper small-icon" data-astro-cid-p5buzfly><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path></svg></div><div class="small-text-content" data-astro-cid-p5buzfly><h4 class="small-title" data-astro-cid-p5buzfly>20 Titik Resapan Air</h4><p class="small-desc" data-astro-cid-p5buzfly>Pembangunan biopori dan sumur resapan guna memulihkan fungsi hidrologi kawasan.</p></div></div></div></div><div data-animate="fade-up" data-delay="400" data-astro-cid-rvzyeh7d><div class="metric-card card-small" data-animate="fade-up" data-astro-cid-p5buzfly><div class="small-card-content" data-astro-cid-p5buzfly><div class="card-icon-wrapper small-icon" data-astro-cid-p5buzfly><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg></div><div class="small-text-content" data-astro-cid-p5buzfly><h4 class="small-title" data-astro-cid-p5buzfly>130.976 m² Lahan Terkelola</h4><p class="small-desc" data-astro-cid-p5buzfly>Optimalisasi seluruh ruang terbuka hijau dan bengkel sebagai Living Laboratory.</p></div></div></div></div><div data-animate="fade-up" data-delay="500" data-astro-cid-rvzyeh7d><div class="metric-card card-small" data-animate="fade-up" data-astro-cid-p5buzfly><div class="small-card-content" data-astro-cid-p5buzfly><div class="card-icon-wrapper small-icon" data-astro-cid-p5buzfly><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 9.5 12 12l2.5 2.5"/><path d="M9.5 9.5 12 12l-2.5 2.5"/><path d="M12 12V2"/><path d="M12 12v10"/><path d="M12 12h10"/><path d="M12 12H2"/></svg></div><div class="small-text-content" data-astro-cid-p5buzfly><h4 class="small-title" data-astro-cid-p5buzfly>23,8 kW Kapasitas Bersih</h4><p class="small-desc" data-astro-cid-p5buzfly>Total energi dari fasilitas PLTS (20,8 kW) dan PLTB (3 kW) BMTI yang telah terpasang.</p></div></div></div></div></div></div></section><section id="manfaat" class="benefits-section" data-astro-cid-5iyckawq><div class="bg-overlay" data-astro-cid-5iyckawq></div><div class="benefits-container" data-astro-cid-5iyckawq><!-- Header Section --><div class="benefits-header" data-animate="fade-up" data-astro-cid-5iyckawq><div class="header-left" data-astro-cid-5iyckawq><div class="section-label" data-astro-cid-5iyckawq><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Manfaat Program</div><h2 class="section-heading" data-astro-cid-5iyckawq>Nilai Tambah & Dampak Strategis Green Office</h2></div><div class="header-right" data-astro-cid-5iyckawq><p class="section-description" data-astro-cid-5iyckawq>Implementasi peta jalan ini dirancang untuk memberikan dampak operasional yang berkelanjutan, menciptakan ekosistem kampus yang tangguh bagi seluruh pemangku kepentingan.</p></div></div><!-- Cards Grid --><div class="benefits-grid" data-astro-cid-5iyckawq><div class="benefit-card" data-animate="fade-up" data-delay="0" data-astro-cid-5iyckawq><div class="card-icon-box" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></div><h3 class="card-title" data-astro-cid-5iyckawq>Efisiensi Anggaran Berkinerja</h3><p class="card-desc" data-astro-cid-5iyckawq>Tercapainya efisiensi anggaran operasional yang diukur melalui optimasi penggunaan energi dan pengelolaan limbah.</p><button class="card-link benefit-read-more" data-modal="benefit-modal-0" data-astro-cid-5iyckawq><span class="link-text" data-astro-cid-5iyckawq>Baca Selengkapnya</span><span class="arrow-icon" data-astro-cid-5iyckawq>➔</span></button></div><div class="benefit-card" data-animate="fade-up" data-delay="100" data-astro-cid-5iyckawq><div class="card-icon-box" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3 class="card-title" data-astro-cid-5iyckawq>Optimalisasi Aset Berkelanjutan</h3><p class="card-desc" data-astro-cid-5iyckawq>Meningkatkan nilai guna investasi melalui pemanfaatan infrastruktur ramah lingkungan seperti PLTS, PLTB, dan biogas guna menekan jejak karbon institusi.</p><button class="card-link benefit-read-more" data-modal="benefit-modal-1" data-astro-cid-5iyckawq><span class="link-text" data-astro-cid-5iyckawq>Baca Selengkapnya</span><span class="arrow-icon" data-astro-cid-5iyckawq>➔</span></button></div><div class="benefit-card" data-animate="fade-up" data-delay="200" data-astro-cid-5iyckawq><div class="card-icon-box" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12h6"/><path d="M12 9v6"/></svg></div><h3 class="card-title" data-astro-cid-5iyckawq>Kualitas Lingkungan (Well-being)</h3><p class="card-desc" data-astro-cid-5iyckawq>Terciptanya atmosfer kerja yang lebih sehat, nyaman, dan aman melalui manajemen limbah yang sistematis serta mitigasi risiko proaktif.</p><button class="card-link benefit-read-more" data-modal="benefit-modal-2" data-astro-cid-5iyckawq><span class="link-text" data-astro-cid-5iyckawq>Baca Selengkapnya</span><span class="arrow-icon" data-astro-cid-5iyckawq>➔</span></button></div><div class="benefit-card" data-animate="fade-up" data-delay="300" data-astro-cid-5iyckawq><div class="card-icon-box" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg></div><h3 class="card-title" data-astro-cid-5iyckawq>Fasilitas Living Laboratory</h3><p class="card-desc" data-astro-cid-5iyckawq>Menjadikan ekosistem di lingkungan BBPPMPV BMTI sebagai media pembelajaran nyata yang komprehensif bagi para peserta diklat.</p><button class="card-link benefit-read-more" data-modal="benefit-modal-3" data-astro-cid-5iyckawq><span class="link-text" data-astro-cid-5iyckawq>Baca Selengkapnya</span><span class="arrow-icon" data-astro-cid-5iyckawq>➔</span></button></div><div class="benefit-card" data-animate="fade-up" data-delay="400" data-astro-cid-5iyckawq><div class="card-icon-box" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></div><h3 class="card-title" data-astro-cid-5iyckawq>Rujukan Vokasi Nasional</h3><p class="card-desc" data-astro-cid-5iyckawq>Memposisikan lembaga sebagai pionir pendidikan vokasi yang adaptif, sehingga menjadi benchmark (rujukan) nasional dalam praktik tata kelola ramah lingkungan.</p><button class="card-link benefit-read-more" data-modal="benefit-modal-4" data-astro-cid-5iyckawq><span class="link-text" data-astro-cid-5iyckawq>Baca Selengkapnya</span><span class="arrow-icon" data-astro-cid-5iyckawq>➔</span></button></div><div class="benefit-card" data-animate="fade-up" data-delay="500" data-astro-cid-5iyckawq><div class="card-icon-box" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div><h3 class="card-title" data-astro-cid-5iyckawq>Kontribusi SDGs &amp; Asta Cita</h3><p class="card-desc" data-astro-cid-5iyckawq>Memberikan kontribusi nyata dalam pencapaian target SDGs global serta mendukung prioritas nasional terkait kemandirian energi dan air.</p><button class="card-link benefit-read-more" data-modal="benefit-modal-5" data-astro-cid-5iyckawq><span class="link-text" data-astro-cid-5iyckawq>Baca Selengkapnya</span><span class="arrow-icon" data-astro-cid-5iyckawq>➔</span></button></div></div></div><!-- Modals for Benefits --><dialog id="benefit-modal-0" class="custom-modal benefit-modal" data-lenis-prevent data-astro-cid-5iyckawq><div class="modal-content" data-astro-cid-5iyckawq><button class="modal-close close-benefit-modal" aria-label="Tutup Modal" data-target="benefit-modal-0" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><line x1="18" y1="6" x2="6" y2="18" data-astro-cid-5iyckawq></line><line x1="6" y1="6" x2="18" y2="18" data-astro-cid-5iyckawq></line></svg></button><div class="modal-header-img" data-astro-cid-5iyckawq><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fabt-2.jpeg%3ForigWidth%3D1024%26origHeight%3D682%26origFormat%3Djpg&amp;w=1024&amp;h=682&amp;f=webp" data-image-component="true" alt="Efisiensi Anggaran Berkinerja" loading="lazy" data-astro-cid-5iyckawq="true" decoding="async" width="1024" height="682"></div><div class="modal-body" data-lenis-prevent data-astro-cid-5iyckawq><h2 data-astro-cid-5iyckawq>Efisiensi Anggaran Berkinerja</h2><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Optimalisasi Belanja Negara</div><p data-astro-cid-5iyckawq>Program ini memastikan tercapainya efisiensi anggaran operasional yang diukur melalui optimasi penggunaan energi, pengelolaan limbah, dan pemeliharaan sarana prasarana sebagai langkah strategis dalam menanggapi kebijakan penajaman belanja negara.</p><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Penguatan Tata Kelola Berstandar Mutu</div><p data-astro-cid-5iyckawq>Efisiensi ini bukan sekadar pemotongan biaya, melainkan wujud tata kelola lingkungan kerja yang terstandarisasi, transparan, dan berkelanjutan. Sistem ini terintegrasi secara holistik ke dalam sistem penjaminan mutu serta evaluasi kinerja instansi.</p></div></div></dialog><dialog id="benefit-modal-1" class="custom-modal benefit-modal" data-lenis-prevent data-astro-cid-5iyckawq><div class="modal-content" data-astro-cid-5iyckawq><button class="modal-close close-benefit-modal" aria-label="Tutup Modal" data-target="benefit-modal-1" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><line x1="18" y1="6" x2="6" y2="18" data-astro-cid-5iyckawq></line><line x1="6" y1="6" x2="18" y2="18" data-astro-cid-5iyckawq></line></svg></button><div class="modal-header-img" data-astro-cid-5iyckawq><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fbg-1.jpeg%3ForigWidth%3D1280%26origHeight%3D853%26origFormat%3Djpg&amp;w=1280&amp;h=853&amp;f=webp" data-image-component="true" alt="Optimalisasi Aset Berkelanjutan" loading="lazy" data-astro-cid-5iyckawq="true" decoding="async" width="1280" height="853"></div><div class="modal-body" data-lenis-prevent data-astro-cid-5iyckawq><h2 data-astro-cid-5iyckawq>Optimalisasi Aset Berkelanjutan</h2><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Pemanfaatan Infrastruktur Hijau</div><p data-astro-cid-5iyckawq>BBPPMPV BMTI meningkatkan nilai guna investasi melalui pemanfaatan maksimal infrastruktur ramah lingkungan. Ini mencakup optimalisasi PLTS, PLTB, PLTMH, instalasi biogas, dan stasiun pengisian kendaraan listrik.</p><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Penurunan Jejak Karbon</div><p data-astro-cid-5iyckawq>Langkah optimalisasi aset ini secara langsung menekan ketergantungan operasional kampus pada sumber energi konvensional, yang pada akhirnya menurunkan jejak karbon institusi secara signifikan.</p></div></div></dialog><dialog id="benefit-modal-2" class="custom-modal benefit-modal" data-lenis-prevent data-astro-cid-5iyckawq><div class="modal-content" data-astro-cid-5iyckawq><button class="modal-close close-benefit-modal" aria-label="Tutup Modal" data-target="benefit-modal-2" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><line x1="18" y1="6" x2="6" y2="18" data-astro-cid-5iyckawq></line><line x1="6" y1="6" x2="18" y2="18" data-astro-cid-5iyckawq></line></svg></button><div class="modal-header-img" data-astro-cid-5iyckawq><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fabt-2.jpeg%3ForigWidth%3D1024%26origHeight%3D682%26origFormat%3Djpg&amp;w=1024&amp;h=682&amp;f=webp" data-image-component="true" alt="Kualitas Lingkungan (Well-being)" loading="lazy" data-astro-cid-5iyckawq="true" decoding="async" width="1024" height="682"></div><div class="modal-body" data-lenis-prevent data-astro-cid-5iyckawq><h2 data-astro-cid-5iyckawq>Kualitas Lingkungan (Well-being)</h2><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Kesehatan dan Keselamatan Kerja</div><p data-astro-cid-5iyckawq>Terciptanya atmosfer kerja yang lebih sehat, nyaman, dan aman. Hal ini dicapai melalui manajemen limbah yang sistematis, pengendalian polusi, serta mitigasi risiko lingkungan (seperti pengelolaan vegetasi) yang proaktif.</p><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Peningkatan Produktivitas</div><p data-astro-cid-5iyckawq>Ekosistem kerja yang kondusif, segar, dan estetik secara langsung berkontribusi pada peningkatan kesehatan fisik, kesejahteraan mental, dan motivasi kerja pegawai dalam memberikan layanan pendidikan yang prima.</p><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Internalisasi Budaya Hijau</div><p data-astro-cid-5iyckawq>Terbentuknya kebiasaan hemat energi dan ramah lingkungan yang mengakar kuat dalam setiap prosedur standar operasional (SOP) serta rutinitas harian seluruh warga kampus.</p></div></div></dialog><dialog id="benefit-modal-3" class="custom-modal benefit-modal" data-lenis-prevent data-astro-cid-5iyckawq><div class="modal-content" data-astro-cid-5iyckawq><button class="modal-close close-benefit-modal" aria-label="Tutup Modal" data-target="benefit-modal-3" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><line x1="18" y1="6" x2="6" y2="18" data-astro-cid-5iyckawq></line><line x1="6" y1="6" x2="18" y2="18" data-astro-cid-5iyckawq></line></svg></button><div class="modal-header-img" data-astro-cid-5iyckawq><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fbg-1.jpeg%3ForigWidth%3D1280%26origHeight%3D853%26origFormat%3Djpg&amp;w=1280&amp;h=853&amp;f=webp" data-image-component="true" alt="Fasilitas Living Laboratory" loading="lazy" data-astro-cid-5iyckawq="true" decoding="async" width="1280" height="853"></div><div class="modal-body" data-lenis-prevent data-astro-cid-5iyckawq><h2 data-astro-cid-5iyckawq>Fasilitas Living Laboratory</h2><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Media Pembelajaran Komprehensif</div><p data-astro-cid-5iyckawq>Menjadikan ekosistem di lingkungan BBPPMPV BMTI sebagai media pembelajaran nyata (Living Laboratory) yang komprehensif bagi peserta diklat.</p><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Praktik Langsung 3R &amp; Adaptasi Iklim</div><p data-astro-cid-5iyckawq>Peserta dapat mengimplementasikan langsung prinsip 3R (Reduce, Reuse, Recycle), efisiensi energi, dan strategi adaptasi perubahan iklim. Praktik baik ini dapat direplikasi langsung pada satuan pendidikan maupun dunia industri asal mereka.</p><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Literasi Ekologis</div><p data-astro-cid-5iyckawq>Meningkatkan kompetensi serta kesadaran ekologis pegawai dan peserta melalui partisipasi aktif dalam program pemantauan energi dan aksi pelestarian lingkungan.</p></div></div></dialog><dialog id="benefit-modal-4" class="custom-modal benefit-modal" data-lenis-prevent data-astro-cid-5iyckawq><div class="modal-content" data-astro-cid-5iyckawq><button class="modal-close close-benefit-modal" aria-label="Tutup Modal" data-target="benefit-modal-4" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><line x1="18" y1="6" x2="6" y2="18" data-astro-cid-5iyckawq></line><line x1="6" y1="6" x2="18" y2="18" data-astro-cid-5iyckawq></line></svg></button><div class="modal-header-img" data-astro-cid-5iyckawq><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fabt-2.jpeg%3ForigWidth%3D1024%26origHeight%3D682%26origFormat%3Djpg&amp;w=1024&amp;h=682&amp;f=webp" data-image-component="true" alt="Rujukan Vokasi Nasional" loading="lazy" data-astro-cid-5iyckawq="true" decoding="async" width="1024" height="682"></div><div class="modal-body" data-lenis-prevent data-astro-cid-5iyckawq><h2 data-astro-cid-5iyckawq>Rujukan Vokasi Nasional</h2><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Pionir Pendidikan Adaptif</div><p data-astro-cid-5iyckawq>Memposisikan BBPPMPV BMTI sebagai UPT pendidikan vokasi pelopor yang inovatif dan adaptif, sehingga menjadi benchmark (rujukan) nasional dalam implementasi praktik Green Office.</p><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Penyediaan Model Replikasi</div><p data-astro-cid-5iyckawq>Menghadirkan prototipe efisiensi operasional dan program lingkungan yang dapat direplikasi oleh satuan kerja lain dalam optimalisasi sumber daya. Model ini membuktikan bahwa efisiensi bisa dilakukan tanpa mengabaikan kualitas layanan publik.</p><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Akselerasi Kemitraan</div><p data-astro-cid-5iyckawq>Membuka peluang sinergi kemitraan dengan berbagai pihak, termasuk Pemerintah Daerah, komunitas lingkungan, dan sektor swasta, guna membangun ekosistem pendidikan vokasi yang tangguh.</p></div></div></dialog><dialog id="benefit-modal-5" class="custom-modal benefit-modal" data-lenis-prevent data-astro-cid-5iyckawq><div class="modal-content" data-astro-cid-5iyckawq><button class="modal-close close-benefit-modal" aria-label="Tutup Modal" data-target="benefit-modal-5" data-astro-cid-5iyckawq><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><line x1="18" y1="6" x2="6" y2="18" data-astro-cid-5iyckawq></line><line x1="6" y1="6" x2="18" y2="18" data-astro-cid-5iyckawq></line></svg></button><div class="modal-header-img" data-astro-cid-5iyckawq><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fbg-1.jpeg%3ForigWidth%3D1280%26origHeight%3D853%26origFormat%3Djpg&amp;w=1280&amp;h=853&amp;f=webp" data-image-component="true" alt="Kontribusi SDGs &amp; Asta Cita" loading="lazy" data-astro-cid-5iyckawq="true" decoding="async" width="1280" height="853"></div><div class="modal-body" data-lenis-prevent data-astro-cid-5iyckawq><h2 data-astro-cid-5iyckawq>Kontribusi SDGs &amp; Asta Cita</h2><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Dukungan Tujuan Pembangunan Berkelanjutan (SDGs)</div><p data-astro-cid-5iyckawq>Memberikan kontribusi nyata pada pencapaian SDGs global, khususnya Tujuan 7 (Energi Bersih), Tujuan 9 (Inovasi &amp; Infrastruktur), Tujuan 11 (Permukiman Berkelanjutan), Tujuan 12 (Konsumsi Bertanggung Jawab), serta Tujuan 13 (Penanganan Perubahan Iklim).</p><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Keselarasan Prioritas Nasional</div><p data-astro-cid-5iyckawq>Mendukung implementasi Asta Cita ke-2 (Kemandirian Energi dan Air) dan Asta Cita ke-4 (Penguatan SDM dan Pendidikan). Program ini juga mengintegrasikan nilai-nilai Gerakan Indonesia ASRI dalam operasional pendidikan vokasi.</p><div class="modal-section-label" data-astro-cid-5iyckawq><svg class="label-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-5iyckawq><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-5iyckawq></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-5iyckawq></path></svg>Transisi Pemerintahan Rendah Karbon</div><p data-astro-cid-5iyckawq>Memperkuat komitmen nasional dalam mewujudkan tata kelola pemerintahan rendah karbon (low-carbon governance) serta mengarusutamakan praktik sirkular ekonomi.</p></div></div></dialog></section><script type="module" src="/src/components/BenefitsSection.astro?astro&type=script&index=0&lang.ts"></script><section id="peta-jalan" class="roadmap-section" data-astro-cid-dtsbz5pk><div class="roadmap-container" data-astro-cid-dtsbz5pk><!-- Left Column (Sticky) --><div class="roadmap-left" data-animate="fade-right" data-astro-cid-dtsbz5pk><div class="sticky-wrapper" data-astro-cid-dtsbz5pk><div class="section-label" data-astro-cid-dtsbz5pk><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-dtsbz5pk><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-dtsbz5pk></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-dtsbz5pk></path></svg>PETA JALAN PROGRAM</div><h2 class="section-heading" data-astro-cid-dtsbz5pk>Transformasi Menuju Keunggulan Berkelanjutan</h2><p class="section-description" data-astro-cid-dtsbz5pk>Dari upaya menekan beban operasional hingga mencapai kemandirian energi. Eksplorasi tahapan strategis BBPPMPV BMTI dalam mewujudkan tata kelola ekosistem kampus yang berwawasan lingkungan.</p><div class="highlight-box" data-astro-cid-dtsbz5pk><h3 class="highlight-number" data-astro-cid-dtsbz5pk>2026 &ndash; 2030</h3><h4 class="highlight-title" data-astro-cid-dtsbz5pk>Periode Transformasi Strategis</h4><p class="highlight-desc" data-astro-cid-dtsbz5pk>Peta jalan ini disusun untuk mengoptimalkan siklus anggaran 2026 dengan visi jangka panjang mewujudkan tata kelola kampus rendah karbon.</p></div></div></div><!-- Right Column (Timeline) --><div class="roadmap-right" data-astro-cid-dtsbz5pk><div class="timeline" data-animate="fade-in" data-astro-cid-dtsbz5pk><div class="timeline-item" data-animate="fade-up" data-delay="0" data-astro-cid-dtsbz5pk><div class="timeline-icon" data-astro-cid-dtsbz5pk><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div><div class="timeline-content" data-astro-cid-dtsbz5pk><span class="timeline-date" data-astro-cid-dtsbz5pk>MEI – JUNI 2026</span><h3 class="timeline-title" data-astro-cid-dtsbz5pk>Tahap I: Stabilisasi</h3><p class="timeline-desc" data-astro-cid-dtsbz5pk>Fokus pada pencapaian Quick Wins untuk menekan biaya operasional secara langsung. Langkah utama meliputi sinkronisasi data beban konsumsi listrik dan air, serta aktivasi fasilitas Green Point untuk pengelolaan sampah terpilah.</p></div></div><div class="timeline-item" data-animate="fade-up" data-delay="150" data-astro-cid-dtsbz5pk><div class="timeline-icon" data-astro-cid-dtsbz5pk><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><div class="timeline-content" data-astro-cid-dtsbz5pk><span class="timeline-date" data-astro-cid-dtsbz5pk>JULI – DESEMBER 2026</span><h3 class="timeline-title" data-astro-cid-dtsbz5pk>Tahap II: Institusionalisasi</h3><p class="timeline-desc" data-astro-cid-dtsbz5pk>Pelembagaan sistem agar program terus berjalan pasca-2026. Tahap ini mengintegrasikan seluruh Standar Operasional Prosedur (SOP) Green Office ke dalam Sistem Penjaminan Mutu Internal (SPMI) dan menyelaraskannya dengan siklus perencanaan DIPA.</p></div></div><div class="timeline-item" data-animate="fade-up" data-delay="300" data-astro-cid-dtsbz5pk><div class="timeline-icon" data-astro-cid-dtsbz5pk><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg></div><div class="timeline-content" data-astro-cid-dtsbz5pk><span class="timeline-date" data-astro-cid-dtsbz5pk>2027 – 2030</span><h3 class="timeline-title" data-astro-cid-dtsbz5pk>Tahap III: Ekspansi &amp; Mandiri</h3><p class="timeline-desc" data-astro-cid-dtsbz5pk>Visi jangka panjang untuk mewujudkan kampus mandiri energi dan netralitas emisi. Ditandai dengan integrasi teknologi Waste-to-Energy dalam skala penuh dan pencapaian kemandirian energi hingga ≥20% melalui optimalisasi PLTS, PLTB, serta operasional unit pirolisis.</p></div></div></div></div></div></section><section id="aktivitas" class="activities-section" data-astro-cid-2amqlyem><div class="activities-container" data-astro-cid-2amqlyem><!-- Header --><div class="activities-header" data-animate="fade-up" data-astro-cid-2amqlyem><div class="header-left" data-astro-cid-2amqlyem><div class="section-label" data-astro-cid-2amqlyem><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-2amqlyem><circle cx="12" cy="12" r="3" data-astro-cid-2amqlyem></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" data-astro-cid-2amqlyem></path></svg>Aksi & Implementasi</div><h2 class="section-heading" data-astro-cid-2amqlyem>Inisiatif Nyata untuk<br data-astro-cid-2amqlyem><span class="heading-light" data-astro-cid-2amqlyem>Mewujudkan Kampus Hijau</span></h2></div><div class="header-right" data-astro-cid-2amqlyem><button class="nav-btn prev-btn" aria-label="Previous" data-astro-cid-2amqlyem><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-2amqlyem><path d="M15 18l-6-6 6-6" data-astro-cid-2amqlyem></path></svg></button><button class="nav-btn next-btn" aria-label="Next" data-astro-cid-2amqlyem><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-2amqlyem><path d="M9 18l6-6-6-6" data-astro-cid-2amqlyem></path></svg></button></div></div><!-- Carousel Track --><div class="carousel-wrapper" data-animate="fade-up" data-delay="200" data-astro-cid-2amqlyem><div class="carousel-track" id="activities-track" data-astro-cid-2amqlyem><div class="activity-card" data-astro-cid-2amqlyem><div class="card-image-wrapper" data-astro-cid-2amqlyem><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fblog-01%2F20250416_093334.jpg%3ForigWidth%3D4032%26origHeight%3D2268%26origFormat%3Djpg&amp;w=4032&amp;h=2268&amp;f=webp" data-image-component="true" alt="SD CIKAL SERPONG GALI ILMU ENERGI ALTERNATIF DI BBPPMPV BMTI" loading="lazy" data-astro-cid-2amqlyem="true" decoding="async" width="4032" height="2268" class="card-image"><div class="card-date" data-astro-cid-2amqlyem>16 September 2026</div></div><div class="card-content" data-astro-cid-2amqlyem><h3 class="card-title" data-astro-cid-2amqlyem>SD CIKAL SERPONG GALI ILMU ENERGI ALTERNATIF DI BBPPMPV BMTI</h3><p class="card-desc" data-astro-cid-2amqlyem>SD Cikal Serpong mengambil langkah inspiratif dalam memperkenalkan isu energi terbarukan kepada para siswa sejak dini melalui kegiatan Overnight Field Trip Year 4 di BBPPMPV BMTI.</p><a href="/aktivitas/belajar-sejak-dini-energi-hijau" class="card-link" data-astro-cid-2amqlyem><span class="link-text" data-astro-cid-2amqlyem>Baca Selengkapnya</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-2amqlyem><path d="M7 17l9.2-9.2M17 17V7H7" data-astro-cid-2amqlyem></path></svg></a></div><!-- Floating bottom right icon --><div class="card-floating-icon bg-green" data-astro-cid-2amqlyem><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div></div><div class="activity-card" data-astro-cid-2amqlyem><div class="card-image-wrapper" data-astro-cid-2amqlyem><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2FIMG_0289.JPG%3ForigWidth%3D6240%26origHeight%3D4160%26origFormat%3Djpg&amp;w=6240&amp;h=4160&amp;f=webp" data-image-component="true" alt="BBPPMPV BMTI Kembangkan Energi Hijau Lewat Sarana Praktik PLTS untuk Mobil Listrik" loading="lazy" data-astro-cid-2amqlyem="true" decoding="async" width="6240" height="4160" class="card-image"><div class="card-date" data-astro-cid-2amqlyem>06 November 2025</div></div><div class="card-content" data-astro-cid-2amqlyem><h3 class="card-title" data-astro-cid-2amqlyem>BBPPMPV BMTI Kembangkan Energi Hijau Lewat Sarana Praktik PLTS untuk Mobil Listrik</h3><p class="card-desc" data-astro-cid-2amqlyem>BBPPMPV BMTI terus memperkuat peran strategisnya dalam mendukung kebijakan pemerintah menuju green economy melalui peresmian Sarana Praktik Pembangkit Listrik Tenaga Surya (PLTS) untuk Mobil Listrik.</p><a href="/aktivitas/kembangkan-energi-hijau-lewat-sarana-praktik-plts" class="card-link" data-astro-cid-2amqlyem><span class="link-text" data-astro-cid-2amqlyem>Baca Selengkapnya</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-2amqlyem><path d="M7 17l9.2-9.2M17 17V7H7" data-astro-cid-2amqlyem></path></svg></a></div><!-- Floating bottom right icon --><div class="card-floating-icon bg-white" data-astro-cid-2amqlyem><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div></div><div class="activity-card" data-astro-cid-2amqlyem><div class="card-image-wrapper" data-astro-cid-2amqlyem><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2FIMG_0341.JPG%3ForigWidth%3D6240%26origHeight%3D4160%26origFormat%3Djpg&amp;w=6240&amp;h=4160&amp;f=webp" data-image-component="true" alt="GRAND LAUNCHING PROGRAM GREEN OFFICE &amp; GREEN CULTURE BBPPMPV BMTI TAHUN 2026" loading="lazy" data-astro-cid-2amqlyem="true" decoding="async" width="6240" height="4160" class="card-image"><div class="card-date" data-astro-cid-2amqlyem>4 Juni 2026</div></div><div class="card-content" data-astro-cid-2amqlyem><h3 class="card-title" data-astro-cid-2amqlyem>GRAND LAUNCHING PROGRAM GREEN OFFICE &amp; GREEN CULTURE BBPPMPV BMTI TAHUN 2026</h3><p class="card-desc" data-astro-cid-2amqlyem>Menyambut Hari Lingkungan Hidup, BBPPMPV BMTI resmi memulai era baru tata kelola rendah karbon melalui peluncuran program Green Office &amp; Green Culture 2026.</p><a href="/aktivitas/grand-launching-program-green-office-2026" class="card-link" data-astro-cid-2amqlyem><span class="link-text" data-astro-cid-2amqlyem>Baca Selengkapnya</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-2amqlyem><path d="M7 17l9.2-9.2M17 17V7H7" data-astro-cid-2amqlyem></path></svg></a></div><!-- Floating bottom right icon --><div class="card-floating-icon bg-green" data-astro-cid-2amqlyem><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div></div><div class="activity-card" data-astro-cid-2amqlyem><div class="card-image-wrapper" data-astro-cid-2amqlyem><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fbg-2.jpg%3ForigWidth%3D739%26origHeight%3D415%26origFormat%3Djpg&amp;w=739&amp;h=415&amp;f=webp" data-image-component="true" alt="Kisah Pohon Keben BBPPMPV BMTI, Saksi Sejarah &quot;Pohon Perdamaian Dunia&quot; 1986" loading="lazy" data-astro-cid-2amqlyem="true" decoding="async" width="739" height="415" class="card-image"><div class="card-date" data-astro-cid-2amqlyem>15 September 2026</div></div><div class="card-content" data-astro-cid-2amqlyem><h3 class="card-title" data-astro-cid-2amqlyem>Kisah Pohon Keben BBPPMPV BMTI, Saksi Sejarah &quot;Pohon Perdamaian Dunia&quot; 1986</h3><p class="card-desc" data-astro-cid-2amqlyem>Di antara rimbunnya lanskap hijau kampus BBPPMPV BMTI, berdiri sebuah pohon sarat makna yang menyimpan rekam jejak sejarah penting bagi pelestarian lingkungan di Indonesia.</p><a href="/aktivitas/kisah-pohon-keben-bbppmpv-bmti" class="card-link" data-astro-cid-2amqlyem><span class="link-text" data-astro-cid-2amqlyem>Baca Selengkapnya</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-2amqlyem><path d="M7 17l9.2-9.2M17 17V7H7" data-astro-cid-2amqlyem></path></svg></a></div><!-- Floating bottom right icon --><div class="card-floating-icon bg-white" data-astro-cid-2amqlyem><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2-9 5 18 2-9h5"/></svg></div></div><!-- View All Card --><a href="/aktivitas" class="activity-card view-all-card" data-astro-cid-2amqlyem><div class="view-all-content" data-astro-cid-2amqlyem><div class="view-all-icon" data-astro-cid-2amqlyem><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-2amqlyem><path d="M5 12h14M12 5l7 7-7 7" data-astro-cid-2amqlyem></path></svg></div><span class="view-all-text" data-astro-cid-2amqlyem>Lihat semua aktivitas</span></div></a></div></div></div></section><script type="module" src="/src/components/ActivitiesSection.astro?astro&type=script&index=0&lang.ts"></script><section id="konservasi" class="gallery-section" data-astro-cid-yfwvpblw><div class="gallery-container" data-astro-cid-yfwvpblw><!-- Header (Centered) --><div class="gallery-header" data-animate="fade-up" data-astro-cid-yfwvpblw><div class="section-label" data-astro-cid-yfwvpblw><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-yfwvpblw></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-yfwvpblw></path></svg>Konservasi & Ekosistem</div><h2 class="section-heading" data-astro-cid-yfwvpblw>Menjaga Harmoni Alam:<br data-astro-cid-yfwvpblw><span class="heading-light" data-astro-cid-yfwvpblw>Ruang Terbuka Hijau BMTI</span></h2><p class="section-description" data-astro-cid-yfwvpblw>Jelajahi langkah nyata kami dalam merawat ekosistem seluas 130.976 m². Mengubah setiap jengkal lahan menjadi kawasan konservasi yang asri, produktif, dan selaras dengan alam.</p></div><!-- Filters --><div class="gallery-filters" data-animate="fade-up" data-delay="100" data-astro-cid-yfwvpblw><button class="filter-btn active" data-filter="all" data-astro-cid-yfwvpblw>Semua</button><button class="filter-btn " data-filter="Penanaman Vegetasi" data-astro-cid-yfwvpblw>Penanaman Vegetasi</button><button class="filter-btn " data-filter="Konservasi Hidrologi" data-astro-cid-yfwvpblw>Konservasi Hidrologi</button><button class="filter-btn " data-filter="Perawatan RTH" data-astro-cid-yfwvpblw>Perawatan RTH</button><button class="filter-btn " data-filter="Kolaborasi Ekologis" data-astro-cid-yfwvpblw>Kolaborasi Ekologis</button></div><!-- Grid --><div class="gallery-grid" data-animate="fade-up" data-delay="200" data-astro-cid-yfwvpblw><div class="gallery-item" data-category="Penanaman Vegetasi" data-astro-cid-yfwvpblw><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fbg-1.jpeg%3ForigWidth%3D1280%26origHeight%3D853%26origFormat%3Djpg&amp;w=1280&amp;h=853&amp;f=webp" data-image-component="true" alt="Peremajaan Vegetasi Kampus" loading="lazy" data-astro-cid-yfwvpblw="true" decoding="async" width="1280" height="853" class="gallery-img"><div class="gallery-overlay" data-astro-cid-yfwvpblw><div class="overlay-top-space" data-astro-cid-yfwvpblw><div class="overlay-center-icon" data-img="/@fs/D:/Magang (BMTI)/lestari/lestari/src/assets/img/bg-1.jpeg?origWidth=1280&amp;origHeight=853&amp;origFormat=jpg" data-title="Peremajaan Vegetasi Kampus" data-category="Penanaman Vegetasi" data-desc="Penataan ulang Ruang Terbuka Hijau (RTH) dan pemeliharaan pohon tua guna menjaga pasokan oksigen mikro." data-date="12-08-2026" data-location="Zona Barat Kampus BMTI" data-parties="Staf Teknis &amp; Mahasiswa Magang" data-astro-cid-yfwvpblw><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M7 17l9.2-9.2M17 17V7H7" data-astro-cid-yfwvpblw></path></svg></div></div><div class="overlay-bottom-card" data-astro-cid-yfwvpblw><span class="overlay-category" data-astro-cid-yfwvpblw>Penanaman Vegetasi</span><h3 class="overlay-title" data-astro-cid-yfwvpblw>Peremajaan Vegetasi Kampus</h3><p class="overlay-desc" data-astro-cid-yfwvpblw>Penataan ulang Ruang Terbuka Hijau (RTH) dan pemeliharaan pohon tua guna menjaga pasokan oksigen mikro.</p></div></div></div><div class="gallery-item" data-category="Konservasi Hidrologi" data-astro-cid-yfwvpblw><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fbg-2.jpg%3ForigWidth%3D739%26origHeight%3D415%26origFormat%3Djpg&amp;w=739&amp;h=415&amp;f=webp" data-image-component="true" alt="Sumur Resapan &amp; Biopori" loading="lazy" data-astro-cid-yfwvpblw="true" decoding="async" width="739" height="415" class="gallery-img"><div class="gallery-overlay" data-astro-cid-yfwvpblw><div class="overlay-top-space" data-astro-cid-yfwvpblw><div class="overlay-center-icon" data-img="/@fs/D:/Magang (BMTI)/lestari/lestari/src/assets/img/bg-2.jpg?origWidth=739&amp;origHeight=415&amp;origFormat=jpg" data-title="Sumur Resapan &amp; Biopori" data-category="Konservasi Hidrologi" data-desc="Konstruksi 20 lubang biopori di titik rawan genangan untuk mengembalikan fungsi serapan air tanah." data-date="25-08-2026" data-location="Area Parkir &amp; Lapangan Olahraga" data-parties="Unit Infrastruktur &amp; Fasilitas" data-astro-cid-yfwvpblw><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M7 17l9.2-9.2M17 17V7H7" data-astro-cid-yfwvpblw></path></svg></div></div><div class="overlay-bottom-card" data-astro-cid-yfwvpblw><span class="overlay-category" data-astro-cid-yfwvpblw>Konservasi Hidrologi</span><h3 class="overlay-title" data-astro-cid-yfwvpblw>Sumur Resapan &amp; Biopori</h3><p class="overlay-desc" data-astro-cid-yfwvpblw>Konstruksi 20 lubang biopori di titik rawan genangan untuk mengembalikan fungsi serapan air tanah.</p></div></div></div><div class="gallery-item" data-category="Konservasi Hidrologi" data-astro-cid-yfwvpblw><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fbg-3.jpg%3ForigWidth%3D739%26origHeight%3D415%26origFormat%3Djpg&amp;w=739&amp;h=415&amp;f=webp" data-image-component="true" alt="Rain Harvesting System" loading="lazy" data-astro-cid-yfwvpblw="true" decoding="async" width="739" height="415" class="gallery-img"><div class="gallery-overlay" data-astro-cid-yfwvpblw><div class="overlay-top-space" data-astro-cid-yfwvpblw><div class="overlay-center-icon" data-img="/@fs/D:/Magang (BMTI)/lestari/lestari/src/assets/img/bg-3.jpg?origWidth=739&amp;origHeight=415&amp;origFormat=jpg" data-title="Rain Harvesting System" data-category="Konservasi Hidrologi" data-desc="Sistem pemanenan air hujan untuk menjaga siklus hidrologi dan ketersediaan air bersih di area kampus." data-date="05-09-2026" data-location="Atap Gedung Utama BMTI" data-parties="Vendor Teknisi &amp; Staf BMTI" data-astro-cid-yfwvpblw><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M7 17l9.2-9.2M17 17V7H7" data-astro-cid-yfwvpblw></path></svg></div></div><div class="overlay-bottom-card" data-astro-cid-yfwvpblw><span class="overlay-category" data-astro-cid-yfwvpblw>Konservasi Hidrologi</span><h3 class="overlay-title" data-astro-cid-yfwvpblw>Rain Harvesting System</h3><p class="overlay-desc" data-astro-cid-yfwvpblw>Sistem pemanenan air hujan untuk menjaga siklus hidrologi dan ketersediaan air bersih di area kampus.</p></div></div></div><div class="gallery-item" data-category="Perawatan RTH" data-astro-cid-yfwvpblw><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fabt-1.jpeg%3ForigWidth%3D1024%26origHeight%3D682%26origFormat%3Djpg&amp;w=1024&amp;h=682&amp;f=webp" data-image-component="true" alt="Manajemen Sampah Organik" loading="lazy" data-astro-cid-yfwvpblw="true" decoding="async" width="1024" height="682" class="gallery-img"><div class="gallery-overlay" data-astro-cid-yfwvpblw><div class="overlay-top-space" data-astro-cid-yfwvpblw><div class="overlay-center-icon" data-img="/@fs/D:/Magang (BMTI)/lestari/lestari/src/assets/img/abt-1.jpeg?origWidth=1024&amp;origHeight=682&amp;origFormat=jpg" data-title="Manajemen Sampah Organik" data-category="Perawatan RTH" data-desc="Pengelolaan harian limbah hayati dari ruang terbuka hijau untuk mewujudkan target Zero-Waste." data-date="Rutinitas Harian" data-location="Seluruh Area Taman BMTI" data-parties="Tim Kebersihan BMTI" data-astro-cid-yfwvpblw><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M7 17l9.2-9.2M17 17V7H7" data-astro-cid-yfwvpblw></path></svg></div></div><div class="overlay-bottom-card" data-astro-cid-yfwvpblw><span class="overlay-category" data-astro-cid-yfwvpblw>Perawatan RTH</span><h3 class="overlay-title" data-astro-cid-yfwvpblw>Manajemen Sampah Organik</h3><p class="overlay-desc" data-astro-cid-yfwvpblw>Pengelolaan harian limbah hayati dari ruang terbuka hijau untuk mewujudkan target Zero-Waste.</p></div></div></div><div class="gallery-item" data-category="Kolaborasi Ekologis" data-astro-cid-yfwvpblw><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fabt-2.jpeg%3ForigWidth%3D1024%26origHeight%3D682%26origFormat%3Djpg&amp;w=1024&amp;h=682&amp;f=webp" data-image-component="true" alt="Sinergi dengan DLH Kota Cimahi" loading="lazy" data-astro-cid-yfwvpblw="true" decoding="async" width="1024" height="682" class="gallery-img"><div class="gallery-overlay" data-astro-cid-yfwvpblw><div class="overlay-top-space" data-astro-cid-yfwvpblw><div class="overlay-center-icon" data-img="/@fs/D:/Magang (BMTI)/lestari/lestari/src/assets/img/abt-2.jpeg?origWidth=1024&amp;origHeight=682&amp;origFormat=jpg" data-title="Sinergi dengan DLH Kota Cimahi" data-category="Kolaborasi Ekologis" data-desc="Perawatan partisipatif kawasan hijau bersama instansi pemerintah daerah untuk pelestarian jangka panjang." data-date="10-09-2026" data-location="Batas Luar Kampus BMTI" data-parties="BMTI &amp; Mitra DLH Cimahi" data-astro-cid-yfwvpblw><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M7 17l9.2-9.2M17 17V7H7" data-astro-cid-yfwvpblw></path></svg></div></div><div class="overlay-bottom-card" data-astro-cid-yfwvpblw><span class="overlay-category" data-astro-cid-yfwvpblw>Kolaborasi Ekologis</span><h3 class="overlay-title" data-astro-cid-yfwvpblw>Sinergi dengan DLH Kota Cimahi</h3><p class="overlay-desc" data-astro-cid-yfwvpblw>Perawatan partisipatif kawasan hijau bersama instansi pemerintah daerah untuk pelestarian jangka panjang.</p></div></div></div><div class="gallery-item" data-category="Penanaman Vegetasi" data-astro-cid-yfwvpblw><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fbg-2.jpg%3ForigWidth%3D739%26origHeight%3D415%26origFormat%3Djpg&amp;w=739&amp;h=415&amp;f=webp" data-image-component="true" alt="Edukasi Lingkungan Hijau" loading="lazy" data-astro-cid-yfwvpblw="true" decoding="async" width="739" height="415" class="gallery-img"><div class="gallery-overlay" data-astro-cid-yfwvpblw><div class="overlay-top-space" data-astro-cid-yfwvpblw><div class="overlay-center-icon" data-img="/@fs/D:/Magang (BMTI)/lestari/lestari/src/assets/img/bg-2.jpg?origWidth=739&amp;origHeight=415&amp;origFormat=jpg" data-title="Edukasi Lingkungan Hijau" data-category="Penanaman Vegetasi" data-desc="Melibatkan siswa dan masyarakat sekitar dalam praktik langsung perawatan tanaman dan pemahaman ekosistem." data-date="12-09-2026" data-location="Zona Selatan Kampus" data-parties="Peserta Diklat PjBL" data-astro-cid-yfwvpblw><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M7 17l9.2-9.2M17 17V7H7" data-astro-cid-yfwvpblw></path></svg></div></div><div class="overlay-bottom-card" data-astro-cid-yfwvpblw><span class="overlay-category" data-astro-cid-yfwvpblw>Penanaman Vegetasi</span><h3 class="overlay-title" data-astro-cid-yfwvpblw>Edukasi Lingkungan Hijau</h3><p class="overlay-desc" data-astro-cid-yfwvpblw>Melibatkan siswa dan masyarakat sekitar dalam praktik langsung perawatan tanaman dan pemahaman ekosistem.</p></div></div></div><div class="gallery-item" data-category="Konservasi Hidrologi" data-astro-cid-yfwvpblw><img src="/_image?href=%2F%40fs%2FD%3A%2FMagang+%28BMTI%29%2Flestari%2Flestari%2Fsrc%2Fassets%2Fimg%2Fbg-3.jpg%3ForigWidth%3D739%26origHeight%3D415%26origFormat%3Djpg&amp;w=739&amp;h=415&amp;f=webp" data-image-component="true" alt="Kawasan Bebas Emisi" loading="lazy" data-astro-cid-yfwvpblw="true" decoding="async" width="739" height="415" class="gallery-img"><div class="gallery-overlay" data-astro-cid-yfwvpblw><div class="overlay-top-space" data-astro-cid-yfwvpblw><div class="overlay-center-icon" data-img="/@fs/D:/Magang (BMTI)/lestari/lestari/src/assets/img/bg-3.jpg?origWidth=739&amp;origHeight=415&amp;origFormat=jpg" data-title="Kawasan Bebas Emisi" data-category="Konservasi Hidrologi" data-desc="Penetapan zona khusus bebas kendaraan bermotor di area pusat kampus untuk menjaga kualitas udara." data-date="Mulai Sep 2026" data-location="Jalur Utama Kampus BMTI" data-parties="Unit Keamanan &amp; Staf BMTI" data-astro-cid-yfwvpblw><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M7 17l9.2-9.2M17 17V7H7" data-astro-cid-yfwvpblw></path></svg></div></div><div class="overlay-bottom-card" data-astro-cid-yfwvpblw><span class="overlay-category" data-astro-cid-yfwvpblw>Konservasi Hidrologi</span><h3 class="overlay-title" data-astro-cid-yfwvpblw>Kawasan Bebas Emisi</h3><p class="overlay-desc" data-astro-cid-yfwvpblw>Penetapan zona khusus bebas kendaraan bermotor di area pusat kampus untuk menjaga kualitas udara.</p></div></div></div><!-- View All Card --><a href="/galeri" class="gallery-item view-all-card" data-category="Semua" data-astro-cid-yfwvpblw><div class="view-all-content" data-astro-cid-yfwvpblw><div class="view-all-icon" data-astro-cid-yfwvpblw><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M5 12h14M12 5l7 7-7 7" data-astro-cid-yfwvpblw></path></svg></div><h3 class="view-all-text" data-astro-cid-yfwvpblw>Lihat semua galeri</h3></div></a></div></div><!-- Lightbox --><div id="gallery-lightbox" class="lightbox" data-lenis-prevent data-astro-cid-yfwvpblw><div class="lightbox-overlay" id="lightbox-close" data-astro-cid-yfwvpblw></div><div class="lightbox-content" data-astro-cid-yfwvpblw><button class="lightbox-close-btn" id="lightbox-close-btn" data-astro-cid-yfwvpblw>&times;</button><div class="lightbox-img-wrapper" data-astro-cid-yfwvpblw><img src="" alt="Gallery Image" class="lightbox-img" id="lightbox-img" data-astro-cid-yfwvpblw></div><div class="lightbox-card" id="lightbox-card" data-lenis-prevent data-astro-cid-yfwvpblw><span class="overlay-category" id="lightbox-category" data-astro-cid-yfwvpblw></span><h3 class="overlay-title" id="lightbox-title" data-astro-cid-yfwvpblw></h3><p class="overlay-desc" id="lightbox-desc" data-astro-cid-yfwvpblw></p><div class="lightbox-metadata" data-astro-cid-yfwvpblw><div class="meta-item" data-astro-cid-yfwvpblw><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><rect x="3" y="4" width="18" height="18" rx="2" ry="2" data-astro-cid-yfwvpblw></rect><line x1="16" y1="2" x2="16" y2="6" data-astro-cid-yfwvpblw></line><line x1="8" y1="2" x2="8" y2="6" data-astro-cid-yfwvpblw></line><line x1="3" y1="10" x2="21" y2="10" data-astro-cid-yfwvpblw></line></svg><span id="lightbox-date" data-astro-cid-yfwvpblw></span></div><div class="meta-item" data-astro-cid-yfwvpblw><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-astro-cid-yfwvpblw></path><circle cx="12" cy="10" r="3" data-astro-cid-yfwvpblw></circle></svg><span id="lightbox-location" data-astro-cid-yfwvpblw></span></div><div class="meta-item" data-astro-cid-yfwvpblw><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" data-astro-cid-yfwvpblw></path><circle cx="9" cy="7" r="4" data-astro-cid-yfwvpblw></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87" data-astro-cid-yfwvpblw></path><path d="M16 3.13a4 4 0 0 1 0 7.75" data-astro-cid-yfwvpblw></path></svg><span id="lightbox-parties" data-astro-cid-yfwvpblw></span></div></div></div><button class="lightbox-toggle-card" id="lightbox-toggle-card" aria-label="Toggle Informasi" data-astro-cid-yfwvpblw><svg id="icon-hide" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-yfwvpblw><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" data-astro-cid-yfwvpblw></path><line x1="1" y1="1" x2="23" y2="23" data-astro-cid-yfwvpblw></line></svg><svg id="icon-show" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;" data-astro-cid-yfwvpblw><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" data-astro-cid-yfwvpblw></path><circle cx="12" cy="12" r="3" data-astro-cid-yfwvpblw></circle></svg></button></div></div></section><script type="module" src="/src/components/GallerySection.astro?astro&type=script&index=0&lang.ts"></script><section id="kolaborasi" class="cta-section" data-astro-cid-xphih35w><div class="cta-container" data-astro-cid-xphih35w><div class="cta-box" data-animate="fade-up" data-astro-cid-xphih35w><!-- Background graphic (Leaf) --><div class="bg-graphic" data-astro-cid-xphih35w><svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" xml:space="preserve" data-astro-cid-xphih35w><g data-astro-cid-xphih35w><path fill="currentColor" d="M34.929,7.629c-0.205-0.513-0.787-0.763-1.297-0.557c-0.513,0.203-0.764,0.784-0.562,1.297
+							c0.019,0.047,1.84,4.804-0.032,11.356c0,0-0.001,0.007-0.001,0.011c-1.215,1.103-2.459,2.271-3.744,3.557
+							c-1.357,1.357-2.591,2.671-3.745,3.948c0.998-9.183-0.498-16.128-0.571-16.458c-0.12-0.539-0.654-0.876-1.193-0.76
+							c-0.539,0.12-0.879,0.654-0.76,1.193c0.019,0.086,1.823,8.469,0.13,18.763c-2.26,2.695-4.05,5.14-5.464,7.261
+							c0.709-7.9-0.644-14.145-0.713-14.457c-0.12-0.539-0.65-0.886-1.193-0.759c-0.539,0.119-0.879,0.653-0.76,1.192
+							c0.02,0.087,1.885,8.75,0.048,18.297c-1.383,2.488-1.953,3.988-2.01,4.141c-0.19,0.518,0.074,1.092,0.592,1.283
+							C13.768,46.979,13.885,47,14,47c0.406,0,0.788-0.25,0.938-0.653c0.013-0.034,0.5-1.302,1.684-3.468
+							c10.438-2.726,19.995,0.051,20.092,0.079C36.809,42.986,36.905,43,37,43c0.431,0,0.828-0.28,0.958-0.714
+							c0.158-0.528-0.142-1.085-0.671-1.244C36.897,40.924,28.2,38.391,18,40.506c1.416-2.316,3.406-5.218,6.108-8.52
+							c0.052-0.006,0.104-0.008,0.154-0.021c10.595-2.889,21.367-0.029,21.475,0C45.825,31.988,45.913,32,46,32
+							c0.44,0,0.844-0.292,0.965-0.737c0.145-0.533-0.169-1.082-0.702-1.228c-0.425-0.116-9.801-2.598-20.012-0.576
+							c1.341-1.524,2.814-3.109,4.456-4.752c1.41-1.41,2.777-2.693,4.103-3.88c6.452-1.649,12.852,0.116,12.916,0.135
+							C47.817,20.987,47.909,21,48,21c0.436,0,0.836-0.287,0.961-0.727c0.151-0.53-0.155-1.083-0.687-1.235
+							c-0.239-0.067-4.9-1.367-10.473-0.779c8.531-7.021,14.472-9.294,14.545-9.321c0.518-0.191,0.782-0.767,0.591-1.284
+							c-0.191-0.519-0.766-0.779-1.283-0.592c-0.326,0.12-6.805,2.58-16.068,10.431C36.527,11.735,35.004,7.816,34.929,7.629z" data-astro-cid-xphih35w></path><path fill="currentColor" d="M60.893,1.549c-0.136-0.269-0.386-0.462-0.679-0.525c-2.98-0.652-6.97-0.982-11.856-0.982
+							c-4.922,0-10.564,0.353-15.481,0.967C17.641,2.912,7,13.601,7,27v18.678L3.103,60.225c-0.428,1.598,0.523,3.244,2.122,3.674
+							c1.598,0.426,3.245-0.525,3.673-2.121L11.25,53H31c14.337,0,26-11.663,26-26c0-6.663,0-15.788,3.914-24.594
+							C61.036,2.132,61.028,1.816,60.893,1.549z M6.966,61.26c-0.143,0.532-0.691,0.849-1.224,0.707
+							c-0.534-0.145-0.851-0.691-0.708-1.225l2.552-9.686c0.405,0.672,0.998,1.212,1.712,1.55L6.966,61.26z M55,27
+							c0,13.233-10.767,24-24,24H11c-1.104,0-2-0.896-2-2v-1V27C9,14.641,18.92,4.769,33.124,2.992
+							c4.839-0.604,10.391-0.951,15.233-0.951c4.048,0,7.553,0.242,10.238,0.705C55,11.565,55,20.443,55,27z" data-astro-cid-xphih35w></path></g></svg></div><div class="cta-content" data-astro-cid-xphih35w><div class="section-label" data-astro-cid-xphih35w><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-xphih35w><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" data-astro-cid-xphih35w></path></svg>Sinergi & Kolaborasi Lintas Sektor</div><h2 class="cta-heading" data-astro-cid-xphih35w>Mari Berkolaborasi Mewujudkan Ekosistem Vokasi Berkelanjutan!</h2><p class="cta-desc" data-astro-cid-xphih35w>Dalam semangat gotong royong, BBPPMPV BMTI membuka peluang kemitraan strategis bagi Dunia Industri (DUDI), Pemerintah Daerah, Komunitas Lingkungan, serta Satuan Pendidikan lainnya. Mari bersinergi untuk riset efisiensi energi, adopsi praktik Green Office (replikasi), hingga pemanfaatan kawasan kampus sebagai Living Laboratory berskala nasional.</p></div><div class="cta-actions" data-astro-cid-xphih35w><a href="#" class="btn btn-primary-light" data-astro-cid-xphih35w><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-xphih35w><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" data-astro-cid-xphih35w></path><polyline points="7 10 12 15 17 10" data-astro-cid-xphih35w></polyline><line x1="12" y1="15" x2="12" y2="3" data-astro-cid-xphih35w></line></svg>Unduh Peta Jalan (PDF)</a><a href="#" class="btn btn-outline-light" data-astro-cid-xphih35w><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-xphih35w><rect x="3" y="4" width="18" height="18" rx="2" ry="2" data-astro-cid-xphih35w></rect><line x1="16" y1="2" x2="16" y2="6" data-astro-cid-xphih35w></line><line x1="8" y1="2" x2="8" y2="6" data-astro-cid-xphih35w></line><line x1="3" y1="10" x2="21" y2="10" data-astro-cid-xphih35w></line></svg>Ajukan Kemitraan / Studi Banding</a></div></div></div></section><footer class="site-footer" data-astro-cid-jo6i4kqk><div class="footer-container" data-astro-cid-jo6i4kqk><div class="footer-top" data-astro-cid-jo6i4kqk><!-- Column 1 --><div class="footer-col col-brand" data-astro-cid-jo6i4kqk><div class="footer-logo" data-astro-cid-jo6i4kqk><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green-600)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-jo6i4kqk><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" data-astro-cid-jo6i4kqk></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" data-astro-cid-jo6i4kqk></path></svg><div class="logo-text" data-astro-cid-jo6i4kqk><span class="logo-title" data-astro-cid-jo6i4kqk>Green Office</span><span class="logo-subtitle" data-astro-cid-jo6i4kqk>Kampus Berkelanjutan</span></div></div><p class="footer-desc" data-astro-cid-jo6i4kqk>Balai Besar Pengembangan Penjaminan Mutu Pendidikan Vokasi Bidang Mesin dan Industri. Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia.</p><div class="footer-badge" data-astro-cid-jo6i4kqk><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-jo6i4kqk><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" data-astro-cid-jo6i4kqk></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" data-astro-cid-jo6i4kqk></path><path d="M4 22h16" data-astro-cid-jo6i4kqk></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" data-astro-cid-jo6i4kqk></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" data-astro-cid-jo6i4kqk></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" data-astro-cid-jo6i4kqk></path></svg>Zona Integritas WBK / WBBM</div></div><!-- Column 2 --><div class="footer-col" data-astro-cid-jo6i4kqk><h4 class="footer-heading" data-astro-cid-jo6i4kqk>Alamat Institusi</h4><ul class="footer-list" data-astro-cid-jo6i4kqk><li data-astro-cid-jo6i4kqk><svg class="list-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-jo6i4kqk><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-astro-cid-jo6i4kqk></path><circle cx="12" cy="10" r="3" data-astro-cid-jo6i4kqk></circle></svg><div class="list-text" data-astro-cid-jo6i4kqk>Jl. Pesantren KM. 2, Cibabat, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat 40513<br data-astro-cid-jo6i4kqk><span class="text-green" data-astro-cid-jo6i4kqk>BBPPMPV BMTI Cimahi</span></div></li></ul></div><!-- Column 3 --><div class="footer-col" data-astro-cid-jo6i4kqk><h4 class="footer-heading" data-astro-cid-jo6i4kqk>Kontak & Layanan</h4><ul class="footer-list" data-astro-cid-jo6i4kqk><li data-astro-cid-jo6i4kqk><svg class="list-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-jo6i4kqk><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" data-astro-cid-jo6i4kqk></path></svg><div class="list-text" data-astro-cid-jo6i4kqk>(022) 6652326</div></li><li data-astro-cid-jo6i4kqk><svg class="list-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-jo6i4kqk><rect x="2" y="4" width="20" height="16" rx="2" ry="2" data-astro-cid-jo6i4kqk></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" data-astro-cid-jo6i4kqk></path></svg><div class="list-text" data-astro-cid-jo6i4kqk>bbppmpv.bmti@kemendikdasmen.go.id</div></li><li data-astro-cid-jo6i4kqk><svg class="list-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-jo6i4kqk><circle cx="12" cy="12" r="10" data-astro-cid-jo6i4kqk></circle><polyline points="12 6 12 12 16 14" data-astro-cid-jo6i4kqk></polyline></svg><div class="list-text" data-astro-cid-jo6i4kqk>Layanan Terpadu:<br data-astro-cid-jo6i4kqk>Senin - Jumat: 08.00 - 16.00 WIB</div></li></ul></div><!-- Column 4 --><div class="footer-col" data-astro-cid-jo6i4kqk><h4 class="footer-heading" data-astro-cid-jo6i4kqk>Kanal & Transformasi</h4><!-- <p class="footer-desc mb-4">
+					Pusat informasi transformasi tata kelola kelembagaan vokasi hijau, efisiensi energi, dan pelestarian keanekaragaman hayati terintegrasi.
+				</p> --><div class="footer-social" data-astro-cid-jo6i4kqk><a href="#" aria-label="Instagram" data-astro-cid-jo6i4kqk><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-jo6i4kqk><rect x="2" y="2" width="20" height="20" rx="5" ry="5" data-astro-cid-jo6i4kqk></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" data-astro-cid-jo6i4kqk></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" data-astro-cid-jo6i4kqk></line></svg></a><a href="#" aria-label="YouTube" data-astro-cid-jo6i4kqk><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-jo6i4kqk><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" data-astro-cid-jo6i4kqk></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" data-astro-cid-jo6i4kqk></polygon></svg></a></div></div></div><div class="footer-bottom" data-astro-cid-jo6i4kqk><div class="copyright" data-astro-cid-jo6i4kqk>&copy; 2026 BBPPMPV BMTI Kemendikbudristek. Seluruh Hak Cipta Dilindungi Undang-Undang.</div><div class="footer-legal" data-astro-cid-jo6i4kqk><a href="#" data-astro-cid-jo6i4kqk>Kebijakan Privasi</a><a href="#" data-astro-cid-jo6i4kqk>Aksesibilitas</a><a href="#" data-astro-cid-jo6i4kqk>Maklumat Pelayanan</a></div></div></div></footer></body></html><script type="module" src="/src/layouts/Layout.astro?astro&type=script&index=0&lang.ts"></script>

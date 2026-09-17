@@ -1,4 +1,11 @@
 ---
+import { Image } from 'astro:assets';
+import img1 from '../assets/img/bg-1.jpeg';
+import img2 from '../assets/img/bg-2.jpg';
+import img3 from '../assets/img/bg-3.jpg';
+import img4 from '../assets/img/abt-1.jpeg';
+import img5 from '../assets/img/abt-2.jpeg';
+
 const categories = [
 	'Semua',
 	'Penanaman Vegetasi',
@@ -10,7 +17,7 @@ const categories = [
 const galleryItems = [
 	{
 		category: 'Penanaman Vegetasi',
-		image: '/src/assets/img/bg-1.jpeg',
+		image: img1,
 		title: 'Peremajaan Vegetasi Kampus',
 		desc: 'Penataan ulang Ruang Terbuka Hijau (RTH) dan pemeliharaan pohon tua guna menjaga pasokan oksigen mikro.',
 		date: '12-08-2026',
@@ -19,7 +26,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Konservasi Hidrologi',
-		image: '/src/assets/img/bg-2.jpg',
+		image: img2,
 		title: 'Sumur Resapan & Biopori',
 		desc: 'Konstruksi 20 lubang biopori di titik rawan genangan untuk mengembalikan fungsi serapan air tanah.',
 		date: '25-08-2026',
@@ -28,7 +35,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Konservasi Hidrologi',
-		image: '/src/assets/img/bg-3.jpg',
+		image: img3,
 		title: 'Rain Harvesting System',
 		desc: 'Sistem pemanenan air hujan untuk menjaga siklus hidrologi dan ketersediaan air bersih di area kampus.',
 		date: '05-09-2026',
@@ -37,7 +44,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Perawatan RTH',
-		image: '/src/assets/img/abt-1.jpeg',
+		image: img4,
 		title: 'Manajemen Sampah Organik',
 		desc: 'Pengelolaan harian limbah hayati dari ruang terbuka hijau untuk mewujudkan target Zero-Waste.',
 		date: 'Rutinitas Harian',
@@ -46,7 +53,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Kolaborasi Ekologis',
-		image: '/src/assets/img/abt-2.jpeg',
+		image: img5,
 		title: 'Sinergi dengan DLH Kota Cimahi',
 		desc: 'Perawatan partisipatif kawasan hijau bersama instansi pemerintah daerah untuk pelestarian jangka panjang.',
 		date: '10-09-2026',
@@ -55,7 +62,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Penanaman Vegetasi',
-		image: '/src/assets/img/bg-2.jpg',
+		image: img2,
 		title: 'Edukasi Lingkungan Hijau',
 		desc: 'Melibatkan siswa dan masyarakat sekitar dalam praktik langsung perawatan tanaman dan pemahaman ekosistem.',
 		date: '12-09-2026',
@@ -64,7 +71,7 @@ const galleryItems = [
 	},
 	{
 		category: 'Konservasi Hidrologi',
-		image: '/src/assets/img/bg-3.jpg',
+		image: img3,
 		title: 'Kawasan Bebas Emisi',
 		desc: 'Penetapan zona khusus bebas kendaraan bermotor di area pusat kampus untuk menjaga kualitas udara.',
 		date: 'Mulai Sep 2026',
@@ -107,11 +114,11 @@ const galleryItems = [
 		<div class="gallery-grid" data-animate="fade-up" data-delay="200">
 			{galleryItems.map(item => (
 				<div class="gallery-item" data-category={item.category}>
-					<img src={item.image} alt={item.title} class="gallery-img" loading="lazy" />
+					<Image src={item.image} alt={item.title} class="gallery-img" loading="lazy" />
 					<div class="gallery-overlay">
 						<div class="overlay-top-space">
 							<div class="overlay-center-icon" 
-								data-img={item.image} 
+								data-img={item.image.src} 
 								data-title={item.title} 
 								data-category={item.category} 
 								data-desc={item.desc}

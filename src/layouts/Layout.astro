@@ -323,5 +323,57 @@ import Preloader from '../components/Preloader.astro';
 		);
 
 		animateElements.forEach((el) => observer.observe(el));
+
+		// Smooth Image Loading with Skeleton
+		const images = document.querySelectorAll('img');
+		images.forEach(img => {
+			if (img.width < 100 || img.height < 100 || img.classList.contains('partner-logo') || img.classList.contains('preloader-logo') || img.classList.contains('global-goals-img') || img.classList.contains('carousel-bg')) {
+				return;
+			}
+
+			if (img.complete && img.naturalWidth > 0) {
+				img.style.opacity = '1';
+				return;
+			}
+			
+			img.style.opacity = '0';
+			img.style.transition = 'opacity 0.6s ease-out';
+			
+			const skeleton = document.createElement('div');
+			skeleton.className = 'skeleton';
+			
+			const updateSkeleton = () => {
+				if(!img.offsetParent) return;
+				skeleton.style.position = 'absolute';
+				skeleton.style.top = img.offsetTop + 'px';
+				skeleton.style.left = img.offsetLeft + 'px';
+				skeleton.style.width = img.offsetWidth + 'px';
+				skeleton.style.height = img.offsetHeight + 'px';
+				skeleton.style.borderRadius = getComputedStyle(img).borderRadius;
+				skeleton.style.zIndex = '1'; 
+				skeleton.style.pointerEvents = 'none';
+			};
+			
+			if (img.offsetParent) {
+				updateSkeleton();
+				img.offsetParent.appendChild(skeleton);
+			}
+			
+			const handleResize = () => updateSkeleton();
+			window.addEventListener('resize', handleResize);
+			
+			const handleLoad = () => {
+				img.style.opacity = '1';
+				skeleton.style.opacity = '0';
+				skeleton.style.transition = 'opacity 0.6s ease-out';
+				setTimeout(() => {
+					skeleton.remove();
+					window.removeEventListener('resize', handleResize);
+				}, 600);
+			};
+			
+			img.addEventListener('load', handleLoad);
+			img.addEventListener('error', handleLoad);
+		});
 	});
 </script>

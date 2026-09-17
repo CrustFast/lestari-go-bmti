@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import { articles } from '../data/berita';
 
 const icons = [
@@ -52,7 +53,7 @@ const activities = articles.slice(0, 4).map((article, index) => ({
 				{activities.map((item, index) => (
 					<div class="activity-card">
 						<div class="card-image-wrapper">
-							<img src={item.image} alt={item.title} class="card-image skeleton" loading="lazy" onload="this.classList.remove('skeleton')" />
+							<Image src={item.image} alt={item.title} class="card-image" loading="lazy" />
 							<div class="card-date">{item.date}</div>
 						</div>
 						<div class="card-content">
@@ -263,7 +264,8 @@ const activities = articles.slice(0, 4).map((article, index) => ({
 		scrollbar-width: none; /* Firefox */
 		-ms-overflow-style: none;  /* IE and Edge */
 		padding-bottom: 2rem; /* space for box shadows */
-		scroll-behavior: smooth;
+		overscroll-behavior-x: contain; /* Prevent browser swipe back */
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.carousel-track::-webkit-scrollbar {

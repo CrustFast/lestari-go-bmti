@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import { articles } from '../../data/berita';
 const carouselItems = articles.map(article => ({
     ...article,
@@ -10,7 +11,7 @@ const carouselItems = articles.map(article => ({
     <!-- Background Image Carousel -->
     <div class="hero-bg" id="hero-bg-carousel">
         {carouselItems.map((item, index) => (
-            <img 
+            <Image 
                 src={item.image} 
                 class={`carousel-bg ${index === 0 ? 'active' : ''}`} 
                 alt={item.title} 

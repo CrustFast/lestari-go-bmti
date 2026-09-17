@@ -1,11 +1,17 @@
 ---
+import { Image } from 'astro:assets';
+import modalImg1 from '../assets/img/abt-2.jpeg';
+import modalImg2 from '../assets/img/bg-1.jpeg';
+import modalImg3 from '../assets/img/manfaat-1.jpeg';
+import modalImg4 from '../assets/img/IMG_0289.webp';
+
 const benefits = [
 	{
 		icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>`, // Wallet
 		title: 'Efisiensi Anggaran Berkinerja',
 		description: 'Tercapainya efisiensi anggaran operasional yang diukur melalui optimasi penggunaan energi dan pengelolaan limbah.',
 		linkText: 'Baca Selengkapnya',
-		modalImg: '/img/abt-2.jpeg',
+		modalImg: modalImg1,
 		modalPoints: [
 			{ title: 'Optimalisasi Belanja Negara', text: 'Program ini memastikan tercapainya efisiensi anggaran operasional yang diukur melalui optimasi penggunaan energi, pengelolaan limbah, dan pemeliharaan sarana prasarana sebagai langkah strategis dalam menanggapi kebijakan penajaman belanja negara.' },
 			{ title: 'Penguatan Tata Kelola Berstandar Mutu', text: 'Efisiensi ini bukan sekadar pemotongan biaya, melainkan wujud tata kelola lingkungan kerja yang terstandarisasi, transparan, dan berkelanjutan. Sistem ini terintegrasi secara holistik ke dalam sistem penjaminan mutu serta evaluasi kinerja instansi.' }
@@ -16,7 +22,7 @@ const benefits = [
 		title: 'Optimalisasi Aset Berkelanjutan',
 		description: 'Meningkatkan nilai guna investasi melalui pemanfaatan infrastruktur ramah lingkungan seperti PLTS, PLTB, dan biogas guna menekan jejak karbon institusi.',
 		linkText: 'Baca Selengkapnya',
-		modalImg: '/img/bg-1.jpeg',
+		modalImg: modalImg2,
 		modalPoints: [
 			{ title: 'Pemanfaatan Infrastruktur Hijau', text: 'BBPPMPV BMTI meningkatkan nilai guna investasi melalui pemanfaatan maksimal infrastruktur ramah lingkungan. Ini mencakup optimalisasi PLTS, PLTB, PLTMH, instalasi biogas, dan stasiun pengisian kendaraan listrik.' },
 			{ title: 'Penurunan Jejak Karbon', text: 'Langkah optimalisasi aset ini secara langsung menekan ketergantungan operasional kampus pada sumber energi konvensional, yang pada akhirnya menurunkan jejak karbon institusi secara signifikan.' }
@@ -27,7 +33,7 @@ const benefits = [
 		title: 'Kualitas Lingkungan (Well-being)',
 		description: 'Terciptanya atmosfer kerja yang lebih sehat, nyaman, dan aman melalui manajemen limbah yang sistematis serta mitigasi risiko proaktif.',
 		linkText: 'Baca Selengkapnya',
-		modalImg: '/img/abt-2.jpeg',
+		modalImg: modalImg1,
 		modalPoints: [
 			{ title: 'Kesehatan dan Keselamatan Kerja', text: 'Terciptanya atmosfer kerja yang lebih sehat, nyaman, dan aman. Hal ini dicapai melalui manajemen limbah yang sistematis, pengendalian polusi, serta mitigasi risiko lingkungan (seperti pengelolaan vegetasi) yang proaktif.' },
 			{ title: 'Peningkatan Produktivitas', text: 'Ekosistem kerja yang kondusif, segar, dan estetik secara langsung berkontribusi pada peningkatan kesehatan fisik, kesejahteraan mental, dan motivasi kerja pegawai dalam memberikan layanan pendidikan yang prima.' },
@@ -39,7 +45,7 @@ const benefits = [
 		title: 'Fasilitas Living Laboratory',
 		description: 'Menjadikan ekosistem di lingkungan BBPPMPV BMTI sebagai media pembelajaran nyata yang komprehensif bagi para peserta diklat.',
 		linkText: 'Baca Selengkapnya',
-		modalImg: '/img/bg-1.jpeg',
+		modalImg: modalImg2,
 		modalPoints: [
 			{ title: 'Media Pembelajaran Komprehensif', text: 'Menjadikan ekosistem di lingkungan BBPPMPV BMTI sebagai media pembelajaran nyata (Living Laboratory) yang komprehensif bagi peserta diklat.' },
 			{ title: 'Praktik Langsung 3R & Adaptasi Iklim', text: 'Peserta dapat mengimplementasikan langsung prinsip 3R (Reduce, Reuse, Recycle), efisiensi energi, dan strategi adaptasi perubahan iklim. Praktik baik ini dapat direplikasi langsung pada satuan pendidikan maupun dunia industri asal mereka.' },
@@ -51,7 +57,7 @@ const benefits = [
 		title: 'Rujukan Vokasi Nasional',
 		description: 'Memposisikan lembaga sebagai pionir pendidikan vokasi yang adaptif, sehingga menjadi benchmark (rujukan) nasional dalam praktik tata kelola ramah lingkungan.',
 		linkText: 'Baca Selengkapnya',
-		modalImg: '/img/abt-2.jpeg',
+		modalImg: modalImg1,
 		modalPoints: [
 			{ title: 'Pionir Pendidikan Adaptif', text: 'Memposisikan BBPPMPV BMTI sebagai UPT pendidikan vokasi pelopor yang inovatif dan adaptif, sehingga menjadi benchmark (rujukan) nasional dalam implementasi praktik Green Office.' },
 			{ title: 'Penyediaan Model Replikasi', text: 'Menghadirkan prototipe efisiensi operasional dan program lingkungan yang dapat direplikasi oleh satuan kerja lain dalam optimalisasi sumber daya. Model ini membuktikan bahwa efisiensi bisa dilakukan tanpa mengabaikan kualitas layanan publik.' },
@@ -63,7 +69,7 @@ const benefits = [
 		title: 'Kontribusi SDGs & Asta Cita',
 		description: 'Memberikan kontribusi nyata dalam pencapaian target SDGs global serta mendukung prioritas nasional terkait kemandirian energi dan air.',
 		linkText: 'Baca Selengkapnya',
-		modalImg: '/img/bg-1.jpeg',
+		modalImg: modalImg2,
 		modalPoints: [
 			{ title: 'Dukungan Tujuan Pembangunan Berkelanjutan (SDGs)', text: 'Memberikan kontribusi nyata pada pencapaian SDGs global, khususnya Tujuan 7 (Energi Bersih), Tujuan 9 (Inovasi & Infrastruktur), Tujuan 11 (Permukiman Berkelanjutan), Tujuan 12 (Konsumsi Bertanggung Jawab), serta Tujuan 13 (Penanganan Perubahan Iklim).' },
 			{ title: 'Keselarasan Prioritas Nasional', text: 'Mendukung implementasi Asta Cita ke-2 (Kemandirian Energi dan Air) dan Asta Cita ke-4 (Penguatan SDM dan Pendidikan). Program ini juga mengintegrasikan nilai-nilai Gerakan Indonesia ASRI dalam operasional pendidikan vokasi.' },
@@ -123,7 +129,7 @@ const benefits = [
 					</svg>
 				</button>
 				<div class="modal-header-img">
-					<img src={item.modalImg} alt={item.title} loading="lazy" />
+					<Image src={item.modalImg} alt={item.title} loading="lazy" />
 				</div>
 				<div class="modal-body" data-lenis-prevent>
 					<h2>{item.title}</h2>
@@ -151,7 +157,7 @@ const benefits = [
 		position: relative;
 		padding: 4.5rem 0;
 		/* Parallax Background */
-		background-image: url('/img/manfaat-1.jpeg');
+		background-image: url('../assets/img/manfaat-1.jpeg');
 		background-position: center;
 		background-size: cover;
 		background-attachment: fixed; /* This creates the parallax effect */

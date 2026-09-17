@@ -1,9 +1,12 @@
 ---
-const navLinks = [
+import { Image } from 'astro:assets';
+import logoImg from '../assets/img/logo 1.png';
+
+const navLinks: Array<{ label: string; href: string; active?: boolean; hasDropdown?: boolean }> = [
 	{ label: 'Beranda', href: '#', active: true },
 	{ label: 'Peta pohon', href: '/peta-pohon' },
 	{ label: 'SDGs', href: '/sdgs' },
-	{ label: 'Profil', href: '#', hasDropdown: true },
+	{ label: 'Galeri', href: '/galeri' },
 ];
 ---
 
@@ -12,7 +15,7 @@ const navLinks = [
 		<!-- Logo -->
 		<a href="/" class="navbar-logo" aria-label="Lestari Home">
 			<div class="logo-icon-wrapper">
-				<img src="/img/logo 1.png" alt="Logo Lestari" class="logo-icon-img" />
+				<Image src={logoImg} alt="Logo Lestari" class="logo-icon-img" />
 			</div>
 			<span class="logo-text">Lestari</span>
 		</a>
@@ -121,8 +124,8 @@ const navLinks = [
 	}
 
 	.logo-icon-wrapper {
-		width: 36px;
-		height: 36px;
+		width: 34px;
+		height: 34px;
 		background-color: var(--btn-primary-bg);
 		border-radius: 50%;
 		display: flex;
@@ -133,8 +136,8 @@ const navLinks = [
 	}
 
 	.logo-icon-img {
-		width: 75%;
-		height: 75%;
+		width: 85%;
+		height: 85%;
 		object-fit: contain;
 	}
 

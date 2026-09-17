@@ -1,12 +1,15 @@
 ---
+import { Image } from 'astro:assets';
+import heroImg1 from '../assets/img/IMG_0293.webp';
+import heroImg2 from '../assets/img/IMG_0341.webp';
+import heroImg3 from '../assets/img/IMG_0387.webp';
 ---
-
 <section id="hero" class="hero">
 	<!-- Background Image Carousel -->
 	<div class="hero-bg" id="hero-bg-carousel">
-		<img src="/img/IMG_0293.webp" class="carousel-bg active skeleton" alt="Lanskap 1" loading="eager" fetchpriority="high" onload="this.classList.remove('skeleton')" />
-		<img src="/img/IMG_0341.webp" class="carousel-bg skeleton" alt="Lanskap 2" loading="lazy" onload="this.classList.remove('skeleton')" />
-		<img src="/img/IMG_0387.webp" class="carousel-bg skeleton" alt="Lanskap 3" loading="lazy" onload="this.classList.remove('skeleton')" />
+		<Image src={heroImg1} class="carousel-bg active" alt="Lanskap 1" loading="eager" fetchpriority="high" />
+		<Image src={heroImg2} class="carousel-bg" alt="Lanskap 2" loading="lazy" />
+		<Image src={heroImg3} class="carousel-bg" alt="Lanskap 3" loading="lazy" />
 		<div class="hero-overlay"></div>
 	</div>
 
@@ -47,13 +50,13 @@
 		<!-- Carousel Indicators -->
 		<div class="hero-gallery" id="carousel-indicators" data-animate="fade-left" data-delay="400">
 			<div class="gallery-card active" data-index="0">
-				<img src="/img/IMG_0293.webp" alt="Lanskap 1" width="120" height="90" loading="eager" class="skeleton" onload="this.classList.remove('skeleton')" />
+				<Image src={heroImg1} alt="Lanskap 1" width="120" height="90" loading="eager" />
 			</div>
 			<div class="gallery-card" data-index="1">
-				<img src="/img/IMG_0341.webp" alt="Lanskap 2" width="120" height="90" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')" />
+				<Image src={heroImg2} alt="Lanskap 2" width="120" height="90" loading="lazy" />
 			</div>
 			<div class="gallery-card" data-index="2">
-				<img src="/img/IMG_0387.webp" alt="Lanskap 3" width="120" height="90" loading="lazy" class="skeleton" onload="this.classList.remove('skeleton')" />
+				<Image src={heroImg3} alt="Lanskap 3" width="120" height="90" loading="lazy" />
 			</div>
 		</div>
 	</div>
@@ -75,7 +78,7 @@
 		z-index: 0;
 	}
 
-	.hero-bg img.carousel-bg {
+	.hero-bg :global(img.carousel-bg) {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -87,7 +90,7 @@
 		transition: opacity 1s ease-in-out;
 	}
 
-	.hero-bg img.carousel-bg.active {
+	.hero-bg :global(img.carousel-bg.active) {
 		opacity: 1;
 	}
 
@@ -212,7 +215,7 @@
 		transform: translateY(-2px);
 	}
 
-	.gallery-card img {
+	.gallery-card :global(img) {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -252,46 +255,48 @@
 	}
 </style>
 
-<script>
-	// Carousel Logic
-	const cards = document.querySelectorAll('.gallery-card');
-	const bgs = document.querySelectorAll('.carousel-bg');
-	
-	if (cards.length > 0 && bgs.length > 0) {
-		let currentIndex = 0;
-		let carouselInterval: ReturnType<typeof setInterval>;
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Carousel Logic
+		const cards = document.querySelectorAll('.gallery-card');
+		const bgs = document.querySelectorAll('.carousel-bg');
+		
+		if (cards.length > 0 && bgs.length > 0) {
+			let currentIndex = 0;
+			let carouselInterval;
 
-		function goToSlide(index: number) {
-			cards.forEach(c => c.classList.remove('active'));
-			bgs.forEach(b => b.classList.remove('active'));
-			
-			if (cards[index]) cards[index].classList.add('active');
-			if (bgs[index]) bgs[index].classList.add('active');
-			currentIndex = index;
-		}
+			function goToSlide(index) {
+				cards.forEach(c => c.classList.remove('active'));
+				bgs.forEach(b => b.classList.remove('active'));
+				
+				if (cards[index]) cards[index].classList.add('active');
+				if (bgs[index]) bgs[index].classList.add('active');
+				currentIndex = index;
+			}
 
-		function nextSlide() {
-			let next = currentIndex + 1;
-			if (next >= cards.length) next = 0;
-			goToSlide(next);
-		}
+			function nextSlide() {
+				let next = currentIndex + 1;
+				if (next >= cards.length) next = 0;
+				goToSlide(next);
+			}
 
-		function startAutoplay() {
-			carouselInterval = setInterval(nextSlide, 5000);
-		}
+			function startAutoplay() {
+				carouselInterval = setInterval(nextSlide, 5000);
+			}
 
-		function resetAutoplay() {
-			clearInterval(carouselInterval);
+			function resetAutoplay() {
+				clearInterval(carouselInterval);
+				startAutoplay();
+			}
+
+			cards.forEach((card, index) => {
+				card.addEventListener('click', () => {
+					goToSlide(index);
+					resetAutoplay();
+				});
+			});
+
 			startAutoplay();
 		}
-
-		cards.forEach((card, index) => {
-			card.addEventListener('click', () => {
-				goToSlide(index);
-				resetAutoplay();
-			});
-		});
-
-		startAutoplay();
-	}
+	});
 </script>

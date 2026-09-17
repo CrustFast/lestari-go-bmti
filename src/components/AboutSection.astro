@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import img0139 from '../assets/img/image2.jpg';
+import img0289 from '../assets/img/IMG_0289.webp';
 import LogoSection from './LogoSection.astro';
 ---
 
@@ -11,7 +14,7 @@ import LogoSection from './LogoSection.astro';
 		<!-- Left Image with Floating Card -->
 		<div class="about-visual" data-animate="fade-right">
 			<div class="image-wrapper">
-				<img src="/img/IMG_0139.webp" alt="Petani di area green office" class="main-image" loading="lazy" />
+				<Image src={img0139} alt="Petani di area green office" class="main-image" loading="lazy" />
 				
 				<!-- Floating Card -->
 				<div class="floating-card">
@@ -101,7 +104,7 @@ import LogoSection from './LogoSection.astro';
 				</svg>
 			</button>
 			<div class="modal-header-img">
-				<img src="/img/IMG_0289.webp" alt="Banner Transformasi Hijau" loading="lazy" />
+				<Image src={img0289} alt="Banner Transformasi Hijau" loading="lazy" />
 			</div>
 			<div class="modal-body" data-lenis-prevent>
 				<h2>Profil & Visi Transformasi Hijau BBPPMPV BMTI</h2>
