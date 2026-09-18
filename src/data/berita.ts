@@ -1,5 +1,5 @@
 import img1 from '../assets/img/IMG_0139.JPG';
-import img2 from '../assets/img/IMG_0289.JPG';
+import img2 from '../assets/img/20250922_152720.jpg';
 import img3 from '../assets/img/IMG_0341.JPG';
 import img4 from '../assets/img/bg-2.jpg';
 import img5 from '../assets/img/bg-3.jpg';
@@ -104,7 +104,7 @@ export const articles: Article[] = [
 <p>Sarana praktik PLTS tersebut dimanfaatkan untuk pembelajaran dan pelatihan bagi pegawai serta guru vokasi pada program Teknologi Energi Terbarukan (TET). Program ini berkolaborasi dengan bidang Teknik Otomotif, di mana pelatihan terkait teknologi mobil listrik disampaikan oleh widyaiswara berlatar belakang otomotif, sementara aspek pemanfaatan dan integrasi tenaga surya dikembangkan oleh tim TET.</p>
 
 <figure>
-    <img src="/img/IMG_0289.webp" alt="Fungsionalisasi PLTS">
+    <img src="/img/20250922_152924.jpg" alt="Fungsionalisasi PLTS">
     <figcaption>Fungsionalisasi Pembangkit Listrik Tenaga Surya (PLTS) pada Mobil Listrik</figcaption>
 </figure>
 
