@@ -59,23 +59,31 @@ export const articles: Article[] = [
 
 <h4>4. Energi Surya</h4>
 <figure>
-    <img src="/img/IMG_0293.webp" alt="Materi Surya">
+    <img src="/img/blog-01/20250416_094019.jpg" alt="Materi Surya">
     <figcaption>Peserta sedang merakit minatur Hybrid PLTS</figcaption>
 </figure>
 <p>Sesi terakhir tak kalah seru, di mana siswa diajak merakit miniatur panel surya dan menangkap sinar matahari untuk menyalakan kipas kecil. Mereka juga mencoba merakit versi mini dari <em>Hybrid PLTS</em> (Pembangkit Listrik Tenaga Surya), lengkap dengan bimbingan dari instruktur ahli. Salah satu siswa, Artha, mengungkapkan rasa senangnya, “Rasanya seperti bermain, tapi kita bisa belajar banyak. Seru banget waktu merakit solar panel sendiri dan bisa nyalain kipas!”</p>
 
 <h3>Belajar Serius dengan Cara yang Menyenangkan</h3>
+<figure>
+    <img src="/img/blog-01/20250416_093052.jpg" alt="Sesi pemaparan materi dan diskusi">
+</figure>
 <p>Tak hanya praktik, sesi kunjungan ini juga diisi dengan pemaparan materi singkat dan diskusi reflektif. Para siswa secara aktif berdialog dan mengajukan pertanyaan kepada para instruktur dan ahli dari Kompetensi Keahlian Teknik Energi Terbarukan BMTI. Kepala Komli TET, Ujang Ahmad Soebandi, mengaku terkesan dengan semangat para siswa.</p>
-<p>“Anak-anak sangat antusias dan kritis. Mereka bertanya bagaimana energi ini bisa digunakan di rumah atau di daerah terpencil. Ini menunjukkan bahwa anak-anak kita memiliki kepedulian dan potensi besar menjadi agen perubahan sejak dini,” ujarnya.</p>
+<blockquote>
+    <p>“Anak-anak sangat antusias dan kritis. Mereka bertanya bagaimana energi ini bisa digunakan di rumah atau di daerah terpencil. Ini menunjukkan bahwa anak-anak kita memiliki kepedulian dan potensi besar menjadi agen perubahan sejak dini,” ujarnya.</p>
+</blockquote>
 <p>Senada dengan Kepala Sekolah SD Cikal Serpong, Vira Krisna Yuantari, menjelaskan bahwa kegiatan ini merupakan bagian dari implementasi kurikulum <em>Cikal 5 Stars Competencies</em>—kurikulum khas Cikal yang tetap mengacu pada standar nasional namun menekankan pada pembelajaran berbasis praktik, kompetensi nyata, dan penguatan minat serta bakat siswa.</p>
 
 <h3>Menumbuhkan Kepedulian dan Aksi Nyata</h3>
 <figure>
-    <img src="/img/IMG_0435.webp" alt="Foto Bersama">
+    <img src="/img/blog-01/20250416_105603.jpg" alt="Menumbuhkan Kepedulian dan Aksi Nyata">
     <figcaption>Foto bersama 100 peserta</figcaption>
 </figure>
 <p>Melalui kunjungan edukatif ini, diharapkan para siswa tidak hanya memahami konsep energi secara teoritis, tetapi juga tumbuh sebagai individu yang sadar akan pentingnya keberlanjutan lingkungan dan energi masa depan.</p>
-<p><em>“Kami ingin membentuk karakter siswa yang tanggap terhadap isu global dan mampu berpikir kritis serta solutif. Energi hijau adalah masa depan, dan pemahamannya perlu ditanamkan sejak dini,”</em> pungkas Vira.</p>
+<blockquote>
+    <p>“Kami ingin membentuk karakter siswa yang tanggap terhadap isu global dan mampu berpikir kritis serta solutif. Energi hijau adalah masa depan, dan pemahamannya perlu ditanamkan sejak dini,” pungkas Vira.</p>
+</blockquote>
+<p><strong>***Penulis DONI TP (Editor: Tim Lestari)</strong></p>
         `
     },
     {

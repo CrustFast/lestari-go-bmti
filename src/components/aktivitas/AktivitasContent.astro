@@ -430,6 +430,14 @@ const popularNews = articles.slice(0, 5);
         display: flex;
         gap: 1rem;
         align-items: center;
+        padding: 0.75rem;
+        border-radius: 12px;
+        transition: background 0.3s ease;
+        margin: -0.75rem; /* negative margin so it aligns with title when not hovered */
+    }
+
+    .popular-item:hover {
+        background: var(--gray-100, #f3f4f6);
     }
 
     .popular-img-link {

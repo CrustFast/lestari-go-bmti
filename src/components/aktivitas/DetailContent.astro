@@ -175,6 +175,68 @@ if (imageMatches) {
         font-weight: 600;
     }
 
+    .prose h3 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--green-800, #166534);
+        margin-top: 2.5rem;
+        margin-bottom: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .prose h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--gray-900, #111827);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .prose figure {
+        margin: 2rem 0;
+        border-radius: 12px;
+        overflow: hidden;
+        background: var(--gray-50, #f9fafb);
+        padding-bottom: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    }
+
+    .prose figure img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .prose figcaption {
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--gray-500, #6b7280);
+        margin-top: 1rem;
+        font-style: italic;
+        padding: 0 1rem;
+    }
+
+    .prose blockquote {
+        border-left: 4px solid var(--btn-primary-bg, #1ea02f);
+        padding-left: 1.5rem;
+        margin: 2rem 0;
+        font-style: italic;
+        color: var(--gray-600, #4b5563);
+        background: linear-gradient(to right, rgba(30,160,47,0.05), transparent);
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .prose ul, .prose ol {
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .prose li {
+        margin-bottom: 0.5rem;
+    }
+
     .author-credits {
         margin-top: 3rem;
         padding-top: 1.5rem;
@@ -234,6 +296,14 @@ if (imageMatches) {
         display: flex;
         gap: 1rem;
         align-items: flex-start;
+        padding: 0.75rem;
+        border-radius: 12px;
+        transition: background 0.3s ease;
+        margin: -0.75rem;
+    }
+
+    .popular-item:hover {
+        background: var(--gray-100, #f3f4f6);
     }
 
     .popular-img-link {
