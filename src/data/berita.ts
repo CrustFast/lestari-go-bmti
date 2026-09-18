@@ -1,6 +1,6 @@
 import img1 from '../assets/img/IMG_0139.JPG';
 import img2 from '../assets/img/20250922_152720.jpg';
-import img3 from '../assets/img/IMG_0341.JPG';
+import img3 from '../assets/img/blog-02/image1.jpg';
 import img4 from '../assets/img/bg-2.jpg';
 import img5 from '../assets/img/bg-3.jpg';
 import img6 from '../assets/img/abt-1.jpeg';
@@ -134,7 +134,7 @@ export const articles: Article[] = [
 
 <h3>Transformasi Fundamental, Bukan Sekadar Kosmetik Visual</h3>
 <figure>
-    <img src="/img/IMG_0341.webp" alt="Pelepasan Burung">
+    <img src="/img/blog-02/image3.jpg" alt="Pelepasan Burung">
     <figcaption>Pelepasan Burung Kutilang Oleh Dirjen PMPK dan Kepala BBPPMPV BMTI</figcaption>
 </figure>
 <p>Acara yang diawali dengan kesegaran senam pagi bersama ini dibuka oleh Kepala Bagian Tata Usaha BBPPMPV BMTI, Heri Susanto, S.Kom., M.Kes. Dalam laporannya, Heri menegaskan bahwa momentum ini adalah komitmen bersama untuk meninggalkan pola kerja administrasi yang masih konvensional.</p>
