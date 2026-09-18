@@ -124,8 +124,8 @@ const navLinks: Array<{ label: string; href: string; active?: boolean; hasDropdo
 	}
 
 	.logo-icon-wrapper {
-		width: 34px;
-		height: 34px;
+		width: 30px;
+		height: 30px;
 		background-color: var(--btn-primary-bg);
 		border-radius: 50%;
 		display: flex;
@@ -136,9 +136,10 @@ const navLinks: Array<{ label: string; href: string; active?: boolean; hasDropdo
 	}
 
 	.logo-icon-img {
-		width: 85%;
-		height: 85%;
+		width: 100%;
+		height: 100%;
 		object-fit: contain;
+		transform: scale(1.15); /* Memperbesar gambar sedikit melebihi batas standar tanpa mengubah layout flex */
 	}
 
 	.logo-text {
