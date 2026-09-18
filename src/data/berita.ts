@@ -4,7 +4,7 @@ import img3 from '../assets/img/blog-02/image1.jpg';
 import img4 from '../assets/img/blog-03/buah Keben.jpg';
 import img5 from '../assets/img/blog-04/20260915_164615.jpg';
 import img6 from '../assets/img/blog-05/20260915_072140.jpg';
-import img7 from '../assets/img/abt-2.jpeg';
+import img7 from '../assets/img/blog-06/20260916_073413.jpg';
 import img8 from '../assets/img/blog-01/20250416_093334.jpg';
 
 export interface Article {
@@ -298,6 +298,9 @@ export const articles: Article[] = [
 <h3>Asal-Usul dan Sejarah Etnobotani</h3>
 <p><em>Hura crepitans</em> merupakan pohon hutan hujan tropis asli dari wilayah lembah Amazon (Amerika Selatan), Amerika Tengah, serta kepulauan Karibia. Pohon ini masuk ke dalam famili <em>Euphorbiaceae</em> (keluarga getah-getahan/kastuba) dan mampu tumbuh menjulang hingga 30–60 meter.</p>
 <p>Nama unik "Sandbox Tree" berakar dari sejarah masa kolonial pada abad ke-18 hingga ke-19. Sebelum ditemukannya kertas isap (<em>blotting paper</em>), buah pohon ini yang berongga-rongga dikosongkan dan diisi pasir halus. Pasir tersebut ditaburkan di atas dokumen untuk mengeringkan sisa tinta pena bulu (<em>quill</em>) agar tulisan tidak blobor. Di habitat aslinya, getah pohon ini juga dimanfaatkan secara tradisional oleh suku pedalaman Amazon untuk melumuri mata anak panah dan membius ikan di sungai.</p>
+<figure>
+    <img src="/img/blog-05/20260915_072106.jpg" alt="Pohon Hura crepitans">
+</figure>
 
 <h3>Tiga Mekanisme Pertahanan Alami</h3>
 <p>Spesies ini dikenal memiliki sistem pertahanan mandiri paling komplet di dunia tumbuhan:</p>
@@ -362,10 +365,22 @@ export const articles: Article[] = [
 
 <h3>2. Ciri-Ciri Morfologi yang Unik</h3>
 <ul>
-    <li><strong>Batang dan Percabangan:</strong> Pohon ini dapat tumbuh besar mencapai tinggi 25 meter dengan diameter batang utama hingga 40 cm. Kulit batangnya berwarna cokelat kelabu hingga kehitaman.</li>
+    <li>
+        <strong>Batang dan Percabangan:</strong>
+        <figure>
+            <img src="/img/blog-06/20260916_073447.jpg" alt="Batang dan Percabangan Pohon Kepel">
+        </figure>
+        Pohon ini dapat tumbuh besar mencapai tinggi 25 meter dengan diameter batang utama hingga 40 cm. Kulit batangnya berwarna cokelat kelabu hingga kehitaman.
+    </li>
     <li><strong>Cauliflowery (Buah di Batang):</strong> Salah satu ciri paling unik dari pohon kepel adalah letak bunga dan buahnya. Bunga dan buah kepel <strong>tidak tumbuh di ujung ranting</strong>, melainkan bergerombol langsung menempel pada tonjolan-tonjolan di sekujur batang pohon (<em>cauliflowery</em>).</li>
     <li><strong>Bunga:</strong> Bunganya berkelamin tunggal dan beraroma harum. Bunga jantan biasanya tumbuh di bagian batang atas atau cabang tua, sementara bunga betina berada di bagian pangkal batang bawah.</li>
-    <li><strong>Buah dan Daun:</strong> Buahnya berbentuk bulat lonjong menyerupai sawo berukuran besar dengan warna cokelat keabu-abuan saat muda dan berubah menjadi cokelat tua ketika matang. Daging buahnya manis dan membungkus beberapa biji yang cukup besar. Daunnya tunggal, berbentuk elips hingga lonjong meruncing dengan warna hijau gelap yang mengkilap.</li>
+    <li>
+        <strong>Buah dan Daun:</strong>
+        <figure>
+            <img src="/img/blog-06/20260916_073517.jpg" alt="Buah dan Daun Pohon Kepel">
+        </figure>
+        Buahnya berbentuk bulat lonjong menyerupai sawo berukuran besar dengan warna cokelat keabu-abuan saat muda dan berubah menjadi cokelat tua ketika matang. Daging buahnya manis dan membungkus beberapa biji yang cukup besar. Daunnya tunggal, berbentuk elips hingga lonjong meruncing dengan warna hijau gelap yang mengkilap.
+    </li>
 </ul>
 
 <h3>3. Kegunaan Tradisional & "Deodoran Alami" Putri Keraton</h3>
@@ -377,6 +392,14 @@ export const articles: Article[] = [
 
 <h3>4. Makna Filosofis</h3>
 <p>Nama "Kepel" berasal dari kata dalam bahasa Jawa yaitu <em>kepel</em> (genggaman tangan) yang menyimbolkan <em>greget</em> atau niat yang kuat dalam bekerja, dipadukan dengan filosofi <em>watu</em> (dasar). Pohon kepel melambangkan <strong>"manunggaling sedya kaliyan gegayuhan"</strong>—yakni bersatunya niat yang kuat dengan kerja keras untuk mencapai cita-cita.</p>
+
+<h3>Referensi / Rujukan Ilmiah & Historis</h3>
+<ul class="references-list">
+    <li><strong>Pusat Perpustakaan dan Penyebaran Teknologi Pertanian (Pustaka Kementerian Pertanian)</strong> — <em>Kepel: Pohon Berharga dengan Makna Filosofis</em>.</li>
+    <li><strong>Dinas Kebudayaan Daerah Istimewa Yogyakarta (Budaya Jogja)</strong> — <em>Kepel Buah Favorit Putri Keraton</em>.</li>
+    <li><strong>Yayasan Keanekaragaman Hayati Indonesia (KEHATI / Biodiversity Warriors)</strong> — <em>Kepel (Stelechocarpus burahol)</em>.</li>
+    <li><strong>Portal Informasi Ilmiah & Konservasi Alam (Alamendah)</strong> — <em>Buah Kepel (Stelechocarpus burahol) Kegemaran Putri Keraton</em>.</li>
+</ul>
         `
     }
 ];

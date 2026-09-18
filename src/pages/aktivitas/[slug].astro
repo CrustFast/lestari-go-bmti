@@ -17,7 +17,7 @@ const { article } = Astro.props;
 ---
 
 <Layout title={`${article.title} - Lestari BMTI`}>
-	<NavbarAktivitas />
+	<NavbarAktivitas backUrl="/aktivitas" />
 	<DetailHero article={article} />
 	<DetailContent article={article} />
 	<Footer />

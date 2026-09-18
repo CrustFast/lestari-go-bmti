@@ -1,83 +1,34 @@
 ---
 import { Image } from 'astro:assets';
-import img1 from '../assets/img/bg-1.jpeg';
-import img2 from '../assets/img/bg-2.jpg';
-import img3 from '../assets/img/bg-3.jpg';
-import img4 from '../assets/img/abt-1.jpeg';
-import img5 from '../assets/img/abt-2.jpeg';
+import img1 from '../assets/img/blog-02/image5.jpg';
+import img2 from '../assets/img/blog-02/image6.jpg';
+import img3 from '../assets/img/blog-02/image1.jpg';
+import img4 from '../assets/img/blog-02/image3.jpg';
+import img5 from '../assets/img/blog-02/image4.jpg';
+import bh1 from '../assets/img/blog-03/buah Keben.jpg';
+import bh2 from '../assets/img/blog-04/20260915_164615.jpg';
+import bh3 from '../assets/img/blog-05/20260915_072118.jpg';
+import bh4 from '../assets/img/blog-05/buah roda.jpg';
 
 const categories = [
 	'Semua',
 	'Penanaman Vegetasi',
 	'Konservasi Hidrologi',
 	'Perawatan RTH',
-	'Kolaborasi Ekologis'
+	'Kolaborasi Ekologis',
+	'Keragaman Hayati'
 ];
 
 const galleryItems = [
-	{
-		category: 'Penanaman Vegetasi',
-		image: img1,
-		title: 'Peremajaan Vegetasi Kampus',
-		desc: 'Penataan ulang Ruang Terbuka Hijau (RTH) dan pemeliharaan pohon tua guna menjaga pasokan oksigen mikro.',
-		date: '12-08-2026',
-		location: 'Zona Barat Kampus BMTI',
-		parties: 'Staf Teknis & Mahasiswa Magang'
-	},
-	{
-		category: 'Konservasi Hidrologi',
-		image: img2,
-		title: 'Sumur Resapan & Biopori',
-		desc: 'Konstruksi 20 lubang biopori di titik rawan genangan untuk mengembalikan fungsi serapan air tanah.',
-		date: '25-08-2026',
-		location: 'Area Parkir & Lapangan Olahraga',
-		parties: 'Unit Infrastruktur & Fasilitas'
-	},
-	{
-		category: 'Konservasi Hidrologi',
-		image: img3,
-		title: 'Rain Harvesting System',
-		desc: 'Sistem pemanenan air hujan untuk menjaga siklus hidrologi dan ketersediaan air bersih di area kampus.',
-		date: '05-09-2026',
-		location: 'Atap Gedung Utama BMTI',
-		parties: 'Vendor Teknisi & Staf BMTI'
-	},
-	{
-		category: 'Perawatan RTH',
-		image: img4,
-		title: 'Manajemen Sampah Organik',
-		desc: 'Pengelolaan harian limbah hayati dari ruang terbuka hijau untuk mewujudkan target Zero-Waste.',
-		date: 'Rutinitas Harian',
-		location: 'Seluruh Area Taman BMTI',
-		parties: 'Tim Kebersihan BMTI'
-	},
-	{
-		category: 'Kolaborasi Ekologis',
-		image: img5,
-		title: 'Sinergi dengan DLH Kota Cimahi',
-		desc: 'Perawatan partisipatif kawasan hijau bersama instansi pemerintah daerah untuk pelestarian jangka panjang.',
-		date: '10-09-2026',
-		location: 'Batas Luar Kampus BMTI',
-		parties: 'BMTI & Mitra DLH Cimahi'
-	},
-	{
-		category: 'Penanaman Vegetasi',
-		image: img2,
-		title: 'Edukasi Lingkungan Hijau',
-		desc: 'Melibatkan siswa dan masyarakat sekitar dalam praktik langsung perawatan tanaman dan pemahaman ekosistem.',
-		date: '12-09-2026',
-		location: 'Zona Selatan Kampus',
-		parties: 'Peserta Diklat PjBL'
-	},
-	{
-		category: 'Konservasi Hidrologi',
-		image: img3,
-		title: 'Kawasan Bebas Emisi',
-		desc: 'Penetapan zona khusus bebas kendaraan bermotor di area pusat kampus untuk menjaga kualitas udara.',
-		date: 'Mulai Sep 2026',
-		location: 'Jalur Utama Kampus BMTI',
-		parties: 'Unit Keamanan & Staf BMTI'
-	}
+	{ category: 'Penanaman Vegetasi', image: img1, title: 'Peremajaan Vegetasi Kampus', desc: 'Penataan ulang Ruang Terbuka Hijau (RTH) dan pemeliharaan pohon tua guna menjaga pasokan oksigen mikro.', date: '12-08-2026', location: 'Zona Barat Kampus BMTI', parties: 'Staf Teknis & Mahasiswa Magang' },
+	{ category: 'Konservasi Hidrologi', image: img2, title: 'Sumur Resapan & Biopori', desc: 'Konstruksi 20 lubang biopori di titik rawan genangan untuk mengembalikan fungsi serapan air tanah.', date: '25-08-2026', location: 'Area Parkir & Lapangan Olahraga', parties: 'Unit Infrastruktur & Fasilitas' },
+	{ category: 'Konservasi Hidrologi', image: img3, title: 'Rain Harvesting System', desc: 'Sistem pemanenan air hujan untuk menjaga siklus hidrologi dan ketersediaan air bersih di area kampus.', date: '05-09-2026', location: 'Atap Gedung Utama BMTI', parties: 'Vendor Teknisi & Staf BMTI' },
+	{ category: 'Perawatan RTH', image: img4, title: 'Manajemen Sampah Organik', desc: 'Pengelolaan harian limbah hayati dari ruang terbuka hijau untuk mewujudkan target Zero-Waste.', date: 'Rutinitas Harian', location: 'Seluruh Area Taman BMTI', parties: 'Tim Kebersihan BMTI' },
+	{ category: 'Kolaborasi Ekologis', image: img5, title: 'Sinergi dengan DLH Kota Cimahi', desc: 'Perawatan partisipatif kawasan hijau bersama instansi pemerintah daerah untuk pelestarian jangka panjang.', date: '10-09-2026', location: 'Batas Luar Kampus BMTI', parties: 'BMTI & Mitra DLH Cimahi' },
+	{ category: 'Keragaman Hayati', image: bh1, title: 'Buah Keben', desc: 'Koleksi flora BMTI.', date: '15-09-2026', location: 'Kampus BMTI', parties: 'Tim Lestari' },
+	{ category: 'Keragaman Hayati', image: bh2, title: 'Pohon Kemiri Sunan', desc: 'Tanaman penghasil energi biomassa.', date: '15-09-2026', location: 'Kampus BMTI', parties: 'Tim Lestari' },
+	{ category: 'Keragaman Hayati', image: bh3, title: 'Hura crepitans', desc: 'Pohon purba di ruang hijau BMTI.', date: '15-09-2026', location: 'Kampus BMTI', parties: 'Tim Lestari' },
+	{ category: 'Keragaman Hayati', image: bh4, title: 'Buah Roda Hura', desc: 'Karakteristik buah berdaya ledak tinggi.', date: '15-09-2026', location: 'Kampus BMTI', parties: 'Tim Lestari' }
 ];
 ---
 
