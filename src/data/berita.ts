@@ -1,9 +1,9 @@
 import img1 from '../assets/img/IMG_0139.JPG';
 import img2 from '../assets/img/20250922_152720.jpg';
 import img3 from '../assets/img/blog-02/image1.jpg';
-import img4 from '../assets/img/bg-2.jpg';
-import img5 from '../assets/img/bg-3.jpg';
-import img6 from '../assets/img/abt-1.jpeg';
+import img4 from '../assets/img/blog-03/buah Keben.jpg';
+import img5 from '../assets/img/blog-04/20260915_164615.jpg';
+import img6 from '../assets/img/blog-05/20260915_072140.jpg';
 import img7 from '../assets/img/abt-2.jpeg';
 import img8 from '../assets/img/blog-01/20250416_093334.jpg';
 
@@ -186,16 +186,41 @@ export const articles: Article[] = [
 <p>Semangat global tersebut kemudian diabadikan secara nyata di lingkungan institusi. Pada tahun <strong>1988</strong>, sebuah pohon Keben ditanam secara langsung oleh Gubernur Jawa Barat di kawasan kampus BBPPMPV BMTI. Selama puluhan tahun, pohon bersejarah ini terus tumbuh subur, beradaptasi, dan menjadi saksi bisu perkembangan dunia pendidikan vokasi hingga hari ini.</p>
 
 <h3>Mengenal Lebih Dekat Pohon Keben (<em>Barringtonia asiatica</em>)</h3>
+<figure>
+    <img src="/img/blog-03/daun dan batang.jpg" alt="Daun dan batang Pohon Keben">
+</figure>
 <p>Dikenal pula dengan nama lokal seperti <em>butun</em> atau <em>putat laut</em>, tanaman ini merupakan flora khas pesisir tropis yang memiliki daya tahan luar biasa:</p>
-<ul>
-    <li><strong>Bentuk Buah yang Unik:</strong> Buah Keben berbentuk seperti kotak bersiku atau stupa lampion berserat tebal. Bentuk ini memungkinkannya mengapung di atas air laut untuk menyebarkan benih secara alami dari satu pulau ke pulau lainnya.</li>
-    <li><strong>Bunga Eksotis:</strong> Memiliki bunga majemuk berbentuk menyerupai pom-pom dengan benang sari putih berujung merah jambu yang biasanya mekar pada malam hari.</li>
-    <li><strong>Fungsi Ekologis:</strong> Tajuknya yang besar dan rimbun menjadikan pohon ini sangat ideal sebagai pelindung alami (<em>windbreaker</em>) penahan angin serta penjaga keseimbangan ekosistem.</li>
-</ul>
+
+<h4>Bentuk Buah yang Unik</h4>
+<figure>
+    <img src="/img/blog-03/buah Keben.jpg" alt="Buah Keben">
+</figure>
+<figure>
+    <img src="/img/blog-03/pentil.jpg" alt="Buah muda Keben (Pentil)">
+</figure>
+<p>Buah Keben berbentuk seperti kotak bersiku atau stupa lampion berserat tebal. Bentuk ini memungkinkannya mengapung di atas air laut untuk menyebarkan benih secara alami dari satu pulau ke pulau lainnya.</p>
+
+<h4>Bunga Eksotis</h4>
+<figure>
+    <img src="/img/blog-03/bunga keben.jpg" alt="Bunga eksotis Pohon Keben">
+</figure>
+<p>Memiliki bunga majemuk berbentuk menyerupai pom-pom dengan benang sari putih berujung merah jambu yang biasanya mekar pada malam hari.</p>
+
+<h4>Fungsi Ekologis</h4>
+<p>Tajuknya yang besar dan rimbun menjadikan pohon ini sangat ideal sebagai pelindung alami (<em>windbreaker</em>) penahan angin serta penjaga keseimbangan ekosistem.</p>
 
 <h3>Warisan Hidup yang Terus Dirawat</h3>
 <p>Keberadaan Pohon Keben penanaman tahun 1988 di BBPPMPV BMTI kini bukan sekadar elemen lanskap biasa. Ia menjadi simbol hidup komitmen institusi dalam mengintegrasikan dunia pendidikan dengan kesadaran lingkungan (<em>Green Management System</em>).</p>
 <p>Merawat pohon ini berarti menjaga warisan sejarah, merawat napas perdamaian, serta mewariskan kesadaran ekologis bagi setiap generasi civitas akademika dan masyarakat luas yang berkunjung ke kampus BBPPMPV BMTI.</p>
+
+<h3>Referensi / Rujukan Ilmiah & Historis</h3>
+<ul class="references-list">
+    <li>Kantor Menteri Negara Kependudukan dan Lingkungan Hidup (KLH). (1986). <em>Peringatan Hari Lingkungan Hidup Sedunia 1986: Pohon Perdamaian dan Kelestarian Alam</em>. Sekretariat Negara Republik Indonesia, Jakarta. <em>(Dokumentasi pencanangan pohon Keben sebagai Pohon Perdamaian Dunia oleh Presiden Soeharto).</em></li>
+    <li>Heyne, K. (1987). <em>Tumbuhan Berguna Indonesia</em>, Jilid III (Terjemahan Badan Litbang Kehutanan). Yayasan Sarana Wana Jaya, Jakarta, hlm. 1474–1476. <em>(Kajian etnobotani dan sebaran Barringtonia asiatica di kepulauan Nusantara).</em></li>
+    <li>Payens, J. P. D. W. (1967). A Monograph of the Genus <em>Barringtonia</em> (Lecythidaceae). <em>Blumea: Biodiversity, Evolution and Biogeography of Plants</em>, 15(2), 157–263. <em>(Kajian taksonomi botani, morfologi pembungaan nokturnal, dan struktur buah).</em></li>
+    <li>United Nations Environment Programme (UNEP). (1986). <em>World Environment Day 1986: A Tree for Peace</em>. UNEP Information Service, Nairobi, Kenya. <em>(Arsip tema global Hari Lingkungan Hidup Sedunia tahun 1986).</em></li>
+    <li>Sunarto, & Sudrajat, D. J. (2018). Karakteristik Morfologis dan Potensi Ekologis Pohon Keben (<em>Barringtonia asiatica</em>) dalam Rehabilitasi Sempadan dan Kawasan Pesisir. <em>Jurnal Pemuliaan Tanaman Hutan</em>, 12(1), 45–56.</li>
+</ul>
         `
     },
     {
@@ -244,6 +269,15 @@ export const articles: Article[] = [
     <li><strong>Pembersihan Buah Jatuh:</strong> Buah yang gugur dikumpulkan secara berkala oleh tim fasilitas untuk disalurkan ke unit percontohan pengolahan bioenergi.</li>
 </ul>
 <p>Melalui integrasi pohon kemiri sunan, tata kelola lingkungan membuktikan bahwa ruang terbuka hijau dapat menghadirkan harmoni antara keteduhan estetika, perlindungan tanah, dan inovasi energi terbarukan.</p>
+
+<h3>Referensi / Rujukan Ilmiah</h3>
+<ul class="references-list">
+    <li>Badan Penelitian dan Pengembangan Pertanian (Balitbangtan). (2012). <em>Kemiri Sunan (Reutealis trisperma (Blanco) Airy Shaw) Tanaman Penghasil Minyak Nabati untuk Biodiesel dan Konservasi Lahan</em>. Balittri, Pusat Penelitian dan Pengembangan Perkebunan, Kementerian Pertanian Republik Indonesia.</li>
+    <li>Herman, M., Syakir, M., & Pranowo, D. (2013). Kemiri Sunan (<em>Reutealis trisperma</em> (Blanco) Airy Shaw) Sumber Bahan Baku Biodiesel dan Pengembangannya di Lahan Terdegradasi. <em>Bunga Rampai Inovasi Tanaman Bioindustri</em>, IAARD Press, Jakarta, hlm. 45–62.</li>
+    <li>Airy Shaw, H. K. (1967). Notes on the Genus <em>Reutealis</em> (Euphorbiaceae). <em>Kew Bulletin</em>, 20(3), 394–395.</li>
+    <li>Pranowo, D., & Herman, M. (2015). Keragaman Karakter Morfologi dan Potensi Hasil Tanaman Kemiri Sunan (<em>Reutealis trisperma</em>) di Berbagai Agroekologi. <em>Jurnal Penelitian Tanaman Industri</em>, 21(4), 173–182.</li>
+    <li>Setyaningsih, D., Sugiharto, & Hambali, E. (2016). Ekstraksi dan Karakterisasi Minyak Biji Kemiri Sunan (<em>Reutealis trisperma</em>) sebagai Bahan Baku Biodiesel Non-Pangan. <em>Jurnal Teknologi Industri Pertanian</em>, 26(2), 145–154.</li>
+</ul>
         `
     },
     {
@@ -268,9 +302,27 @@ export const articles: Article[] = [
 <h3>Tiga Mekanisme Pertahanan Alami</h3>
 <p>Spesies ini dikenal memiliki sistem pertahanan mandiri paling komplet di dunia tumbuhan:</p>
 <ul>
-    <li><strong>Batang Berzirah Duri (<em>Armored Trunk</em>):</strong> Kulit batangnya dipenuhi tonjolan duri kerucut keras berukuran 1–2 cm. Duri ini berfungsi sebagai pertahanan alami untuk mencegah satwa herbivora atau hewan pemanjat memakan dedaunan mudanya.</li>
-    <li><strong>Buah Berdaya Ledak (<em>Explosive Balochory</em>):</strong> Buahnya berbentuk kapsul berlekuk 12–16 rongga menyerupai labu mini. Saat buah matang dan mengering di dahan tinggi, terjadi akumulasi tegangan mekanis selulosa yang sangat kuat. Ketika batas elastisitas terlampaui, buah akan meletup disertai dentuman keras, melontarkan biji secepat 240–250 km/jam hingga radius 30 sampai 45 meter.</li>
-    <li><strong>Getah Kimiawi Kaustik (<em>Huratoxin</em> & <em>Crepitin</em>):</strong> Seluruh jaringan batang dan ranting menghasilkan getah putih pekat yang mengandung senyawa racun <em>huratoxin</em> (golongan diterpenoid daphnane kaustik) serta lektin toksik <em>crepitin</em> pada bijinya. Kontak langsung getah pada kulit dapat menyebabkan dermatitis dan rasa terbakar parah, serta berisiko fatal bagi penglihatan bila terpercik ke kornea mata.</li>
+    <li>
+        <strong>Batang Berzirah Duri (<em>Armored Trunk</em>):</strong>
+        <figure>
+            <img src="/img/blog-05/20260915_072042.jpg" alt="Batang Berzirah Duri">
+        </figure>
+        Kulit batangnya dipenuhi tonjolan duri kerucut keras berukuran 1–2 cm. Duri ini berfungsi sebagai pertahanan alami untuk mencegah satwa herbivora atau hewan pemanjat memakan dedaunan mudanya.
+    </li>
+    <li>
+        <strong>Buah Berdaya Ledak (<em>Explosive Balochory</em>):</strong>
+        <figure>
+            <img src="/img/blog-05/buah roda.jpg" alt="Buah Berdaya Ledak">
+        </figure>
+        Buahnya berbentuk kapsul berlekuk 12–16 rongga menyerupai labu mini. Saat buah matang dan mengering di dahan tinggi, terjadi akumulasi tegangan mekanis selulosa yang sangat kuat. Ketika batas elastisitas terlampaui, buah akan meletup disertai dentuman keras, melontarkan biji secepat 240–250 km/jam hingga radius 30 sampai 45 meter.
+    </li>
+    <li>
+        <strong>Getah Kimiawi Kaustik (<em>Huratoxin</em> & <em>Crepitin</em>):</strong>
+        <figure>
+            <img src="/img/blog-05/20260915_072025.jpg" alt="Getah Kimiawi Kaustik">
+        </figure>
+        Seluruh jaringan batang dan ranting menghasilkan getah putih pekat yang mengandung senyawa racun <em>huratoxin</em> (golongan diterpenoid daphnane kaustik) serta lektin toksik <em>crepitin</em> pada bijinya. Kontak langsung getah pada kulit dapat menyebabkan dermatitis dan rasa terbakar parah, serta berisiko fatal bagi penglihatan bila terpercik ke kornea mata.
+    </li>
 </ul>
 
 <h3>Panduan Interaksi & Keselamatan Lingkungan (GMS Action)</h3>
@@ -282,6 +334,15 @@ export const articles: Article[] = [
     <li><strong>Pertolongan Pertama:</strong> Apabila terkena cipratan getah secara tidak sengaja, segera basuh menggunakan air bersih mengalir dan sabun selama minimal 15 menit, lalu periksakan diri ke unit medis terdekat.</li>
 </ul>
 <p>Keberadaan <em>Hura crepitans</em> membuktikan betapa luar biasanya adaptasi pertahanan alam raya. Mari kita pelajari keunikannya dengan penuh rasa hormat dari jarak yang aman.</p>
+
+<h3>Referensi / Rujukan Ilmiah</h3>
+<ul class="references-list">
+    <li>Swaine, M. D., & Beer, T. (1977). Explosive Seed Dispersal in <em>Hura crepitans</em> L. (Euphorbiaceae). <em>New Phytologist</em>, 78(3), 695–708. <em>(Mengkaji biofisika kecepatan lontaran proyektil biji hingga 70 m/s dan radius sebaran balistik).</em></li>
+    <li>Vogel, S. (2005). Living in a Physical World II: The Bio-Ballistics of Small Projectiles. <em>Journal of Biosciences</em>, 30(2), 167–175. <em>(Analisis aerodinamika hambatan udara/drag pada pelepasan benih ledak Hura crepitans).</em></li>
+    <li>Sakas, K. E., et al. (1971). Huratoxin, a Piscicidal Constituent of <em>Hura crepitans</em>. <em>Tetrahedron Letters</em>, 12(26), 2441–2444. <em>(Identifikasi kimia diterpen daphnane dalam lateks kaustik).</em></li>
+    <li>Stirpe, F., et al. (1983). Purification and Properties of the Ribosome-Inactivating Protein/Lectins (<em>Crepitin</em>) from the Seeds of <em>Hura crepitans</em>. <em>The Biochemical Journal</em>, 216(3), 617–625. <em>(Kajian toksikologi protein toksalbumin pada biji).</em></li>
+    <li>Webster, G. L. (1994). Synopsis of the Genera and Suprageneric Taxa of <em>Euphorbiaceae</em>. <em>Annals of the Missouri Botanical Garden</em>, 81(1), 33–144. <em>(Taksonomi dan persebaran biogeografi famili Euphorbiaceae neotropis).</em></li>
+</ul>
         `
     },
     {

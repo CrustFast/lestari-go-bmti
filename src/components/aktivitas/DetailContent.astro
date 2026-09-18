@@ -166,16 +166,16 @@ if (imageMatches) {
         color: var(--gray-700, #374151);
     }
 
-    .prose p {
+    .prose :global(p) {
         margin-bottom: 1.5rem;
     }
 
-    .prose strong {
+    .prose :global(strong) {
         color: var(--gray-900, #111827);
         font-weight: 600;
     }
 
-    .prose h3 {
+    .prose :global(h3) {
         font-size: 1.6rem;
         font-weight: 700;
         color: var(--green-800, #166534);
@@ -184,7 +184,7 @@ if (imageMatches) {
         line-height: 1.4;
     }
 
-    .prose h4 {
+    .prose :global(h4) {
         font-size: 1.25rem;
         font-weight: 600;
         color: var(--gray-900, #111827);
@@ -192,8 +192,8 @@ if (imageMatches) {
         margin-bottom: 1rem;
     }
 
-    .prose figure {
-        margin: 2rem 0;
+    .prose :global(figure) {
+        margin: 2.5rem 0; /* Increased margin for clear separation */
         border-radius: 12px;
         overflow: hidden;
         background: var(--gray-50, #f9fafb);
@@ -201,14 +201,14 @@ if (imageMatches) {
         box-shadow: 0 4px 6px rgba(0,0,0,0.02);
     }
 
-    .prose figure img {
+    .prose :global(figure img) {
         width: 100%;
         height: auto;
         display: block;
         border-radius: 12px 12px 0 0;
     }
 
-    .prose figcaption {
+    .prose :global(figcaption) {
         text-align: center;
         font-size: 0.9rem;
         color: var(--gray-500, #6b7280);
@@ -217,7 +217,7 @@ if (imageMatches) {
         padding: 0 1rem;
     }
 
-    .prose blockquote {
+    .prose :global(blockquote) {
         border-left: 4px solid var(--btn-primary-bg, #1ea02f);
         padding-left: 1.5rem;
         margin: 2rem 0;
@@ -228,12 +228,29 @@ if (imageMatches) {
         padding-bottom: 0.5rem;
     }
 
-    .prose ul, .prose ol {
+    .prose :global(blockquote p:last-child) {
+        margin-bottom: 0;
+    }
+
+    .prose :global(.references-list) {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 1.5rem;
+    }
+
+    .prose :global(.references-list li) {
+        padding-left: 2.5rem;
+        text-indent: -2.5rem;
+        margin-bottom: 1.25rem;
+        line-height: 1.7;
+    }
+
+    .prose :global(ul), .prose :global(ol) {
         margin-bottom: 1.5rem;
         padding-left: 1.5rem;
     }
 
-    .prose li {
+    .prose :global(li) {
         margin-bottom: 0.5rem;
     }
 
