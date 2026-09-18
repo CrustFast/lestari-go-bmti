@@ -128,9 +128,6 @@ const benefits = [
 						<line x1="6" y1="6" x2="18" y2="18"></line>
 					</svg>
 				</button>
-				<div class="modal-header-img">
-					<Image src={item.modalImg} alt={item.title} loading="lazy" />
-				</div>
 				<div class="modal-body" data-lenis-prevent>
 					<h2>{item.title}</h2>
 					
@@ -444,17 +441,7 @@ const benefits = [
 		transform: scale(1.1);
 	}
 
-	.modal-header-img {
-		width: 100%;
-		height: 250px;
-		flex-shrink: 0;
-	}
 
-	.modal-header-img img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
 
 	.modal-body {
 		padding: 2.5rem;
@@ -502,11 +489,6 @@ const benefits = [
 		.section-label {
 			justify-content: center;
 		}
-
-		.modal-header-img {
-			height: 200px;
-		}
-		
 		.modal-body {
 			padding: 1.5rem;
 		}
@@ -535,24 +517,12 @@ const benefits = [
 
 	@media (min-width: 992px) {
 		.modal-content {
-			flex-direction: row;
 			height: 80vh;
 			max-height: 700px;
 		}
 
-		.modal-header-img {
-			width: 40%;
-			height: 100%;
-			padding: 1.5rem 0 1.5rem 1.5rem;
-		}
-		
-		.modal-header-img img {
-			border-radius: 12px;
-			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-		}
-
 		.modal-body {
-			width: 60%;
+			width: 100%;
 			height: 100%;
 			padding: 3rem;
 		}

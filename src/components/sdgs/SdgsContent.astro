@@ -19,7 +19,7 @@ const sdgsData = [
     { 
         bg: img0, icon: img1, alt: 'SDG 4', color: '#C5192D', goal: '4',
         desc: 'Memastikan pendidikan vokasi yang inklusif, merata, dan berkualitas serta mempromosikan kesempatan belajar sepanjang hayat bagi semua.',
-        metrics: [ {v: '1', l: 'Living Laboratory'}, {v: '5+', l: 'Modul Hijau'}, {v: '100%', l: 'Keterlibatan PjBL'}, {v: '12', l: 'Kegiatan Literasi'} ],
+        metrics: [ {v: '1', l: 'Living Laboratory'}, {v: '5+', l: 'Modul Hijau'}, {v: '50+', l: 'Karya Proyek PjBL'}, {v: '12', l: 'Kegiatan Literasi'} ],
         panelHeader: 'SDG 4 - Pendidikan Bermutu',
         panelTitle: 'Mengintegrasikan Keberlanjutan dalam Pendidikan Vokasi',
         activities: [
@@ -32,7 +32,7 @@ const sdgsData = [
     { 
         bg: img3, icon: img4, alt: 'SDG 6', color: '#26BDE2', goal: '6',
         desc: 'Memastikan ketersediaan dan manajemen air bersih yang berkelanjutan serta sanitasi yang memadai di seluruh lingkungan institusi.',
-        metrics: [ {v: '20', l: 'Titik Biopori'}, {v: '5', l: 'Sumur Resapan'}, {v: '1', l: 'Rain Harvesting'}, {v: '100%', l: 'Sanitasi Layak'} ],
+        metrics: [ {v: '20', l: 'Titik Biopori'}, {v: '5', l: 'Sumur Resapan'}, {v: '1', l: 'Rain Harvesting'}, {v: '50+', l: 'Fasilitas Sanitasi Layak'} ],
         panelHeader: 'SDG 6 - Air Bersih dan Sanitasi Layak',
         panelTitle: 'Konservasi Hidrologi dan Manajemen Air BMTI',
         activities: [
@@ -58,7 +58,7 @@ const sdgsData = [
     { 
         bg: img2, icon: img9, alt: 'SDG 9', color: '#FD6925', goal: '9',
         desc: 'Membangun infrastruktur yang tangguh, mendukung industrialisasi berkelanjutan, serta mendorong inovasi teknologi vokasi.',
-        metrics: [ {v: '1', l: 'Unit Pirolisis'}, {v: '1', l: 'Gedung Green Bldg'}, {v: '100%', l: 'Integrasi SPMI'}, {v: '1', l: 'Smart Energy Sys'} ],
+        metrics: [ {v: '1', l: 'Unit Pirolisis'}, {v: '1', l: 'Gedung Green Bldg'}, {v: '14', l:'Unit Terintegrasi Mutu'}, {v: '1', l: 'Smart Energy Sys'} ],
         panelHeader: 'SDG 9 - Industri, Inovasi, dan Infrastruktur',
         panelTitle: 'Inovasi Infrastruktur Vokasi Hijau',
         activities: [
@@ -71,7 +71,7 @@ const sdgsData = [
     { 
         bg: img10, icon: img11, alt: 'SDG 12', color: '#BF8B2E', goal: '12',
         desc: 'Memastikan pola konsumsi sumber daya dan tata kelola operasional yang berkelanjutan serta bertanggung jawab.',
-        metrics: [ {v: '100%', l: 'Kelola Sampah Org'}, {v: '3', l: 'Titik Green Point'}, {v: '42.7%', l: 'Efisiensi Anggaran'}, {v: '4', l: 'Audit Tahunan'} ],
+        metrics: [ {v: '3R', l: 'Kelola Sampah'}, {v: '3', l: 'Titik Green Point'}, {v: '42.7%', l: 'Efisiensi Anggaran'}, {v: '4', l: 'Audit Tahunan'} ],
         panelHeader: 'SDG 12 - Konsumsi dan Produksi yang Bertanggung Jawab',
         panelTitle: 'Sirkularitas Ekonomi dan Efisiensi Operasional',
         activities: [
@@ -84,7 +84,7 @@ const sdgsData = [
     { 
         bg: img5, icon: img12, alt: 'SDG 15', color: '#56C02B', goal: '15',
         desc: 'Melindungi, merestorasi, dan meningkatkan pemanfaatan berkelanjutan ekosistem daratan serta keanekaragaman hayati kampus.',
-        metrics: [ {v: '130k m²', l: 'Area Konservasi'}, {v: '1.250', l: 'Pohon Terdata'}, {v: '100%', l: 'Penataan RTH'}, {v: '25', l: 'Spesies Vegetasi'} ],
+        metrics: [ {v: '130k m²', l: 'Area Konservasi'}, {v: '490', l: 'Pohon Terdata'}, {v: '8', l: 'Blok Kawasan RTH'}, {v: '90', l: 'Spesies Vegetasi'} ],
         panelHeader: 'SDG 15 - Ekosistem Daratan',
         panelTitle: 'Perawatan Ekosistem dan Ruang Terbuka Hijau',
         activities: [
@@ -174,13 +174,9 @@ const sdgsData = [
                     <p><strong>Aksi Nyata:</strong></p>
                     <ul id="drawer-activities"></ul>
                 </div>
-                <div class="drawer-gallery">
-                    <img id="drawer-img-1" src="" alt="Dokumentasi 1" loading="lazy" />
-                    <img id="drawer-img-2" src="" alt="Dokumentasi 2" loading="lazy" />
-                </div>
             </div>
             <div class="drawer-footer">
-                <a href="/galeri" class="drawer-action-btn">Lihat Galeri &rarr;</a>
+                <a href="/aktivitas" class="drawer-action-btn">Lihat Aktivitas &rarr;</a>
             </div>
         </div>
 
@@ -845,8 +841,6 @@ const sdgsData = [
         const drawerBadge = document.getElementById('drawer-badge');
         const drawerTitle = document.getElementById('drawer-title');
         const drawerActivities = document.getElementById('drawer-activities');
-        const img1 = document.getElementById('drawer-img-1');
-        const img2 = document.getElementById('drawer-img-2');
 
         const openDrawer = (goalId) => {
             const data = sdgsData.find(s => s.goal === goalId);
@@ -864,24 +858,6 @@ const sdgsData = [
                 li.textContent = act;
                 drawerActivities.appendChild(li);
             });
-
-            // Set images and lightbox triggers
-            if (data.panelImages && data.panelImages.length >= 2) {
-                const setupImg = (imgEl, src) => {
-                    imgEl.src = src;
-                    imgEl.classList.add('lightbox-trigger');
-                    imgEl.style.cursor = 'pointer';
-                    imgEl.setAttribute('data-img', src);
-                    imgEl.setAttribute('data-category', data.panelHeader);
-                    imgEl.setAttribute('data-title', data.panelTitle);
-                    imgEl.setAttribute('data-desc', 'Aksi nyata berkelanjutan di BBPPMPV BMTI.');
-                    imgEl.setAttribute('data-date', 'September 2026');
-                    imgEl.setAttribute('data-location', 'Kampus BMTI');
-                    imgEl.setAttribute('data-parties', 'Tim Lestari BMTI');
-                };
-                setupImg(img1, data.panelImages[0]);
-                setupImg(img2, data.panelImages[1]);
-            }
 
             // Set dynamic background color
             drawer.style.setProperty('--drawer-bg', data.color);
@@ -925,31 +901,6 @@ const sdgsData = [
         const iconHide = document.getElementById('icon-hide');
         const iconShow = document.getElementById('icon-show');
 
-        // Drawer images act as triggers
-        const triggers = [img1, img2];
-        triggers.forEach(img => {
-            img.addEventListener('click', () => {
-                const newSrc = img.getAttribute('data-img') || '';
-                if(lbCat) lbCat.textContent = img.getAttribute('data-category');
-                if(lbTitle) lbTitle.textContent = img.getAttribute('data-title');
-                if(lbDesc) lbDesc.textContent = img.getAttribute('data-desc');
-                if(lbDate) lbDate.textContent = img.getAttribute('data-date');
-                if(lbLoc) lbLoc.textContent = img.getAttribute('data-location');
-                if(lbParties) lbParties.textContent = img.getAttribute('data-parties');
-                
-                if(lightbox) lightbox.classList.add('active');
-
-                if (lbImg && newSrc) {
-                    const temp = new Image();
-                    temp.src = newSrc;
-                    temp.decode().then(() => {
-                        lbImg.setAttribute('src', newSrc);
-                    }).catch(() => {
-                        lbImg.setAttribute('src', newSrc);
-                    });
-                }
-            });
-        });
 
         if (lbToggle && lbCard && iconHide && iconShow) {
             lbToggle.addEventListener('click', (e) => {
