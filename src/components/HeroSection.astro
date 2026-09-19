@@ -190,18 +190,17 @@ import heroImg3 from '../assets/img/IMG_0387.webp';
 
 	/* Gallery Cards / Carousel Indicators */
 	.hero-gallery {
-		position: absolute;
-		bottom: 3rem;
-		right: var(--container-padding);
 		display: flex;
 		gap: 0.75rem;
 		z-index: 2;
+		margin-top: 2rem;
+		width: 100%;
 	}
 
 	.gallery-card {
-		width: 120px;
-		height: 90px;
-		border-radius: 10px;
+		width: 90px;
+		height: 65px;
+		border-radius: 8px;
 		overflow: hidden;
 		border: 2px solid transparent;
 		cursor: pointer;
@@ -242,6 +241,20 @@ import heroImg3 from '../assets/img/IMG_0387.webp';
 			padding-bottom: 4rem;
 		}
 
+		.hero-gallery {
+			position: absolute;
+			bottom: 3rem;
+			right: var(--container-padding);
+			margin-top: 0;
+			width: auto;
+		}
+
+		.gallery-card {
+			width: 120px;
+			height: 90px;
+			border-radius: 10px;
+		}
+
 		.hero-overlay {
 			background: linear-gradient(
 				105deg,
@@ -256,7 +269,7 @@ import heroImg3 from '../assets/img/IMG_0387.webp';
 </style>
 
 <script is:inline>
-	document.addEventListener('DOMContentLoaded', () => {
+	const initCarousel = () => {
 		// Carousel Logic
 		const cards = document.querySelectorAll('.gallery-card');
 		const bgs = document.querySelectorAll('.carousel-bg');
@@ -298,5 +311,11 @@ import heroImg3 from '../assets/img/IMG_0387.webp';
 
 			startAutoplay();
 		}
-	});
+	};
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initCarousel);
+	} else {
+		initCarousel();
+	}
 </script>

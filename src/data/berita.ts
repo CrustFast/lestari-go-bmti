@@ -1,4 +1,4 @@
-import img1 from '../assets/img/IMG_0139.JPG';
+import img1 from '../assets/img/IMG_0139.webp';
 import img2 from '../assets/img/20250922_152720.jpg';
 import img3 from '../assets/img/blog-02/image1.jpg';
 import img4 from '../assets/img/blog-03/buah Keben.jpg';
