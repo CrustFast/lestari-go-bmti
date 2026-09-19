@@ -147,6 +147,9 @@ export const articles: Article[] = [
 </ol>
 
 <h3>Vokasi Merespons Tantangan Global via Green Office</h3>
+<figure>
+    <img src="/src/assets/img/blog-02/image2.jpg" alt="Vokasi Merespons Tantangan Global">
+</figure>
 <p>Senada dengan hal tersebut, Kepala BBPPMPV BMTI, Dr. Baharudin, S.Pd., M.Pd., menyatakan bahwa langkah strategis ini diambil demi menyelaraskan pendidikan vokasi dengan tuntutan global, khususnya target <em>Sustainable Development Goals</em> (SDGs).</p>
 <p>"Selamat datang kepada Bapak Dirjen dan seluruh stakeholders di Kampus Hijau BBPPMPV BMTI. Berdasarkan proyeksi World Economic Forum, green skills akan menjadi kompetensi yang paling diburu di dunia kerja hingga tahun 2030. Dunia vokasi tidak boleh tertinggal," ujarnya.</p>
 <p>Dr. Baharudin menambahkan, penerapan tata kelola berbasis <em>Green Human Resource Management</em> (HRM) terbukti mampu mendongkrak produktivitas dan keterikatan (engagement) pegawai hingga di atas 20 persen. "Dengan spirit 'Vokasi Kuat, Industri Hebat', kami pastikan institusi ini menjadi pelopor yang melahirkan SDM yang tidak hanya andal secara teknis, tapi juga melek ekologi," imbuhnya.</p>
@@ -154,7 +157,7 @@ export const articles: Article[] = [
 
 <h3>Apresiasi Pusat: BBPPMPV BMTI sebagai Hub Vokasi Ramah Iklim</h3>
 <figure>
-    <img src="/img/IMG_0387.webp" alt="Pemasangan Biopori">
+    <img src="/img/blog-02/image5.jpg" alt="Pemasangan Biopori">
     <figcaption>Pemasangan Biopori oleh Dirjen PMPK dan Kepala BBPPMPV BMTI</figcaption>
 </figure>
 <p>Aksi nyata ini mendapat apresiasi penuh dari Direktur Jenderal Pendidikan Menengah dan Pendidikan Khusus, Tatang Mutaqin, S.Sos., M.Ed., Ph.D., yang hadir langsung untuk meresmikan program.</p>

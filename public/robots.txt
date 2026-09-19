@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lestari-bmti.com/sitemap-index.xml

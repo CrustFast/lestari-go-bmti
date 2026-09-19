@@ -36,13 +36,13 @@ const categories = [
 ];
 
 const galleryItems = [
-	{ id: 1, category: 'Penanaman Vegetasi', image: img1, title: 'Peremajaan Vegetasi Kampus', desc: 'Penataan ulang Ruang Terbuka Hijau (RTH) dan pemeliharaan pohon tua guna menjaga pasokan oksigen mikro.', date: '2026-08-12', dateStr: '12-08-2026', location: 'Zona Barat Kampus BMTI', parties: 'Staf Teknis & Mahasiswa Magang' },
-	{ id: 2, category: 'Konservasi Hidrologi', image: img2, title: 'Sumur Resapan & Biopori', desc: 'Konstruksi 20 lubang biopori di titik rawan genangan untuk mengembalikan fungsi serapan air tanah.', date: '2026-08-25', dateStr: '25-08-2026', location: 'Area Parkir & Lapangan Olahraga', parties: 'Unit Infrastruktur & Fasilitas' },
-	{ id: 3, category: 'Konservasi Hidrologi', image: img3, title: 'Rain Harvesting System', desc: 'Sistem pemanenan air hujan untuk menjaga siklus hidrologi dan ketersediaan air bersih di area kampus.', date: '2026-09-05', dateStr: '05-09-2026', location: 'Atap Gedung Utama BMTI', parties: 'Vendor Teknisi & Staf BMTI' },
-	{ id: 4, category: 'Pengelolaan Limbah & 3R', image: img4, title: 'Manajemen Sampah Organik', desc: 'Pengelolaan harian limbah hayati dari ruang terbuka hijau untuk mewujudkan target Zero-Waste.', date: '2026-09-08', dateStr: '08-09-2026', location: 'Seluruh Area Taman BMTI', parties: 'Tim Kebersihan BMTI' },
-	{ id: 5, category: 'Aksi Kolaborasi', image: img5, title: 'Sinergi dengan DLH Kota Cimahi', desc: 'Perawatan partisipatif kawasan hijau bersama instansi pemerintah daerah untuk pelestarian jangka panjang.', date: '2026-09-10', dateStr: '10-09-2026', location: 'Batas Luar Kampus BMTI', parties: 'BMTI & Mitra DLH Cimahi' },
-	{ id: 6, category: 'Penanaman Vegetasi', image: img2, title: 'Edukasi Lingkungan Hijau', desc: 'Melibatkan siswa dan masyarakat sekitar dalam praktik langsung perawatan tanaman dan pemahaman ekosistem.', date: '2026-09-12', dateStr: '12-09-2026', location: 'Zona Selatan Kampus', parties: 'Peserta Diklat PjBL' },
-	{ id: 7, category: 'Infrastruktur EBT', image: img3, title: 'Kawasan Bebas Emisi', desc: 'Penetapan zona khusus bebas kendaraan bermotor di area pusat kampus untuk menjaga kualitas udara.', date: '2026-09-15', dateStr: '15-09-2026', location: 'Jalur Utama Kampus BMTI', parties: 'Unit Keamanan & Staf BMTI' },
+	// { id: 1, category: 'Penanaman Vegetasi', image: img1, title: 'Peremajaan Vegetasi Kampus', desc: 'Penataan ulang Ruang Terbuka Hijau (RTH) dan pemeliharaan pohon tua guna menjaga pasokan oksigen mikro.', date: '2026-08-12', dateStr: '12-08-2026', location: 'Zona Barat Kampus BMTI', parties: 'Staf Teknis & Mahasiswa Magang' },
+	// { id: 2, category: 'Konservasi Hidrologi', image: img2, title: 'Sumur Resapan & Biopori', desc: 'Konstruksi 20 lubang biopori di titik rawan genangan untuk mengembalikan fungsi serapan air tanah.', date: '2026-08-25', dateStr: '25-08-2026', location: 'Area Parkir & Lapangan Olahraga', parties: 'Unit Infrastruktur & Fasilitas' },
+	// { id: 3, category: 'Konservasi Hidrologi', image: img3, title: 'Rain Harvesting System', desc: 'Sistem pemanenan air hujan untuk menjaga siklus hidrologi dan ketersediaan air bersih di area kampus.', date: '2026-09-05', dateStr: '05-09-2026', location: 'Atap Gedung Utama BMTI', parties: 'Vendor Teknisi & Staf BMTI' },
+	// { id: 4, category: 'Pengelolaan Limbah & 3R', image: img4, title: 'Manajemen Sampah Organik', desc: 'Pengelolaan harian limbah hayati dari ruang terbuka hijau untuk mewujudkan target Zero-Waste.', date: '2026-09-08', dateStr: '08-09-2026', location: 'Seluruh Area Taman BMTI', parties: 'Tim Kebersihan BMTI' },
+	// { id: 5, category: 'Aksi Kolaborasi', image: img5, title: 'Sinergi dengan DLH Kota Cimahi', desc: 'Perawatan partisipatif kawasan hijau bersama instansi pemerintah daerah untuk pelestarian jangka panjang.', date: '2026-09-10', dateStr: '10-09-2026', location: 'Batas Luar Kampus BMTI', parties: 'BMTI & Mitra DLH Cimahi' },
+	// { id: 6, category: 'Penanaman Vegetasi', image: img2, title: 'Edukasi Lingkungan Hijau', desc: 'Melibatkan siswa dan masyarakat sekitar dalam praktik langsung perawatan tanaman dan pemahaman ekosistem.', date: '2026-09-12', dateStr: '12-09-2026', location: 'Zona Selatan Kampus', parties: 'Peserta Diklat PjBL' },
+	{ id: 7, category: 'Aksi Kolaborasi', image: img3, title: 'Penanaman Kemiri Sunan', desc: 'Penanaman Kemiri Sunan oleh Dirjen PMPK dan Kepala BBPPMPV BMTI.', date: '2026-09-15', dateStr: '04-06-2026', location: 'Kampus BMTI', parties: 'Dirjen PMPK dan Kepala BBPPMPV BMTI' },
 	{ id: 8, category: 'Keragaman Hayati', image: bh1, title: 'Buah Keben', desc: 'Koleksi flora BMTI.', date: '2026-09-15', dateStr: '15-09-2026', location: 'Kampus BMTI', parties: 'Tim Lestari' },
 	{ id: 9, category: 'Keragaman Hayati', image: bh2, title: 'Bunga Keben', desc: 'Koleksi flora BMTI.', date: '2026-09-15', dateStr: '15-09-2026', location: 'Kampus BMTI', parties: 'Tim Lestari' },
 	{ id: 10, category: 'Keragaman Hayati', image: bh3, title: 'Daun dan Batang Keben', desc: 'Koleksi flora BMTI.', date: '2026-09-15', dateStr: '15-09-2026', location: 'Kampus BMTI', parties: 'Tim Lestari' },
@@ -97,7 +97,8 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 		<!-- Gallery Grid -->
 		<div class="gallery-grid" id="main-gallery-grid" data-animate="fade-up" data-delay="100">
 			{galleryItems.map((item, index) => (
-				<div class="gallery-item" data-category={item.category} data-date={item.date} style={index >= 12 ? 'display: none;' : ''}>
+				<div class={`gallery-item ${index >= 12 ? 'hidden-by-pagination' : ''}`} data-category={item.category} data-date={item.date}>
+					<div class="skeleton gallery-skeleton"></div>
 					<Image src={item.image} alt={item.title} class="gallery-img" loading="lazy" />
 					<div class="gallery-overlay">
 						<div class="overlay-top-space">
@@ -344,6 +345,18 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 		transform: scale(1);
 		opacity: 1;
 		transition: transform 0.4s ease, opacity 0.4s ease;
+		content-visibility: auto;
+		contain-intrinsic-size: 1px 1000px;
+	}
+
+	.gallery-skeleton {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+	}
+
+	.gallery-item.loaded .gallery-skeleton {
+		display: none;
 	}
 
 	.gallery-item.hidden-by-filter {
@@ -547,6 +560,20 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 		object-fit: cover;
 	}
 
+	@media (max-width: 768px) {
+		.lightbox-img-wrapper {
+			overflow: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+		
+		.lightbox-img {
+			width: 150%;
+			height: 150%;
+			max-width: none;
+			object-fit: cover;
+		}
+	}
+
 	.lightbox-card {
 		position: absolute;
 		bottom: 1.5rem;
@@ -622,7 +649,7 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 		cursor: pointer;
 		backdrop-filter: blur(4px);
 		transition: background 0.3s;
-		z-index: 2;
+		z-index: 100;
 	}
 
 	.lightbox-toggle-card:hover {
@@ -681,6 +708,7 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 			left: 1.5rem;
 			right: 1.5rem;
 			max-width: none;
+			padding-right: 4rem;
 		}
 	}
 
@@ -808,6 +836,24 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 		// Initial Run
 		updateGallery();
 
+		// Skeleton loader trigger
+		const checkImageLoad = () => {
+			const imgs = document.querySelectorAll('.gallery-img');
+			imgs.forEach(img => {
+				const htmlImg = img as HTMLImageElement;
+				if (htmlImg.complete && htmlImg.naturalWidth > 0) {
+					const item = htmlImg.closest('.gallery-item');
+					if (item) item.classList.add('loaded');
+				} else {
+					htmlImg.addEventListener('load', function() {
+						const item = this.closest('.gallery-item');
+						if (item) item.classList.add('loaded');
+					});
+				}
+			});
+		};
+		checkImageLoad();
+
 		// --- Lightbox logic (copied from GallerySection) ---
 		const lightbox = document.getElementById('gallery-lightbox');
 		const lightboxImg = document.getElementById('lightbox-img');
@@ -828,7 +874,8 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 		// Use event delegation for dynamically sorted items
 		grid.addEventListener('click', (e) => {
 			const target = e.target as HTMLElement;
-			const icon = target.closest('.overlay-center-icon');
+			const item = target.closest('.gallery-item');
+			const icon = item ? item.querySelector('.overlay-center-icon') : null;
 			
 			if (icon) {
 				e.preventDefault();
@@ -905,17 +952,7 @@ galleryItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTim
 			}, 400);
 		};
 
-		// Toggle Card Visibility
-		if (lightboxToggle) {
-			lightboxToggle.addEventListener('click', () => {
-				if (lightboxCard) {
-					lightboxCard.classList.toggle('hidden');
-					const isHidden = lightboxCard.classList.contains('hidden');
-					if (iconHide) iconHide.style.display = isHidden ? 'none' : 'block';
-					if (iconShow) iconShow.style.display = isHidden ? 'block' : 'none';
-				}
-			});
-		}
+		// Toggle Card Visibility (Removed duplicate listener)
 
 		// Narrative Info Button Click
 		if (narrativeInfoBtn) {
